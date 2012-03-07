@@ -1,0 +1,10 @@
+
+     * {@inheritDoc}
+     *
+     * <p>The returned iterator provides a snapshot of the state of the list
+     * when the iterator was constructed. No synchronization is needed while
+     * traversing the iterator. The iterator does <em>NOT</em> support the
+     * <tt>remove</tt>, <tt>set</tt> or <tt>add</tt> methods.
+     *
+     * @throws IndexOutOfBoundsException {@inheritDoc}
+     

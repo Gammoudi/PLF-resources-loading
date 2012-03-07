@@ -1,0 +1,4 @@
+
+     * Determines if there is any supplementary character or unpaired
+     * surrogate in the specified range.
+     

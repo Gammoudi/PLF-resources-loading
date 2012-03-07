@@ -1,0 +1,4 @@
+
+     * Adjusts the stamp[] values before nextStamp overflow. nextStamp
+     * is set to the next stamp value upon the return.
+     

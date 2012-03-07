@@ -1,0 +1,5 @@
+
+     * Returns the end index of the text.
+     *
+     * @return the index after the last character in the text
+     

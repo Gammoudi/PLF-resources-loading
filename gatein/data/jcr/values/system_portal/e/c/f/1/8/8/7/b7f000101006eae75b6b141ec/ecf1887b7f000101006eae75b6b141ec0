@@ -1,0 +1,8 @@
+
+     * Translates the specified "alternate representation" Base64 string
+     * into a byte array.
+     * 
+     * @throw IllegalArgumentException or ArrayOutOfBoundsException
+     *        if <tt>s</tt> is not a valid alternate representation
+     *        Base64 string.
+     

@@ -1,0 +1,2 @@
+ A handler for tasks that cannot be executed by a <a href='../java/util/concurrent/ThreadPoolExecutor.html' title='ThreadPoolExecutor'>ThreadPoolExecutor</a>.
+ <DL><DT><B>Authors:</B></DT><DD>Doug Lea</DD></DL><DL><DT><B>Since:</B></DT><DD>1.5</DD></DL>

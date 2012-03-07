@@ -1,0 +1,4 @@
+ These two classes are used to distinguish NodeChangeEvents on
+ eventQueue so the event dispatch thread knows whether to call
+ childAdded or childRemoved.
+     

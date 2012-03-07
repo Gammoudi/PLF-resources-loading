@@ -1,0 +1,16 @@
+
+     * Returns the highest minimum value for the given calendar field
+     * of this <code>Calendar</code> instance. The highest minimum
+     * value is defined as the largest value returned by {@link
+     * #getActualMinimum(int)} for any possible time value. The
+     * greatest minimum value depends on calendar system specific
+     * parameters of the instance.
+     *
+     * @param field the calendar field.
+     * @return the highest minimum value for the given calendar field.
+     * @see #getMinimum(int)
+     * @see #getMaximum(int)
+     * @see #getLeastMaximum(int)
+     * @see #getActualMinimum(int)
+     * @see #getActualMaximum(int)
+     

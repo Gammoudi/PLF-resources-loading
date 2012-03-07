@@ -1,0 +1,12 @@
+
+     * Specialized variant of findNode to perform Map.get. Does a weak
+     * traversal, not bothering to fix any deleted index nodes,
+     * returning early if it happens to see key in index, and passing
+     * over any deleted base nodes, falling back to getUsingFindNode
+     * only if it would otherwise return value from an ongoing
+     * deletion. Also uses "bound" to eliminate need for some
+     * comparisons (see Pugh Cookbook). Also folds uses of null checks
+     * and node-skipping because markers have null keys.
+     * @param okey the key
+     * @return the value, or null if absent
+     

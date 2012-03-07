@@ -1,0 +1,8 @@
+
+     * Returns the amount of memory in bytes that the Java virtual machine
+     * initially requests from the operating system for memory management.
+     * This method returns <tt>-1</tt> if the initial memory size is undefined.
+     *
+     * @return the initial size of memory in bytes;
+     * <tt>-1</tt> if undefined.
+     

@@ -1,0 +1,25 @@
+
+     * Returns the CPU time that the current thread has executed 
+     * in user mode in nanoseconds.
+     * The returned value is of nanoseconds precision but
+     * not necessarily nanoseconds accuracy.
+     *
+     * <p>
+     * This is a convenient method for local management use and is 
+     * equivalent to calling:
+     * <blockquote><pre>
+     *   {@link #getThreadUserTime getThreadUserTime}(Thread.currentThread().getId());
+     * </pre></blockquote>
+     *
+     * @return the user-level CPU time for the current thread if CPU time
+     * measurement is enabled; <tt>-1</tt> otherwise.
+     *
+     * @throws java.lang.UnsupportedOperationException if the Java 
+     * virtual machine does not support CPU time measurement for
+     * the current thread.
+     *
+     * @see #getCurrentThreadCpuTime
+     * @see #isCurrentThreadCpuTimeSupported
+     * @see #isThreadCpuTimeEnabled
+     * @see #setThreadCpuTimeEnabled
+     

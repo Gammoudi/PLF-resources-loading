@@ -1,0 +1,5 @@
+
+     * Retrieves and removes the head (first element) of this list
+     * @return the head of this list, or <tt>null</tt> if this list is empty
+     * @since 1.5
+     

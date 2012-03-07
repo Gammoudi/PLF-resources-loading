@@ -1,0 +1,8 @@
+
+     * Tests if this dictionary maps no keys to value. The general contract 
+     * for the <tt>isEmpty</tt> method is that the result is true if and only 
+     * if this dictionary contains no entries. 
+     *
+     * @return  <code>true</code> if this dictionary maps no keys to values;
+     *          <code>false</code> otherwise.
+     

@@ -1,0 +1,14 @@
+
+	 * Takes a JarInputStream and converts it into a Pack200 archive.
+	 * <p>
+	 * Closes its input but not its output.  (Pack200 archives are appendable.)
+	 * <p>
+	 * The modification time and deflation hint attributes are not available,
+	 * for the JAR manifest file and its containing directory.
+	 *
+	 * @see #MODIFICATION_TIME
+	 * @see #DEFLATE_HINT
+	 * @param in a JarInputStream
+	 * @param out an OutputStream
+	 * @exception IOException if an error is encountered.
+	 

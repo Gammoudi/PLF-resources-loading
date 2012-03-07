@@ -1,0 +1,45 @@
+
+     * Implements the <tt>node</tt> method as per the specification in
+     * {@link Preferences#node(String)}.
+     *
+     * <p>This implementation obtains this preference node's lock and checks
+     * that the node has not been removed.  If <tt>path</tt> is <tt>""</tt>,
+     * this node is returned; if <tt>path</tt> is <tt>"/"</tt>, this node's
+     * root is returned.  If the first character in <tt>path</tt> is 
+     * not <tt>'/'</tt>, the implementation breaks <tt>path</tt> into
+     * tokens and recursively traverses the path from this node to the
+     * named node, "consuming" a name and a slash from <tt>path</tt> at
+     * each step of the traversal.  At each step, the current node is locked
+     * and the node's child-cache is checked for the named node.  If it is
+     * not found, the name is checked to make sure its length does not
+     * exceed <tt>MAX_NAME_LENGTH</tt>.  Then the {@link #childSpi(String)}
+     * method is invoked, and the result stored in this node's child-cache.
+     * If the newly created <tt>Preferences</tt> object's {@link #newNode}
+     * field is <tt>true</tt> and there are any node change listeners,
+     * a notification event is enqueued for processing by the event dispatch
+     * thread. 
+     *
+     * <p>When there are no more tokens, the last value found in the
+     * child-cache or returned by <tt>childSpi</tt> is returned by this
+     * method.  If during the traversal, two <tt>"/"</tt> tokens occur
+     * consecutively, or the final token is <tt>"/"</tt> (rather than a name),
+     * an appropriate <tt>IllegalArgumentException</tt> is thrown.
+     *
+     * <p> If the first character of <tt>path</tt> is <tt>'/'</tt>
+     * (indicating an absolute path name) this preference node's
+     * lock is dropped prior to breaking <tt>path</tt> into tokens, and 
+     * this method recursively traverses the path starting from the root
+     * (rather than starting from this node).  The traversal is otherwise
+     * identical to the one described for relative path names.  Dropping
+     * the lock on this node prior to commencing the traversal at the root
+     * node is essential to avoid the possibility of deadlock, as per the
+     * {@link #lock locking invariant}.
+     *
+     * @param path the path name of the preference node to return.
+     * @return the specified preference node.
+     * @throws IllegalArgumentException if the path name is invalid (i.e.,
+     *         it contains multiple consecutive slash characters, or ends
+     *         with a slash character and is more than one character long).
+     * @throws IllegalStateException if this node (or an ancestor) has been
+     *         removed with the {@link #removeNode()} method.
+     

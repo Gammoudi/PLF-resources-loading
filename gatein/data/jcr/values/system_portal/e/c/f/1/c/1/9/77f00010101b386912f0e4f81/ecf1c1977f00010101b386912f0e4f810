@@ -1,0 +1,8 @@
+
+     * Returns the name of the specified calendar field.
+     *
+     * @param field the calendar field
+     * @return the calendar field name
+     * @exception IndexOutOfBoundsException if <code>field</code> is negative,
+     * equal to or greater then <code>FIELD_COUNT</code>.
+     

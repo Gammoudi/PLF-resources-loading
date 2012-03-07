@@ -1,0 +1,6 @@
+
+     * Tests if verbose output for the memory system is enabled.
+     *
+     * @return <tt>true</tt> if verbose output for the memory 
+     * system is enabled; <tt>false</tt> otherwise.
+     

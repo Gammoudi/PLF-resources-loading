@@ -1,0 +1,6 @@
+
+     * Returns SimpleImmutableEntry for results of findNear.
+     * @param key the key
+     * @param rel the relation -- OR'ed combination of EQ, LT, GT
+     * @return Entry fitting relation, or null if no such
+     

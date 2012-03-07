@@ -1,0 +1,8 @@
+
+     * Returns the depth in the stack trace where the object monitor
+     * was locked.  The depth is the index to the <tt>StackTraceElement</tt>
+     * array returned in the {@link ThreadInfo#getStackTrace} method.
+     * 
+     * @return the depth in the stack trace where the object monitor
+     *         was locked, or a negative number if not available.
+     

@@ -1,0 +1,3 @@
+ Optimized version of CharProperty that works only for
+ properties never satisfied by Supplementary characters.
+     

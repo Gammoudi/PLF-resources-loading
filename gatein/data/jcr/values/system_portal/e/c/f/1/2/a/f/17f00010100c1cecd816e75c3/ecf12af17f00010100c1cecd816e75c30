@@ -1,0 +1,9 @@
+
+     * Constructs a new map containing the same mappings and using the
+     * same ordering as the specified sorted map.
+     *
+     * @param m the sorted map whose mappings are to be placed in this
+     *        map, and whose comparator is to be used to sort this map
+     * @throws NullPointerException if the specified sorted map or any of
+     *         its keys or values are null
+     

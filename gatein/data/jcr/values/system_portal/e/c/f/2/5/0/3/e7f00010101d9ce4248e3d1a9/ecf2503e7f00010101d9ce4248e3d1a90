@@ -1,0 +1,10 @@
+
+     * Returns a three-letter abbreviation for this locale's country.  If the locale
+     * doesn't specify a country, this will be the empty string.  Otherwise, this will
+     * be an uppercase ISO 3166 3-letter country code.
+     * The ISO 3166-2 country codes can be found on-line at
+     * <a href="http://www.davros.org/misc/iso3166.txt">
+     * <code>http://www.davros.org/misc/iso3166.txt</code>.</a>
+     * @exception MissingResourceException Throws MissingResourceException if the
+     * three-letter country abbreviation is not available for this locale.
+     

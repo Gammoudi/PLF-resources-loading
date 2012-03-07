@@ -1,0 +1,45 @@
+#classic-searchbox-QuickEditingBlock {
+	float: right;
+}
+
+.ClassicSearchTDContainer {
+	width: 350px;
+}
+
+.UIWCMSearchBoxPortlet {
+	float: right;
+	padding: 10px 10px 0px 0px;
+	overflow: hidden;
+}
+
+.UIWCMSearchBoxPortlet .LeftSearchBox {
+	background: url('/portal/rest/jcr/repository/collaboration/sites content/live/intranet/web contents/site artifacts/Searchbox/medias/images/SearchBoxBg.png') no-repeat left -3px; 
+	padding-left:22px;
+}
+
+.UIWCMSearchBoxPortlet .RightSearchBox {
+	background: url('/portal/rest/jcr/repository/collaboration/sites content/live/intranet/web contents/site artifacts/Searchbox/medias/images/SearchBoxBg.png') no-repeat right -39px; 
+	padding-right:6px;
+}
+
+.UIWCMSearchBoxPortlet .CenterSearchBox {
+	background: url('/portal/rest/jcr/repository/collaboration/sites content/live/intranet/web contents/site artifacts/Searchbox/medias/images/SearchBoxBg.png') repeat-x left -75px; 
+	border: none;
+}
+
+.UIWCMSearchBoxPortlet .siteSearchBox {
+	padding: 0px;
+}
+
+.UIWCMSearchBoxPortlet .siteSearchBox .keywordInput { 
+
+}
+
+.UIWCMSearchBoxPortlet .siteSearchBox .keywordInput input {
+	border: none;
+	background: none;
+	color: #808080;
+	font-size: 11px;
+	padding: 4px 0 5px;
+	width: 200px;
+}

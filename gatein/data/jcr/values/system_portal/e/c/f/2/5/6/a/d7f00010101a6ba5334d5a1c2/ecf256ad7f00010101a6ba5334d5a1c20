@@ -1,0 +1,8 @@
+
+	 * Returns the key corresponding to this entry.
+	 *
+	 * @return the key corresponding to this entry
+         * @throws IllegalStateException implementations may, but are not
+         *         required to, throw this exception if the entry has been
+         *         removed from the backing map.
+	 

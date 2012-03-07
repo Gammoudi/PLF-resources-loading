@@ -1,0 +1,5 @@
+<div id="UIWCMLoginPortlet" class="UIWCMLoginPortlet">
+<div class="Content"><span class="Welcome">&nbsp;</span><span class="LoggedUser">&nbsp;</span><a class="LoginInfo LogoutIcon">Logout</a> | <a class="LoginInfo LanguageIcon">Change language</a> | <a class="LoginInfo RegisterIcon">Register</a></div>
+<div style="clear: right;"></div>
+</div>
+<script type="text/javascript"> /* <![CDATA[ */ validateUser(); /* ]]> */</script>

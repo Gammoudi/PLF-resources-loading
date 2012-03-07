@@ -1,0 +1,15 @@
+
+     * Returns <tt>true</tt> if this list contains all of the elements of the
+     * specified collection.
+     *
+     * @param  c collection to be checked for containment in this list
+     * @return <tt>true</tt> if this list contains all of the elements of the
+     *         specified collection
+     * @throws ClassCastException if the types of one or more elements
+     *         in the specified collection are incompatible with this
+     *         list (optional)
+     * @throws NullPointerException if the specified collection contains one
+     *         or more null elements and this list does not permit null
+     *         elements (optional), or if the specified collection is null
+     * @see #contains(Object)
+     

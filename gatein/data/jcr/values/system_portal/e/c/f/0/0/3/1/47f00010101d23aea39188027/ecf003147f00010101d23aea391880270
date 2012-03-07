@@ -1,0 +1,15 @@
+
+     * Initialize ThreadInfo object
+     *
+     * @param t             Thread 
+     * @param state         Thread state 
+     * @param lockObj       Object on which the thread is blocked 
+     * @param lockOwner     the thread holding the lock 
+     * @param blockedCount  Number of times blocked to enter a lock
+     * @param blockedTime   Approx time blocked to enter a lock
+     * @param waitedCount   Number of times waited on a lock
+     * @param waitedTime    Approx time waited on a lock
+     * @param stackTrace    Thread stack trace
+     * @param lockedMonitors List of locked monitors
+     * @param lockedSynchronizers List of locked synchronizers 
+     

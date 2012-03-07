@@ -1,0 +1,6 @@
+
+     * Inserts the specified element at the tail of this queue.
+     *
+     * @return {@code true} (as specified by {@link Queue#offer})
+     * @throws NullPointerException if the specified element is null
+     

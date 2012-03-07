@@ -1,0 +1,15 @@
+
+     * Implements the <tt>keys</tt> method as per the specification in
+     * {@link Preferences#keys()}.
+     *
+     * <p>This implementation obtains this preference node's lock, checks that
+     * the node has not been removed and invokes {@link #keysSpi()}.
+     *
+     * @return an array of the keys that have an associated value in this
+     *         preference node.
+     * @throws BackingStoreException if this operation cannot be completed
+     *         due to a failure in the backing store, or inability to 
+     *         communicate with it.
+     * @throws IllegalStateException if this node (or an ancestor) has been
+     *         removed with the {@link #removeNode()} method.
+     

@@ -1,0 +1,4 @@
+
+     * Specialized version of find to get last valid node.
+     * @return last node or null if empty
+     

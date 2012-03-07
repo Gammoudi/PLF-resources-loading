@@ -1,0 +1,4 @@
+ Handles the branching of alternations. Note this is also used for
+ the ? quantifier to branch between the case where it matches once
+ and where it does not occur.
+     

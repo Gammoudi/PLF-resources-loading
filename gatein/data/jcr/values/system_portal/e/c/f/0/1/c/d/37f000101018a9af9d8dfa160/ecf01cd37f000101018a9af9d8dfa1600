@@ -1,0 +1,22 @@
+
+     * Finds a class with the specified <a href="#name">binary name</a>,
+     * loading it if necessary.
+     *
+     * <p> This method loads the class through the system class loader (see
+     * {@link #getSystemClassLoader()}).  The <tt>Class</tt> object returned
+     * might have more than one <tt>ClassLoader</tt> associated with it.
+     * Subclasses of <tt>ClassLoader</tt> need not usually invoke this method,
+     * because most class loaders need to override just {@link
+     * #findClass(String)}.  </p>
+     *
+     * @param  name
+     *         The <a href="#name">binary name</a> of the class
+     *
+     * @return  The <tt>Class</tt> object for the specified <tt>name</tt>
+     *
+     * @throws  ClassNotFoundException
+     *          If the class could not be found
+     *
+     * @see  #ClassLoader(ClassLoader)
+     * @see  #getParent()
+     

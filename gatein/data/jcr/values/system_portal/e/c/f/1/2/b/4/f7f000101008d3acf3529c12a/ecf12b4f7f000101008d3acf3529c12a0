@@ -1,0 +1,7 @@
+
+     * Specialized variant of findPredecessor to get predecessor of last
+     * valid node.  Needed when removing the last entry.  It is possible
+     * that all successors of returned node will have been deleted upon
+     * return, in which case this method can be retried.
+     * @return likely predecessor of last node
+     

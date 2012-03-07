@@ -1,0 +1,10 @@
+
+     * Returns <tt>true</tt> if this map maps one or more keys to the
+     * specified value.  This operation requires time linear in the
+     * map size.
+     *
+     * @param value value whose presence in this map is to be tested
+     * @return <tt>true</tt> if a mapping to <tt>value</tt> exists;
+     *         <tt>false</tt> otherwise
+     * @throws NullPointerException if the specified value is null
+     

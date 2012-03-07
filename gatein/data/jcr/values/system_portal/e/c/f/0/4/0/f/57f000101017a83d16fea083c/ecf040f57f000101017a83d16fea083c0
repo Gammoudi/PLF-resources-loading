@@ -1,0 +1,10 @@
+
+     * Returns the string representation of the <code>double</code> argument.
+     * <p>
+     * The representation is exactly the one returned by the
+     * <code>Double.toString</code> method of one argument.
+     *
+     * @param   d   a <code>double</code>.
+     * @return  a  string representation of the <code>double</code> argument.
+     * @see     java.lang.Double#toString(double)
+     

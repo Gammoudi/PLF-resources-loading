@@ -1,0 +1,10 @@
+
+     * Returns the <tt>IOException</tt> last thrown by this formatter's {@link
+     * Appendable}.
+     *
+     * <p> If the destination's <tt>append()</tt> method never throws
+     * <tt>IOException</tt>, then this method will always return <tt>null</tt>.
+     *
+     * @return  The last exception thrown by the Appendable or <tt>null</tt> if
+     *          no such exception exists.
+     

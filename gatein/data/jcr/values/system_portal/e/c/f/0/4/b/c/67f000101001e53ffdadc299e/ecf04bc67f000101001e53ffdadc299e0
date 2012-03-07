@@ -1,0 +1,5 @@
+
+     * Performs reflective checks on given subclass to verify that it doesn't
+     * override security-sensitive non-final methods.  Returns true if the
+     * subclass overrides any of the methods, false otherwise.
+     

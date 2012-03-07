@@ -1,0 +1,4 @@
+ Thrown by a <code>Scanner</code> to indicate that the token
+ retrieved does not match the pattern for the expected type, or
+ that the token is out of range for the expected type.
+ <DL><DT><B>Authors:</B></DT><DD>unascribed</DD></DL><DL><DT><B>Version:</B></DT><DD>%I% %G%</DD></DL><DL><DT><B>See Also:</B></DT><DD><a href='../java/util/Scanner.html' title='Scanner'>Scanner</a></DD></DL><DL><DT><B>Since:</B></DT><DD>1.5</DD></DL>

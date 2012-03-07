@@ -1,0 +1,5 @@
+
+     * Construct a new FileSystemPreferences instance with the specified
+     * parent node and name.  This constructor, called from childSpi,
+     * is used to make every node except for the two //roots.
+     

@@ -1,0 +1,6 @@
+ 
+     * Returns the amount of used memory in bytes.
+     *
+     * @return the amount of used memory in bytes.
+     *
+     

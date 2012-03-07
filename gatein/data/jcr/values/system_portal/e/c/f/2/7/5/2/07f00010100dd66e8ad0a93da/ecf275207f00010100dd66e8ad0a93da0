@@ -1,0 +1,75 @@
+ <code>TimeZone</code> represents a time zone offset, and also figures out daylight
+ savings.
+
+ <p>
+ Typically, you get a <code>TimeZone</code> using <code>getDefault</code>
+ which creates a <code>TimeZone</code> based on the time zone where the program
+ is running. For example, for a program running in Japan, <code>getDefault</code>
+ creates a <code>TimeZone</code> object based on Japanese Standard Time.
+
+ <p>
+ You can also get a <code>TimeZone</code> using <code>getTimeZone</code>
+ along with a time zone ID. For instance, the time zone ID for the
+ U.S. Pacific Time zone is "America/Los_Angeles". So, you can get a
+ U.S. Pacific Time <code>TimeZone</code> object with:
+ <blockquote><pre>
+ TimeZone tz = TimeZone.getTimeZone("America/Los_Angeles");
+ </pre></blockquote>
+ You can use the <code>getAvailableIDs</code> method to iterate through
+ all the supported time zone IDs. You can then choose a
+ supported ID to get a <code>TimeZone</code>.
+ If the time zone you want is not represented by one of the
+ supported IDs, then a custom time zone ID can be specified to
+ produce a TimeZone. The syntax of a custom time zone ID is:
+
+ <blockquote><pre>
+ <a name="CustomID"><i>CustomID:</i></a>
+         <code>GMT</code> <i>Sign</i> <i>Hours</i> <code>:</code> <i>Minutes</i>
+         <code>GMT</code> <i>Sign</i> <i>Hours</i> <i>Minutes</i>
+         <code>GMT</code> <i>Sign</i> <i>Hours</i>
+ <i>Sign:</i> one of
+         <code>+ -</code>
+ <i>Hours:</i>
+         <i>Digit</i>
+         <i>Digit</i> <i>Digit</i>
+ <i>Minutes:</i>
+         <i>Digit</i> <i>Digit</i>
+ <i>Digit:</i> one of
+         <code>0 1 2 3 4 5 6 7 8 9</code>
+ </pre></blockquote>
+
+ <i>Hours</i> must be between 0 to 23 and <i>Minutes</i> must be
+ between 00 to 59.  For example, "GMT+10" and "GMT+0010" mean ten
+ hours and ten minutes ahead of GMT, respectively.
+ <p>
+ The format is locale independent and digits must be taken from the
+ Basic Latin block of the Unicode standard. No daylight saving time
+ transition schedule can be specified with a custom time zone ID. If
+ the specified string doesn't match the syntax, <code>"GMT"</code>
+ is used.
+ <p>
+ When creating a <code>TimeZone</code>, the specified custom time
+ zone ID is normalized in the following syntax:
+ <blockquote><pre>
+ <a name="NormalizedCustomID"><i>NormalizedCustomID:</i></a>
+         <code>GMT</code> <i>Sign</i> <i>TwoDigitHours</i> <code>:</code> <i>Minutes</i>
+ <i>Sign:</i> one of
+         <code>+ -</code>
+ <i>TwoDigitHours:</i>
+         <i>Digit</i> <i>Digit</i>
+ <i>Minutes:</i>
+         <i>Digit</i> <i>Digit</i>
+ <i>Digit:</i> one of
+         <code>0 1 2 3 4 5 6 7 8 9</code>
+ </pre></blockquote>
+ For example, TimeZone.getTimeZone("GMT-8").getID() returns "GMT-08:00".
+
+ <h4>Three-letter time zone IDs</h4>
+ 
+ For compatibility with JDK 1.1.x, some other three-letter time zone IDs
+ (such as "PST", "CTT", "AST") are also supported. However, <strong>their
+ use is deprecated</strong> because the same abbreviation is often used
+ for multiple time zones (for example, "CST" could be U.S. "Central Standard
+ Time" and "China Standard Time"), and the Java platform can then only
+ recognize one of them.
+ <DL><DT><B>Authors:</B></DT><DD>Mark Davis, David Goldsmith, Chen-Lieh Huang, Alan Liu</DD></DL><DL><DT><B>Version:</B></DT><DD>%I% %G%</DD></DL><DL><DT><B>See Also:</B></DT><DD><a href='../java/util/Calendar.html' title='Calendar'>Calendar</a></DD><DD><a href='../java/util/GregorianCalendar.html' title='GregorianCalendar'>GregorianCalendar</a></DD><DD><a href='../java/util/SimpleTimeZone.html' title='SimpleTimeZone'>SimpleTimeZone</a></DD></DL><DL><DT><B>Since:</B></DT><DD>JDK1.1</DD></DL>

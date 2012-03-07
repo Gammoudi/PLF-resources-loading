@@ -1,0 +1,9 @@
+.UIFooterPortlet{
+	 color: #565759;
+	 text-align: center;
+	 padding: 8px 0px 35px;
+}
+
+.UIFooterPortlet img{
+  vertical-align: bottom;
+}

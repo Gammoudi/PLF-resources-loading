@@ -1,0 +1,5 @@
+
+     * Processes repetition. If the next character peeked is a quantifier
+     * then new nodes must be appended to handle the repetition.
+     * Prev could be a single or a group, so it could be a chain of nodes.
+     

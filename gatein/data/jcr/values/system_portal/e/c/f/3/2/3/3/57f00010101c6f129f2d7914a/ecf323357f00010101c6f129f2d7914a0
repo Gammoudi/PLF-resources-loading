@@ -1,0 +1,6 @@
+
+     * Close this output stream.
+     *
+     * @exception  SecurityException  if a security manager exists and if
+     *             the caller does not have <tt>LoggingPermission("control")</tt>.
+     

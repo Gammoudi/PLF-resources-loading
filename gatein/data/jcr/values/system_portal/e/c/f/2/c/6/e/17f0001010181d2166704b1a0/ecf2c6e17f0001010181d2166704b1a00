@@ -1,0 +1,9 @@
+
+         * Returns a collection containing those threads that may be
+         * waiting on this Condition.
+         * Implements {@link AbstractQueuedLongSynchronizer#getWaitingThreads}.
+         *
+         * @return the collection of threads
+         * @throws IllegalMonitorStateException if {@link #isHeldExclusively}
+         *         returns {@code false}
+         

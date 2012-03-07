@@ -1,0 +1,4 @@
+
+         * Sets table to new HashEntry array.
+         * Call only while holding lock or in constructor.
+         

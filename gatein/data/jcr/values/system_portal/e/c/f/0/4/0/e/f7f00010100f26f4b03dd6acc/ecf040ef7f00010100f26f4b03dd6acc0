@@ -1,0 +1,10 @@
+
+     * Returns the string representation of the <code>long</code> argument.
+     * <p>
+     * The representation is exactly the one returned by the
+     * <code>Long.toString</code> method of one argument.
+     *
+     * @param   l   a <code>long</code>.
+     * @return  a string representation of the <code>long</code> argument.
+     * @see     java.lang.Long#toString(long)
+     

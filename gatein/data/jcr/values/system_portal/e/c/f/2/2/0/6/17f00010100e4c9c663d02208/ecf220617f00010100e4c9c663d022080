@@ -1,0 +1,6 @@
+
+     * Returns the length of the specified month in the specified
+     * year. The year number must be normalized.
+     *
+     * @see #isLeapYear(int)
+     

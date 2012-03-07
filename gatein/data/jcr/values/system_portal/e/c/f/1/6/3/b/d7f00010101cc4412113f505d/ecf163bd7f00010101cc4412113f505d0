@@ -1,0 +1,9 @@
+
+     * Tries to cancel a wait for the given node waiting in the given
+     * slot, if so, helping clear the node from its slot to avoid
+     * garbage retention.
+     *
+     * @param node the waiting node
+     * @param the slot it is waiting in
+     * @return true if successfully cancelled
+     

@@ -1,0 +1,4 @@
+
+         * Performs {@link Lock#lock}. The main reason for subclassing
+         * is to allow fast path for nonfair version.
+         

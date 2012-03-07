@@ -1,0 +1,5 @@
+
+     * Reconstitute the <tt>ConcurrentHashMap</tt> instance from a
+     * stream (i.e., deserialize it).
+     * @param s the stream
+     

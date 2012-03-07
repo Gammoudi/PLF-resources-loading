@@ -1,0 +1,10 @@
+ The unpacker engine converts the packed stream to a JAR file.
+ An instance of the engine can be obtained
+ using <a href='#newUnpacker'>newUnpacker</a>.
+ <p>
+ Every JAR file produced by this engine will include the string
+ "<tt>PACK200</tt>" as a zip file comment.
+ This allows a deployer to detect if a JAR archive was packed and unpacked.
+ <p>
+ This version of the unpacker is compatible with all previous versions.
+     <DL><DT><B>Since:</B></DT><DD>1.5</DD></DL>

@@ -1,0 +1,7 @@
+
+         * Helps out a deletion by appending marker or unlinking from
+         * predecessor. This is called during traversals when value
+         * field seen to be null.
+         * @param b predecessor
+         * @param f successor
+         

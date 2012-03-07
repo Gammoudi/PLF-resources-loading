@@ -1,0 +1,13 @@
+
+     * Tests if thread CPU time measurement is enabled.
+     *
+     * @return <tt>true</tt> if thread CPU time measurement is enabled;
+     *         <tt>false</tt> otherwise.
+     *
+     * @throws java.lang.UnsupportedOperationException if the Java virtual 
+     * machine does not support CPU time measurement for other threads
+     * nor for the current thread.
+     *
+     * @see #isThreadCpuTimeSupported
+     * @see #isCurrentThreadCpuTimeSupported
+     

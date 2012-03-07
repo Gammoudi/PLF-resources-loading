@@ -1,0 +1,3 @@
+ Private implementation class for EnumSet, for "jumbo" enum types
+ (i.e., those with more than 64 elements).<DL><DT><B>serial:</B></DT><DD>exclude</DD></DL>
+ <DL><DT><B>Authors:</B></DT><DD>Josh Bloch</DD></DL><DL><DT><B>Since:</B></DT><DD>1.5</DD></DL>

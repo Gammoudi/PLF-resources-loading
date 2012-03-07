@@ -1,0 +1,16 @@
+
+	 * Returns the hash code value for this map entry.  The hash code
+	 * of a map entry <tt>e</tt> is defined to be: <pre>
+	 *     (e.getKey()==null   ? 0 : e.getKey().hashCode()) ^
+	 *     (e.getValue()==null ? 0 : e.getValue().hashCode())
+         * </pre>
+	 * This ensures that <tt>e1.equals(e2)</tt> implies that
+	 * <tt>e1.hashCode()==e2.hashCode()</tt> for any two Entries
+	 * <tt>e1</tt> and <tt>e2</tt>, as required by the general
+	 * contract of <tt>Object.hashCode</tt>.
+	 *
+	 * @return the hash code value for this map entry
+	 * @see Object#hashCode()
+	 * @see Object#equals(Object)
+	 * @see #equals(Object)
+	 

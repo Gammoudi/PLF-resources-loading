@@ -1,0 +1,6 @@
+ Thrown to indicate that the requested operation is not supported.<p>
+
+ This class is a member of the
+ <a href="{@docRoot}/../technotes/guides/collections/index.html">
+ Java Collections Framework</a>.
+ <DL><DT><B>Authors:</B></DT><DD>Josh Bloch</DD></DL><DL><DT><B>Version:</B></DT><DD>%I%, %G%</DD></DL><DL><DT><B>Since:</B></DT><DD>1.2</DD></DL>

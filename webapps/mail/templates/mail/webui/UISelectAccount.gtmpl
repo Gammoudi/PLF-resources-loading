@@ -1,0 +1,35 @@
+<div class="UISelectAccount ClearFix">
+  <%uiform.begin();%>
+  <% 
+    String accId = uicomponent.getSelectedValue();
+    uicomponent.updateAccount(); 
+    try {
+      uicomponent.setSelectedValue(accId);
+    } catch(Exception e) {}
+  
+  %>
+    <%uicomponent.renderChildren()%>
+    <div class="AddAccountIcon" title="<%=_ctx.appRes(uicomponent.id+ ".label.manage-accounts")%>" onclick="eXo.cs.Utils.show(this, event);">
+    <% /*Begin Popup Menu*/ %>
+        <div style="position: relative;">
+          <ul class="UIRightClickPopupMenu UIContextMenuContainer" style="display: none;">
+            <%
+                //uicomponent.getActions()
+               String[] actions = uicomponent.getActions() ;
+               for(action in actions) {
+               String nameItem = _ctx.appRes(uicomponent.getName() + ".action." + action);
+               String classIconItem = action ;
+            %>
+               <li class="MenuItem">   
+                <a class="ItemIcon $classIconItem" href="<%=uicomponent.event(action)%>">
+                  $nameItem
+                </a>
+               </li>
+            <%}%>
+            <li class="RightClickCustomItem"></li>
+          </ul>
+        </div>
+    <% /*End Popup Menu*/ %>
+    </div>
+  <%uiform.end();%>
+</div>

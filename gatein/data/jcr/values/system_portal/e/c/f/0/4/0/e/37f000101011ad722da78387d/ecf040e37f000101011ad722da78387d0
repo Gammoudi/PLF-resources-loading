@@ -1,0 +1,21 @@
+
+     * Returns the string representation of a specific subarray of the
+     * <code>char</code> array argument.
+     * <p>
+     * The <code>offset</code> argument is the index of the first
+     * character of the subarray. The <code>count</code> argument
+     * specifies the length of the subarray. The contents of the subarray
+     * are copied; subsequent modification of the character array does not
+     * affect the newly created string.
+     *
+     * @param   data     the character array.
+     * @param   offset   the initial offset into the value of the
+     *                  <code>String</code>.
+     * @param   count    the length of the value of the <code>String</code>.
+     * @return  a string representing the sequence of characters contained
+     *          in the subarray of the character array argument.
+     * @exception IndexOutOfBoundsException if <code>offset</code> is
+     *          negative, or <code>count</code> is negative, or
+     *          <code>offset+count</code> is larger than
+     *          <code>data.length</code>.
+     

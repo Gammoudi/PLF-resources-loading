@@ -1,0 +1,7 @@
+
+     * Generates a String from this Matcher's input in the specified range.
+     *
+     * @param  beginIndex   the beginning index, inclusive
+     * @param  endIndex     the ending index, exclusive
+     * @return A String generated from this Matcher's input
+     

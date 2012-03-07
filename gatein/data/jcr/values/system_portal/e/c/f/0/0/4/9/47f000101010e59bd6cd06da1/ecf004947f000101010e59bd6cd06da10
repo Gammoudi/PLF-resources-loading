@@ -1,0 +1,37 @@
+
+     * Returns the thread info for all live threads with stack trace
+     * and synchronization information.
+     * Some threads included in the returned array
+     * may have been terminated when this method returns.
+     *
+     * <p>
+     * This method returns an array of {@link ThreadInfo} objects
+     * as specified in the {@link #getThreadInfo(long[], boolean, boolean)}
+     * method.
+     *
+     * @param  lockedMonitors if <tt>true</tt>, dump all locked monitors.
+     * @param  lockedSynchronizers if <tt>true</tt>, dump all locked
+     *             ownable synchronizers.
+     *
+     * @return an array of {@link ThreadInfo} for all live threads.
+     *
+     * @throws java.lang.SecurityException if a security manager
+     *         exists and the caller does not have
+     *         ManagementPermission("monitor").
+     * @throws java.lang.UnsupportedOperationException 
+     *         <ul>
+     *           <li>if <tt>lockedMonitors</tt> is <tt>true</tt> but
+     *               the Java virtual machine does not support monitoring 
+     *               of {@linkplain #isObjectMonitorUsageSupported
+     *               object monitor usage}; or</li>
+     *           <li>if <tt>lockedSynchronizers</tt> is <tt>true</tt> but
+     *               the Java virtual machine does not support monitoring 
+     *               of {@linkplain #isSynchronizerUsageSupported
+     *               ownable synchronizer usage}.</li>
+     *         </ul>
+     *
+     * @see #isObjectMonitorUsageSupported
+     * @see #isSynchronizerUsageSupported
+     *
+     * @since 1.6
+     

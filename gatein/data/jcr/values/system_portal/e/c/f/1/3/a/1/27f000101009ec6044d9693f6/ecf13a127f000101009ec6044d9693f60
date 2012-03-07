@@ -1,0 +1,7 @@
+
+         * Tries to CAS right field to skip over apparent successor
+         * succ.  Fails (forcing a retraversal by caller) if this node
+         * is known to be deleted.
+         * @param succ the expected current successor
+         * @return true if successful
+         

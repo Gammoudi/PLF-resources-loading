@@ -1,0 +1,5 @@
+
+     * Called by superclass constructors and pseudoconstructors (clone,
+     * readObject) before any entries are inserted into the map.  Initializes
+     * the chain.
+     

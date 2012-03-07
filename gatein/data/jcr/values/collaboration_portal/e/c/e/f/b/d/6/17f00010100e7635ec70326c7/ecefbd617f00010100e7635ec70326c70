@@ -1,0 +1,204 @@
+h1,h2,h3,h4,h5,h6{
+	font-family: Arial, Verdana, sans-serif;
+}
+
+.UIACMWelcome{
+	background: #fff;
+	color: #6a6a6a;
+	font-family: Verdana, Arial, Verdana, sans-serif;
+	margin: 0px;
+	font-size: 13px;
+}
+
+.UIACMWelcome .UIBanner{
+	background: url("/portal/rest/jcr/repository/collaboration/sites content/live/intranet/web contents/site artifacts/Welcome/medias/images/BgHeader.png") repeat-x left top;
+	height: 125px;
+}
+
+.UIBanner .Header{
+	width: 960px;
+	margin: 0 auto;
+	color: #fff;
+	padding-top: 35px;
+}
+
+.UIBanner .Header img{
+	float: left;
+	width: 110px;
+}
+
+.UIBanner .Header h3{
+	font-weight: normal;
+	font-size: 16px;
+	margin: 0px;
+	font-family: Myriad Pro,Arial, Verdana, sans-serif;
+}
+
+.UIBanner .Header h1{
+	font-family: Myriad Pro,Arial, Verdana, sans-serif;
+	font-weight: normal;
+	font-size: 49px;
+	margin: 0px;
+}
+
+.UIBanner .TxtHeader{
+	text-align: right;
+	float: right;
+	margin-top: -15px;
+
+}
+
+.UIBanner .Header .ColorYellow{
+	color: #ffcb08;
+}
+
+.UIACMWelcome .SocialIntranet{
+	margin: 0 auto;
+	width: 960px;
+	font-size: 14px;
+}
+
+.SocialIntranet h1{
+	font-size: 24px;
+	font-weight: normal;
+	margin: 22px 0px;
+}
+
+.UIACMWelcome .UIContentAccount {
+    margin: 20px auto;
+	font-size: 13px;
+	background: #f8f8f8 url("/portal/rest/jcr/repository/collaboration/sites content/live/intranet/web contents/site artifacts/Welcome/medias/images/BgPattern.JPG") no-repeat center bottom;
+	border-top: solid 1px #e6e6e6;
+	border-bottom: solid 1px #e6e6e6;
+	height: 435px;
+}
+
+.UIContentAccount p{
+	font-size: 14px;
+	margin: 0px;
+	height: 49px;
+	overflow: hidden;
+}
+
+.UIContentAccount .AccounLogin p{
+	font-size: 13px;
+}
+
+.BgAccounLogin h1{
+	color: #2f2f2f;
+	font-size: 24px;
+	font-weight: normal;
+	margin: 10px 0px;
+}
+
+
+.UIContentAccount .BgAccounLogin{
+	width: 960px;
+	margin: 0 auto;
+	padding-top: 10px;
+}
+
+.UIContentAccount .AccounLogin{
+	margin-top: 16px;
+	width: 435px;
+	height: 150px;
+}
+
+.AccounLogin .ImgLogin{
+	float: left;
+	margin-right: 23px;
+}
+
+.AccounLogin h4{
+	font-size: 18px;
+	color: #0f62b0;
+	font-weight: normal;
+	margin:0px;
+}
+
+.AccounLogin a{
+	display: inline-block;
+	line-height: 26px;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	font-weight: bold;
+	font-size: 12px;
+	color: #fff;
+	margin-top: 7px;
+	min-width: 195px;
+	text-align: center;
+}
+
+.AccounLogin .BntJack{
+	background: url("/portal/rest/jcr/repository/collaboration/sites content/live/intranet/web contents/site artifacts/Welcome/medias/images/BgBntLogin.png") repeat-x left -10px;
+	border: solid 1px #3da3e7;
+}
+
+.AccounLogin .BntMary{
+	background: url("/portal/rest/jcr/repository/collaboration/sites content/live/intranet/web contents/site artifacts/Welcome/medias/images/BgBntLogin.png") repeat-x left -50px;
+	border: solid 1px #eda501;
+}
+
+.AccounLogin .BntJame{
+	background: url("/portal/rest/jcr/repository/collaboration/sites content/live/intranet/web contents/site artifacts/Welcome/medias/images/BgBntLogin.png") repeat-x left -90px;
+	border: solid 1px #82b020;
+
+}
+
+.AccounLogin .BntJohn{
+	background: url("/portal/rest/jcr/repository/collaboration/sites content/live/intranet/web contents/site artifacts/Welcome/medias/images/BgBntLogin.png") repeat-x left -130px;
+	border: solid 1px #878787;
+}
+
+.UIContentAccount .ClosRight{
+	margin-left: 90px;
+}
+
+.UIACMWelcome .BntSign{
+	margin: 0 auto;
+	text-align: center;
+	width: 960px;
+	margin-bottom: 12px;
+}
+
+.UIACMWelcome .BntSign a{
+	background: url("/portal/rest/jcr/repository/collaboration/sites content/live/intranet/web contents/site artifacts/Welcome/medias/images/BgBntLogin.png") repeat-x left -170px;
+	line-height: 28px;
+	border: solid 1px #d4d4d4;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	display: inline-block;
+	min-width: 250px;
+	color: #606060;
+	margin:0px 10px;
+	font-size: 12px;
+}
+
+.OfficeLeftTDContainer{
+	width: 100%;
+}
+
+.UIACMWelcome .BntSign b{
+	font-family: Myriad Pro, Arial, Verdana, sans-serif;
+	font-size: 18px;
+}
+
+.UIACMWelcome .UIFooter {
+	color: #a3a4a4;
+	background: #474848;
+	height: 42px;
+	line-height: 42px;
+}
+
+.UIFooter .TxtFooter{
+	margin: 0 auto;
+	text-align: center;
+	width: 960px;
+	font-size: 11px;
+}
+
+.UIWorkingWorkspace .UIPageBody .VIEW-PAGEBODY{
+	padding: 0px;
+}

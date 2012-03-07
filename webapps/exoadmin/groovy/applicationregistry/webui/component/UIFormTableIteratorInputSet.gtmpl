@@ -1,0 +1,48 @@
+<%	
+	import org.exoplatform.webui.core.UIComponent ;
+	import org.exoplatform.webui.form.UIFormPageIterator ;
+	import org.exoplatform.webui.form.UIFormCheckBoxInput ;
+	UIFormPageIterator uiIterator = uicomponent.getUIFormPageIterator();	
+%>
+<div class="UIFormTableIterator" id="UIFormTableIterator">
+	<table	class="UIGrid" cellspacing="0" cellpadding="0">
+			<tr>
+				<%
+					List children = uiIterator.getCurrentPageData();
+					def c = children.size() > 0 ? children.get(0) : null;
+					String name = uicomponent.getName();
+					String [] columns = uicomponent.getColumns();
+					for(i = 0; i < columns.length; i++){
+						if(c != null && UIFormCheckBoxInput.class.isInstance(c.getChild(i))) {
+						
+				%>
+				        <th class="center"><%=_ctx.appRes(name + ".header."+columns[i])%></th>	
+						<% } else { %>				
+						<th style="<%=(i==0) ? "text-align: center;" : "";%>"><%=_ctx.appRes(name + ".header."+columns[i])%></th>	
+						<% } %>
+						
+				<%}%>
+			</tr>
+		<%
+			String rowClass = null;
+			boolean even = true;
+			for (child in children)	{
+				if(even) rowClass = "EvenRow";	
+				else rowClass =	"OddRow"; 
+				even = !even;
+				int size = child.getChildren().size();
+				if (size == 0) continue;
+		%>
+				<tr class="$rowClass">
+					<%for(i in 0..size-1){%>
+						<% if(UIFormCheckBoxInput.class.isInstance(child.getChild(i))) { %>
+						<td><div style="text-align: center"><%child.renderChild(i);%></div></td>	
+						<% } else { %>				
+						<td class="text" style="<%=(i==0) ? "text-align: center;" : "";%>"><%child.renderChild(i);%></td>	
+						<% } %>
+					<%}%>
+				</tr>
+		<%}%>
+	</table> 
+</div>
+<div><%_ctx.renderUIComponent(uiIterator);%></div>

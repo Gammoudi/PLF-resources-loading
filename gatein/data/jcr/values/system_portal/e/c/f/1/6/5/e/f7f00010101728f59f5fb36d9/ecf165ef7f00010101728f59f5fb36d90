@@ -1,0 +1,7 @@
+
+     * Returns <tt>true</tt> if all tasks have completed following shut down.
+     * Note that <tt>isTerminated</tt> is never <tt>true</tt> unless
+     * either <tt>shutdown</tt> or <tt>shutdownNow</tt> was called first.
+     *
+     * @return <tt>true</tt> if all tasks have completed following shut down
+     

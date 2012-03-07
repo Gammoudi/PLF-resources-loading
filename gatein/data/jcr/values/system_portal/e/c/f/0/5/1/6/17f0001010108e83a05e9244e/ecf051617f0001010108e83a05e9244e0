@@ -1,0 +1,11 @@
+
+     * Returns an estimate of the number of active groups in this
+     * thread group.  The result might not reflect concurrent activity.
+     * <p>
+     * Due to the inherently imprecise nature of the result, it is
+     * recommended that this method only be used for informational purposes.
+     *
+     * @return  the number of active thread groups with this thread group as
+     *          an ancestor.
+     * @since   JDK1.0
+     

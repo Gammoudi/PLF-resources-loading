@@ -1,0 +1,4 @@
+ 
+     * Checks if unlockFile0() returned an error. Throws a SecurityException,
+     * if access denied. Logs a warning otherwise.
+     

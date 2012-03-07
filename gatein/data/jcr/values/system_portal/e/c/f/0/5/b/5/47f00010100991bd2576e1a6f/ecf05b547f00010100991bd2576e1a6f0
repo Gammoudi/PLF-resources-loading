@@ -1,0 +1,3 @@
+ This class serves as a parameter block to the <code>Instrumentation.redefineClasses</code> method.
+ Serves to bind the <code>Class</code> that needs redefining together with the new class file bytes.
+ <DL><DT><B>See Also:</B></DT><DD><a href='../java/lang/instrument/Instrumentation.html#redefineClasses' title='Instrumentation.redefineClasses'>Instrumentation.redefineClasses</a></DD></DL><DL><DT><B>Since:</B></DT><DD>1.5</DD></DL>

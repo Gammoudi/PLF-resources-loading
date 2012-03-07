@@ -1,0 +1,8 @@
+
+	 * Takes a JarFile and converts it into a Pack200 archive.
+	 * <p>
+	 * Closes its input but not its output.  (Pack200 archives are appendable.)
+	 * @param in a JarFile
+	 * @param out an OutputStream
+	 * @exception IOException if an error is encountered.
+	 

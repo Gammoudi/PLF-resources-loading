@@ -1,0 +1,5 @@
+
+         * Performs tryLock for read, enabling barging in both modes.
+         * This is identical in effect to tryAcquireShared except for
+         * lack of calls to readerShouldBlock
+         

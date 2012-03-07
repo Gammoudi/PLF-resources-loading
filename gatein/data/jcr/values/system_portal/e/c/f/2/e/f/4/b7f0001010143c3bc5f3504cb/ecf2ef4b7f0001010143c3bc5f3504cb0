@@ -1,0 +1,4 @@
+  Creates a bit vector for matching Latin-1 values. A normal BitClass
+  never matches values above Latin-1, and a complemented BitClass always
+  matches values above Latin-1.
+     

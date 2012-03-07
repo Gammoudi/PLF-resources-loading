@@ -1,0 +1,7 @@
+
+     * static version of lastIndexOf.
+     * @param o element to search for
+     * @param elements the array
+     * @param index first index to search
+     * @return index of element, or -1 if absent
+     

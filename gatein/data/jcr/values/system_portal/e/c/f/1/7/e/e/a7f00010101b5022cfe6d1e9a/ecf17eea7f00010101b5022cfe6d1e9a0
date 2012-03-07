@@ -1,0 +1,3 @@
+ A handler for rejected tasks that silently discards the
+ rejected task.
+     

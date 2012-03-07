@@ -1,0 +1,15 @@
+
+     * Returns the empty map (immutable).  This map is serializable.
+     *
+     * <p>This example illustrates the type-safe way to obtain an empty set:
+     * <pre>
+     *     Map&lt;String, Date&gt; s = Collections.emptyMap();
+     * </pre>
+     * Implementation note:  Implementations of this method need not
+     * create a separate <tt>Map</tt> object for each call.   Using this
+     * method is likely to have comparable cost to using the like-named
+     * field.  (Unlike this method, the field does not provide type safety.)
+     *
+     * @see #EMPTY_MAP
+     * @since 1.5
+     

@@ -1,0 +1,5 @@
+
+     * Reconstitute the Queue instance from a stream (that is,
+     * deserialize it).
+     * @param s the stream
+     

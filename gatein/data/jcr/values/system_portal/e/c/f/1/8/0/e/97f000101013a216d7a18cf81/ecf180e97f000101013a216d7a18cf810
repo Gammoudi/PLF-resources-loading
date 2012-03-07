@@ -1,0 +1,16 @@
+
+     * Implements the <tt>putBoolean</tt> method as per the specification in
+     * {@link Preferences#putBoolean(String,boolean)}.
+     *
+     * <p>This implementation translates <tt>value</tt> to a string with
+     * {@link String#valueOf(boolean)} and invokes {@link #put(String,String)}
+     * on the result.
+     *
+     * @param key key with which the string form of value is to be associated.
+     * @param value value whose string form is to be associated with key.
+     * @throws NullPointerException if key is <tt>null</tt>.
+     * @throws IllegalArgumentException if <tt>key.length()</tt> exceeds
+     *         <tt>MAX_KEY_LENGTH</tt>.
+     * @throws IllegalStateException if this node (or an ancestor) has been
+     *         removed with the {@link #removeNode()} method.
+     

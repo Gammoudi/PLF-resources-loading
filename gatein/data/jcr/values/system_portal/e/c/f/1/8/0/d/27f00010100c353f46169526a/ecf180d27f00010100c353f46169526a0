@@ -1,0 +1,9 @@
+
+     * Implements the <tt>name</tt> method as per the specification in
+     * {@link Preferences#name()}.
+     *
+     * <p>This implementation merely returns the name that was
+     * passed to this node's constructor.
+     *
+     * @return this preference node's name, relative to its parent.
+     

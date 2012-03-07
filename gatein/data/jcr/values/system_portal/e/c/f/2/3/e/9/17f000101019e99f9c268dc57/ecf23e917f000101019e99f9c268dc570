@@ -1,0 +1,5 @@
+
+     * Transfers all entries to new table array.  This method is called
+     * by superclass resize.  It is overridden for performance, as it is
+     * faster to iterate using our linked list.
+     

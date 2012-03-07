@@ -1,0 +1,6 @@
+
+     * Returns the stack frame that locked the object monitor.
+     *
+     * @return <tt>StackTraceElement</tt> that locked the object monitor,
+     *         or <tt>null</tt> if not available.
+     

@@ -1,0 +1,4 @@
+
+     * Compares using comparator or natural ordering. Used when the
+     * ComparableUsingComparator approach doesn't apply.
+     

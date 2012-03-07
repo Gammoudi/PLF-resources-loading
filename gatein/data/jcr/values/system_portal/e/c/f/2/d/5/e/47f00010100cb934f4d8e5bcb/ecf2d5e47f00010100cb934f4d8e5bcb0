@@ -1,0 +1,4 @@
+
+         * Reconstitute this lock instance from a stream
+         * @param s the stream
+         

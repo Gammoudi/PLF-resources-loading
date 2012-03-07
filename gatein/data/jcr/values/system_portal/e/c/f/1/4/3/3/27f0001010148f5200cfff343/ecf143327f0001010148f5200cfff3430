@@ -1,0 +1,6 @@
+ Nodes hold keys and values, and are singly linked in sorted
+ order, possibly with some intervening marker nodes. The list is
+ headed by a dummy node accessible as head.node. The value field
+ is declared only as Object because it takes special non-V
+ values for marker and header nodes.
+     

@@ -1,0 +1,5 @@
+
+         * Not supported. Always throws UnsupportedOperationException.
+         * @throws UnsupportedOperationException always; <tt>remove</tt>
+         *         is not supported by this iterator.
+         

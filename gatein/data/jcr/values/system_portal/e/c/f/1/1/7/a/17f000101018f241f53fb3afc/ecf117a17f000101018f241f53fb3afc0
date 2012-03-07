@@ -1,0 +1,4 @@
+
+         * Checks whether nextIndex is valid; if so setting nextItem.
+         * Stops iterator when either hits putIndex or sees null item.
+         

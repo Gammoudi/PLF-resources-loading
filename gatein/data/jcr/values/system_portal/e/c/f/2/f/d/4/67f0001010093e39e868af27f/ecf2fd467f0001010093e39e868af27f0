@@ -1,0 +1,8 @@
+ The GroupHead saves the location where the group begins in the locals
+ and restores them when the match is done.
+
+ The matchRef is used when a reference to this group is accessed later
+ in the expression. The locals will have a negative value in them to
+ indicate that we do not want to unset the group if the reference
+ doesn't match.
+     

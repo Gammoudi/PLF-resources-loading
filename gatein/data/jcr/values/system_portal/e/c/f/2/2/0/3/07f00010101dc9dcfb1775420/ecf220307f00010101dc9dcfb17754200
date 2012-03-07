@@ -1,0 +1,11 @@
+
+     * Computes the fixed date under either the Gregorian or the
+     * Julian calendar, using the given year and the specified calendar fields.
+     *
+     * @param cal the CalendarSystem to be used for the date calculation
+     * @param year the normalized year number, with 0 indicating the
+     * year 1 BCE, -1 indicating 2 BCE, etc.
+     * @param fieldMask the calendar fields to be used for the date calculation
+     * @return the fixed date
+     * @see Calendar#selectFields
+     

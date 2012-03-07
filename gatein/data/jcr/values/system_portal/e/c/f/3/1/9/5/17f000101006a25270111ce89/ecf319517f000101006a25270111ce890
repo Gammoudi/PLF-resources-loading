@@ -1,0 +1,11 @@
+
+     * Specify whether or not this logger should send its output
+     * to it's parent Logger.  This means that any LogRecords will
+     * also be written to the parent's Handlers, and potentially
+     * to its parent, recursively up the namespace.
+     *
+     * @param useParentHandlers   true if output is to be sent to the
+     *		logger's parent.
+     * @exception  SecurityException  if a security manager exists and if
+     *             the caller does not have LoggingPermission("control").
+     

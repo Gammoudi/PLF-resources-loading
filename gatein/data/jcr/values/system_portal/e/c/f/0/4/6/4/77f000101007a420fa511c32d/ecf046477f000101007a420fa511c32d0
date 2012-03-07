@@ -1,0 +1,11 @@
+
+     * Save the state of the <tt>StringBuilder</tt> instance to a stream 
+     * (that is, serialize it).
+     *
+     * @serialData the number of characters currently stored in the string
+     *             builder (<tt>int</tt>), followed by the characters in the
+     *             string builder (<tt>char[]</tt>).   The length of the
+     *             <tt>char</tt> array may be greater than the number of 
+     *             characters currently stored in the string builder, in which
+     *             case extra characters are ignored.
+     

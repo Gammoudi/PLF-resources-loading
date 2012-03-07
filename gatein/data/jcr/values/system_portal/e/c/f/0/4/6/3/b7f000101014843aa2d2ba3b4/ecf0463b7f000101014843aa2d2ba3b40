@@ -1,0 +1,4 @@
+
+     * readObject is called to restore the state of the StringBuffer from
+     * a stream.
+     

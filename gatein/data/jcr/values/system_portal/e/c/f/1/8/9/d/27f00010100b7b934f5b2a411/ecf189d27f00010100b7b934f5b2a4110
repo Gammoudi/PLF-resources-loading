@@ -1,0 +1,8 @@
+
+     * Initialize prefsCache if it has yet to be initialized.  When this method
+     * returns, prefsCache will be non-null.  If the data was successfully
+     * read from the file, lastSyncTime will be updated.  If prefsCache was
+     * null, but it was impossible to read the file (because it didn't
+     * exist or for any other reason) prefsCache will be initialized to an
+     * empty, modifiable Map, and lastSyncTime remain zero.
+     

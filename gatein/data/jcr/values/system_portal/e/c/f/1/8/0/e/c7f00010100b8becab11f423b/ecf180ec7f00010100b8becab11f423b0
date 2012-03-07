@@ -1,0 +1,12 @@
+
+     * Implements the <tt>putByteArray</tt> method as per the specification in
+     * {@link Preferences#putByteArray(String,byte[])}.
+     *
+     * @param key key with which the string form of value is to be associated.
+     * @param value value whose string form is to be associated with key.
+     * @throws NullPointerException if key or value is <tt>null</tt>.
+     * @throws IllegalArgumentException if key.length() exceeds MAX_KEY_LENGTH
+     *         or if value.length exceeds MAX_VALUE_LENGTH*3/4.
+     * @throws IllegalStateException if this node (or an ancestor) has been
+     *         removed with the {@link #removeNode()} method.
+     

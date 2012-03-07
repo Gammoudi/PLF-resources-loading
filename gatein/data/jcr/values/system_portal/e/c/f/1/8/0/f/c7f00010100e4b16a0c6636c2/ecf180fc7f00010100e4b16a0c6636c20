@@ -1,0 +1,14 @@
+
+     * Implements the <tt>remove(String)</tt> method as per the specification
+     * in {@link Preferences#remove(String)}.
+     *
+     * <p>This implementation obtains this preference node's lock,
+     * checks that the node has not been removed, invokes
+     * {@link #removeSpi(String)} and if there are any preference
+     * change listeners, enqueues a notification event for processing by the
+     * event dispatch thread.
+     *
+     * @param key key whose mapping is to be removed from the preference node.
+     * @throws IllegalStateException if this node (or an ancestor) has been
+     *         removed with the {@link #removeNode()} method.
+     

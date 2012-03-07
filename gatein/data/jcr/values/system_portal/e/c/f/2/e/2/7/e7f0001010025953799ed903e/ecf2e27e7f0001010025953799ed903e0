@@ -1,0 +1,4 @@
+
+     * Read the next character, and advance the cursor by one,
+     * ignoring the COMMENTS setting
+     

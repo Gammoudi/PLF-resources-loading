@@ -1,0 +1,20 @@
+
+     * Returns the lowest maximum value for the given calendar field
+     * of this <code>Calendar</code> instance. The lowest maximum
+     * value is defined as the smallest value returned by {@link
+     * #getActualMaximum(int)} for any possible time value. The least
+     * maximum value depends on calendar system specific parameters of
+     * the instance. For example, a <code>Calendar</code> for the
+     * Gregorian calendar system returns 28 for the
+     * <code>DAY_OF_MONTH</code> field, because the 28th is the last
+     * day of the shortest month of this calendar, February in a
+     * common year.
+     *
+     * @param field the calendar field.
+     * @return the lowest maximum value for the given calendar field.
+     * @see #getMinimum(int)
+     * @see #getMaximum(int)
+     * @see #getGreatestMinimum(int)
+     * @see #getActualMinimum(int)
+     * @see #getActualMaximum(int)
+     

@@ -1,0 +1,8 @@
+ 
+         * Method invoked when the given thread terminates due to the
+         * given uncaught exception.
+         * <p>Any exception thrown by this method will be ignored by the
+         * Java Virtual Machine.
+         * @param t the thread
+         * @param e the exception
+         

@@ -1,0 +1,14 @@
+
+         * Unlinks cancelled waiter nodes from condition queue.
+         * Called only while holding lock. This is called when
+         * cancellation occurred during condition wait, and upon
+         * insertion of a new waiter when lastWaiter is seen to have
+         * been cancelled. This method is needed to avoid garbage
+         * retention in the absence of signals. So even though it may
+         * require a full traversal, it comes into play only when
+         * timeouts or cancellations occur in the absence of
+         * signals. It traverses all nodes rather than stopping at a
+         * particular target to unlink all pointers to garbage nodes
+         * without requiring many re-traversals during cancellation
+         * storms.
+         

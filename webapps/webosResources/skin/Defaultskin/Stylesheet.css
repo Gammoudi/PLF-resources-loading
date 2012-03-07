@@ -1,0 +1,11 @@
+@import url(portal/webui/component/view/UIPageDesktop/Stylesheet.css);
+@import url(portal/webui/component/view/UIAddApplication/Stylesheet.css);
+@import url(portal/webui/component/view/UIToolbarContainer/Stylesheet.css);
+@import url(/webosResources/skin/portal/webui/component/UIIFramePortlet/DefaultStylesheet.css);
+@import url(webui/component/UIPopup/UIWindow/Stylesheet.css);
+@import url(/webosResources/skin/PortletThemes/Stylesheet.css);
+
+div.UIWebOSWorkingWorkspace {
+	background:none repeat scroll 0 0 #B5B6B6;
+	width:auto;
+}

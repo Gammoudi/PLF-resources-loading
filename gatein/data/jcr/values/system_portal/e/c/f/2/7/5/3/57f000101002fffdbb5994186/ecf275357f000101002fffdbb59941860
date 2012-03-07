@@ -1,0 +1,4 @@
+
+     * Returns the reference to the default TimeZone object. This
+     * method doesn't create a clone.
+     

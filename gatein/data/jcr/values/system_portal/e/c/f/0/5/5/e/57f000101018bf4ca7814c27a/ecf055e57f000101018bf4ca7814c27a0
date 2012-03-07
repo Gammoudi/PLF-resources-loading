@@ -1,0 +1,15 @@
+
+         * Replace a stale entry encountered during a set operation
+         * with an entry for the specified key.  The value passed in
+         * the value parameter is stored in the entry, whether or not
+         * an entry already exists for the specified key.
+         *
+         * As a side effect, this method expunges all stale entries in the
+         * "run" containing the stale entry.  (A run is a sequence of entries
+         * between two null slots.)
+         *
+         * @param  key the key
+         * @param  value the value to be associated with key
+         * @param  staleSlot index of the first stale entry encountered while
+         *         searching for key.
+         

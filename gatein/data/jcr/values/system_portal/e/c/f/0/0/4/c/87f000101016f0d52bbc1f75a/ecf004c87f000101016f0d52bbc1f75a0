@@ -1,0 +1,6 @@
+
+     * Returns the total number of threads created and also started 
+     * since the Java virtual machine started.
+     *
+     * @return the total number of threads started.
+     

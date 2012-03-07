@@ -1,0 +1,3 @@
+ Node to match the location where the last match ended.
+ This is used for the \G construct.
+     

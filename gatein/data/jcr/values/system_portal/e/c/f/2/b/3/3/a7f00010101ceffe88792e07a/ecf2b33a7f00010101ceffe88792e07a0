@@ -1,0 +1,3 @@
+
+     * Closes the compressor when garbage is collected.
+     

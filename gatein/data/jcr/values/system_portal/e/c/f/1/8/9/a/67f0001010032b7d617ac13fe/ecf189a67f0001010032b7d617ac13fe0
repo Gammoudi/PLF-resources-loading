@@ -1,0 +1,4 @@
+
+     * Translate a string into a byte array by translating each character
+     * into two bytes, high-byte first ("big-endian").
+     

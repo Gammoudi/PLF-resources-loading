@@ -1,0 +1,29 @@
+
+     * Sets the collection usage threshold of this memory pool to 
+     * the given <tt>threshold</tt> value. 
+     * When this threshold is set to positive, the Java virtual machine
+     * will check the memory usage at its best appropriate time after it has 
+     * expended effort in recycling unused objects in this memory pool.
+     * <p>
+     * The collection usage threshold crossing checking is enabled 
+     * in this memory pool if the threshold is set to a positive value.
+     * The collection usage threshold crossing checking is disabled
+     * if it is set to zero. 
+     * 
+     * @param threhsold the new collection usage threshold value in bytes.
+     *              Must be non-negative.
+     *
+     * @throws IllegalArgumentException if <tt>threshold</tt> is negative
+     *         or greater than the maximum amount of memory for 
+     *         this memory pool if defined.
+     *
+     * @throws UnsupportedOperationException if this memory pool
+     *         does not support a collection usage threshold.
+     *
+     * @throws java.lang.SecurityException if a security manager
+     *         exists and the caller does not have
+     *         ManagementPermission("control").
+     *
+     * @see #isCollectionUsageThresholdSupported
+     * @see <a href="#CollectionThreshold">Collection usage threshold</a>
+     

@@ -1,0 +1,20 @@
+
+     * Concatenates the specified string to the end of this string.
+     * <p>
+     * If the length of the argument string is <code>0</code>, then this
+     * <code>String</code> object is returned. Otherwise, a new
+     * <code>String</code> object is created, representing a character
+     * sequence that is the concatenation of the character sequence
+     * represented by this <code>String</code> object and the character
+     * sequence represented by the argument string.<p>
+     * Examples:
+     * <blockquote><pre>
+     * "cares".concat("s") returns "caress"
+     * "to".concat("get").concat("her") returns "together"
+     * </pre></blockquote>
+     *
+     * @param   str   the <code>String</code> that is concatenated to the end
+     *                of this <code>String</code>.
+     * @return  a string that represents the concatenation of this object's
+     *          characters followed by the string argument's characters.
+     

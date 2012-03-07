@@ -1,0 +1,4 @@
+
+     * Returns the millisecond offset from the beginning of this
+     * year. This Calendar object must have been normalized.
+     

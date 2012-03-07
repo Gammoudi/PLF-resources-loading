@@ -1,0 +1,7 @@
+ <p>
+ The root class from which all event state objects shall be derived.
+ <p>
+ All Events are constructed with a reference to the object, the "source",
+ that is logically deemed to be the object upon which the Event in question
+ initially occurred upon.
+ <DL><DT><B>Since:</B></DT><DD>JDK1.1</DD></DL>

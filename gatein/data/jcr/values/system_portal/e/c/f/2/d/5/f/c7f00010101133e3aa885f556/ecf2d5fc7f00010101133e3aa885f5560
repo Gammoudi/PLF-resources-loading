@@ -1,0 +1,5 @@
+
+         * Performs tryLock for write, enabling barging in both modes.
+         * This is identical in effect to tryAcquire except for lack
+         * of calls to writerShouldBlock
+         

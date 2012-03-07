@@ -1,0 +1,9 @@
+
+     * Returns an array of strings that have all the possible
+     * permutations of the characters in the input string.
+     * This is used to get a list of all possible orderings
+     * of a set of combining marks. Note that some of the permutations
+     * are invalid because of combining class collisions, and these
+     * possibilities must be removed because they are not canonically
+     * equivalent.
+     

@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!--
+
+    Copyright (C) 2010 eXo Platform SAS.
+    
+    This is free software; you can redistribute it and/or modify it
+    under the terms of the GNU Lesser General Public License as
+    published by the Free Software Foundation; either version 2.1 of
+    the License, or (at your option) any later version.
+    
+    This software is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+    Lesser General Public License for more details.
+    
+    You should have received a copy of the GNU Lesser General Public
+    License along with this software; if not, write to the Free
+    Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA
+    02110-1301 USA, or see the FSF site: http://www.fsf.org.
+
+-->
+
+<gatein-resources xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.gatein.org/xml/ns/gatein_resources_1_2_1 http://www.gatein.org/xml/ns/gatein_resources_1_2_1"
+  xmlns="http://www.gatein.org/xml/ns/gatein_resources_1_2_1">
+
+  <portal-skin>
+    <skin-name>Default</skin-name>
+    <skin-module>wiki</skin-module>
+    <css-path>/skin/DefaultSkin/webui/Stylesheet.css</css-path>
+    <css-priority>1</css-priority>
+  </portal-skin>
+
+  <portlet-skin>
+    <application-name>wiki</application-name>
+    <portlet-name>WikiPortlet</portlet-name>
+    <skin-name>Default</skin-name>
+    <css-path>/skin/DefaultSkin/webui/Stylesheet.css</css-path>
+    <css-priority>1</css-priority>
+  </portlet-skin>
+
+  <!-- Javascripts used in View Mode -->
+  <portlet>
+    <name>WikiPortlet</name>
+    <scripts>
+      <mode>on-load</mode>
+      <module>
+        <name>eXo.wiki.UIWikiPortlet</name>
+        <path>/javascript/eXo/wiki/UIWikiPortlet.js</path>
+      </module>
+      <module>
+        <name>eXo.wiki.UIWikiAjaxRequest</name>
+        <path>/javascript/eXo/wiki/UIWikiAjaxRequest.js</path>
+      </module>
+      <module>
+        <name>eXo.wikiUIWikiPageVersionsList</name>
+        <path>/javascript/eXo/wiki/UIWikiPageVersionsList.js</path>
+      </module>
+      <module>
+        <name>eXo.wiki.UIWikiEditParagraph</name>
+        <path>/javascript/eXo/wiki/UIWikiEditParagraph.js</path>
+      </module>
+      <module>
+        <name>eXo.wiki.UIWikiSearchBox</name>
+        <path>/javascript/eXo/wiki/UIWikiSearchBox.js</path>
+      </module>
+      <module>
+        <name>eXo.wiki.UIWikiAdvanceSearchForm</name>
+        <path>/javascript/eXo/wiki/UIWikiAdvanceSearchForm.js</path>
+      </module>
+      <module>
+        <name>eXo.wiki.UITreeExplorer</name>
+        <path>/javascript/eXo/wiki/tree/UITreeExplorer.js</path>
+      </module>
+      <module>
+        <name>eXo.wiki.WikiLayout</name>
+        <path>/javascript/eXo/wiki/layout/WikiLayout.js</path>
+      </module>
+      <module>
+        <name>eXo.wiki.UIUpload</name>
+        <path>/javascript/eXo/wiki/UIUpload.js</path>
+      </module>
+      <module>
+        <name>eXo.wiki.UIFieldEditableForm</name>
+        <path>/javascript/eXo/wiki/UIFieldEditableForm.js</path>
+      </module>
+      <module>
+        <name>eXo.wiki.UIRelated</name>
+        <path>/javascript/eXo/wiki/related/UIRelated.js</path>
+      </module>
+      <module>
+        <name>eXo.wiki.UIWikiPageTitleControlArea</name>
+        <path>/javascript/eXo/wiki/UIWikiPageTitleControlArea.js</path>
+      </module>
+      <module>
+        <name>eXo.wiki.UIDropdownMenu</name>
+        <path>/javascript/eXo/wiki/UIDropdownMenu.js</path>
+      </module>
+      <module>
+        <name>eXo.wiki.UIWikiSettingContainer</name>
+        <path>/javascript/eXo/wiki/UIWikiSettingContainer.js</path>
+      </module>
+      <module>
+        <name>eXo.wiki.UIWikiTemplateForm</name>
+        <path>/javascript/eXo/wiki/UIWikiTemplateForm.js</path>
+      </module>
+      <!-- To do an improve to move to wiki-edit module -->
+      <module>
+        <name>eXo.wiki.UIWikiPagePreview</name>
+        <path>/javascript/eXo/wiki/UIWikiPagePreview.js</path>
+      </module>
+      <module>
+        <name>eXo.wiki.UIWikiMaskLayer</name>
+        <path>/javascript/eXo/wiki/mask/UIWikiMaskLayer.js</path>
+      </module>
+      <module>
+        <name>eXo.wiki.UIWikiMaskWorkspace</name>
+        <path>/javascript/eXo/wiki/mask/UIWikiMaskWorkspace.js</path>
+      </module>
+      <module>
+        <name>eXo.wiki.UIWikiRichTextArea</name>
+        <path>/javascript/eXo/wiki/UIWikiRichTextArea.js</path>
+      </module>
+      <module>
+        <name>eXo.wiki.UIForm</name>
+        <path>/javascript/eXo/wiki/UIForm.js</path>
+      </module>
+      <depends>
+        <scripts>webui</scripts>
+      </depends>
+      <depends>
+        <scripts>webui-ext</scripts>
+      </depends>
+      <depends>
+        <scripts>ksResources</scripts>
+      </depends>
+    </scripts>
+  </portlet>
+
+  <!-- Javascripts used in Edit Mode -->
+  <scripts>
+    <name>wiki-edit</name>
+    <module>
+      <name>eXo.wiki.UIWikiPageEditForm</name>
+      <path>/javascript/eXo/wiki/UIWikiPageEditForm.js</path>
+    </module>
+    <module>
+      <name>eXo.wiki.UIConfirmBox</name>
+      <path>/javascript/eXo/wiki/confirm/UIConfirmBox.js</path>
+    </module>
+    <module>
+      <name>eXo.wiki.UIWikiSavePage</name>
+      <path>/javascript/eXo/wiki/UIWikiSavePage.js</path>
+    </module>
+    <depends>
+      <scripts>webui</scripts>
+    </depends>
+    <depends>
+      <scripts>ksResources</scripts>
+    </depends>
+  </scripts>
+
+</gatein-resources>

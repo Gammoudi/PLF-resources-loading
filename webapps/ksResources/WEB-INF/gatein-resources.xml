@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+
+<gatein-resources xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.gatein.org/xml/ns/gatein_resources_1_2_1 http://www.gatein.org/xml/ns/gatein_resources_1_2_1"
+  xmlns="http://www.gatein.org/xml/ns/gatein_resources_1_2_1">
+
+  <portal-skin>
+    <skin-name>Default</skin-name>
+    <skin-module>ks</skin-module>
+    <css-path>/skin/Stylesheet.css</css-path>
+    <css-priority>1</css-priority>
+  </portal-skin>
+
+  <scripts>
+    <name>ksResources</name>
+    <module>
+      <name>eXo.core.Keyboard</name>
+      <path>/javascript/eXo/core/Keyboard.js</path>
+    </module>
+    <module>
+      <name>eXo.ks.KSUtils</name>
+      <path>/javascript/eXo/ks/KSUtils.js</path>
+    </module>
+    <module>
+      <name>eXo.ks.MaskLayerControl</name>
+      <path>/javascript/eXo/ks/MaskLayerControl.js</path>
+    </module>
+    <depends>
+      <scripts>base</scripts>
+    </depends>
+  </scripts>
+
+  <scripts>
+    <name>ksResources-syntaxhighlighter</name>
+    <module>
+      <name>shCore</name>
+      <path>/syntaxhighlighter/Scripts/shCore.js</path>
+    </module>
+    <module>
+      <name>shLoadConfig</name>
+      <path>/syntaxhighlighter/Scripts/shLoadConfig.js</path>
+    </module>
+    <module>
+      <name>shBrushBash</name>
+      <path>/syntaxhighlighter/Scripts/shBrushBash.js</path>
+    </module>
+    <module>
+      <name>shBrushCpp</name>
+      <path>/syntaxhighlighter/Scripts/shBrushCpp.js</path>
+    </module>
+    <module>
+      <name>shBrushCSharp</name>
+      <path>/syntaxhighlighter/Scripts/shBrushCSharp.js</path>
+    </module>
+    <module>
+      <name>shBrushCss.js</name>
+      <path>/syntaxhighlighter/Scripts/shBrushCss.js</path>
+    </module>
+    <module>
+      <name>shBrushDelphi</name>
+      <path>/syntaxhighlighter/Scripts/shBrushDelphi.js</path>
+    </module>
+    <module>
+      <name>shBrushGroovy</name>
+      <path>/syntaxhighlighter/Scripts/shBrushGroovy.js</path>
+    </module>
+    <module>
+      <name>shBrushJava</name>
+      <path>/syntaxhighlighter/Scripts/shBrushJava.js</path>
+    </module>
+    <module>
+      <name>shBrushJScript</name>
+      <path>/syntaxhighlighter/Scripts/shBrushJScript.js</path>
+    </module>
+    <module>
+      <name>shBrushPhp</name>
+      <path>/syntaxhighlighter/Scripts/shBrushPhp.js</path>
+    </module>
+    <module>
+      <name>shBrushPython</name>
+      <path>/syntaxhighlighter/Scripts/shBrushPython.js</path>
+    </module>
+    <module>
+      <name>shBrushRuby</name>
+      <path>/syntaxhighlighter/Scripts/shBrushRuby.js</path>
+    </module>
+    <module>
+      <name>shBrushScala</name>
+      <path>/syntaxhighlighter/Scripts/shBrushScala.js</path>
+    </module>
+    <module>
+      <name>shBrushSql</name>
+      <path>/syntaxhighlighter/Scripts/shBrushSql.js</path>
+    </module>
+    <module>
+      <name>shBrushVb</name>
+      <path>/syntaxhighlighter/Scripts/shBrushVb.js</path>
+    </module>
+    <module>
+      <name>shBrushXml</name>
+      <path>/syntaxhighlighter/Scripts/shBrushXml.js</path>
+    </module>
+  </scripts>
+
+</gatein-resources>
+

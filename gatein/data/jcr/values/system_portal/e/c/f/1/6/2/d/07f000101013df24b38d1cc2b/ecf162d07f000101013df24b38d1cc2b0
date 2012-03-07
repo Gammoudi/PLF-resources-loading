@@ -1,0 +1,2 @@
+ Snapshot iterator that works off copy of underlying q array.
+     

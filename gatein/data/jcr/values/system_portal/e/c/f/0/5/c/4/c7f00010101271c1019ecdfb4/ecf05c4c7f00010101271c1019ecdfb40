@@ -1,0 +1,17 @@
+
+     * Returns whether or not the current JVM configuration supports retransformation
+     * of classes.
+     * The ability to retransform an already loaded class is an optional capability
+     * of a JVM.
+     * Retransformation will only be supported if the 
+     * <code>Can-Retransform-Classes</code> manifest attribute is set to
+     * <code>true</code> in the agent JAR file (as described in the 
+     * {@linkplain java.lang.instrument package specification}) and the JVM supports
+     * this capability.
+     * During a single instantiation of a single JVM, multiple calls to this
+     * method will always return the same answer.
+     * @return  true if the current JVM configuration supports retransformation of
+     *          classes, false if not.
+     * @see #retransformClasses
+     * @since 1.6
+     

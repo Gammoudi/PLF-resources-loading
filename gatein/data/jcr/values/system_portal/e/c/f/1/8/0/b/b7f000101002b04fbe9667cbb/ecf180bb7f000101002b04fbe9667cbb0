@@ -1,0 +1,22 @@
+
+     * Implements the <tt>getDouble</tt> method as per the specification in
+     * {@link Preferences#getDouble(String,double)}.
+     *
+     * <p>This implementation invokes {@link #get(String,String) <tt>get(key,
+     * null)</tt>}.  If the return value is non-null, the implementation
+     * attempts to translate it to an <tt>double</tt> with
+     * {@link Double#parseDouble(String)}.  If the attempt succeeds, the return
+     * value is returned by this method.  Otherwise, <tt>def</tt> is returned.
+     *
+     * @param key key whose associated value is to be returned as a double.
+     * @param def the value to be returned in the event that this
+     *        preference node has no value associated with <tt>key</tt>
+     *        or the associated value cannot be interpreted as a double.
+     * @return the double value represented by the string associated with
+     *         <tt>key</tt> in this preference node, or <tt>def</tt> if the
+     *         associated value does not exist or cannot be interpreted as
+     *         a double.
+     * @throws IllegalStateException if this node (or an ancestor) has been
+     *         removed with the {@link #removeNode()} method.
+     * @throws NullPointerException if <tt>key</tt> is <tt>null</tt>.
+     

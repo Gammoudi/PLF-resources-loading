@@ -1,0 +1,4 @@
+ Recursive reference to a group in the regular expression. It calls
+ matchRef because if the reference fails to match we would not unset
+ the group.
+     

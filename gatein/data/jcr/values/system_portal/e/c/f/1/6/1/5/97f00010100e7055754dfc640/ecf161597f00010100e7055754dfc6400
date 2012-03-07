@@ -1,0 +1,7 @@
+
+     * Retrieves and removes the head of this queue, or returns <tt>null</tt>
+     * if this queue has no elements with an expired delay.
+     *
+     * @return the head of this queue, or <tt>null</tt> if this
+     *         queue has no elements with an expired delay
+     

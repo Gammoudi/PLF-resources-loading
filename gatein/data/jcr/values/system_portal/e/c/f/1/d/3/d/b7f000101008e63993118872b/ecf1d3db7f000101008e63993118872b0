@@ -1,0 +1,7 @@
+
+     * Returns an immutable set containing only the specified object.
+     * The returned set is serializable.
+     *
+     * @param o the sole object to be stored in the returned set.
+     * @return an immutable set containing only the specified object.
+     

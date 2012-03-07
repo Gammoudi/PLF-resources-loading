@@ -1,0 +1,33 @@
+
+     * Waits for another thread to arrive at this exchange point (unless
+     * the current thread is {@linkplain Thread#interrupt interrupted}),
+     * and then transfers the given object to it, receiving its object
+     * in return.
+     *
+     * <p>If another thread is already waiting at the exchange point then
+     * it is resumed for thread scheduling purposes and receives the object
+     * passed in by the current thread.  The current thread returns immediately,
+     * receiving the object passed to the exchange by that other thread.
+     *
+     * <p>If no other thread is already waiting at the exchange then the
+     * current thread is disabled for thread scheduling purposes and lies
+     * dormant until one of two things happens:
+     * <ul>
+     * <li>Some other thread enters the exchange; or
+     * <li>Some other thread {@linkplain Thread#interrupt interrupts} the current
+     * thread.
+     * </ul>
+     * <p>If the current thread:
+     * <ul>
+     * <li>has its interrupted status set on entry to this method; or
+     * <li>is {@linkplain Thread#interrupt interrupted} while waiting
+     * for the exchange,
+     * </ul>
+     * then {@link InterruptedException} is thrown and the current thread's
+     * interrupted status is cleared.
+     *
+     * @param x the object to exchange
+     * @return the object provided by the other thread
+     * @throws InterruptedException if the current thread was
+     *         interrupted while waiting
+     

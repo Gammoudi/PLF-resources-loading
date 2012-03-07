@@ -1,0 +1,7 @@
+
+         * Pre calculates arrays needed to generate the bad character
+         * shift and the good suffix shift. Only the last seven bits
+         * are used to see if chars match; This keeps the tables small
+         * and covers the heavily used ASCII range, but occasionally
+         * results in an aliased match for the bad character shift.
+         

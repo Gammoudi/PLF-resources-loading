@@ -1,0 +1,19 @@
+Manifest-Version: 1.0
+Archiver-Version: Plexus Archiver
+Created-By: Apache Maven
+Built-By: jenkins
+Build-Jdk: 1.6.0_29
+Implementation-Vendor-Id: org.exoplatform.ide
+Date: 20120301-2259
+Implementation-Title: eXo IDE :: Client : Gadget
+Implementation-URL: http://www.exoplatform.com/exo-ide-parent/exo-ide-
+ client-gadget
+Implementation-Vendor: eXo Platform SAS
+Implementation-Version: 1.1.5-SNAPSHOT
+SCM-Revision: 80051
+SCM-URL: scm:svn:http://svn.exoplatform.org/projects/ide/branches/1.1.
+ x/exo-ide-client-gadget
+Specification-Title: exo-ide
+Specification-Vendor: eXo Platform SAS
+Specification-Version: N/A
+

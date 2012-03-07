@@ -1,0 +1,18 @@
+
+     * Returns the names of the children of this preference node.  (The
+     * returned array will be of size zero if this node has no children.)
+     * This method need not return the names of any nodes already cached,
+     * but may do so without harm.
+     *
+     * <p>This method is invoked with the lock on this node held.
+     *
+     * <p>If this node throws a <tt>BackingStoreException</tt>, the exception
+     * will propagate out beyond the enclosing {@link #childrenNames()}
+     * invocation.
+     *
+     * @return an array containing the names of the children of this
+     *         preference node.
+     * @throws BackingStoreException if this operation cannot be completed
+     *         due to a failure in the backing store, or inability to 
+     *         communicate with it.
+     

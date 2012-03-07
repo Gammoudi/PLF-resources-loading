@@ -1,0 +1,5 @@
+ Unchecked exception thrown when an unknown conversion is given.
+
+ <p> Unless otherwise specified, passing a <tt>null</tt> argument to
+ any method or constructor in this class will cause a java.lang.NullPointerException to be thrown.
+ <DL><DT><B>Version:</B></DT><DD>%I%, %G%</DD></DL><DL><DT><B>Since:</B></DT><DD>1.5</DD></DL>

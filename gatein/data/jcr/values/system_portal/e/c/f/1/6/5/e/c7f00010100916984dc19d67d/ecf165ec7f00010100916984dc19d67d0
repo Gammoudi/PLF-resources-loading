@@ -1,0 +1,5 @@
+
+     * Returns <tt>true</tt> if this executor has been shut down.
+     *
+     * @return <tt>true</tt> if this executor has been shut down
+     

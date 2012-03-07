@@ -1,0 +1,10 @@
+
+     * Implements the <tt>exportSubtree</tt> method as per the specification in
+     * {@link Preferences#exportSubtree(OutputStream)}.
+     *
+     * @param os the output stream on which to emit the XML document.
+     * @throws IOException if writing to the specified output stream
+     *         results in an <tt>IOException</tt>.
+     * @throws BackingStoreException if preference data cannot be read from
+     *         backing store.
+     

@@ -1,0 +1,7 @@
+
+     * Helper method: recursively stops or suspends (as directed by the
+     * boolean argument) all of the threads in this thread group and its
+     * subgroups, except the current thread.  This method returns true
+     * if (and only if) the current thread is found to be in this thread
+     * group or one of its subgroups.
+     

@@ -1,0 +1,20 @@
+.UITooltipAtTop{
+	width:147px;
+	position:absolute;
+	display:none;
+}
+
+.UITooltipAtTop .UITooltipAtTop_Top{
+	background: url('images/tooltipTop.gif') no-repeat left top;
+	height:16px;  
+}
+
+.UITooltipAtTop .UITooltipAtTop_Middle{
+	background: url('images/tooltipMiddle.gif') repeat-y left center;
+	padding: 0 7px;
+}
+
+.UITooltipAtTop .UITooltipAtTop_Bottom{
+	background: url('images/tooltipBottom.gif') no-repeat left bottom;
+	height:44px;
+}

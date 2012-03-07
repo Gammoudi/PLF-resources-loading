@@ -1,0 +1,4 @@
+
+     * Returns a list of all 2-letter country codes defined in ISO 3166.
+     * Can be used to create Locales.
+     

@@ -1,0 +1,5 @@
+ Abstract base class for reference objects.  This class defines the
+ operations common to all reference objects.	Because reference objects are
+ implemented in close cooperation with the garbage collector, this class may
+ not be subclassed directly.
+ <DL><DT><B>Authors:</B></DT><DD>Mark Reinhold</DD></DL><DL><DT><B>Version:</B></DT><DD>%I%, %G%</DD></DL><DL><DT><B>Since:</B></DT><DD>1.2</DD></DL>

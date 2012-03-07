@@ -1,0 +1,27 @@
+
+     * Returns a string describing this <code>Constructor</code>,
+     * including type parameters.  The string is formatted as the
+     * constructor access modifiers, if any, followed by an
+     * angle-bracketed comma separated list of the constructor's type
+     * parameters, if any, followed by the fully-qualified name of the
+     * declaring class, followed by a parenthesized, comma-separated
+     * list of the constructor's generic formal parameter types.  A
+     * space is used to separate access modifiers from one another and
+     * from the type parameters or return type.  If there are no type
+     * parameters, the type parameter list is elided; if the type
+     * parameter list is present, a space separates the list from the
+     * class name.  If the constructor is declared to throw
+     * exceptions, the parameter list is followed by a space, followed
+     * by the word &quot;<tt>throws</tt>&quot; followed by a
+     * comma-separated list of the thrown exception types.
+     *
+     * <p>The only possible modifiers for constructors are the access
+     * modifiers <tt>public</tt>, <tt>protected</tt> or
+     * <tt>private</tt>.  Only one of these may appear, or none if the
+     * constructor has default (package) access.
+     *
+     * @return a string describing this <code>Constructor</code>,
+     * include type parameters
+     *
+     * @since 1.5
+     

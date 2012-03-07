@@ -1,0 +1,4 @@
+
+     * Returns the variant code for this locale.
+     * @see #getDisplayVariant
+     

@@ -1,0 +1,15 @@
+
+     * Returns the empty list (immutable).  This list is serializable.
+     *
+     * <p>This example illustrates the type-safe way to obtain an empty list:
+     * <pre>
+     *     List&lt;String&gt; s = Collections.emptyList();
+     * </pre>
+     * Implementation note:  Implementations of this method need not
+     * create a separate <tt>List</tt> object for each call.   Using this
+     * method is likely to have comparable cost to using the like-named
+     * field.  (Unlike this method, the field does not provide type safety.)
+     *
+     * @see #EMPTY_LIST
+     * @since 1.5
+     

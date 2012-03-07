@@ -1,0 +1,19 @@
+
+     * Copies into the specified array every active thread in 
+     * the current thread's thread group and its subgroups. This method simply 
+     * calls the <code>enumerate</code> method of the current thread's thread 
+     * group with the array argument. 
+     * <p>
+     * First, if there is a security manager, that <code>enumerate</code>
+     * method calls the security
+     * manager's <code>checkAccess</code> method 
+     * with the thread group as its argument. This may result 
+     * in throwing a <code>SecurityException</code>. 
+     *
+     * @param tarray an array of Thread objects to copy to
+     * @return  the number of threads put into the array
+     * @exception  SecurityException  if a security manager exists and its  
+     *             <code>checkAccess</code> method doesn't allow the operation.
+     * @see     ThreadGroup#enumerate(Thread[])
+     * @see     SecurityManager#checkAccess(ThreadGroup)
+     

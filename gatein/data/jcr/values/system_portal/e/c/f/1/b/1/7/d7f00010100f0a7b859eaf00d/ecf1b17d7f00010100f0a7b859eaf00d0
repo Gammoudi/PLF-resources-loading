@@ -1,0 +1,8 @@
+
+     * Save the state of the <tt>ArrayList</tt> instance to a stream (that
+     * is, serialize it).
+     *
+     * @serialData The length of the array backing the <tt>ArrayList</tt>
+     *             instance is emitted (int), followed by all of its elements
+     *             (each an <tt>Object</tt>) in the proper order.
+     

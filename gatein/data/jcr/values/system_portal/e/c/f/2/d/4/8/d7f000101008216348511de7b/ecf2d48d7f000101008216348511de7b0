@@ -1,0 +1,6 @@
+
+         * Throws {@code UnsupportedOperationException} because
+	 * {@code ReadLocks} do not support conditions.
+         *
+         * @throws UnsupportedOperationException always
+         

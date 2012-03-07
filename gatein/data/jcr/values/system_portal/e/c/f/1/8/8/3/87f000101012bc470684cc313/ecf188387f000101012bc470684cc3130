@@ -1,0 +1,4 @@
+ Thrown to indicate that a preferences operation could not complete because
+ of a failure in the backing store, or a failure to contact the backing
+ store.
+ <DL><DT><B>Authors:</B></DT><DD>Josh Bloch</DD></DL><DL><DT><B>Version:</B></DT><DD>%I%, %G%</DD></DL><DL><DT><B>Since:</B></DT><DD>1.4</DD></DL>

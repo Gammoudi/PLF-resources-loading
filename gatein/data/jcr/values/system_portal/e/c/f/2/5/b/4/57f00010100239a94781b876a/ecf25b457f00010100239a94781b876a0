@@ -1,0 +1,9 @@
+
+     * {@inheritDoc}
+     *
+     * <p>Equivalent to {@code subSet(fromElement, true, toElement, false)}.
+     *
+     * @throws ClassCastException       {@inheritDoc}
+     * @throws NullPointerException     {@inheritDoc}
+     * @throws IllegalArgumentException {@inheritDoc}
+     

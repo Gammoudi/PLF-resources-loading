@@ -1,0 +1,4 @@
+
+     * Specialized variant of findNode to get first valid node.
+     * @return first node or null if empty
+     

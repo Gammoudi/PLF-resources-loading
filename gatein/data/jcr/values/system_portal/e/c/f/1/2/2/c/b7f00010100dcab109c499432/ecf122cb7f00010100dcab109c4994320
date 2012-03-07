@@ -1,0 +1,7 @@
+
+         * Reads value field of an entry under lock. Called if value
+         * field ever appears to be null. This is possible only if a
+         * compiler happens to reorder a HashEntry initialization with
+         * its table assignment, which is legal under memory model
+         * but is not known to ever occur.
+         

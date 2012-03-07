@@ -1,0 +1,18 @@
+
+     * Replaces all occurrences of one specified value in a list with another.
+     * More formally, replaces with <tt>newVal</tt> each element <tt>e</tt>
+     * in <tt>list</tt> such that
+     * <tt>(oldVal==null ? e==null : oldVal.equals(e))</tt>.
+     * (This method has no effect on the size of the list.)
+     *
+     * @param list the list in which replacement is to occur.
+     * @param oldVal the old value to be replaced.
+     * @param newVal the new value with which <tt>oldVal</tt> is to be
+     *        replaced.
+     * @return <tt>true</tt> if <tt>list</tt> contained one or more elements
+     *         <tt>e</tt> such that
+     *         <tt>(oldVal==null ?  e==null : oldVal.equals(e))</tt>.
+     * @throws UnsupportedOperationException if the specified list or
+     *         its list-iterator does not support the <tt>set</tt> operation.
+     * @since  1.4
+     

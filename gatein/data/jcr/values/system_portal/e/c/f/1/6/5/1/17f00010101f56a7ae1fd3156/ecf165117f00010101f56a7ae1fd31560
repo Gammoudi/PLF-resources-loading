@@ -1,0 +1,4 @@
+ Exception thrown when attempting to retrieve the result of a task
+ that aborted by throwing an exception. This exception can be
+ inspected using the <a href='#getCause()'>getCause()</a> method.
+ <DL><DT><B>Authors:</B></DT><DD>Doug Lea</DD></DL><DL><DT><B>See Also:</B></DT><DD><a href='../java/util/concurrent/Future.html' title='Future'>Future</a></DD></DL><DL><DT><B>Since:</B></DT><DD>1.5</DD></DL>

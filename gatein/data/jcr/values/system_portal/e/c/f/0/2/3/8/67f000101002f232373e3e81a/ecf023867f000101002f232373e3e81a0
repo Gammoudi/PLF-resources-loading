@@ -1,0 +1,10 @@
+
+     * Compiles all classes whose name matches the specified string.
+     *
+     * @param   string   the name of the classes to compile.
+     * @return  <code>true</code> if the compilation succeeded;
+     *          <code>false</code> if the compilation failed or no compiler
+     *          is available.
+     * @exception NullPointerException if <code>string</code> is 
+     *          <code>null</code>.
+     

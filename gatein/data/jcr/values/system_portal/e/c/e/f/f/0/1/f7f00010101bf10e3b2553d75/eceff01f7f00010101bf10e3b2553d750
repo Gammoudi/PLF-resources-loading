@@ -1,0 +1,5 @@
+
+     * Package-private routine (exposed to java.lang.Class via
+     * ReflectAccess) which returns a copy of this Constructor. The copy's
+     * "root" field points to this Constructor.
+     

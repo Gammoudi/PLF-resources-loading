@@ -1,0 +1,3 @@
+ Node class for a case sensitive/BMP-only sequence of literal
+ characters.
+     

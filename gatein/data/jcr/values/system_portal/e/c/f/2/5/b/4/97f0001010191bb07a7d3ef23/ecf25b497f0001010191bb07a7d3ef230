@@ -1,0 +1,9 @@
+
+     * {@inheritDoc}
+     *
+     * <p>Equivalent to {@code tailSet(fromElement, true)}.
+     *
+     * @throws ClassCastException       {@inheritDoc}
+     * @throws NullPointerException     {@inheritDoc}
+     * @throws IllegalArgumentException {@inheritDoc}
+     

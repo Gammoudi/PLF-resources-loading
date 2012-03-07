@@ -1,0 +1,6 @@
+ This class represents a timer task queue: a priority queue of TimerTasks,
+ ordered on nextExecutionTime.  Each Timer object has one of these, which it
+ shares with its TimerThread.  Internally this class uses a heap, which
+ offers log(n) performance for the add, removeMin and rescheduleMin
+ operations, and constant time performance for the getMin operation.
+ 

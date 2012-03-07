@@ -1,0 +1,38 @@
+
+     * Returns a <tt>MonitorInfo</tt> object represented by the
+     * given <tt>CompositeData</tt>.
+     * The given <tt>CompositeData</tt> must contain the following attributes
+     * as well as the attributes specified in the 
+     * <a href="LockInfo.html#MappedType">
+     * mapped type</a> for the {@link LockInfo} class: 
+     * <blockquote>
+     * <table border>
+     * <tr>
+     *   <th align=left>Attribute Name</th>
+     *   <th align=left>Type</th>
+     * </tr>
+     * <tr>
+     *   <td>lockedStackFrame</td>
+     *   <td><tt>CompositeData as specified in the 
+     *       <a href="ThreadInfo.html#StackTrace">stackTrace</a>
+     *       attribute defined in the {@link ThreadInfo#from
+     *       ThreadInfo.from} method.
+     *       </tt></td>
+     * </tr>
+     * <tr>
+     *   <td>lockedStackDepth</td>
+     *   <td><tt>java.lang.Integer</tt></td>
+     * </tr>
+     * </table>
+     * </blockquote>
+     *
+     * @param cd <tt>CompositeData</tt> representing a <tt>MonitorInfo</tt>
+     *
+     * @throws IllegalArgumentException if <tt>cd</tt> does not
+     *   represent a <tt>MonitorInfo</tt> with the attributes described
+     *   above.
+
+     * @return a <tt>MonitorInfo</tt> object represented
+     *         by <tt>cd</tt> if <tt>cd</tt> is not <tt>null</tt>;
+     *         <tt>null</tt> otherwise.
+     

@@ -1,0 +1,6 @@
+ This class is used to serialize all EnumSet instances, regardless of
+ implementation type.  It captures their "logical contents" and they
+ are reconstructed using public static factories.  This is necessary
+ to ensure that the existence of a particular implementation type is
+ an implementation detail.<DL><DT><B>serial:</B></DT><DD>include</DD></DL>
+     

@@ -1,0 +1,7 @@
+
+     * Return the canonical string representation of the actions.
+     * Always returns present actions in the following order:
+     * read, write.
+     *
+     * @return the canonical string representation of the actions.
+     

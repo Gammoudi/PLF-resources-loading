@@ -1,0 +1,22 @@
+
+     * Creates a new array with the specified component type and
+     * length.
+     * Invoking this method is equivalent to creating an array
+     * as follows:
+     * <blockquote>
+     * <pre>
+     * int[] x = {length};
+     * Array.newInstance(componentType, x);
+     * </pre>
+     * </blockquote>
+     *
+     * @param componentType the <code>Class</code> object representing the
+     * component type of the new array
+     * @param length the length of the new array
+     * @return the new array
+     * @exception NullPointerException if the specified
+     * <code>componentType</code> parameter is null
+     * @exception IllegalArgumentException if componentType is {@link Void#TYPE}
+     * @exception NegativeArraySizeException if the specified <code>length</code> 
+     * is negative
+     

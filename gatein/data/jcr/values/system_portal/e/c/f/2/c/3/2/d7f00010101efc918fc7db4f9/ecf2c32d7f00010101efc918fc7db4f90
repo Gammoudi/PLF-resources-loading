@@ -1,0 +1,4 @@
+ This class implements an input stream filter for reading files in the
+ ZIP file format. Includes support for both compressed and uncompressed
+ entries.
+ <DL><DT><B>Authors:</B></DT><DD>David Connelly</DD></DL><DL><DT><B>Version:</B></DT><DD>%I%, %G%</DD></DL>

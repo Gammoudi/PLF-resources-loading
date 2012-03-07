@@ -1,0 +1,6 @@
+
+     * Returns the first (lowest) element currently in this set.
+     *
+     * @return the first (lowest) element currently in this set
+     * @throws NoSuchElementException if this set is empty
+     

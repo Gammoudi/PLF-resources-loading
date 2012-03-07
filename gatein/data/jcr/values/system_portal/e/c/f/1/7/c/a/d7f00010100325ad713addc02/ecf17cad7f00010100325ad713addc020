@@ -1,0 +1,13 @@
+
+         * Performs a put or take.
+         *
+         * @param e if non-null, the item to be handed to a consumer;
+         *          if null, requests that transfer return an item
+         *          offered by producer.
+         * @param timed if this operation should timeout
+         * @param nanos the timeout, in nanoseconds
+         * @return if non-null, the item provided or received; if null,
+         *         the operation failed due to timeout or interrupt --
+         *         the caller can distinguish which of these occurred
+         *         by checking Thread.interrupted.
+         

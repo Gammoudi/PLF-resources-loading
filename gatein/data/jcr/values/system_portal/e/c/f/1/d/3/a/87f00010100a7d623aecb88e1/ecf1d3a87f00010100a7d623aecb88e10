@@ -1,0 +1,21 @@
+
+     * Returns the minimum element of the given collection, according to the
+     * <i>natural ordering</i> of its elements.  All elements in the
+     * collection must implement the <tt>Comparable</tt> interface.
+     * Furthermore, all elements in the collection must be <i>mutually
+     * comparable</i> (that is, <tt>e1.compareTo(e2)</tt> must not throw a
+     * <tt>ClassCastException</tt> for any elements <tt>e1</tt> and
+     * <tt>e2</tt> in the collection).<p>
+     *
+     * This method iterates over the entire collection, hence it requires
+     * time proportional to the size of the collection.
+     *
+     * @param  coll the collection whose minimum element is to be determined.
+     * @return the minimum element of the given collection, according
+     *         to the <i>natural ordering</i> of its elements.
+     * @throws ClassCastException if the collection contains elements that are
+     *	       not <i>mutually comparable</i> (for example, strings and
+     *	       integers).
+     * @throws NoSuchElementException if the collection is empty.
+     * @see Comparable
+     

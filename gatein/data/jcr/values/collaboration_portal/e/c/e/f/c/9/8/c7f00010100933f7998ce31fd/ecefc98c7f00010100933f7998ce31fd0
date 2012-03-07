@@ -1,0 +1,1 @@
+eXo.require("eXo.wcm.frontoffice.public.Search", "/eXoWCMResources/javascript/");

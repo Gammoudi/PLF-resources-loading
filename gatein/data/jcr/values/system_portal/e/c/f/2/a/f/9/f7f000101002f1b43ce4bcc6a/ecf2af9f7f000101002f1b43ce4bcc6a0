@@ -1,0 +1,2 @@
+ A class that can be used to compute the CRC-32 of a data stream.
+ <DL><DT><B>Authors:</B></DT><DD>David Connelly</DD></DL><DL><DT><B>Version:</B></DT><DD>%I%, %G%</DD></DL><DL><DT><B>See Also:</B></DT><DD><a href='../java/util/zip/Checksum.html' title='Checksum'>Checksum</a></DD></DL>

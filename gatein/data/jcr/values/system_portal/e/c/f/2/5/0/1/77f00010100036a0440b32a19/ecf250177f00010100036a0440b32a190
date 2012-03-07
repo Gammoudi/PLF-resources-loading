@@ -1,0 +1,11 @@
+
+     * Format a list using given pattern strings.
+     * If either of the patterns is null, then a the list is
+     * formatted by concatenation with the delimiter ','.
+     * @param stringList the list of strings to be formatted.
+     * @param listPattern should create a MessageFormat taking 0-3 arguments
+     * and formatting them into a list.
+     * @param listCompositionPattern should take 2 arguments
+     * and is used by composeList.
+     * @return a string representing the list.
+     

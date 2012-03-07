@@ -1,0 +1,7 @@
+
+     * Removes all of the mappings from this map (optional operation).
+     * The map will be empty after this call returns.
+     *
+     * @throws UnsupportedOperationException if the <tt>clear</tt> operation
+     *         is not supported by this map
+     

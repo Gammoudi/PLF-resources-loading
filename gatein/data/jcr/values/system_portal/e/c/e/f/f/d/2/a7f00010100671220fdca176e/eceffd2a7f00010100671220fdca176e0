@@ -1,0 +1,7 @@
+ 
+     * Returns the approximate number of objects for which 
+     * finalization is pending.
+     *
+     * @return the approximate number objects for which finalization
+     * is pending.
+     

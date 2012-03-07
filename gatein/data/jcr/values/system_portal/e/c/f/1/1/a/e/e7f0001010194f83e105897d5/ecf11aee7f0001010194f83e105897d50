@@ -1,0 +1,7 @@
+
+     * Retrieves and removes the Future representing the next
+     * completed task or <tt>null</tt> if none are present.
+     *
+     * @return the Future representing the next completed task, or
+     *         <tt>null</tt> if none are present
+     

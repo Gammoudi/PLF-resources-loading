@@ -1,0 +1,4 @@
+
+         * Returns highest node. This node might not be in range, so
+         * most usages need to check bounds
+         

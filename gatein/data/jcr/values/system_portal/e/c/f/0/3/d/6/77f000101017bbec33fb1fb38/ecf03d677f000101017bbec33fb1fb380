@@ -1,0 +1,2 @@
+ Thrown by the security manager to indicate a security violation.
+ <DL><DT><B>Authors:</B></DT><DD>unascribed</DD></DL><DL><DT><B>Version:</B></DT><DD>%I%, %G%</DD></DL><DL><DT><B>See Also:</B></DT><DD><a href='../java/lang/SecurityManager.html' title='SecurityManager'>SecurityManager</a></DD></DL><DL><DT><B>Since:</B></DT><DD>JDK1.0</DD></DL>

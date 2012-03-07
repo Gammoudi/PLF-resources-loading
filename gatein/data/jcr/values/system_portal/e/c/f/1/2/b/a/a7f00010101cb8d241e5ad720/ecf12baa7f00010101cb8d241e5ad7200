@@ -1,0 +1,7 @@
+
+     * {@inheritDoc}
+     *
+     * @throws ClassCastException if the specified key cannot be compared
+     *         with the keys currently in the map
+     * @throws NullPointerException if any of the arguments are null
+     

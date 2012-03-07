@@ -1,0 +1,10 @@
+
+     * Fills specified buffer with compressed data. Returns actual number
+     * of bytes of compressed data. A return value of 0 indicates that
+     * needsInput() should be called in order to determine if more input
+     * data is required.
+     * @param b the buffer for the compressed data
+     * @param off the start offset of the data
+     * @param len the maximum number of bytes of compressed data
+     * @return the actual number of bytes of compressed data
+     

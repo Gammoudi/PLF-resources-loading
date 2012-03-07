@@ -1,0 +1,17 @@
+Manifest-Version: 1.0
+Archiver-Version: Plexus Archiver
+Created-By: Apache Maven
+Built-By: nagui
+Build-Jdk: 1.6.0_24
+Implementation-Vendor-Id: org.exoplatform.cs
+Implementation-Title: eXo mail application
+Implementation-URL: http://www.exoplatform.org
+Implementation-Vendor: eXo Platform SAS
+Implementation-Version: 2.2.8-SNAPSHOT
+SCM-URL: scm:svn:http://svn.exoplatform.org/projects/cs/branches/2.2.x
+ /exo.cs.eXoApplication/exo.cs.eXoApplication.mail/exo.cs.eXoApplicati
+ on.mail.webapp
+Specification-Title: eXo Platform
+Specification-Vendor: eXo Platform SAS
+Specification-Version: N/A
+

@@ -1,0 +1,6 @@
+
+     * Returns true if the specified character is appropriate for use in
+     * Unix directory names.  A character is appropriate if it's a printable
+     * ASCII character (> 0x1f && < 0x7f) and unequal to slash ('/', 0x2f),
+     * dot ('.', 0x2e), or underscore ('_', 0x5f).
+     

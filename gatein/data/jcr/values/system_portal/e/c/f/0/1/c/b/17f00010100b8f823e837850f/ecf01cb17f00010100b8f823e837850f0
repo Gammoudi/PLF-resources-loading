@@ -1,0 +1,22 @@
+
+     * Returns the assertion status that would be assigned to the specified
+     * class if it were to be initialized at the time this method is invoked.
+     * If the named class has had its assertion status set, the most recent
+     * setting will be returned; otherwise, if any package default assertion
+     * status pertains to this class, the most recent setting for the most
+     * specific pertinent package default assertion status is returned;
+     * otherwise, this class loader's default assertion status is returned.
+     * </p>
+     *
+     * @param  className
+     *         The fully qualified class name of the class whose desired
+     *         assertion status is being queried.
+     *
+     * @return  The desired assertion status of the specified class.
+     *
+     * @see  #setClassAssertionStatus(String, boolean)
+     * @see  #setPackageAssertionStatus(String, boolean)
+     * @see  #setDefaultAssertionStatus(boolean)
+     *
+     * @since  1.4
+     

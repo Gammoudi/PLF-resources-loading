@@ -1,0 +1,59 @@
+ An engine that performs match operations on a java.lang.CharSequence by interpreting a <a href='../java/util/regex/Pattern.html' title='Pattern'>Pattern</a>.
+
+ <p> A matcher is created from a pattern by invoking the pattern's <a href='../java/util/regex/Pattern.html#matcher' title='matcher'>matcher</a> method.  Once created, a matcher can be used to
+ perform three different kinds of match operations:
+
+ <ul>
+
+   <li><p> The <a href='#matches'>matches</a> method attempts to match the entire
+   input sequence against the pattern.  </p></li>
+
+   <li><p> The <a href='#lookingAt'>lookingAt</a> method attempts to match the
+   input sequence, starting at the beginning, against the pattern.  </p></li>
+
+   <li><p> The <a href='#find'>find</a> method scans the input sequence looking for
+   the next subsequence that matches the pattern.  </p></li>
+
+ </ul>
+
+ <p> Each of these methods returns a boolean indicating success or failure.
+ More information about a successful match can be obtained by querying the
+ state of the matcher.
+
+ <p> A matcher finds matches in a subset of its input called the 
+ <i>region</i>. By default, the region contains all of the matcher's input. 
+ The region can be modified via the<a href='#region'>region</a> method and queried
+ via the <a href='#regionStart'>regionStart</a> and <a href='#regionEnd'>regionEnd</a> 
+ methods. The way that the region boundaries interact with some pattern
+ constructs can be changed. See <a href='#useAnchoringBounds'></a> and <a href='#useTransparentBounds'>useTransparentBounds</a>
+ for more details.
+
+ <p> This class also defines methods for replacing matched subsequences with
+ new strings whose contents can, if desired, be computed from the match
+ result.  The <a href='#appendReplacement'>appendReplacement</a> and <a href='#appendTail'>appendTail</a> methods can be used in tandem in order to collect
+ the result into an existing string buffer, or the more convenient <a href='#replaceAll'>replaceAll</a> method can be used to create a string in which every
+ matching subsequence in the input sequence is replaced.
+
+ <p> The explicit state of a matcher includes the start and end indices of
+ the most recent successful match.  It also includes the start and end
+ indices of the input subsequence captured by each <a
+ href="Pattern.html#cg">capturing group</a> in the pattern as well as a total
+ count of such subsequences.  As a convenience, methods are also provided for
+ returning these captured subsequences in string form.
+
+ <p> The explicit state of a matcher is initially undefined; attempting to
+ query any part of it before a successful match will cause an java.lang.IllegalStateException to be thrown.  The explicit state of a matcher is
+ recomputed by every match operation.
+
+ <p> The implicit state of a matcher includes the input character sequence as
+ well as the <i>append position</i>, which is initially zero and is updated
+ by the <a href='#appendReplacement'>appendReplacement</a> method.
+
+ <p> A matcher may be reset explicitly by invoking its <a href='#reset()'>reset()</a>
+ method or, if a new input sequence is desired, its <a href='#reset(java.lang.CharSequence) reset(CharSequence)'>reset(java.lang.CharSequence) reset(CharSequence)</a> method.  Resetting a
+ matcher discards its explicit state information and sets the append position
+ to zero.
+
+ <p> Instances of this class are not safe for use by multiple concurrent
+ threads. </p><DL><DT><B>spec:</B></DT><DD>JSR-51</DD></DL>
+ <DL><DT><B>Authors:</B></DT><DD>Mike McCloskey</DD><DD>Mark Reinhold</DD><DD>JSR-51 Expert Group</DD></DL><DL><DT><B>Version:</B></DT><DD>%I%, %E%</DD></DL><DL><DT><B>Since:</B></DT><DD>1.4</DD></DL>

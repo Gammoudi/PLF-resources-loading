@@ -1,0 +1,3 @@
+ Unchecked exception thrown to indicate a syntax error in a
+ regular-expression pattern.<DL><DT><B>spec:</B></DT><DD>JSR-51</DD></DL>
+ <DL><DT><B>Authors:</B></DT><DD>unascribed</DD></DL><DL><DT><B>Version:</B></DT><DD>%I%, %E%</DD></DL><DL><DT><B>Since:</B></DT><DD>1.4</DD></DL>

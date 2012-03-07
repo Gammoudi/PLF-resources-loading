@@ -1,0 +1,11 @@
+
+     * Returns the smaller of two <code>int</code> values. That is,
+     * the result the argument closer to the value of
+     * <code>Integer.MIN_VALUE</code>.  If the arguments have the same
+     * value, the result is that same value.
+     *
+     * @param   a   an argument.
+     * @param   b   another argument.
+     * @return  the smaller of <code>a</code> and <code>b</code>.
+     * @see     java.lang.Long#MIN_VALUE
+     

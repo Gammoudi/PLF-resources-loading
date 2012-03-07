@@ -1,0 +1,17 @@
+
+     * Implements the <tt>getByteArray</tt> method as per the specification in
+     * {@link Preferences#getByteArray(String,byte[])}.
+     *
+     * @param key key whose associated value is to be returned as a byte array.
+     * @param def the value to be returned in the event that this
+     *        preference node has no value associated with <tt>key</tt>
+     *        or the associated value cannot be interpreted as a byte array.
+     * @return the byte array value represented by the string associated with
+     *         <tt>key</tt> in this preference node, or <tt>def</tt> if the
+     *         associated value does not exist or cannot be interpreted as
+     *         a byte array.
+     * @throws IllegalStateException if this node (or an ancestor) has been
+     *         removed with the {@link #removeNode()} method.
+     * @throws NullPointerException if <tt>key</tt> is <tt>null</tt>.  (A 
+     *         <tt>null</tt> value for <tt>def</tt> <i>is</i> permitted.)
+     

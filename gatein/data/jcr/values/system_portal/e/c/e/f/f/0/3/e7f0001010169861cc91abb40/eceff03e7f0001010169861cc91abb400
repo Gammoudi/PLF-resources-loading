@@ -1,0 +1,9 @@
+
+     * Returns an array of <code>Class</code> objects that represent the types
+     * of exceptions declared to be thrown by the underlying constructor
+     * represented by this <code>Constructor</code> object.  Returns an array of
+     * length 0 if the constructor declares no exceptions in its <code>throws</code> clause.
+     *
+     * @return the exception types declared as being thrown by the
+     * constructor this object represents
+     

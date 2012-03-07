@@ -1,0 +1,22 @@
+
+     * Executes the given tasks, returning the result
+     * of one that has completed successfully (i.e., without throwing
+     * an exception), if any do before the given timeout elapses.
+     * Upon normal or exceptional return, tasks that have not
+     * completed are cancelled.
+     * The results of this method are undefined if the given
+     * collection is modified while this operation is in progress.
+     *
+     * @param tasks the collection of tasks
+     * @param timeout the maximum time to wait
+     * @param unit the time unit of the timeout argument
+     * @return the result returned by one of the tasks.
+     * @throws InterruptedException if interrupted while waiting
+     * @throws NullPointerException if tasks, any of its elements, or
+     *         unit are <tt>null</tt>
+     * @throws TimeoutException if the given timeout elapses before
+     *         any task successfully completes
+     * @throws ExecutionException if no task successfully completes
+     * @throws RejectedExecutionException if tasks cannot be scheduled
+     *         for execution
+     

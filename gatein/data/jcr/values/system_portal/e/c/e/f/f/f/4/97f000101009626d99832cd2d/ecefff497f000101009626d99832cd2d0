@@ -1,0 +1,24 @@
+
+     * Sets the threshold of this memory pool to the given <tt>threshold</tt>
+     * value if this memory pool supports the usage threshold. 
+     * The usage threshold crossing checking is enabled in this memory pool 
+     * if the threshold is set to a positive value.
+     * The usage threshold crossing checking is disabled
+     * if it is set to zero. 
+     *
+     * @param threshold the new threshold value in bytes. Must be non-negative.
+     *
+     * @throws IllegalArgumentException if <tt>threshold</tt> is negative
+     *         or greater than the maximum amount of memory for
+     *         this memory pool if defined.
+     *
+     * @throws UnsupportedOperationException if this memory pool
+     *         does not support a usage threshold.
+     *
+     * @throws java.lang.SecurityException if a security manager
+     *         exists and the caller does not have
+     *         ManagementPermission("control").
+     *
+     * @see #isUsageThresholdSupported
+     * @see <a href="#UsageThreshold">Usage threshold</a>
+     

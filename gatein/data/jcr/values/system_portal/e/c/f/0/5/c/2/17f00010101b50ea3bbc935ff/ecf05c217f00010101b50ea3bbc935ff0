@@ -1,0 +1,30 @@
+ This class provides services needed to instrument Java
+ programming language code.
+ Instrumentation is the addition of byte-codes to methods for the
+ purpose of gathering data to be utilized by tools. 
+ Since the changes are purely additive, these tools do not modify
+ application state or behavior.
+ Examples of such benign tools include monitoring agents, profilers,
+ coverage analyzers, and event loggers.
+
+ <P>
+ There are two ways to obtain an instance of the
+ <code>Instrumentation</code> interface:
+
+ <ol>
+   <li><p> When a JVM is launched in a way that indicates an agent 
+     class. In that case an <code>Instrumentation</code> instance
+     is passed to the <code>premain</code> method of the agent class. 
+     </p></li>
+   <li><p> When a JVM provides a mechanism to start agents sometime
+     after the JVM is launched. In that case an <code>Instrumentation</code>
+     instance is passed to the <code>agentmain</code> method of the
+     agent code. </p> </li> 
+ </ol>
+ <p> 
+ These mechanisms are described in the 
+ {<DL><DT><B>linkplain:</B></DT><DD>java.lang.instrument package specification}.
+ <p>
+ Once an agent acquires an <code>Instrumentation</code> instance,
+ the agent may call methods on the instance at any time.</DD></DL>
+ <DL><DT><B>Since:</B></DT><DD>1.5</DD></DL>

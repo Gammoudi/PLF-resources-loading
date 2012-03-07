@@ -1,0 +1,12 @@
+
+     * Returns the least key strictly greater than the given key, or
+     * {@code null} if there is no such key.
+     *
+     * @param key the key
+     * @return the least key greater than {@code key},
+     *         or {@code null} if there is no such key
+     * @throws ClassCastException if the specified key cannot be compared
+     *         with the keys currently in the map
+     * @throws NullPointerException if the specified key is null
+     *         and this map does not permit null keys
+     

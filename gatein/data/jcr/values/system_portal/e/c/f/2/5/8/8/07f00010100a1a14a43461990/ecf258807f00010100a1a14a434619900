@@ -1,0 +1,48 @@
+ A <a href='../java/util/SortedMap.html' title='SortedMap'>SortedMap</a> extended with navigation methods returning the
+ closest matches for given search targets. Methods
+ <TT>lowerEntry</TT>, <TT>floorEntry</TT>, <TT>ceilingEntry</TT>,
+ and <TT>higherEntry</TT> return <TT>Map.Entry</TT> objects
+ associated with keys respectively less than, less than or equal,
+ greater than or equal, and greater than a given key, returning
+ <TT>null</TT> if there is no such key.  Similarly, methods
+ <TT>lowerKey</TT>, <TT>floorKey</TT>, <TT>ceilingKey</TT>, and
+ <TT>higherKey</TT> return only the associated keys. All of these
+ methods are designed for locating, not traversing entries.
+
+ <p>A <TT>NavigableMap</TT> may be accessed and traversed in either
+ ascending or descending key order.  The <TT>descendingMap</TT>
+ method returns a view of the map with the senses of all relational
+ and directional methods inverted. The performance of ascending
+ operations and views is likely to be faster than that of descending
+ ones.  Methods <TT>subMap</TT>, <TT>headMap</TT>,
+ and <TT>tailMap</TT> differ from the like-named <TT>SortedMap</TT> methods in accepting additional arguments describing
+ whether lower and upper bounds are inclusive versus exclusive.
+ Submaps of any <TT>NavigableMap</TT> must implement the <TT>NavigableMap</TT> interface.
+
+ <p>This interface additionally defines methods <TT>firstEntry</TT>,
+ <TT>pollFirstEntry</TT>, <TT>lastEntry</TT>, and
+ <TT>pollLastEntry</TT> that return and/or remove the least and
+ greatest mappings, if any exist, else returning <TT>null</TT>.
+
+ <p>Implementations of entry-returning methods are expected to
+ return <TT>Map.Entry</TT> pairs representing snapshots of mappings
+ at the time they were produced, and thus generally do <em>not</em>
+ support the optional <TT>Entry.setValue</TT> method. Note however
+ that it is possible to change mappings in the associated map using
+ method <TT>put</TT>.
+
+ <p>Methods
+ <a href='#subMap(Object, Object) subMap(K, K)'>subMap(Object, Object) subMap(K, K)</a>,
+ <a href='#headMap(Object) headMap(K)'>headMap(Object) headMap(K)</a>, and
+ <a href='#tailMap(Object) tailMap(K)'>tailMap(Object) tailMap(K)</a>
+ are specified to return <TT>SortedMap</TT> to allow existing
+ implementations of <TT>SortedMap</TT> to be compatibly retrofitted to
+ implement <TT>NavigableMap</TT>, but extensions and implementations
+ of this interface are encouraged to override these methods to return
+ <TT>NavigableMap</TT>.  Similarly,
+ <a href='#keySet()'>keySet()</a> can be overriden to return <TT>NavigableSet</TT>.
+
+ <p>This interface is a member of the
+ <a href="{@docRoot}/../technotes/guides/collections/index.html">
+ Java Collections Framework</a>.
+ <DL><DT><B>Parameters:</B></DT><DD><code><K></code> -  the type of keys maintained by this map</DD><DD><code><V></code> -  the type of mapped values</DD></DL><DL><DT><B>Authors:</B></DT><DD>Doug Lea</DD><DD>Josh Bloch</DD></DL><DL><DT><B>Since:</B></DT><DD>1.6</DD></DL>

@@ -1,0 +1,9 @@
+
+         * Returns true if this node is a marker. This method isn't
+         * actually called in any current code checking for markers
+         * because callers will have already read value field and need
+         * to use that read (not another done here) and so directly
+         * test if value points to node.
+         * @param n a possibly null reference to a node
+         * @return true if this node is a marker node
+         

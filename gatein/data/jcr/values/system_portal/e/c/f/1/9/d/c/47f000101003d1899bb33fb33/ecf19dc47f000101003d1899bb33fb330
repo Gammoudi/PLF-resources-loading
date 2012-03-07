@@ -1,0 +1,4 @@
+
+     * return an array of CodeSigner objects for
+     * the given file in the jar. this array is not cloned.
+     

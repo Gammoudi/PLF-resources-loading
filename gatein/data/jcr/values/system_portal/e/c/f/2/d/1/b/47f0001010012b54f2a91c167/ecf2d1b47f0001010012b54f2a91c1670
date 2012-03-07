@@ -1,0 +1,5 @@
+
+         * Performs non-fair tryLock.  tryAcquire is
+         * implemented in subclasses, but both need nonfair
+         * try for trylock method.
+         

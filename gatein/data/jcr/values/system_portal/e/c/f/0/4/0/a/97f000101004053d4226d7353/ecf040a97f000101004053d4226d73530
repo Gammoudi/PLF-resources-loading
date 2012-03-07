@@ -1,0 +1,50 @@
+
+     * Tests if two string regions are equal.
+     * <p>
+     * A substring of this <tt>String</tt> object is compared to a substring
+     * of the argument <tt>other</tt>. The result is <tt>true</tt> if these
+     * substrings represent character sequences that are the same, ignoring
+     * case if and only if <tt>ignoreCase</tt> is true. The substring of
+     * this <tt>String</tt> object to be compared begins at index
+     * <tt>toffset</tt> and has length <tt>len</tt>. The substring of
+     * <tt>other</tt> to be compared begins at index <tt>ooffset</tt> and
+     * has length <tt>len</tt>. The result is <tt>false</tt> if and only if
+     * at least one of the following is true:
+     * <ul><li><tt>toffset</tt> is negative.
+     * <li><tt>ooffset</tt> is negative.
+     * <li><tt>toffset+len</tt> is greater than the length of this
+     * <tt>String</tt> object.
+     * <li><tt>ooffset+len</tt> is greater than the length of the other
+     * argument.
+     * <li><tt>ignoreCase</tt> is <tt>false</tt> and there is some nonnegative
+     * integer <i>k</i> less than <tt>len</tt> such that:
+     * <blockquote><pre>
+     * this.charAt(toffset+k) != other.charAt(ooffset+k)
+     * </pre></blockquote>
+     * <li><tt>ignoreCase</tt> is <tt>true</tt> and there is some nonnegative
+     * integer <i>k</i> less than <tt>len</tt> such that:
+     * <blockquote><pre>
+     * Character.toLowerCase(this.charAt(toffset+k)) !=
+               Character.toLowerCase(other.charAt(ooffset+k))
+     * </pre></blockquote>
+     * and:
+     * <blockquote><pre>
+     * Character.toUpperCase(this.charAt(toffset+k)) !=
+     *         Character.toUpperCase(other.charAt(ooffset+k))
+     * </pre></blockquote>
+     * </ul>
+     *
+     * @param   ignoreCase   if <code>true</code>, ignore case when comparing
+     *                       characters.
+     * @param   toffset      the starting offset of the subregion in this
+     *                       string.
+     * @param   other        the string argument.
+     * @param   ooffset      the starting offset of the subregion in the string
+     *                       argument.
+     * @param   len          the number of characters to compare.
+     * @return  <code>true</code> if the specified subregion of this string
+     *          matches the specified subregion of the string argument;
+     *          <code>false</code> otherwise. Whether the matching is exact
+     *          or case insensitive depends on the <code>ignoreCase</code>
+     *          argument.
+     

@@ -1,0 +1,2 @@
+ The lock returned by method <a href='../java/util/concurrent/locks/ReentrantReadWriteLock.html#writeLock' title='ReentrantReadWriteLock.writeLock'>ReentrantReadWriteLock.writeLock</a>.
+     

@@ -1,0 +1,9 @@
+.keyword {
+  background: white url('/portal/rest/jcr/repository/collaboration/sites content/live/acme/web contents/site artifacts/Searchbox/medias/images/Search.gif') no-repeat 4px center;
+  -moz-border-radius:3px;
+  -webkit-border-radius:3px;
+  height: 18px;
+  width: 120px;
+  border: none;
+  padding-left: 20px;
+}

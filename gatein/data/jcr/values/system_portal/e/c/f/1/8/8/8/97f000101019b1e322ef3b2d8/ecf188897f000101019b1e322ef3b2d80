@@ -1,0 +1,4 @@
+
+     * Translates the specified byte array into a Base64 string as per
+     * Preferences.put(byte[]).
+     

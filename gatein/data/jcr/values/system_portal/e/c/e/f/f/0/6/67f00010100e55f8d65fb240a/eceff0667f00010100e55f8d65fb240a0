@@ -1,0 +1,7 @@
+
+     * Returns the Java language modifiers for the constructor
+     * represented by this <code>Constructor</code> object, as an integer. The
+     * <code>Modifier</code> class should be used to decode the modifiers.
+     *
+     * @see Modifier
+     

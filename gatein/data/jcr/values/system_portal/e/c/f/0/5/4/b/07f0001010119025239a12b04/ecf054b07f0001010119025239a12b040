@@ -1,0 +1,7 @@
+
+     * Get the map associated with a ThreadLocal. Overridden in
+     * InheritableThreadLocal.
+     *
+     * @param  t the current thread
+     * @return the map
+     

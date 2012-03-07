@@ -1,0 +1,55 @@
+<%
+    import org.exoplatform.portal.application.PortalRequestContext;
+    import org.exoplatform.portal.mop.user.UserNode;
+    import org.exoplatform.portal.webui.util.Util;
+    import org.exoplatform.web.application.JavascriptManager;
+    import org.exoplatform.web.url.PortalURL;
+	
+	def nodes = uicomponent.getSameSiblingsNode();
+	def tabNbs = nodes.size();
+
+	PortalRequestContext pcontext = Util.getPortalRequestContext();	
+    PortalURL nodeURL = nodeurl();
+
+	def selectedNode = Util.getUIPortal().getSelectedUserNode();
+	
+	JavascriptManager jsManager = pcontext.getJavascriptManager();
+	jsManager.importJavascript("eXo.webui.UIWebOSTabbedDashboard", "/webosadmin/javascript/");
+%>
+
+<div id="$uicomponent.id" class="UIWebOSTabPaneDashboard ClearFix">
+<%  for (UserNode node : nodes) {
+        if (uicomponent.isWebOSNode(node)) continue;
+        nodeURL.setNode(node);
+        String tabLabel = node.getLabel();
+        if (org.exoplatform.webos.toolbar.UIUserToolbarDesktopPortlet.DEFAULT_TAB_NAME.equals(node.getName())) {
+          tabLabel = _ctx.appRes("UIUserToolbarDesktopPortlet.page." + node.getLabel());
+        }
+        
+        String param = node.getName();
+        if (node.getURI().equals(selectedNode.getURI())) {
+	%>
+	<div class="UITab GrayTabStyle">
+		<div class="SelectedTab">
+		<% 
+			String ondblclick = "eXo.webui.UIWebOSTabbedDashboard.showEditLabelInput(this,\"" + param + "\",\"" + tabLabel + "\")";
+		%>
+    		<span ondblclick='$ondblclick'>$tabLabel</span>
+    		<a  href="<%= uicomponent.url("DeleteTab",param); %>">
+    			<img class="CloseIcon" src="/eXoResources/skin/sharedImages/Blank.gif" alt="DEL" />
+    		</a>
+		</div>
+	</div>
+	<% } else { %>
+	<div class="UITab GrayTabStyle">
+		<div class="NormalTab">
+    		<a  href="<%= nodeURL.toString(); %>"><span>$tabLabel</span></a>
+    		<a  href="<%= uicomponent.url("DeleteTab",param); %>">
+    			<img class="CloseIcon" src="/eXoResources/skin/sharedImages/Blank.gif" alt="DEL" />
+    		</a>
+		</div>
+	</div>
+	<% } %>
+<% } %>
+    <a href="#" class="AddDashboard" onclick="eXo.webui.UIWebOSTabbedDashboard.createTabDashboard(this)"><span></span></a>								
+</div>

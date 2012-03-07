@@ -1,0 +1,6 @@
+
+     * Atomically decrements by one the element at index {@code i}.
+     *
+     * @param i the index
+     * @return the previous value
+     

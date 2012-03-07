@@ -1,0 +1,4 @@
+ Thrown to indicate that an array has been accessed with an 
+ illegal index. The index is either negative or greater than or 
+ equal to the size of the array.
+ <DL><DT><B>Authors:</B></DT><DD>unascribed</DD></DL><DL><DT><B>Version:</B></DT><DD>%I%, %G%</DD></DL><DL><DT><B>Since:</B></DT><DD>JDK1.0</DD></DL>

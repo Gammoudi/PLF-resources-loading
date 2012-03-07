@@ -1,0 +1,17 @@
+Manifest-Version: 1.0
+Archiver-Version: Plexus Archiver
+Created-By: Apache Maven
+Built-By: nagui
+Build-Jdk: 1.6.0_24
+Implementation-Vendor-Id: org.exoplatform.platform
+Implementation-Title: eXo Platform - Extension Webapp
+Implementation-URL: http://www.exoplatform.com/exo.platform.parent/exo
+ .platform.extension/exo.platform.extension.webapp
+Implementation-Vendor: eXo Platform SAS
+Implementation-Version: 3.5.2-SNAPSHOT
+SCM-URL: scm:svn:http://svn.exoplatform.org/projects/platform/trunk/ex
+ o.platform.extension/exo.platform.extension.webapp
+Specification-Title: eXo Platform
+Specification-Vendor: eXo Platform SAS
+Specification-Version: N/A
+

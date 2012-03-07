@@ -1,0 +1,20 @@
+
+     * Returns the index within this <code>String</code> that is
+     * offset from the given <code>index</code> by
+     * <code>codePointOffset</code> code points. Unpaired surrogates
+     * within the text range given by <code>index</code> and
+     * <code>codePointOffset</code> count as one code point each.
+     *
+     * @param index the index to be offset
+     * @param codePointOffset the offset in code points
+     * @return the index within this <code>String</code>
+     * @exception IndexOutOfBoundsException if <code>index</code>
+     *   is negative or larger then the length of this
+     *   <code>String</code>, or if <code>codePointOffset</code> is positive
+     *   and the substring starting with <code>index</code> has fewer
+     *   than <code>codePointOffset</code> code points,
+     *   or if <code>codePointOffset</code> is negative and the substring
+     *   before <code>index</code> has fewer than the absolute value
+     *   of <code>codePointOffset</code> code points.
+     * @since 1.5
+     

@@ -1,0 +1,3 @@
+ Thrown if the Java Virtual Machine cannot find an appropriate 
+ native-language definition of a method declared <code>native</code>.
+ <DL><DT><B>Authors:</B></DT><DD>unascribed</DD></DL><DL><DT><B>Version:</B></DT><DD>%I%, %G%</DD></DL><DL><DT><B>See Also:</B></DT><DD><a href='../java/lang/Runtime.html' title='Runtime'>Runtime</a></DD></DL><DL><DT><B>Since:</B></DT><DD>JDK1.0</DD></DL>

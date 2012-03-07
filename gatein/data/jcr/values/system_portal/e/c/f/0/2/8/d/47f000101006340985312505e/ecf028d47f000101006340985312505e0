@@ -1,0 +1,4 @@
+ Thrown to indicate that a thread has attempted to wait on an 
+ object's monitor or to notify other threads waiting on an object's
+ monitor without owning the specified monitor.
+ <DL><DT><B>Authors:</B></DT><DD>unascribed</DD></DL><DL><DT><B>Version:</B></DT><DD>%I%, %G%</DD></DL><DL><DT><B>See Also:</B></DT><DD><a href='../java/lang/Object.html#notify()' title='Object.notify'>Object.notify</a></DD><DD><a href='../java/lang/Object.html#notifyAll()' title='Object.notifyAll'>Object.notifyAll</a></DD><DD><a href='../java/lang/Object.html#wait()' title='Object.wait'>Object.wait</a></DD><DD><a href='../java/lang/Object.html#wait(long)' title='Object.wait'>Object.wait</a></DD><DD><a href='../java/lang/Object.html#wait(long, int)' title='Object.wait'>Object.wait</a></DD></DL><DL><DT><B>Since:</B></DT><DD>JDK1.0</DD></DL>

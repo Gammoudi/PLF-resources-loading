@@ -1,0 +1,6 @@
+
+     * Always returns {@code false} because this input stream does not support
+     * the {@link #mark mark()} and {@link #reset reset()} methods.
+     *
+     * @return false, always
+     

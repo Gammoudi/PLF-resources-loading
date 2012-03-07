@@ -1,0 +1,5 @@
+
+         * Checks for interrupt, returning THROW_IE if interrupted
+         * before signalled, REINTERRUPT if after signalled, or
+         * 0 if not interrupted.
+         

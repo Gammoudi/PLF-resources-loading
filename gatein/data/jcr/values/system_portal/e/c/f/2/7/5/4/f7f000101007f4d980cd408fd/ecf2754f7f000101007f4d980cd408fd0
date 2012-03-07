@@ -1,0 +1,16 @@
+
+     * Returns the amount of time in milliseconds to add to UTC to get
+     * standard time in this time zone. Because this value is not
+     * affected by daylight saving time, it is called <I>raw
+     * offset</I>.
+     * <p>
+     * If an underlying <code>TimeZone</code> implementation subclass
+     * supports historical GMT offset changes, the method returns the
+     * raw offset value of the current date. In Honolulu, for example,
+     * its raw offset changed from GMT-10:30 to GMT-10:00 in 1947, and
+     * this method always returns -36000000 milliseconds (i.e., -10
+     * hours).
+     *
+     * @return the amount of raw offset time in milliseconds to add to UTC.
+     * @see Calendar#ZONE_OFFSET
+     

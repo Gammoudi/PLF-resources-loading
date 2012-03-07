@@ -1,0 +1,36 @@
+
+     * Returns a <tt>MemoryNotificationInfo</tt> object represented by the
+     * given <tt>CompositeData</tt>.
+     * The given <tt>CompositeData</tt> must contain
+     * the following attributes:
+     * <blockquote>
+     * <table border>
+     * <tr>
+     *   <th align=left>Attribute Name</th>
+     *   <th align=left>Type</th>
+     * </tr>
+     * <tr>
+     *   <td>poolName</td>
+     *   <td><tt>java.lang.String</tt></td>
+     * </tr>
+     * <tr>
+     *   <td>usage</td>
+     *   <td><tt>javax.management.openmbean.CompositeData</tt></td>
+     * </tr>
+     * <tr>
+     *   <td>count</td>
+     *   <td><tt>java.lang.Long</tt></td>
+     * </tr>
+     * </table>
+     * </blockquote>
+     *
+     * @param cd <tt>CompositeData</tt> representing a
+     *           <tt>MemoryNotificationInfo</tt>
+     *
+     * @throws IllegalArgumentException if <tt>cd</tt> does not
+     *   represent a <tt>MemoryNotificationInfo</tt> object.
+     *
+     * @return a <tt>MemoryNotificationInfo</tt> object represented 
+     *         by <tt>cd</tt> if <tt>cd</tt> is not <tt>null</tt>;
+     *         <tt>null</tt> otherwise.
+     

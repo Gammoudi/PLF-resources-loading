@@ -1,0 +1,23 @@
+ This <tt>Handler</tt> publishes log records to <tt>System.err</tt>.
+ By default the <tt>SimpleFormatter</tt> is used to generate brief summaries.
+ <p>
+ <b>Configuration:</b>
+ By default each <tt>ConsoleHandler</tt> is initialized using the following
+ <tt>LogManager</tt> configuration properties.  If properties are not defined
+ (or have invalid values) then the specified default values are used.
+ <ul>
+ <li>   java.util.logging.ConsoleHandler.level 
+	  specifies the default level for the <tt>Handler</tt>
+	  (defaults to <tt>Level.INFO</tt>).
+ <li>   java.util.logging.ConsoleHandler.filter
+	  specifies the name of a <tt>Filter</tt> class to use
+	  (defaults to no <tt>Filter</tt>).
+ <li>   java.util.logging.ConsoleHandler.formatter
+ 	  specifies the name of a <tt>Formatter</tt> class to use
+  	  (defaults to <tt>java.util.logging.SimpleFormatter</tt>).
+ <li>   java.util.logging.ConsoleHandler.encoding 
+	  the name of the character set encoding to use (defaults to
+	  the default platform encoding).
+ </ul>
+ <p>
+ <DL><DT><B>Version:</B></DT><DD>%I%, %G%</DD></DL><DL><DT><B>Since:</B></DT><DD>1.4</DD></DL>

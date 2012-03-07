@@ -1,0 +1,4 @@
+
+     * Gets the custom time zone ID based on the GMT offset of the
+     * platform. (e.g., "GMT+08:00")
+     

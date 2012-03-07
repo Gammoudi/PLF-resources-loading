@@ -1,0 +1,3 @@
+ Implementing this interface allows an object to be the target of
+  the "foreach" statement.
+ <DL><DT><B>Since:</B></DT><DD>1.5</DD></DL>

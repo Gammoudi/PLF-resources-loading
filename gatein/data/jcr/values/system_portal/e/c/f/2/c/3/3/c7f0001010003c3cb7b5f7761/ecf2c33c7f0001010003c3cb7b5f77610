@@ -1,0 +1,7 @@
+
+     * Creates a new <code>ZipEntry</code> object for the specified
+     * entry name.
+     *
+     * @param name the ZIP file entry name
+     * @return the ZipEntry just created
+     

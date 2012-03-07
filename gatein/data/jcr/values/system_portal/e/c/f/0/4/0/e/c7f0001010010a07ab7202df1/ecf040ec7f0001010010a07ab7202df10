@@ -1,0 +1,10 @@
+
+     * Returns the string representation of the <code>int</code> argument.
+     * <p>
+     * The representation is exactly the one returned by the
+     * <code>Integer.toString</code> method of one argument.
+     *
+     * @param   i   an <code>int</code>.
+     * @return  a string representation of the <code>int</code> argument.
+     * @see     java.lang.Integer#toString(int, int)
+     

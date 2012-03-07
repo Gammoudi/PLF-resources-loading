@@ -1,0 +1,23 @@
+
+     * Returns <tt>true</tt> if the two specified collections have no
+     * elements in common.
+     *
+     * <p>Care must be exercised if this method is used on collections that
+     * do not comply with the general contract for <tt>Collection</tt>.
+     * Implementations may elect to iterate over either collection and test
+     * for containment in the other collection (or to perform any equivalent
+     * computation).  If either collection uses a nonstandard equality test
+     * (as does a {@link SortedSet} whose ordering is not <i>compatible with
+     * equals</i>, or the key set of an {@link IdentityHashMap}), both
+     * collections must use the same nonstandard equality test, or the
+     * result of this method is undefined.
+     *
+     * <p>Note that it is permissible to pass the same collection in both
+     * parameters, in which case the method will return true if and only if
+     * the collection is empty.
+     *
+     * @param c1 a collection
+     * @param c2 a collection
+     * @throws NullPointerException if either collection is null
+     * @since 1.5
+     

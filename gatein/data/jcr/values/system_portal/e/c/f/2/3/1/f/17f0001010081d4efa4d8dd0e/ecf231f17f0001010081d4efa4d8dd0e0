@@ -1,0 +1,3 @@
+ Since we don't use Entry objects, we use the Iterator
+ itself as an entry.
+     

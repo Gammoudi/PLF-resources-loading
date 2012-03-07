@@ -1,0 +1,16 @@
+
+     * Removes the first occurrence of the specified element from this deque.
+     * If the deque does not contain the element, it is unchanged.
+     * More formally, removes the first element <tt>e</tt> such that
+     * <tt>(o==null&nbsp;?&nbsp;e==null&nbsp;:&nbsp;o.equals(e))</tt>
+     * (if such an element exists).
+     * Returns <tt>true</tt> if this deque contained the specified element
+     * (or equivalently, if this deque changed as a result of the call).
+     *
+     * @param o element to be removed from this deque, if present
+     * @return <tt>true</tt> if an element was removed as a result of this call
+     * @throws ClassCastException if the class of the specified element
+     *         is incompatible with this deque (optional)
+     * @throws NullPointerException if the specified element is null and this
+     *         deque does not permit null elements (optional)
+     

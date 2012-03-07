@@ -1,0 +1,19 @@
+
+     * This method is invoked with this node locked.  The contract of this
+     * method is to force any cached changes in the contents of this
+     * preference node to the backing store, guaranteeing their persistence.
+     * (It is perfectly possible that this node does not exist on the backing
+     * store, either because it has been deleted by another VM, or because it
+     * has not yet been created.)  Note that this method should <i>not</i>
+     * flush the preferences in any subnodes of this node.  If the backing
+     * store naturally flushes an entire subtree at once, the implementer is
+     * encouraged to override flush(), rather than merely overriding this
+     * method.
+     *
+     * <p>If this node throws a <tt>BackingStoreException</tt>, the exception
+     * will propagate out beyond the enclosing {@link #flush()} invocation.
+     *
+     * @throws BackingStoreException if this operation cannot be completed
+     *         due to a failure in the backing store, or inability to 
+     *         communicate with it.
+     

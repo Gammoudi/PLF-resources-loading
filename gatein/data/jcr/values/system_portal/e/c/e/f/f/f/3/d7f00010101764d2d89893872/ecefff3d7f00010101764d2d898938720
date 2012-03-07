@@ -1,0 +1,9 @@
+
+     * Tests if this memory pool is valid in the Java virtual
+     * machine.  A memory pool becomes invalid once the Java virtual
+     * machine removes it from the memory system.
+     *
+     * @return <tt>true</tt> if the memory pool is valid in the running 
+     *              Java virtual machine;
+     *         <tt>false</tt> otherwise.
+     

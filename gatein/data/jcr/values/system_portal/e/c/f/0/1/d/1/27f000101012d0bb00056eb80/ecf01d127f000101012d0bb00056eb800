@@ -1,0 +1,26 @@
+
+     * Finds all the resources with the given name. A resource is some data
+     * (images, audio, text, etc) that can be accessed by class code in a way
+     * that is independent of the location of the code.
+     *
+     * <p>The name of a resource is a <tt>/</tt>-separated path name that
+     * identifies the resource.
+     *
+     * <p> The search order is described in the documentation for {@link
+     * #getResource(String)}.  </p>
+     *
+     * @param  name
+     *         The resource name
+     *
+     * @return  An enumeration of {@link java.net.URL <tt>URL</tt>} objects for
+     *          the resource.  If no resources could  be found, the enumeration
+     *          will be empty.  Resources that the class loader doesn't have
+     *          access to will not be in the enumeration.
+     *
+     * @throws  IOException
+     *          If I/O errors occur
+     *
+     * @see  #findResources(String)
+     *
+     * @since  1.2
+     

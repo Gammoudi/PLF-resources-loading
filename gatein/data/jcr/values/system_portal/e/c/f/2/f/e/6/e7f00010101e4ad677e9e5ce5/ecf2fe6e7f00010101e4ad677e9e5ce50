@@ -1,0 +1,7 @@
+ The GroupTail handles the setting of group beginning and ending
+ locations when groups are successfully matched. It must also be able to
+ unset groups that have to be backed off of.
+
+ The GroupTail node is also used when a previous group is referenced,
+ and in that case no group information needs to be set.
+     

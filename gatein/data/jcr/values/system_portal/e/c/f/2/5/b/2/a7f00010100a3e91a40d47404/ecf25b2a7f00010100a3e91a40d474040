@@ -1,0 +1,6 @@
+
+     * Returns an iterator over the elements in this set, in descending order.
+     * Equivalent in effect to {@code descendingSet().iterator()}.
+     *
+     * @return an iterator over the elements in this set, in descending order
+     

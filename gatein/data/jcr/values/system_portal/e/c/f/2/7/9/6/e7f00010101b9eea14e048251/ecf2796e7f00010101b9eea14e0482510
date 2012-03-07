@@ -1,0 +1,31 @@
+
+     * Schedules the specified task for repeated <i>fixed-rate execution</i>,
+     * beginning after the specified delay.  Subsequent executions take place
+     * at approximately regular intervals, separated by the specified period.
+     *
+     * <p>In fixed-rate execution, each execution is scheduled relative to the
+     * scheduled execution time of the initial execution.  If an execution is
+     * delayed for any reason (such as garbage collection or other background
+     * activity), two or more executions will occur in rapid succession to
+     * "catch up."  In the long run, the frequency of execution will be
+     * exactly the reciprocal of the specified period (assuming the system
+     * clock underlying <tt>Object.wait(long)</tt> is accurate).
+     *
+     * <p>Fixed-rate execution is appropriate for recurring activities that
+     * are sensitive to <i>absolute</i> time, such as ringing a chime every
+     * hour on the hour, or running scheduled maintenance every day at a
+     * particular time.  It is also appropriate for recurring activities
+     * where the total time to perform a fixed number of executions is
+     * important, such as a countdown timer that ticks once every second for
+     * ten seconds.  Finally, fixed-rate execution is appropriate for
+     * scheduling multiple repeating timer tasks that must remain synchronized
+     * with respect to one another.
+     *
+     * @param task   task to be scheduled.
+     * @param delay  delay in milliseconds before task is to be executed.
+     * @param period time in milliseconds between successive task executions.
+     * @throws IllegalArgumentException if <tt>delay</tt> is negative, or
+     *         <tt>delay + System.currentTimeMillis()</tt> is negative.
+     * @throws IllegalStateException if task was already scheduled or
+     *         cancelled, timer was cancelled, or timer thread terminated.
+     

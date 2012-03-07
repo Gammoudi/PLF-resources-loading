@@ -1,0 +1,47 @@
+ This class implements the <tt>Set</tt> interface, backed by a hash table
+ (actually a <tt>HashMap</tt> instance).  It makes no guarantees as to the
+ iteration order of the set; in particular, it does not guarantee that the
+ order will remain constant over time.  This class permits the <tt>null</tt>
+ element.
+
+ <p>This class offers constant time performance for the basic operations
+ (<tt>add</tt>, <tt>remove</tt>, <tt>contains</tt> and <tt>size</tt>),
+ assuming the hash function disperses the elements properly among the
+ buckets.  Iterating over this set requires time proportional to the sum of
+ the <tt>HashSet</tt> instance's size (the number of elements) plus the
+ "capacity" of the backing <tt>HashMap</tt> instance (the number of
+ buckets).  Thus, it's very important not to set the initial capacity too
+ high (or the load factor too low) if iteration performance is important.
+
+ <p><strong>Note that this implementation is not synchronized.</strong>
+ If multiple threads access a hash set concurrently, and at least one of
+ the threads modifies the set, it <i>must</i> be synchronized externally.
+ This is typically accomplished by synchronizing on some object that
+ naturally encapsulates the set.
+
+ If no such object exists, the set should be "wrapped" using the
+ <a href='../java/util/Collections.html#synchronizedSet' title='Collections.synchronizedSet'>Collections.synchronizedSet</a>
+ method.  This is best done at creation time, to prevent accidental
+ unsynchronized access to the set:<pre>
+   Set s = Collections.synchronizedSet(new HashSet(...));</pre>
+
+ <p>The iterators returned by this class's <tt>iterator</tt> method are
+ <i>fail-fast</i>: if the set is modified at any time after the iterator is
+ created, in any way except through the iterator's own <tt>remove</tt>
+ method, the Iterator throws a <a href='../java/util/ConcurrentModificationException.html' title='ConcurrentModificationException'>ConcurrentModificationException</a>.
+ Thus, in the face of concurrent modification, the iterator fails quickly
+ and cleanly, rather than risking arbitrary, non-deterministic behavior at
+ an undetermined time in the future.
+
+ <p>Note that the fail-fast behavior of an iterator cannot be guaranteed
+ as it is, generally speaking, impossible to make any hard guarantees in the
+ presence of unsynchronized concurrent modification.  Fail-fast iterators
+ throw <tt>ConcurrentModificationException</tt> on a best-effort basis.
+ Therefore, it would be wrong to write a program that depended on this
+ exception for its correctness: <i>the fail-fast behavior of iterators
+ should be used only to detect bugs.</i>
+
+ <p>This class is a member of the
+ <a href="{@docRoot}/../technotes/guides/collections/index.html">
+ Java Collections Framework</a>.
+ <DL><DT><B>Parameters:</B></DT><DD><code><E></code> -  the type of elements maintained by this set</DD></DL><DL><DT><B>Authors:</B></DT><DD>Josh Bloch</DD><DD>Neal Gafter</DD></DL><DL><DT><B>Version:</B></DT><DD>%I%, %G%</DD></DL><DL><DT><B>See Also:</B></DT><DD><a href='../java/util/Collection.html' title='Collection'>Collection</a></DD><DD><a href='../java/util/Set.html' title='Set'>Set</a></DD><DD><a href='../java/util/TreeSet.html' title='TreeSet'>TreeSet</a></DD><DD><a href='../java/util/HashMap.html' title='HashMap'>HashMap</a></DD></DL><DL><DT><B>Since:</B></DT><DD>1.2</DD></DL>

@@ -1,0 +1,14 @@
+
+     * Returns the index within this string of the first occurrence of the
+     * specified substring, starting at the specified index.  The integer
+     * returned is the smallest value <tt>k</tt> for which:
+     * <blockquote><pre>
+     *     k &gt;= Math.min(fromIndex, this.length()) && this.startsWith(str, k)
+     * </pre></blockquote>
+     * If no such value of <i>k</i> exists, then -1 is returned.
+     *
+     * @param   str         the substring for which to search.
+     * @param   fromIndex   the index from which to start the search.
+     * @return  the index within this string of the first occurrence of the
+     *          specified substring, starting at the specified index.
+     

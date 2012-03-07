@@ -1,0 +1,16 @@
+ Interface for handlers invoked when a <tt>Thread</tt> abruptly 
+ terminates due to an uncaught exception. 
+ <p>When a thread is about to terminate due to an uncaught exception
+ the Java Virtual Machine will query the thread for its
+ <tt>UncaughtExceptionHandler</tt> using 
+ <a href='#getUncaughtExceptionHandler'>getUncaughtExceptionHandler</a> and will invoke the handler's
+ <tt>uncaughtException</tt> method, passing the thread and the
+ exception as arguments.
+ If a thread has not had its <tt>UncaughtExceptionHandler</tt>
+ explicitly set, then its <tt>ThreadGroup</tt> object acts as its
+ <tt>UncaughtExceptionHandler</tt>. If the <tt>ThreadGroup</tt> object
+ has no
+ special requirements for dealing with the exception, it can forward 
+ the invocation to the {<DL><DT><B>linkplain:</B></DT><DD>#getDefaultUncaughtExceptionHandler 
+ default uncaught exception handler}.</DD></DL>
+     <DL><DT><B>See Also:</B></DT><DD><a href='#setDefaultUncaughtExceptionHandler'>setDefaultUncaughtExceptionHandler</a></DD><DD><a href='#setUncaughtExceptionHandler'>setUncaughtExceptionHandler</a></DD><DD><a href='../java/lang/ThreadGroup.html#uncaughtException' title='ThreadGroup.uncaughtException'>ThreadGroup.uncaughtException</a></DD></DL><DL><DT><B>Since:</B></DT><DD>1.5</DD></DL>

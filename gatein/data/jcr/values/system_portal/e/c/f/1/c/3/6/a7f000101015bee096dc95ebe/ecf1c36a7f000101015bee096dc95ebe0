@@ -1,0 +1,13 @@
+
+     * Sets the state of the specified calendar fields to
+     * <em>computed</em>. This state means that the specified calendar fields
+     * have valid values that have been set by internal time calculation
+     * rather than by calling one of the setter methods.
+     *
+     * @param fieldMask the field to be marked as computed.
+     * @exception IndexOutOfBoundsException if the specified
+     *                <code>field</code> is out of range
+     *               (<code>field &lt; 0 || field &gt;= FIELD_COUNT</code>).
+     * @see #isExternallySet(int)
+     * @see #selectFields()
+     

@@ -1,0 +1,5 @@
+
+         * Returns previous node, or throws NullPointerException if
+         * null.  Use when predecessor cannot be null.
+         * @return the predecessor of this node
+         

@@ -1,0 +1,5 @@
+
+     * Return an array of the display names of the variant.
+     * @param bundle the ResourceBundle to use to get the display names
+     * @return an array of display names, possible of zero length.
+     

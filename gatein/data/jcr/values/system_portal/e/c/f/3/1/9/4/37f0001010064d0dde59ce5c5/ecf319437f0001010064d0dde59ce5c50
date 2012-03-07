@@ -1,0 +1,9 @@
+
+     * Remove a log Handler.
+     * <P>
+     * Returns silently if the given Handler is not found or is null
+     * 
+     * @param	handler	a logging Handler
+     * @exception  SecurityException  if a security manager exists and if
+     *             the caller does not have LoggingPermission("control").
+     

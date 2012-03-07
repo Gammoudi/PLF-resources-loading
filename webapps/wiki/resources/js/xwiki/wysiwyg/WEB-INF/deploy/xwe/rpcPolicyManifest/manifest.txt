@@ -1,0 +1,7 @@
+# Module xwe
+# RPC service class, partial path of RPC policy file
+org.xwiki.gwt.wysiwyg.client.plugin.importer.ImportService, 07212F22C6B96D294B31039878552B89.gwt.rpc
+org.xwiki.gwt.wysiwyg.client.plugin.macro.MacroService, 9E682FCBBFBB82E9CCD3D862FB43B5E5.gwt.rpc
+org.xwiki.gwt.wysiwyg.client.converter.HTMLConverter, D1F0A2188476640AA2CC9A86CFA6C041.gwt.rpc
+org.xwiki.gwt.wysiwyg.client.wiki.WikiService, BB34E83EF6D9F1745EED6C7159947F8E.gwt.rpc
+org.xwiki.gwt.wysiwyg.client.cleaner.HTMLCleaner, 0C7E4BF5CF1BD41897F08C1FF040DE18.gwt.rpc

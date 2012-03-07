@@ -1,0 +1,4 @@
+
+         * Returns true if this node is the header of base-level list.
+         * @return true if this node is header node
+         

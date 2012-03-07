@@ -1,0 +1,31 @@
+
+     * Tests if two string regions are equal.
+     * <p>
+     * A substring of this <tt>String</tt> object is compared to a substring
+     * of the argument other. The result is true if these substrings
+     * represent identical character sequences. The substring of this
+     * <tt>String</tt> object to be compared begins at index <tt>toffset</tt>
+     * and has length <tt>len</tt>. The substring of other to be compared
+     * begins at index <tt>ooffset</tt> and has length <tt>len</tt>. The
+     * result is <tt>false</tt> if and only if at least one of the following
+     * is true:
+     * <ul><li><tt>toffset</tt> is negative.
+     * <li><tt>ooffset</tt> is negative.
+     * <li><tt>toffset+len</tt> is greater than the length of this
+     * <tt>String</tt> object.
+     * <li><tt>ooffset+len</tt> is greater than the length of the other
+     * argument.
+     * <li>There is some nonnegative integer <i>k</i> less than <tt>len</tt>
+     * such that:
+     * <tt>this.charAt(toffset+<i>k</i>)&nbsp;!=&nbsp;other.charAt(ooffset+<i>k</i>)</tt>
+     * </ul>
+     *
+     * @param   toffset   the starting offset of the subregion in this string.
+     * @param   other     the string argument.
+     * @param   ooffset   the starting offset of the subregion in the string
+     *                    argument.
+     * @param   len       the number of characters to compare.
+     * @return  <code>true</code> if the specified subregion of this string
+     *          exactly matches the specified subregion of the string argument;
+     *          <code>false</code> otherwise.
+     

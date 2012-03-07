@@ -1,0 +1,212 @@
+span.date {
+	color:#FFA02F;
+}
+.clear {
+	clear:both;
+}
+body.template {
+	text-align:center;
+	font-size:62.5%;
+	font-family:Arial, Helvetica, sans-serif;
+	margin:0;
+	padding:0;
+}
+
+*+html #navigation-generator {
+	display:inline-block;
+}
+
+* html #navigation-generator {
+	display:inline-block;
+}
+
+.UIWCMNavigationPortlet {
+  padding: 0px 8px;  
+  
+}
+
+.UIWCMNavigationPortlet .UINavigationBar {
+	background: #20263f;
+  -moz-border-radius-topleft:5px;
+  -webkit-border-top-left-radius:5px;
+  -moz-border-radius-topright:5px;
+  -webkit-border-top-right-radius:5px;
+  padding: 0px 8px 0px 20px;
+  height: 32px;  
+}
+
+.UIWCMNavigationPortlet .UINavigationBar .ControlButton {
+	float:left;
+	line-height:32px;
+	color: white;
+	height: 32px;	
+	position: relative;
+}
+
+.UIWCMNavigationPortlet .UINavigationBar .ControlButton:hover {
+	background-color: #ebebeb;	
+	-moz-box-shadow: 0px -1px 2px #757575;
+	-webkit-box-shadow: 0px -1px 2px #757575;
+	box-shadow: 0px -1px 2px #757575;
+}
+
+.UIWCMNavigationPortlet .UINavigationBar .ControlButton a {
+	color: #c2c2c2;	
+}
+
+
+.UIWCMNavigationPortlet .UINavigationBar .ControlButton:hover a {
+	color: #464646;
+}
+
+.UIWCMNavigationPortlet .UINavigationBar .ControlButton ul  li a {
+	color: #464646;
+	font-size: 11px;
+}
+
+.UIWCMNavigationPortlet .UINavigationBar .HoverButton .Button {
+  color: #ffcb05;
+}
+
+.UIWCMNavigationPortlet .UINavigationBar .Button {
+	line-height: 32px;
+	margin-left: 6px;
+	cursor: pointer;
+	margin-right: 6px;
+}
+
+.UIWCMNavigationPortlet .UINavigationBar  .MenuItemContainer {
+	background-color: #ebebeb;
+	position: absolute;
+	display: none;
+	top: 32px;
+	left: -1px;
+	-moz-box-shadow: 0 2px 3px #d1d1d1;
+	-webkit-box-shadow: 0 2px 3px #d1d1d1;	
+	box-shadow: 0 2px 3px #d1d1d1;
+	-moz-border-radius-bottomright: 2px;
+	-moz-border-radius-bottomleft: 2px;
+	-webkit-border-bottom-right-radius: 2px;
+	-webkit-border-bottom-left-radius: 2px;
+	padding:0  7px 7px 0;
+	border: 1px solid #b3b3b3;
+	border-top: none;
+	z-index: 99;
+	line-height: 100%;
+}
+
+.UIWCMNavigationPortlet .UINavigationBar  .MenuItemContainer  .SubBlock {
+	float:left;
+	background: #fff;
+	-moz-border-radius: 3px; 
+	-webkit-border-radius: 3px; 
+	width: 141px;
+	margin: 7px 0 0px 7px;
+	padding:5px 0 5px 0;
+}
+
+* html .UIWCMNavigationPortlet .UINavigationBar  .MenuItemContainer  .SubBlock {
+    display:inline;
+}
+
+.UIWCMNavigationPortlet .UINavigationBar .ControlButton .MenuItemContainer  a {
+	display: block;	
+	padding: 4px 10px 4px 18px;
+	font-weight: bold;
+	line-height: 100%;
+}
+
+.UIWCMNavigationPortlet .UINavigationBar .ControlButton ul  li .MenuItem1 {
+	font-size: 12px;
+}
+
+.UIWCMNavigationPortlet .UINavigationBar .ControlButton .MenuItemContainer .MenuItem2   {
+	background: url("/portal/rest/jcr/repository/collaboration/sites%20content/live/acme/web%20contents/site%20artifacts/Navigation/medias/images/ArrowIcon.png") no-repeat 10px 7px;
+	margin-top: 4px;
+}
+
+
+.UIWCMNavigationPortlet .UINavigationBar .ControlButton .MenuItemContainer  ul ul ul  a {
+	font-weight: normal;
+}
+
+.UIWCMNavigationPortlet .UINavigationBar .ControlButton .MenuItemContainer  ul  a:hover {
+	color: #fff;
+	background-color: #ff9403;
+}
+
+.UIWCMNavigationPortlet .UINavigationBar .HoverButton a {
+	color: #ffcb05;
+}
+
+
+.UIWCMNavigationPortlet ul {
+  list-style: none outside none;
+  margin: 0;
+  padding: 0;
+}
+.UIWCMNavigationPortlet .UINavigationBar .UITab {
+
+}
+
+.UIWCMNavigationPortlet .DisableScrollLeftButton {
+  background: url("/eXoWCMResources/skin/DefaultSkin/background/Button.gif") no-repeat scroll left -30px transparent;
+}
+.UIWCMNavigationPortlet .ScrollRightButton {
+  background: url("/eXoWCMResources/skin/DefaultSkin/background/Button.gif") no-repeat scroll right -15px transparent;
+}
+.UIWCMNavigationPortlet .ScrollLeftButton {
+  background: url("/eXoWCMResources/skin/DefaultSkin/background/Button.gif") no-repeat scroll left -15px transparent;
+}
+.UIWCMNavigationPortlet .DisableScrollRightButton {
+  background: url("/eXoWCMResources/skin/DefaultSkin/background/Button.gif") no-repeat scroll right -30px transparent;
+}
+.UIWCMNavigationPortlet .ScrollButtons {
+  cursor: pointer;
+  display: none;
+  float: right;
+  height: 15px;
+  margin: 10px 0 0;
+  width: 20px;
+}
+.UIWCMNavigationPortlet .ScrollButtons a {
+  cursor: pointer;
+  display: block;
+  float: left;
+  height: 15px;
+  width: 10px;
+}
+
+
+.UIWCMNavigationPortlet .UINavigationBar .UITab .ControlButton {
+	float:left;
+	line-height:32px;
+	color: white;
+	height: 32px;	
+	position: relative;
+}
+
+.UIWCMNavigationPortlet .UINavigationBar .UITab .ControlButton:hover {
+	background-color: #ebebeb;	
+	-moz-box-shadow: 0px -1px 2px #757575;
+	-webkit-box-shadow: 0px -1px 2px #757575;
+	box-shadow: 0px -1px 2px #757575;
+}
+
+.UIWCMNavigationPortlet .UINavigationBar .UITab .ControlButton a {
+	color: #c2c2c2;	
+}
+
+
+.UIWCMNavigationPortlet .UINavigationBar .UITab .ControlButton:hover a {
+	color: #464646;
+}
+
+.UIWCMNavigationPortlet .UINavigationBar .UITab .ControlButton ul  li a {
+	color: #464646;
+	font-size: 11px;
+}
+
+.UIWCMNavigationPortlet .UINavigationBar .UITab .HoverButton .Button {
+  color: #ffcb05;
+}

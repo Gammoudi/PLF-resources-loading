@@ -1,0 +1,4 @@
+
+         * Returns true if the node this indexes has been deleted.
+         * @return true if indexed node is known to be deleted
+         

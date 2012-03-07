@@ -1,0 +1,4 @@
+
+         * Throws InterruptedException, reinterrupts current thread, or
+         * does nothing, depending on mode.
+         

@@ -1,0 +1,10 @@
+
+     * Schedules the specified task for execution at the specified time.  If
+     * the time is in the past, the task is scheduled for immediate execution.
+     *
+     * @param task task to be scheduled.
+     * @param time time at which task is to be executed.
+     * @throws IllegalArgumentException if <tt>time.getTime()</tt> is negative.
+     * @throws IllegalStateException if task was already scheduled or
+     *         cancelled, timer was cancelled, or timer thread terminated.
+     

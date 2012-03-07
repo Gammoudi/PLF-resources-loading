@@ -1,0 +1,8 @@
+
+     * Converts the current calendar field values in {@link #fields fields[]}
+     * to the millisecond time value
+     * {@link #time}.
+     *
+     * @see #complete()
+     * @see #computeFields()
+     

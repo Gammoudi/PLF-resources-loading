@@ -1,0 +1,2 @@
+ A listener for receiving preference node change events.
+ <DL><DT><B>Authors:</B></DT><DD>Josh Bloch</DD></DL><DL><DT><B>Version:</B></DT><DD>%I%, %G%</DD></DL><DL><DT><B>See Also:</B></DT><DD><a href='../java/util/prefs/Preferences.html' title='Preferences'>Preferences</a></DD><DD><a href='../java/util/prefs/NodeChangeEvent.html' title='NodeChangeEvent'>NodeChangeEvent</a></DD><DD><a href='../java/util/prefs/PreferenceChangeListener.html' title='PreferenceChangeListener'>PreferenceChangeListener</a></DD></DL><DL><DT><B>Since:</B></DT><DD>1.4</DD></DL>

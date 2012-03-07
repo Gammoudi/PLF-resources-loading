@@ -1,0 +1,9 @@
+
+     * Returns an array of <code>Class</code> objects that represent the formal
+     * parameter types, in declaration order, of the constructor
+     * represented by this <code>Constructor</code> object.  Returns an array of
+     * length 0 if the underlying constructor takes no parameters.
+     *
+     * @return the parameter types for the constructor this object
+     * represents
+     

@@ -1,0 +1,5 @@
+ We need this class in addition to UnmodifiableSet as
+ Map.Entries themselves permit modification of the backing Map
+ via their setValue operation.  This class is subtle: there are
+ many possible attacks that must be thwarted.<DL><DT><B>serial:</B></DT><DD>include</DD></DL>
+         

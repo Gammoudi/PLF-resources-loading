@@ -1,0 +1,13 @@
+ An iterator over a collection.  Iterator takes the place of Enumeration in
+ the Java collections framework.  Iterators differ from enumerations in two
+ ways: <ul>
+	<li> Iterators allow the caller to remove elements from the
+	     underlying collection during the iteration with well-defined
+ 	     semantics.
+	<li> Method names have been improved.
+ </ul><p>
+
+ This interface is a member of the 
+ <a href="{@docRoot}/../technotes/guides/collections/index.html">
+ Java Collections Framework</a>.
+ <DL><DT><B>Authors:</B></DT><DD>Josh Bloch</DD></DL><DL><DT><B>Version:</B></DT><DD>%I%, %G%</DD></DL><DL><DT><B>See Also:</B></DT><DD><a href='../java/util/Collection.html' title='Collection'>Collection</a></DD><DD><a href='../java/util/ListIterator.html' title='ListIterator'>ListIterator</a></DD><DD><a href='../java/util/Enumeration.html' title='Enumeration'>Enumeration</a></DD></DL><DL><DT><B>Since:</B></DT><DD>1.2</DD></DL>

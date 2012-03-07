@@ -1,0 +1,136 @@
+ <code>ResourceBundle.Control</code> defines a set of callback methods
+ that are invoked by the <a href='../java/util/ResourceBundle.html#getBundle' title='ResourceBundle.getBundle'>ResourceBundle.getBundle</a> factory
+ methods during the bundle loading process. In other words, a
+ <code>ResourceBundle.Control</code> collaborates with the factory
+ methods for loading resource bundles. The default implementation of
+ the callback methods provides the information necessary for the
+ factory methods to perform the <a
+ href="./ResourceBundle.html#default_behavior">default behavior</a>.
+
+ <p>In addition to the callback methods, the <a href='#toBundleName(java.lang.String, Locale)'>toBundleName</a> and <a href='#toResourceName(java.lang.String, java.lang.String)'>toResourceName</a> methods are defined
+ primarily for convenience in implementing the callback
+ methods. However, the <code>toBundleName</code> method could be
+ overridden to provide different conventions in the organization and
+ packaging of localized resources.  The <code>toResourceName</code>
+ method is <code>final</code> to avoid use of wrong resource and class
+ name separators.
+
+ <p>Two factory methods, <a href='#getControl(List)'>getControl(List)</a> and <a href='#getNoFallbackControl(List)'>getNoFallbackControl(List)</a>, provide
+ <code>ResourceBundle.Control</code> instances that implement common
+ variations of the default bundle loading process.
+
+ <p>The formats returned by the Control#getFormats(String)#getFormats(String) method and candidate locales returned by the ResourceBundle.Control#getCandidateLocales(String, Locale) method must be consistent in all
+ <code>ResourceBundle.getBundle</code> invocations for the same base
+ bundle. Otherwise, the <code>ResourceBundle.getBundle</code> methods
+ may return unintended bundles. For example, if only
+ <code>"java.class"</code> is returned by the <code>getFormats</code>
+ method for the first call to <code>ResourceBundle.getBundle</code>
+ and only <code>"java.properties"</code> for the second call, then the
+ second call will return the class-based one that has been cached
+ during the first call.
+
+ <p>A <code>ResourceBundle.Control</code> instance must be thread-safe
+ if it's simultaneously used by multiple threads.
+ <code>ResourceBundle.getBundle</code> does not synchronize to call
+ the <code>ResourceBundle.Control</code> methods. The default
+ implementations of the methods are thread-safe.
+
+ <p>Applications can specify <code>ResourceBundle.Control</code>
+ instances returned by the <code>getControl</code> factory methods or
+ created from a subclass of <code>ResourceBundle.Control</code> to
+ customize the bundle loading process. The following are examples of
+ changing the default bundle loading process.
+
+ <p><b>Example 1</b>
+
+ <p>The following code lets <code>ResourceBundle.getBundle</code> look
+ up only properties-based resources.
+
+ <pre>
+ import java.util.*;
+ import static java.util.ResourceBundle.Control.*;
+ ...
+ ResourceBundle bundle =
+   ResourceBundle.getBundle("MyResources", new Locale("fr", "CH"),
+                            ResourceBundle.Control.getControl(FORMAT_PROPERTIES));
+ </pre>
+
+ Given the resource bundles in the <a
+ href="./ResourceBundle.html#default_behavior_example">example</a> in
+ the <code>ResourceBundle.getBundle</code> description, this
+ <code>ResourceBundle.getBundle</code> call loads
+ <code>MyResources_fr_CH.properties</code> whose parent is
+ <code>MyResources_fr.properties</code> whose parent is
+ <code>MyResources.properties</code>. (<code>MyResources_fr_CH.properties</code>
+ is not hidden, but <code>MyResources_fr_CH.class</code> is.)
+
+ <p><b>Example 2</b>
+
+ <p>The following is an example of loading XML-based bundles
+ using <a href='../Properties.html#loadFromXML(java.io.InputStream)' title=' Properties.loadFromXML'> Properties.loadFromXML</a>.
+
+ <pre>
+ ResourceBundle rb = ResourceBundle.getBundle("Messages",
+     new ResourceBundle.Control() {
+         public List&lt;String&gt; getFormats(String baseName) {
+             if (baseName == null)
+                 throw new NullPointerException();
+             return Arrays.asList("xml");
+         }
+         public ResourceBundle newBundle(String baseName,
+                                         Locale locale,
+                                         String format,
+                                         ClassLoader loader,
+                                         boolean reload)
+                          throws IllegalAccessException,
+                                 InstantiationException,
+                                 IOException {
+             if (baseName == null || locale == null
+                   || format == null || loader == null)
+                 throw new NullPointerException();
+             ResourceBundle bundle = null;
+             if (format.equals("xml")) {
+                 String bundleName = toBundleName(baseName, locale);
+                 String resourceName = toResourceName(bundleName, format);
+                 InputStream stream = null;
+                 if (reload) {
+                     URL url = loader.getResource(resourceName);
+                     if (url != null) {
+                         URLConnection connection = url.openConnection();
+                         if (connection != null) {
+                             // Disable caches to get fresh data for
+                             // reloading.
+                             connection.setUseCaches(false);
+                             stream = connection.getInputStream();
+                         }
+                     }
+                 } else {
+                     stream = loader.getResourceAsStream(resourceName);
+                 }
+                 if (stream != null) {
+                     BufferedInputStream bis = new BufferedInputStream(stream);
+                     bundle = new XMLResourceBundle(bis);
+                     bis.close();
+                 }
+             }
+             return bundle;
+         }
+     });
+
+ ...
+
+ private static class XMLResourceBundle extends ResourceBundle {
+     private Properties props;
+     XMLResourceBundle(InputStream stream) throws IOException {
+         props = new Properties();
+         props.loadFromXML(stream);
+     }
+     protected Object handleGetObject(String key) {
+         return props.getProperty(key);
+     }
+     public Enumeration&lt;String&gt; getKeys() {
+         ...
+     }
+ }
+ </pre>
+     <DL><DT><B>Since:</B></DT><DD>1.6</DD></DL>

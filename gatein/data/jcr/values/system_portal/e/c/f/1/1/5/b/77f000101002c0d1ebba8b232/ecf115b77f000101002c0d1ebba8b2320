@@ -1,0 +1,6 @@
+
+     * Unconditionally sets the value of both the reference and stamp.
+     *
+     * @param newReference the new value for the reference
+     * @param newStamp the new value for the stamp
+     

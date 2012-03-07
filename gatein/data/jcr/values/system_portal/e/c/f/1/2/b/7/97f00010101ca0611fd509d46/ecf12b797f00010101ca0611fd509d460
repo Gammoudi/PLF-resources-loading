@@ -1,0 +1,5 @@
+
+     * Creates and adds index nodes for the given node.
+     * @param z the node
+     * @param level the level of the index
+     

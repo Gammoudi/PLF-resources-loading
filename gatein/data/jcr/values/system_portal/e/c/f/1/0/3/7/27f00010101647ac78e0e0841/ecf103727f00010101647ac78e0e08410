@@ -1,0 +1,4 @@
+ A <TT>long</TT> array in which elements may be updated atomically.
+ See the java.util.concurrent.atomic package specification
+ for description of the properties of atomic variables.
+ <DL><DT><B>Authors:</B></DT><DD>Doug Lea</DD></DL><DL><DT><B>Since:</B></DT><DD>1.5</DD></DL>

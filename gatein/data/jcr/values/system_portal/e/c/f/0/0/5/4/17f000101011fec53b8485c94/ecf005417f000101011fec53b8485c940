@@ -1,0 +1,8 @@
+
+     * Tests if the Java virtual machine supports thread contention monitoring.
+     *
+     * @return
+     *   <tt>true</tt>
+     *     if the Java virtual machine supports thread contention monitoring;
+     *   <tt>false</tt> otherwise.
+     

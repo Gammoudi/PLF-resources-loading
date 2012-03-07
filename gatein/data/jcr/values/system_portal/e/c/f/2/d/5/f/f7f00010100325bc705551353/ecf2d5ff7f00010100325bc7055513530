@@ -1,0 +1,5 @@
+
+         * Return true if a writer thread that is otherwise
+         * eligible for lock should block because of policy
+         * for overtaking other waiting threads.
+         

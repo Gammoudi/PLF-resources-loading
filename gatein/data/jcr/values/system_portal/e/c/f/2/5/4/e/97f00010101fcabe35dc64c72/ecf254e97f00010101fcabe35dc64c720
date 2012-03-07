@@ -1,0 +1,16 @@
+
+     * Returns <tt>true</tt> if this map maps one or more keys to the
+     * specified value.  More formally, returns <tt>true</tt> if and only if
+     * this map contains at least one mapping to a value <tt>v</tt> such that
+     * <tt>(value==null ? v==null : value.equals(v))</tt>.  This operation
+     * will probably require time linear in the map size for most
+     * implementations of the <tt>Map</tt> interface.
+     *
+     * @param value value whose presence in this map is to be tested
+     * @return <tt>true</tt> if this map maps one or more keys to the
+     *         specified value
+     * @throws ClassCastException if the value is of an inappropriate type for
+     *         this map (optional)
+     * @throws NullPointerException if the specified value is null and this
+     *         map does not permit null values (optional)
+     

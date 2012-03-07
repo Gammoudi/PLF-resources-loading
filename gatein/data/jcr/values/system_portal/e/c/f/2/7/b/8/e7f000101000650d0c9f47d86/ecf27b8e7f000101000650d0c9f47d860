@@ -1,0 +1,5 @@
+ This "helper class" implements the timer's task execution thread, which
+ waits for tasks on the timer queue, executions them when they fire,
+ reschedules repeating tasks, and removes cancelled tasks and spent
+ non-repeating tasks from the queue.
+ 

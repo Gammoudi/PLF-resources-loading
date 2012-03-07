@@ -1,0 +1,9 @@
+
+     * Returns true if and only if this string contains the specified
+     * sequence of char values.
+     *
+     * @param s the sequence to search for
+     * @return true if this string contains <code>s</code>, false otherwise
+     * @throws NullPointerException if <code>s</code> is <code>null</code>
+     * @since 1.5
+     

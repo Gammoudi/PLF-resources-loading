@@ -1,0 +1,7 @@
+
+     * Retrieve the localization resource bundle name for this
+     * logger.  Note that if the result is null, then the Logger
+     * will use a resource bundle name inherited from its parent.
+     *
+     * @return localization bundle name (may be null)
+     

@@ -1,0 +1,9 @@
+
+     * Registers the supplied transformer. 
+     * <P>
+     * Same as <code>addTransformer(transformer, false)</code>.
+     *
+     * @param transformer          the transformer to register
+     * @throws java.lang.NullPointerException if passed a <code>null</code> transformer
+     * @see    #addTransformer(ClassFileTransformer,boolean)
+     

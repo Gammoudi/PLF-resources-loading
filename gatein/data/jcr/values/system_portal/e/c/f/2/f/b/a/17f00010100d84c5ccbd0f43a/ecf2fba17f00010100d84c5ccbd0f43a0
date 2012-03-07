@@ -1,0 +1,5 @@
+ Searches until the next instance of its atom. This is useful for
+ finding the atom efficiently without passing an instance of it
+ (greedy problem) and without a lot of wasted search time (reluctant
+ problem).
+     

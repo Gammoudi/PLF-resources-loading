@@ -1,0 +1,4 @@
+ Thrown when the Java Virtual Machine attempts to read a class 
+ file and determines that the file is malformed or otherwise cannot 
+ be interpreted as a class file.
+ <DL><DT><B>Authors:</B></DT><DD>unascribed</DD></DL><DL><DT><B>Version:</B></DT><DD>%I%, %G%</DD></DL><DL><DT><B>Since:</B></DT><DD>JDK1.0</DD></DL>

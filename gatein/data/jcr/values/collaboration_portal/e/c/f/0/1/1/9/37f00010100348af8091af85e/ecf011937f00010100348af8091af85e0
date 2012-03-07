@@ -1,0 +1,8 @@
+#ContactUSColumnContainerLeftTop {
+	height: auto !important;
+	padding-bottom: 10px;
+}
+#ContactUSColumnContainerLeftTop p {
+	color: #282828;
+	font-size: 12px;
+}

@@ -1,0 +1,12 @@
+
+     * Creates an enum set initialized from the specified collection.  If
+     * the specified collection is an <tt>EnumSet</tt> instance, this static
+     * factory method behaves identically to {@link #copyOf(EnumSet)}.
+     * Otherwise, the specified collection must contain at least one element
+     * (in order to determine the new enum set's element type).
+     *
+     * @param c the collection from which to initialize this enum set
+     * @throws IllegalArgumentException if <tt>c</tt> is not an
+     *     <tt>EnumSet</tt> instance and contains no elements
+     * @throws NullPointerException if <tt>c</tt> is null
+     

@@ -1,0 +1,12 @@
+
+     * Tests if the Java virtual machine supports CPU time
+     * measurement for the current thread.
+     * This method returns <tt>true</tt> if {@link #isThreadCpuTimeSupported}
+     * returns <tt>true</tt>.
+     *
+     * @return
+     *   <tt>true</tt>
+     *     if the Java virtual machine supports CPU time 
+     *     measurement for current thread;
+     *   <tt>false</tt> otherwise.
+     

@@ -1,0 +1,18 @@
+
+     * Returns the <code>char</code> value at the specified index.  An index ranges from zero
+     * to <tt>length() - 1</tt>.  The first <code>char</code> value of the sequence is at
+     * index zero, the next at index one, and so on, as for array
+     * indexing. </p>
+     *
+     * <p>If the <code>char</code> value specified by the index is a
+     * <a href="Character.html#unicode">surrogate</a>, the surrogate
+     * value is returned.
+     *
+     * @param   index   the index of the <code>char</code> value to be returned
+     *
+     * @return  the specified <code>char</code> value
+     *
+     * @throws  IndexOutOfBoundsException
+     *          if the <tt>index</tt> argument is negative or not less than
+     *          <tt>length()</tt>
+     

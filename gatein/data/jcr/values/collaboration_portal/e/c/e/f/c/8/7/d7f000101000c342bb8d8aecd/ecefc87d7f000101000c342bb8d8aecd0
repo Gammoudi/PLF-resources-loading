@@ -1,0 +1,6 @@
+<div class="UserLogin">
+	<p class="info">Fill this form to register your user account. Then <a href="#" onclick="if(document.getElementById('UIMaskWorkspace')) ajaxGet(eXo.env.server.createPortalURL('UIPortal', 'ShowLoginForm', true));"> click here to login</a></p>
+</div>
+
+
+

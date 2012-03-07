@@ -1,0 +1,8 @@
+
+     * Returns <tt>true</tt> if this constructor is a synthetic
+     * constructor; returns <tt>false</tt> otherwise.
+     *
+     * @return true if and only if this constructor is a synthetic
+     * constructor as defined by the Java Language Specification.
+     * @since 1.5
+     

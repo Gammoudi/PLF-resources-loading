@@ -1,0 +1,9 @@
+
+     * Returns <tt>true</tt> if this constructor was declared to take
+     * a variable number of arguments; returns <tt>false</tt>
+     * otherwise.
+     *
+     * @return <tt>true</tt> if an only if this constructor was declared to
+     * take a variable number of arguments.
+     * @since 1.5
+     

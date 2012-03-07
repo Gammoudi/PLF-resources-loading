@@ -1,0 +1,23 @@
+ A service that decouples the production of new asynchronous tasks
+ from the consumption of the results of completed tasks.  Producers
+ <tt>submit</tt> tasks for execution. Consumers <tt>take</tt>
+ completed tasks and process their results in the order they
+ complete.  A <tt>CompletionService</tt> can for example be used to
+ manage asynchronous IO, in which tasks that perform reads are
+ submitted in one part of a program or system, and then acted upon
+ in a different part of the program when the reads complete,
+ possibly in a different order than they were requested.
+
+ <p>Typically, a <tt>CompletionService</tt> relies on a separate
+ <a href='../java/util/concurrent/Executor.html' title='Executor'>Executor</a> to actually execute the tasks, in which case the
+ <tt>CompletionService</tt> only manages an internal completion
+ queue. The <a href='../java/util/concurrent/ExecutorCompletionService.html' title='ExecutorCompletionService'>ExecutorCompletionService</a> class provides an
+ implementation of this approach.
+
+ <p>Memory consistency effects: Actions in a thread prior to
+ submitting a task to a <TT>CompletionService</TT>
+ <a href="package-summary.html#MemoryVisibility"><i>happen-before</i></a>
+ actions taken by that task, which in turn <i>happen-before</i>
+ actions following a successful return from the corresponding <TT>take()</TT>.
+
+ 

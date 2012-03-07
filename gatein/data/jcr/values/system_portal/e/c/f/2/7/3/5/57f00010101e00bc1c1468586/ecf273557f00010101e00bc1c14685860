@@ -1,0 +1,9 @@
+
+     * Establishes the heap invariant (described above) assuming the heap
+     * satisfies the invariant except possibly for the leaf-node indexed by k
+     * (which may have a nextExecutionTime less than its parent's).
+     *
+     * This method functions by "promoting" queue[k] up the hierarchy
+     * (by swapping it with its parent) repeatedly until queue[k]'s
+     * nextExecutionTime is greater than or equal to that of its parent.
+     

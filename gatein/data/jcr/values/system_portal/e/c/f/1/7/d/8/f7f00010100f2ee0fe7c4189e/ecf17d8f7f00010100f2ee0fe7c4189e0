@@ -1,0 +1,3 @@
+ A handler for rejected tasks that throws a
+ <tt>RejectedExecutionException</tt>.
+     

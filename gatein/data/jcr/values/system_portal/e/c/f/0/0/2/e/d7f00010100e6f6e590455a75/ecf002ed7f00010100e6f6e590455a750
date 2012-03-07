@@ -1,0 +1,19 @@
+
+     * Returns the {@link LockInfo#toString string representation}
+     * of an object for which the thread associated with this 
+     * <tt>ThreadInfo</tt> is blocked waiting.  
+     * This method is equivalent to calling:
+     * <blockquote>
+     * <pre>
+     * getLockInfo().toString()
+     * </pre></blockquote>
+     * 
+     * <p>This method will return <tt>null</tt> if this thread is not blocked
+     * waiting for any object or if the object is not owned by any thread.
+     *
+     * @return the string representation of the object on which
+     * the thread is blocked if any;
+     * <tt>null</tt> otherwise.
+     *
+     * @see #getLockInfo
+     

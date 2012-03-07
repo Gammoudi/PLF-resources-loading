@@ -1,0 +1,62 @@
+ A Red-Black tree based <a href='../java/util/NavigableMap.html' title='NavigableMap'>NavigableMap</a> implementation.
+ The map is sorted according to the {<DL><DT><B>linkplain:</B></DT><DD>Comparable natural
+ ordering} of its keys, or by a <a href='../java/util/Comparator.html' title='Comparator'>Comparator</a> provided at map
+ creation time, depending on which constructor is used.
+
+ <p>This implementation provides guaranteed log(n) time cost for the
+ <tt>containsKey</tt>, <tt>get</tt>, <tt>put</tt> and <tt>remove</tt>
+ operations.  Algorithms are adaptations of those in Cormen, Leiserson, and
+ Rivest's <I>Introduction to Algorithms</I>.
+
+ <p>Note that the ordering maintained by a sorted map (whether or not an
+ explicit comparator is provided) must be <i>consistent with equals</i> if
+ this sorted map is to correctly implement the <tt>Map</tt> interface.  (See
+ <tt>Comparable</tt> or <tt>Comparator</tt> for a precise definition of
+ <i>consistent with equals</i>.)  This is so because the <tt>Map</tt>
+ interface is defined in terms of the equals operation, but a map performs
+ all key comparisons using its <tt>compareTo</tt> (or <tt>compare</tt>)
+ method, so two keys that are deemed equal by this method are, from the
+ standpoint of the sorted map, equal.  The behavior of a sorted map
+ <i>is</i> well-defined even if its ordering is inconsistent with equals; it
+ just fails to obey the general contract of the <tt>Map</tt> interface.
+
+ <p><strong>Note that this implementation is not synchronized.</strong>
+ If multiple threads access a map concurrently, and at least one of the
+ threads modifies the map structurally, it <i>must</i> be synchronized
+ externally.  (A structural modification is any operation that adds or
+ deletes one or more mappings; merely changing the value associated
+ with an existing key is not a structural modification.)  This is
+ typically accomplished by synchronizing on some object that naturally
+ encapsulates the map.
+ If no such object exists, the map should be "wrapped" using the
+ <a href='../java/util/Collections.html#synchronizedSortedMap' title='Collections.synchronizedSortedMap'>Collections.synchronizedSortedMap</a>
+ method.  This is best done at creation time, to prevent accidental
+ unsynchronized access to the map: <pre>
+   SortedMap m = Collections.synchronizedSortedMap(new TreeMap(...));</pre>
+
+ <p>The iterators returned by the <tt>iterator</tt> method of the collections
+ returned by all of this class's "collection view methods" are
+ <i>fail-fast</i>: if the map is structurally modified at any time after the
+ iterator is created, in any way except through the iterator's own
+ <tt>remove</tt> method, the iterator will throw a <a href='../java/util/ConcurrentModificationException.html' title='ConcurrentModificationException'>ConcurrentModificationException</a>.  Thus, in the face of concurrent
+ modification, the iterator fails quickly and cleanly, rather than risking
+ arbitrary, non-deterministic behavior at an undetermined time in the future.
+
+ <p>Note that the fail-fast behavior of an iterator cannot be guaranteed
+ as it is, generally speaking, impossible to make any hard guarantees in the
+ presence of unsynchronized concurrent modification.  Fail-fast iterators
+ throw <tt>ConcurrentModificationException</tt> on a best-effort basis.
+ Therefore, it would be wrong to write a program that depended on this
+ exception for its correctness:   <i>the fail-fast behavior of iterators
+ should be used only to detect bugs.</i>
+
+ <p>All <tt>Map.Entry</tt> pairs returned by methods in this class
+ and its views represent snapshots of mappings at the time they were
+ produced. They do <em>not</em> support the <tt>Entry.setValue</tt>
+ method. (Note however that it is possible to change mappings in the
+ associated map using <tt>put</tt>.)
+
+ <p>This class is a member of the
+ <a href="{@docRoot}/../technotes/guides/collections/index.html">
+ Java Collections Framework</a>.</DD></DL>
+ <DL><DT><B>Parameters:</B></DT><DD><code><K></code> -  the type of keys maintained by this map</DD><DD><code><V></code> -  the type of mapped values</DD></DL><DL><DT><B>Authors:</B></DT><DD>Josh Bloch and Doug Lea</DD></DL><DL><DT><B>Version:</B></DT><DD>1.73, 05/10/06</DD></DL><DL><DT><B>See Also:</B></DT><DD><a href='../java/util/Map.html' title='Map'>Map</a></DD><DD><a href='../java/util/HashMap.html' title='HashMap'>HashMap</a></DD><DD><a href='../java/util/Hashtable.html' title='Hashtable'>Hashtable</a></DD><DD>java.lang.Comparable</DD><DD><a href='../java/util/Comparator.html' title='Comparator'>Comparator</a></DD><DD><a href='../java/util/Collection.html' title='Collection'>Collection</a></DD></DL><DL><DT><B>Since:</B></DT><DD>1.2</DD></DL>

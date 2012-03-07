@@ -1,0 +1,4 @@
+
+     * Returns the Julian calendar system instance (singleton). 'jcal'
+     * and 'jeras' are set upon the return.
+     

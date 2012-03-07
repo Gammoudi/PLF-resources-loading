@@ -1,0 +1,7 @@
+ An <TT>AtomicMarkableReference</TT> maintains an object reference
+ along with a mark bit, that can be updated atomically.
+ <p>
+ <p> Implementation note. This implementation maintains markable
+ references by creating internal objects representing "boxed"
+ [reference, boolean] pairs.
+ <DL><DT><B>Parameters:</B></DT><DD><code><V></code> -  The type of object referred to by this reference</DD></DL><DL><DT><B>Authors:</B></DT><DD>Doug Lea</DD></DL><DL><DT><B>Since:</B></DT><DD>1.5</DD></DL>

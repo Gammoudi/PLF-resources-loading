@@ -1,0 +1,21 @@
+.OfficeLeftTDContainer, .OfficeRightTDContainer {
+	width: 250px;
+}
+.OfficeLogoTDContainer {
+	width: 150px;
+}
+.OfficeSearchTDContainer {
+	width: 250px;
+}
+.OfficeMiddleTDContainer {
+	padding: 0 15px;
+}
+/* Banner */
+.UIWorkingWorkspace #OfficeBanner {
+background: url('/portal/rest/jcr/repository/collaboration/sites content/live/intranet/medias/images/background/BannerBg.jpg') no-repeat right top;
+	height: 50px;
+}
+
+.UIPageBody .VIEW-PAGEBODY .UIPage .UIComponentBlock {
+	background: none!important;
+}

@@ -1,0 +1,6 @@
+
+     * Converts calendar field values to the time value (millisecond
+     * offset from the <a href="Calendar.html#Epoch">Epoch</a>).
+     *
+     * @exception IllegalArgumentException if any calendar fields are invalid.
+     

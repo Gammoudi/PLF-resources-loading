@@ -1,0 +1,3 @@
+ Node to anchor at the beginning of a line. This is essentially the
+ object to match for the multiline ^.
+     

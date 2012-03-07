@@ -1,0 +1,13 @@
+
+     * Code shared by String and StringBuffer to do searches. The
+     * source is the character array being searched, and the target
+     * is the string being searched for.
+     *
+     * @param   source       the characters being searched.
+     * @param   sourceOffset offset of the source string.
+     * @param   sourceCount  count of the source string.
+     * @param   target       the characters being searched for.
+     * @param   targetOffset offset of the target string.
+     * @param   targetCount  count of the target string.
+     * @param   fromIndex    the index to begin searching from.
+     

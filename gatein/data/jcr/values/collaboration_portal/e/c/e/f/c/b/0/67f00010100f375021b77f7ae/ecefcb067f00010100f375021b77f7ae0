@@ -1,0 +1,16 @@
+.UINavigationPortlet  {
+  line-height: 50px;
+}
+
+.UINavigationPortlet  a {
+  margin: 0 7px;
+  color: #484848;
+}
+.UITableColumnContainer .UICLVFolderMode,.UITableColumnContainer .UIPresentationContainer,.UITableColumnContainer .Column1,.UITableColumnContainer .Column2,.UITableColumnContainer  .TwoColumnsCLVTemplate .CLV  {
+	_border:none;
+}
+
+.ContainerHoverClass,.ContainerHoverClassInner {	
+	_border: 1px solid #BFD5ED !important;
+	zoom: 1;
+}

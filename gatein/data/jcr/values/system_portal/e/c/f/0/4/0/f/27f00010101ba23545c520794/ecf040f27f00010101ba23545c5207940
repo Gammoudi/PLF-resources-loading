@@ -1,0 +1,10 @@
+
+     * Returns the string representation of the <code>float</code> argument.
+     * <p>
+     * The representation is exactly the one returned by the
+     * <code>Float.toString</code> method of one argument.
+     *
+     * @param   f   a <code>float</code>.
+     * @return  a string representation of the <code>float</code> argument.
+     * @see     java.lang.Float#toString(float)
+     

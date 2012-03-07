@@ -1,0 +1,8 @@
+
+     * Retrieves, but does not remove, the last element of this deque.
+     * This method differs from {@link #peekLast peekLast} only in that it
+     * throws an exception if this deque is empty.
+     *
+     * @return the tail of this deque
+     * @throws NoSuchElementException if this deque is empty
+     

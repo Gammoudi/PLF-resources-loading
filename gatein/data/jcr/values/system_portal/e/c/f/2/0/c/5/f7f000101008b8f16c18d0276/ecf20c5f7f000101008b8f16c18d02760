@@ -1,0 +1,17 @@
+
+     * Creates an enum set initially containing the specified elements.
+     *
+     * Overloadings of this method exist to initialize an enum set with
+     * one through five elements.  A sixth overloading is provided that
+     * uses the varargs feature.  This overloading may be used to create
+     * an enum set initially containing an arbitrary number of elements, but
+     * is likely to run slower than the overloadings that do not use varargs.
+     *
+     * @param e1 an element that this set is to contain initially
+     * @param e2 another element that this set is to contain initially
+     * @param e3 another element that this set is to contain initially
+     * @param e4 another element that this set is to contain initially
+     * @param e5 another element that this set is to contain initially
+     * @throws NullPointerException if any parameters are null
+     * @return an enum set initially containing the specified elements
+     

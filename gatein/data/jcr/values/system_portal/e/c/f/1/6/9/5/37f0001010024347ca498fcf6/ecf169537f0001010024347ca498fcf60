@@ -1,0 +1,3 @@
+ A wrapper class that exposes only the ScheduledExecutorService
+ methods of a ScheduledExecutorService implementation.
+     

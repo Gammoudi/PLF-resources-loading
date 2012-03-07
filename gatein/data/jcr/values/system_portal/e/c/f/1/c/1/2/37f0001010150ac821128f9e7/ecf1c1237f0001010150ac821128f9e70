@@ -1,0 +1,6 @@
+
+     * Returns the pseudo-time-stamp for two fields, given their
+     * individual pseudo-time-stamps.  If either of the fields
+     * is unset, then the aggregate is unset.  Otherwise, the
+     * aggregate is the later of the two stamps.
+     

@@ -1,0 +1,10 @@
+
+     * Returns an enumeration of the values in this dictionary. The general 
+     * contract for the <tt>elements</tt> method is that an 
+     * <tt>Enumeration</tt> is returned that will generate all the elements 
+     * contained in entries in this dictionary.
+     *
+     * @return  an enumeration of the values in this dictionary.
+     * @see     java.util.Dictionary#keys()
+     * @see     java.util.Enumeration
+     

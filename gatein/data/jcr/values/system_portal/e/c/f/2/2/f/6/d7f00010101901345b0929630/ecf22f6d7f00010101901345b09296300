@@ -1,0 +1,6 @@
+ A hashtable enumerator class.  This class implements both the
+ Enumeration and Iterator interfaces, but individual instances
+ can be created with the Iterator methods disabled.  This is necessary
+ to avoid unintentionally increasing the capabilities granted a user
+ by passing an Enumeration.
+     

@@ -1,0 +1,61 @@
+/**
+ * Copyright (C) 2009 eXo Platform SAS.
+ * 
+ * This is free software; you can redistribute it and/or modify it
+ * under the terms of the GNU Lesser General Public License as
+ * published by the Free Software Foundation; either version 2.1 of
+ * the License, or (at your option) any later version.
+ * 
+ * This software is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * Lesser General Public License for more details.
+ * 
+ * You should have received a copy of the GNU Lesser General Public
+ * License along with this software; if not, write to the Free
+ * Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA
+ * 02110-1301 USA, or see the FSF site: http://www.fsf.org.
+ */
+
+.UIHorizontalTabs {
+}
+
+.UIHorizontalTabs .TabsContainer {
+	border-bottom:1px solid #AEAEAE;	
+ 	height: 24px;
+}
+
+.UIHorizontalTabs .UITab {
+	float: left; /* orientation=lt */
+	float: right; /* orientation=rt */
+	font-weight: bold;
+	text-align: center;
+	width: auto;
+}
+
+/*###########################-- NormalTabStyle --############################*/
+
+.UIHorizontalTabs  .MiddleTab {
+	line-height: 23px;
+	cursor: pointer;
+	padding: 0px 16px;
+	font-weight:normal;
+	text-align: right; /* orientation=rt */
+	white-space: nowrap; /* orientation=rt */
+	color:#363636;
+}
+
+
+.UIHorizontalTabs  .SelectedTab .MiddleTab {
+	background: #fff;
+	-moz-border-radius-topleft: 6px;/*Firefox*/
+	-moz-border-radius-topright: 6px;
+    -webkit-border-top-left-radius: 6px;  /*Chrome, Safari*/
+    -webkit-border-top-right-radius: 6px;
+	border-top-left-radius: 6px 6px;/*supported in IE9+, Firefox 4+, Chrome, Safari 5+, and Opera. http://www.w3schools.com*/
+	border-top-right-radius: 6px 6px; 
+	border:1px solid #AEAEAE;	
+	border-bottom: none;
+	padding-bottom: 1px;
+	
+}

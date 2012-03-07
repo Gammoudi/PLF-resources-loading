@@ -1,0 +1,5 @@
+
+     * This method starts the event dispatch thread the first time it
+     * is called.  The event dispatch thread will be started only
+     * if someone registers a listener.
+     

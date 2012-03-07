@@ -1,0 +1,22 @@
+
+     * Inserts the specified element into the list (optional operation).  The
+     * element is inserted immediately before the next element that would be
+     * returned by <tt>next</tt>, if any, and after the next element that
+     * would be returned by <tt>previous</tt>, if any.  (If the list contains
+     * no elements, the new element becomes the sole element on the list.)
+     * The new element is inserted before the implicit cursor: a subsequent
+     * call to <tt>next</tt> would be unaffected, and a subsequent call to
+     * <tt>previous</tt> would return the new element.  (This call increases
+     * by one the value that would be returned by a call to <tt>nextIndex</tt>
+     * or <tt>previousIndex</tt>.)
+     *
+     * @param e the element to insert.
+     * @exception UnsupportedOperationException if the <tt>add</tt> method is
+     * 		  not supported by this list iterator.
+     *
+     * @exception ClassCastException if the class of the specified element
+     * 		  prevents it from being added to this list.
+     *
+     * @exception IllegalArgumentException if some aspect of this element
+     *            prevents it from being added to this list.
+     

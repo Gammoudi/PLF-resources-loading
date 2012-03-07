@@ -1,0 +1,21 @@
+
+     * Returns the memory usage after the Java virtual machine  
+     * most recently expended effort in recycling unused objects
+     * in this memory pool.
+     * This method does not request the Java virtual
+     * machine to perform any garbage collection other than its normal
+     * automatic memory management.
+     * This method returns <tt>null</tt> if the Java virtual
+     * machine does not support this method.
+     * 
+     * <p>
+     * <b>MBeanServer access</b>:<br>
+     * The mapped type of <tt>MemoryUsage</tt> is
+     * <tt>CompositeData</tt> with attributes as specified in
+     * {@link MemoryUsage#from MemoryUsage}.
+     *
+     * @return a {@link MemoryUsage} representing the memory usage of
+     * this memory pool after the Java virtual machine most recently 
+     * expended effort in recycling unused objects;
+     * <tt>null</tt> if this method is not supported.
+     

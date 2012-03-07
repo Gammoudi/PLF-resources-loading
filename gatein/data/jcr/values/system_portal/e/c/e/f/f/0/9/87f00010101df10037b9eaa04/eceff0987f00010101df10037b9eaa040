@@ -1,0 +1,48 @@
+
+     * Uses the constructor represented by this <code>Constructor</code> object to
+     * create and initialize a new instance of the constructor's
+     * declaring class, with the specified initialization parameters.
+     * Individual parameters are automatically unwrapped to match
+     * primitive formal parameters, and both primitive and reference
+     * parameters are subject to method invocation conversions as necessary.
+     *
+     * <p>If the number of formal parameters required by the underlying constructor
+     * is 0, the supplied <code>initargs</code> array may be of length 0 or null.
+     *
+     * <p>If the constructor's declaring class is an inner class in a
+     * non-static context, the first argument to the constructor needs
+     * to be the enclosing instance; see <i>The Java Language
+     * Specification</i>, section 15.9.3.
+     *
+     * <p>If the required access and argument checks succeed and the
+     * instantiation will proceed, the constructor's declaring class
+     * is initialized if it has not already been initialized.
+     *
+     * <p>If the constructor completes normally, returns the newly
+     * created and initialized instance.
+     *
+     * @param initargs array of objects to be passed as arguments to
+     * the constructor call; values of primitive types are wrapped in
+     * a wrapper object of the appropriate type (e.g. a <tt>float</tt>
+     * in a {@link java.lang.Float Float})
+     *
+     * @return a new object created by calling the constructor
+     * this object represents
+     * 
+     * @exception IllegalAccessException    if this <code>Constructor</code> object
+     *              enforces Java language access control and the underlying
+     *              constructor is inaccessible.
+     * @exception IllegalArgumentException  if the number of actual
+     *              and formal parameters differ; if an unwrapping
+     *              conversion for primitive arguments fails; or if,
+     *              after possible unwrapping, a parameter value
+     *              cannot be converted to the corresponding formal
+     *              parameter type by a method invocation conversion; if
+     *              this constructor pertains to an enum type.
+     * @exception InstantiationException    if the class that declares the
+     *              underlying constructor represents an abstract class.
+     * @exception InvocationTargetException if the underlying constructor
+     *              throws an exception.
+     * @exception ExceptionInInitializerError if the initialization provoked
+     *              by this method fails.
+     

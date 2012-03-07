@@ -1,0 +1,69 @@
+ The information about a memory notification.
+
+ <p>
+ A memory notification is emitted by <a href='../java/lang/management/MemoryMXBean.html' title='MemoryMXBean'>MemoryMXBean</a> 
+ when the Java virtual machine detects that the memory usage 
+ of a memory pool is exceeding a threshold value. 
+ The notification emitted will contain the memory notification
+ information about the detected condition:
+ <ul>
+   <li>The name of the memory pool.</li>
+   <li>The memory usage of the memory pool when the notification 
+       was constructed.</li>
+   <li>The number of times that the memory usage has crossed 
+       a threshold when the notification was constructed.
+       For usage threshold notifications, this count will be the 
+       <a href='../java/lang/management/MemoryPoolMXBean.html#getUsageThresholdCount' title='usage threshold'>usage threshold</a>.  For collection threshold notifications, 
+       this count will be the
+       <a href='../java/lang/management/MemoryPoolMXBean.html#getCollectionUsageThresholdCount' title='       collection usage threshold count'>       collection usage threshold count</a>.
+       </li>
+ </ul>
+
+ <p>
+ A javax.management.openmbean.CompositeData representing 
+ the <tt>MemoryNotificationInfo</tt> object 
+ is stored in the
+ javax.management.Notification#setUserData 
+ of a javax.management.Notification.
+ The <a href='#from'>from</a> method is provided to convert from 
+ a <tt>CompositeData</tt> to a <tt>MemoryNotificationInfo</tt> 
+ object. For example:
+
+ <blockquote><pre>
+      Notification notif;
+
+      // receive the notification emitted by MemoryMXBean and set to notif
+      ...
+            
+      String notifType = notif.getType();
+      if (notifType.equals(MemoryNotificationInfo.MEMORY_THRESHOLD_EXCEEDED) ||
+          notifType.equals(MemoryNotificationInfo.MEMORY_COLLECTION_THRESHOLD_EXCEEDED)) {
+          // retrieve the memory notification information
+          CompositeData cd = (CompositeData) notif.getUserData();
+          MemoryNotificationInfo info = MemoryNotificationInfo.from(cd);
+          ....
+      }  
+ </pre></blockquote>
+
+ <p>
+ The types of notifications emitted by <tt>MemoryMXBean</tt> are:
+ <ul> 
+   <li>A <a href='#MEMORY_THRESHOLD_EXCEEDED'></a>.
+       <br>This notification will be emitted when
+       the memory usage of a memory pool is increased and has reached 
+       or exceeded its 
+       <a href="MemoryPoolMXBean.html#UsageThreshold"> usage threshold</a> value.
+       Subsequent crossing of the usage threshold value does not cause
+       further notification until the memory usage has returned
+       to become less than the usage threshold value.
+       <p></li>
+   <li>A <a href='#MEMORY_COLLECTION_THRESHOLD_EXCEEDED'>       collection usage threshold exceeded notification</a>.
+       <br>This notification will be emitted when
+       the memory usage of a memory pool is greater than or equal to its
+       <a href="MemoryPoolMXBean.html#CollectionThreshold">
+       collection usage threshold</a> after the Java virtual machine
+       has expended effort in recycling unused objects in that
+       memory pool.</li> 
+ </ul>
+
+ <DL><DT><B>Authors:</B></DT><DD>Mandy Chung</DD></DL><DL><DT><B>Version:</B></DT><DD>%I%, %G%</DD></DL><DL><DT><B>Since:</B></DT><DD>1.5</DD></DL>

@@ -1,0 +1,11 @@
+
+     * Returns a string representation of this thread info.
+     * The format of this string depends on the implementation.
+     * The returned string will typically include  
+     * the {@linkplain #getThreadName thread name}, 
+     * the {@linkplain #getThreadId thread ID},
+     * its {@linkplain #getThreadState state}, 
+     * and a {@linkplain #getStackTrace stack trace} if any.
+     *
+     * @return a string representation of this thread info.
+     

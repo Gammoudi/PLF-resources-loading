@@ -1,0 +1,6 @@
+ Index nodes represent the levels of the skip list.  Note that
+ even though both Nodes and Indexes have forward-pointing
+ fields, they have different types and are handled in different
+ ways, that can't nicely be captured by placing field in a
+ shared abstract class.
+     

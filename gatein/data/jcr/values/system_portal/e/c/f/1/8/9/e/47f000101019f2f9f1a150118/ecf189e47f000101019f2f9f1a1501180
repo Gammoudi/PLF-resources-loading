@@ -1,0 +1,5 @@
+
+     * Locks file using UNIX file locking.
+     * @param fileName Absolute file name of the lock file.
+     * @return Returns a lock handle, used to unlock the file.
+     

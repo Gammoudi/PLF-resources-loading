@@ -1,0 +1,3 @@
+ Node in the Tree.  Doubles as a means to pass key-value pairs back to
+ user (see Map.Entry).
+     

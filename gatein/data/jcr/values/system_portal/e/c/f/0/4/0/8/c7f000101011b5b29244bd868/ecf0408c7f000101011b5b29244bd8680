@@ -1,0 +1,8 @@
+
+     * Returns <tt>true</tt> if, and only if, {@link #length()} is <tt>0</tt>.
+     *
+     * @return <tt>true</tt> if {@link #length()} is <tt>0</tt>, otherwise
+     * <tt>false</tt>
+     *
+     * @since 1.6
+     

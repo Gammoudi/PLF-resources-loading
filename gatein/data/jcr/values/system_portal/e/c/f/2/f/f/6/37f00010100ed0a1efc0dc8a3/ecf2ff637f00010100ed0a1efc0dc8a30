@@ -1,0 +1,5 @@
+
+         * This method implements the classic accept node with
+         * the addition of a check to see if the match occurred
+         * using all of the input.
+         

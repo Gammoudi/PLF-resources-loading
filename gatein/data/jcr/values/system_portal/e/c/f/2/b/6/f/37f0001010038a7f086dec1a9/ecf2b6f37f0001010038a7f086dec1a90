@@ -1,0 +1,9 @@
+
+     * Reads a single byte of compressed data from the input stream.
+     * This method will block until some input can be read and compressed.
+     *
+     * @return a single byte of compressed data, or -1 if the end of the
+     * uncompressed input stream is reached
+     * @throws IOException if an I/O error occurs or if this stream is
+     * already closed
+     

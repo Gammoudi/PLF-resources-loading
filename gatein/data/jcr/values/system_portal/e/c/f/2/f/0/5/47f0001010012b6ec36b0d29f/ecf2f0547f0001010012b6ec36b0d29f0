@@ -1,0 +1,27 @@
+ Attempts to match a slice in the input using the Boyer-Moore string
+ matching algorithm. The algorithm is based on the idea that the
+ pattern can be shifted farther ahead in the search text if it is
+ matched right to left.
+ <p>
+ The pattern is compared to the input one character at a time, from
+ the rightmost character in the pattern to the left. If the characters
+ all match the pattern has been found. If a character does not match,
+ the pattern is shifted right a distance that is the maximum of two
+ functions, the bad character shift and the good suffix shift. This
+ shift moves the attempted match position through the input more
+ quickly than a naive one position at a time check.
+ <p>
+ The bad character shift is based on the character from the text that
+ did not match. If the character does not appear in the pattern, the
+ pattern can be shifted completely beyond the bad character. If the
+ character does occur in the pattern, the pattern can be shifted to
+ line the pattern up with the next occurrence of that character.
+ <p>
+ The good suffix shift is based on the idea that some subset on the right
+ side of the pattern has matched. When a bad character is found, the
+ pattern can be shifted right by the pattern length if the subset does
+ not occur again in pattern, or by the amount of distance to the
+ next occurrence of the subset in the pattern.
+
+ Boyer-Moore search methods adapted from code by Amy Yu.
+     

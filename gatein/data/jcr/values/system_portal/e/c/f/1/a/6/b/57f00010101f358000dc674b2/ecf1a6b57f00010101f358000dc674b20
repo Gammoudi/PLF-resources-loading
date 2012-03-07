@@ -1,0 +1,7 @@
+
+	 * Remove a listener for PropertyChange events, added by
+	 * the {@link #addPropertyChangeListener}.
+	 *
+	 * @see #addPropertyChangeListener
+	 * @param listener  The PropertyChange listener to be removed.
+	 

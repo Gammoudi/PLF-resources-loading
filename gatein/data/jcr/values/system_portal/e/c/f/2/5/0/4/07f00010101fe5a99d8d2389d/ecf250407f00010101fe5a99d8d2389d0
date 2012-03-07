@@ -1,0 +1,10 @@
+
+     * Returns a three-letter abbreviation for this locale's language.  If the locale
+     * doesn't specify a language, this will be the empty string.  Otherwise, this will
+     * be a lowercase ISO 639-2/T language code.
+     * The ISO 639-2 language codes can be found on-line at
+     * <a href="http://www.loc.gov/standards/iso639-2/englangn.html">
+     * <code>http://www.loc.gov/standards/iso639-2/englangn.html</code>.</a>
+     * @exception MissingResourceException Throws MissingResourceException if the
+     * three-letter language abbreviation is not available for this locale.
+     

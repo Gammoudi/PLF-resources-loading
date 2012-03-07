@@ -1,0 +1,16 @@
+ 
+.UIToolbarContainer ul {
+    padding: 0px;
+	margin: 0px;
+	list-style: none;
+}
+
+.UIToolbarContainer .UIUserToolBarDesktopPortlet .UITab {
+	float: left; /* orientation=lt */
+	display: inline-block;
+}
+
+.UIToolbarContainer .UIWebOSAdminToolbarPortlet .UITab {
+    float: left; /* orientation=lt */
+	display: inline-block;
+}

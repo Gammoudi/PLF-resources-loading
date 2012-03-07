@@ -1,0 +1,13 @@
+ A <tt>Handler</tt> object takes log messages from a <tt>Logger</tt> and
+ exports them.  It might for example, write them to a console
+ or write them to a file, or send them to a network logging service,
+ or forward them to an OS log, or whatever.
+ <p>
+ A <tt>Handler</tt> can be disabled by doing a <tt>setLevel(Level.OFF)</tt>
+ and can  be re-enabled by doing a <tt>setLevel</tt> with an appropriate level.
+ <p>
+ <tt>Handler</tt> classes typically use <tt>LogManager</tt> properties to set
+ default values for the <tt>Handler</tt>'s <tt>Filter</tt>, <tt>Formatter</tt>,
+ and <tt>Level</tt>.  See the specific documentation for each concrete
+ <tt>Handler</tt> class.
+ <DL><DT><B>Version:</B></DT><DD>%I%, %G%</DD></DL><DL><DT><B>Since:</B></DT><DD>1.4</DD></DL>

@@ -1,0 +1,25 @@
+
+     * Returns the hyperbolic sine of a <code>double</code> value.
+     * The hyperbolic sine of <i>x</i> is defined to be
+     * (<i>e<sup>x</sup>&nbsp;-&nbsp;e<sup>-x</sup></i>)/2
+     * where <i>e</i> is {@linkplain Math#E Euler's number}.
+     *
+     * <p>Special cases:
+     * <ul>
+     *
+     * <li>If the argument is NaN, then the result is NaN.
+     *
+     * <li>If the argument is infinite, then the result is an infinity
+     * with the same sign as the argument.
+     *
+     * <li>If the argument is zero, then the result is a zero with the
+     * same sign as the argument.
+     *
+     * </ul>
+     *
+     * <p>The computed result must be within 2.5 ulps of the exact result.
+     *
+     * @param   x The number whose hyperbolic sine is to be returned.
+     * @return  The hyperbolic sine of <code>x</code>.
+     * @since 1.5
+     

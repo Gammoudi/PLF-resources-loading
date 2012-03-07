@@ -1,0 +1,12 @@
+
+     * Finds the resource with the given name. Class loader implementations
+     * should override this method to specify where to find resources.  </p>
+     *
+     * @param  name
+     *         The resource name
+     *
+     * @return  A <tt>URL</tt> object for reading the resource, or
+     *          <tt>null</tt> if the resource could not be found
+     *
+     * @since  1.2
+     

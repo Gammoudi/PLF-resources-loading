@@ -1,0 +1,14 @@
+
+     * Set the log level specifying which message levels will be
+     * logged by this logger.  Message levels lower than this
+     * value will be discarded.  The level value Level.OFF
+     * can be used to turn off logging.
+     * <p>
+     * If the new level is null, it means that this node should
+     * inherit its level from its nearest ancestor with a specific
+     * (non-null) level value.
+     * 
+     * @param newLevel   the new value for the log level (may be null)
+     * @exception  SecurityException  if a security manager exists and if
+     *             the caller does not have LoggingPermission("control").
+     

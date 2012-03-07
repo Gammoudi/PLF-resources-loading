@@ -1,0 +1,5 @@
+
+         * Re-pack and/or re-size the table. First scan the entire
+         * table removing stale entries. If this doesn't sufficiently
+         * shrink the size of the table, double the table size.
+         

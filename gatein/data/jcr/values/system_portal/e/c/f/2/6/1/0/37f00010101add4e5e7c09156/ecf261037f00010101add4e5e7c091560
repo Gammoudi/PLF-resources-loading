@@ -1,0 +1,6 @@
+
+     * Returns an enumeration of all the PropertyPermission objects in the
+     * container.
+     *
+     * @return an enumeration of all the PropertyPermission objects.
+     

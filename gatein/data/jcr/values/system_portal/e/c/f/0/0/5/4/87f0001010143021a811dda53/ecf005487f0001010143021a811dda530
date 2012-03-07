@@ -1,0 +1,13 @@
+
+     * Tests if the Java virtual machine implementation supports CPU time
+     * measurement for any thread.
+     * A Java virtual machine implementation that supports CPU time
+     * measurement for any thread will also support CPU time
+     * measurement for the current thread.  
+     *
+     * @return
+     *   <tt>true</tt>
+     *     if the Java virtual machine supports CPU time 
+     *     measurement for any thread;
+     *   <tt>false</tt> otherwise.
+     

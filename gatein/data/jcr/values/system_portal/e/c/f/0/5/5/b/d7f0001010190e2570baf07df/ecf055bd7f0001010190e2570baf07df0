@@ -1,0 +1,5 @@
+
+         * Construct a new map initially containing (firstKey, firstValue).
+         * ThreadLocalMaps are constructed lazily, so we only create
+         * one when we have at least one entry to put in it.
+         

@@ -1,0 +1,9 @@
+
+     * Save the state of this map to a stream.
+     *
+     * @serialData The key (Object) and value (Object) for each
+     * key-value mapping represented by the map, followed by
+     * <tt>null</tt>. The key-value mappings are emitted in key-order
+     * (as determined by the Comparator, or by the keys' natural
+     * ordering if no Comparator).
+     

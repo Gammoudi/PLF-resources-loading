@@ -1,0 +1,9 @@
+
+     * Returns the "canonical string representation" of the actions.
+     * That is, this method always returns present actions in the following order:
+     * read, write. For example, if this PropertyPermission object
+     * allows both write and read actions, a call to <code>getActions</code>
+     * will return the string "read,write".
+     *
+     * @return the canonical string representation of the actions.
+     

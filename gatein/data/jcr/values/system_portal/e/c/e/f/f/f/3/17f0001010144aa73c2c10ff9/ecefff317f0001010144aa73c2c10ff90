@@ -1,0 +1,6 @@
+
+     * Tests if this memory pool supports a collection usage threshold.
+     *
+     * @return <tt>true</tt> if this memory pool supports the
+     * collection usage threshold; <tt>false</tt> otherwise.
+     

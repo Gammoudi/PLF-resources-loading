@@ -1,0 +1,5 @@
+
+     * Parses a group and returns the head node of a set of nodes that process
+     * the group. Sometimes a double return system is used where the tail is
+     * returned in root.
+     

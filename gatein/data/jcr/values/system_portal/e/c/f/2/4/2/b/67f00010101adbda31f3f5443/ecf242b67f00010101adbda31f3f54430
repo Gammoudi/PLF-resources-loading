@@ -1,0 +1,7 @@
+
+     * Adds the specified element as the tail (last element) of this list.
+     *
+     * @param e the element to add
+     * @return <tt>true</tt> (as specified by {@link Queue#offer})
+     * @since 1.5
+     

@@ -1,0 +1,32 @@
+
+     * Sorts the specified list according to the order induced by the
+     * specified comparator.  All elements in the list must be <i>mutually
+     * comparable</i> using the specified comparator (that is,
+     * <tt>c.compare(e1, e2)</tt> must not throw a <tt>ClassCastException</tt>
+     * for any elements <tt>e1</tt> and <tt>e2</tt> in the list).<p>
+     *
+     * This sort is guaranteed to be <i>stable</i>:  equal elements will
+     * not be reordered as a result of the sort.<p>
+     *
+     * The sorting algorithm is a modified mergesort (in which the merge is
+     * omitted if the highest element in the low sublist is less than the
+     * lowest element in the high sublist).  This algorithm offers guaranteed
+     * n log(n) performance.
+     *
+     * The specified list must be modifiable, but need not be resizable.
+     * This implementation dumps the specified list into an array, sorts
+     * the array, and iterates over the list resetting each element
+     * from the corresponding position in the array.  This avoids the
+     * n<sup>2</sup> log(n) performance that would result from attempting
+     * to sort a linked list in place.
+     *
+     * @param  list the list to be sorted.
+     * @param  c the comparator to determine the order of the list.  A
+     *        <tt>null</tt> value indicates that the elements' <i>natural
+     *        ordering</i> should be used.
+     * @throws ClassCastException if the list contains elements that are not
+     *	       <i>mutually comparable</i> using the specified comparator.
+     * @throws UnsupportedOperationException if the specified list's
+     *	       list-iterator does not support the <tt>set</tt> operation.
+     * @see Comparator
+     

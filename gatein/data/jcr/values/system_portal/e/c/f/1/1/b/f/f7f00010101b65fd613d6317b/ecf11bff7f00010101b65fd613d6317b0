@@ -1,0 +1,8 @@
+
+     * Creates a new map with the same mappings as the given map.
+     * The map is created with a capacity of 1.5 times the number
+     * of mappings in the given map or 16 (whichever is greater),
+     * and a default load factor (0.75) and concurrencyLevel (16).
+     *
+     * @param m the map
+     

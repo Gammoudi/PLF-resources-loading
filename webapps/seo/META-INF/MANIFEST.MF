@@ -1,0 +1,18 @@
+Manifest-Version: 1.0
+Archiver-Version: Plexus Archiver
+Created-By: Apache Maven
+Built-By: nagui
+Build-Jdk: 1.6.0_24
+Implementation-Vendor-Id: org.exoplatform.ecms
+Date: 20120306-1212
+Implementation-Title: eXo WCM SEO Portlet Suites
+Implementation-URL: http://www.exoplatform.com/exo-ecms/exo-ecms-apps/
+ exo-ecms-apps-portlet-seo
+Implementation-Vendor: eXo Platform SAS
+Implementation-Version: 2.3.6-SNAPSHOT
+SCM-URL: scm:svn:http://svn.exoplatform.org/projects/ecms/trunk/exo-ec
+ ms-apps/exo-ecms-apps-portlet-seo
+Specification-Title: exo-wcm
+Specification-Vendor: eXo Platform SAS
+Specification-Version: 2.0
+

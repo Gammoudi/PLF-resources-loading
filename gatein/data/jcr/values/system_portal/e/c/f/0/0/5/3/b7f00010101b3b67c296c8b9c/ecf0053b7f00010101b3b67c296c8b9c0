@@ -1,0 +1,14 @@
+
+     * Tests if the Java virtual machine supports monitoring of
+     * <a href="LockInfo.html#OwnableSynchronizer">
+     * ownable synchronizer</a> usage.
+     *
+     * @return
+     *   <tt>true</tt>
+     *     if the Java virtual machine supports monitoring of ownable
+     *     synchronizer usage;
+     *   <tt>false</tt> otherwise.
+     *
+     * @see #dumpAllThreads
+     * @since 1.6
+     

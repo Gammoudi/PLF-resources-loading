@@ -1,0 +1,4 @@
+
+         * Removes and transfers all nodes.
+         * @param first (non-null) the first node on condition queue
+         

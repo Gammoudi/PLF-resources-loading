@@ -1,0 +1,13 @@
+
+     * Returns an array of {@link LockInfo} objects, each of which
+     * represents an <a href="LockInfo.html#OwnableSynchronizer">ownable
+     * synchronizer</a> currently locked by the thread associated with
+     * this <tt>ThreadInfo</tt>.  If no locked synchronizer was
+     * requested for this thread info or no synchronizer is locked by
+     * the thread, this method will return a zero-length array.
+     *
+     * @return an array of <tt>LockInfo</tt> objects representing
+     *         the ownable synchronizers locked by the thread.
+     *
+     * @since 1.6
+     

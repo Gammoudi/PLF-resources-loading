@@ -1,0 +1,5 @@
+
+     * returns true if there no files to verify.
+     * should only be called after all the META-INF entries
+     * have been processed.
+     

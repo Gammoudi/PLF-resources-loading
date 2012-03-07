@@ -1,0 +1,4 @@
+
+     * Returns true if given key greater than or equal to least and less
+     * or equal to fence. Needed mainly in submap operations.
+     

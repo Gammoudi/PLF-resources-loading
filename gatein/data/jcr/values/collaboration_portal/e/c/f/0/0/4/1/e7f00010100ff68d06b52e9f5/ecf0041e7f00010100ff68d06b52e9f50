@@ -1,0 +1,21 @@
+<div class="UILocation">
+	<table border="0" cellpadding="1" cellspacing="1">
+		<th class="Title">Locations</th>
+		<tr>
+			<td>
+				 <img alt="FrFlag.gif" name="FrFlag.gif" src="/portal/rest/jcr/repository/collaboration/sites%20content/live/acme/medias/images/flags/FrFlag.gif" /><span class="Place">Paris</span></td>
+		</tr>
+		<tr>
+			<td>
+				<img alt="AmFlag.gif" name="AmFlag.gif" src="/portal/rest/jcr/repository/collaboration/sites%20content/live/acme/medias/images/flags/AmFlag.gif" /><span class="Place">Los Angeles</span></td>
+		</tr>
+		<tr>
+			<td>
+				<img alt="JaFlag.gif" name="JaFlag.gif" src="/portal/rest/jcr/repository/collaboration/sites%20content/live/acme/medias/images/flags/JaFlag.gif" /><span class="Place">Tokyo</span></td>
+		</tr>
+		<tr>
+			<td>
+				<img alt="ArFlag.gif" name="ArFlag.gif" src="/portal/rest/jcr/repository/collaboration/sites%20content/live/acme/medias/images/flags/ArFlag.gif" /><span class="Place">Dubai</span></td>
+		</tr>
+	</table>
+</div>

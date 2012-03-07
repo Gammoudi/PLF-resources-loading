@@ -1,0 +1,18 @@
+ An object that creates new threads on demand.  Using thread factories
+ removes hardwiring of calls to java.lang.Thread#Thread(java.lang.Runnable),
+ enabling applications to use special thread subclasses, priorities, etc.
+
+ <p>
+ The simplest implementation of this interface is just:
+ <pre>
+ class SimpleThreadFactory implements ThreadFactory {
+   public Thread newThread(Runnable r) {
+     return new Thread(r);
+   }
+ }
+ </pre>
+
+ The <a href='../java/util/concurrent/Executors.html#defaultThreadFactory' title='Executors.defaultThreadFactory'>Executors.defaultThreadFactory</a> method provides a more
+ useful simple implementation, that sets the created thread context
+ to known values before returning it.
+ <DL><DT><B>Authors:</B></DT><DD>Doug Lea</DD></DL><DL><DT><B>Since:</B></DT><DD>1.5</DD></DL>

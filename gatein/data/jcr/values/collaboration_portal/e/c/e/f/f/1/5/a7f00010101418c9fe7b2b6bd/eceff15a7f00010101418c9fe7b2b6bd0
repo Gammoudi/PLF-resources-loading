@@ -1,0 +1,22 @@
+.LeftImageHome {
+	height: 165px;
+	font-family: lusida Sans,Arial,Tahoma,Verdana,Helvetica,sans-serif;
+}
+
+.RightImageHome {
+	background: url('/portal/rest/jcr/repository/collaboration/sites content/live/acme/web contents/site artifacts/Introduce/medias/images/ImageHome.gif') no-repeat left top;
+	padding-right: 4px;
+	color: #6b3e25;
+}
+
+.Welcome1 {
+	font-size: 30px!important;
+	text-align: right;
+	padding: 40px 20px 0px 0px;
+}
+
+.Welcome2 {
+	text-align: right;
+	padding-right: 20px;
+	font-size: 20px!important;
+}

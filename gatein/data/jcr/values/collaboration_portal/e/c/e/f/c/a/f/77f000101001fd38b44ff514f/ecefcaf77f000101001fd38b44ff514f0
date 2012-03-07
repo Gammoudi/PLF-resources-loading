@@ -1,0 +1,35 @@
+eXo.require("eXo.wcm.backoffice.private.WCMUtils", "/eXoWCMResources/javascript/");
+eXo.require("eXo.wcm.frontoffice.public.Breadcrumb", "/eXoWCMResources/javascript/");
+function renderNavigations() {
+   var navigations = eXo.env.portal.navigations;
+   var html =  '<div class="UINavigationPortlet ClearFix"><div class="TabsContainer">';
+   var date = (new Date()).getTime();
+   for (var ownerType in navigations) {
+     if (Array.prototype[ownerType]) continue;
+     for (var i in navigations[ownerType].nodes) {
+       var navigation = navigations[ownerType].nodes[i];
+       if (Array.prototype[i]) continue;
+       else{
+     var title = navigation.resolvedLabel;
+        if (navigation.resolvedLabel.length > 30)
+          navigation.resolvedLabel = navigation.resolvedLabel.substring(0,29) + "...";
+        var tabStyleNavigation = 'ControlButton';
+        var currentNodes = eXo.ecm.WCMBreadcrumbPortlet.getCurrentNodes(navigations, eXo.env.portal.selectedNodeUri);
+        if (currentNodes.length>0 && navigation.uri == currentNodes[currentNodes.length - 1].uri) 
+          tabStyleNavigation = 'ControlButton HoverButton';
+        var link = eXo.ecm.WCMUtils.getHostName() + eXo.env.portal.context + '/' + eXo.env.portal.accessMode + '/' + eXo.env.portal.portalName + '/' +  navigation.uri;
+        var arrowIcon = '';
+        if (ownerType==0) {
+            
+          if (navigation.uri)
+            html +=    '<a class="Tab FR TxtGray' + '"' + 'title="' + title + '"' + 'href="' + link + '">' + navigation.resolvedLabel + '</a> <span>|</span>';
+          else 
+            html +=    '<a class="TabLabel ' + navigation.icon + '" title="' + title + '">' + navigation.resolvedLabel + '</a> <span>|</span>';
+                   
+        }
+    }
+     }
+   }
+   html += '</div></div></div>';
+   document.getElementById("navigation-generator").innerHTML = html;
+ }

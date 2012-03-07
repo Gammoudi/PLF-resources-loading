@@ -1,0 +1,4 @@
+
+     * Determines if the specified code point is a supplementary
+     * character or unpaired surrogate.
+     

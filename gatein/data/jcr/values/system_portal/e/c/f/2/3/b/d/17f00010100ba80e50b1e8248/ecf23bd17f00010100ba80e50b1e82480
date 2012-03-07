@@ -1,0 +1,6 @@
+
+     * Returns <tt>true</tt> if this set contains the specified element.
+     *
+     * @param e element to be checked for containment in this collection
+     * @return <tt>true</tt> if this set contains the specified element
+     

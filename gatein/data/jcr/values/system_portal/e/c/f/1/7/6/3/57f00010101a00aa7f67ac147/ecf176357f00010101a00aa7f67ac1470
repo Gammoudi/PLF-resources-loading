@@ -1,0 +1,5 @@
+
+         * Returns true if this is a periodic (not a one-shot) action.
+         *
+         * @return true if periodic
+         

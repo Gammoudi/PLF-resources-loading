@@ -1,0 +1,34 @@
+<div class="ReadingPaneBar ClearFix">
+  <div class="Subject"><span><%=_ctx.appRes(uicomponent.getName() + ".UIIntroduction.label.title")%></span>
+    <span><%=_ctx.appRes(uicomponent.getName() + ".UIIntroduction.label.subject")%></span>  <!-- Welcome to eXo Mail - eXo Collaboration Suite. -->
+  </div>
+  <div><a href="javascript:void(0);" onclick="eXo.mail.UIMailPortlet.showHidePreviewPane(this);"><span id="ActionReadingPane" class="MaximizeReadingPane" title="<%=_ctx.appRes(uicomponent.getName() + ".UIIntroduction.action.title.togglePreview")%>"></span></a></div>
+</div>
+<div class="ReadingPaneDetails SpliterResizableListArea">
+  <div class="SubjectMail">
+    <div class="WelcomeMail ClearFix">
+      <div class="LabelWelcomeMail"><%=_ctx.appRes(uicomponent.getName() + ".UIIntroduction.label.welcome")%></div>
+    </div>
+    <!-- div class="LogoMail">
+      <span></span>
+    </div -->  
+    <div class="OverviewMail">
+      <%=_ctx.appRes(uicomponent.getName() + ".UIIntroduction.label.overview")%>
+    </div>
+    <div class="ContentMail" style="margin-left:25px;">
+      <%=_ctx.appRes(uicomponent.getName() + ".UIIntroduction.label.label0")%>
+    </div>
+    <div class="FeaturesMail">
+      <%=_ctx.appRes(uicomponent.getName() + ".UIIntroduction.label.features")%>
+    </div>
+    <div class="ContentMail">
+      <ul>
+        <li><%=_ctx.appRes(uicomponent.getName() + ".UIIntroduction.label.label1")%></li>
+        <li><%=_ctx.appRes(uicomponent.getName() + ".UIIntroduction.label.label2")%></li>
+        <li><%=_ctx.appRes(uicomponent.getName() + ".UIIntroduction.label.label3")%></li>
+        <li><%=_ctx.appRes(uicomponent.getName() + ".UIIntroduction.label.label4")%></li>
+        <li><%=_ctx.appRes(uicomponent.getName() + ".UIIntroduction.label.label5")%></li>
+      </ul>
+    </div>
+  </div>
+</div>  

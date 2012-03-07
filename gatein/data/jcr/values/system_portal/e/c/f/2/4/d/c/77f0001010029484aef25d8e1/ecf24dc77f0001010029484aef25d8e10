@@ -1,0 +1,23 @@
+
+ An iterator for lists that allows the programmer
+ to traverse the list in either direction, modify
+ the list during iteration, and obtain the iterator's
+ current position in the list. A <TT>ListIterator</TT>
+ has no current element; its <I>cursor position</I> always
+ lies between the element that would be returned by a call
+ to <TT>previous()</TT> and the element that would be
+ returned by a call to <TT>next()</TT>.
+ An iterator for a list of length <tt>n</tt> has <tt>n+1</tt> possible
+ cursor positions, as illustrated by the carets (<tt>^</tt>) below:
+ <PRE>
+                      Element(0)   Element(1)   Element(2)   ... Element(n-1)
+ cursor positions:  ^            ^            ^            ^                  ^
+ </PRE>
+ Note that the <a href='#remove'>remove</a> and <a href='#set(java.lang.Object)'>set(Object)</a> methods are
+ <i>not</i> defined in terms of the cursor position;  they are defined to
+ operate on the last element returned by a call to <a href='#next'>next</a> or <a href='#previous()'>previous()</a>.
+ <P>
+ This interface is a member of the
+ <a href="{@docRoot}/../technotes/guides/collections/index.html">
+ Java Collections Framework</a>.
+ <DL><DT><B>Authors:</B></DT><DD>Josh Bloch</DD></DL><DL><DT><B>Version:</B></DT><DD>%I%, %G%</DD></DL><DL><DT><B>See Also:</B></DT><DD><a href='../java/util/Collection.html' title='Collection'>Collection</a></DD><DD><a href='../java/util/List.html' title='List'>List</a></DD><DD><a href='../java/util/Iterator.html' title='Iterator'>Iterator</a></DD><DD><a href='../java/util/Enumeration.html' title='Enumeration'>Enumeration</a></DD><DD><a href='../java/util/List.html#listIterator()' title='List.listIterator'>List.listIterator</a></DD></DL><DL><DT><B>Since:</B></DT><DD>1.2</DD></DL>

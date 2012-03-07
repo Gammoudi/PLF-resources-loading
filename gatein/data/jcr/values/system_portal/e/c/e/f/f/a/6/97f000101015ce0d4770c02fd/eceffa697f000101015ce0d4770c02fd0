@@ -1,0 +1,9 @@
+ Indicates how long annotations with the annotated type are to
+ be retained.  If no Retention annotation is present on
+ an annotation type declaration, the retention policy defaults to
+ <tt>RetentionPolicy.CLASS</tt>.
+
+ <p>A Target meta-annotation has effect only if the meta-annotated
+ type is use directly for annotation.  It has no effect if the meta-annotated
+ type is used as a member type in another annotation type.
+ <DL><DT><B>Authors:</B></DT><DD>Joshua Bloch</DD></DL><DL><DT><B>Since:</B></DT><DD>1.5</DD></DL>

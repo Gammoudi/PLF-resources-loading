@@ -1,0 +1,7 @@
+ The <code>Array</code> class provides static methods to dynamically create and
+ access Java arrays.
+
+ <p><code>Array</code> permits widening conversions to occur during a get or set
+ operation, but throws an <code>IllegalArgumentException</code> if a narrowing
+ conversion would occur.
+ <DL><DT><B>Authors:</B></DT><DD>Nakul Saraiya</DD></DL>

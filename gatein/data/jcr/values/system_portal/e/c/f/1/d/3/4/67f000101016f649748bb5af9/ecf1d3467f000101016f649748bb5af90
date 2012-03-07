@@ -1,0 +1,34 @@
+
+     * Searches the specified list for the specified object using the binary
+     * search algorithm.  The list must be sorted into ascending order
+     * according to the specified comparator (as by the
+     * {@link #sort(List, Comparator) sort(List, Comparator)}
+     * method), prior to making this call.  If it is
+     * not sorted, the results are undefined.  If the list contains multiple
+     * elements equal to the specified object, there is no guarantee which one
+     * will be found.
+     *
+     * <p>This method runs in log(n) time for a "random access" list (which
+     * provides near-constant-time positional access).  If the specified list
+     * does not implement the {@link RandomAccess} interface and is large,
+     * this method will do an iterator-based binary search that performs
+     * O(n) link traversals and O(log n) element comparisons.
+     *
+     * @param  list the list to be searched.
+     * @param  key the key to be searched for.
+     * @param  c the comparator by which the list is ordered.
+     *         A <tt>null</tt> value indicates that the elements'
+     *	       {@linkplain Comparable natural ordering} should be used.
+     * @return the index of the search key, if it is contained in the list;
+     *	       otherwise, <tt>(-(<i>insertion point</i>) - 1)</tt>.  The
+     *	       <i>insertion point</i> is defined as the point at which the
+     *	       key would be inserted into the list: the index of the first
+     *	       element greater than the key, or <tt>list.size()</tt> if all
+     *	       elements in the list are less than the specified key.  Note
+     *	       that this guarantees that the return value will be &gt;= 0 if
+     *	       and only if the key is found.
+     * @throws ClassCastException if the list contains elements that are not
+     *	       <i>mutually comparable</i> using the specified comparator,
+     *	       or the search key is not mutually comparable with the
+     *	       elements of the list using this comparator.
+     

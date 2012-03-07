@@ -1,0 +1,7 @@
+ Thrown if an application attempts to access or modify a field, or 
+ to call a method that it does not have access to. 
+ <p>
+ Normally, this error is caught by the compiler; this error can 
+ only occur at run time if the definition of a class has 
+ incompatibly changed.
+ <DL><DT><B>Authors:</B></DT><DD>unascribed</DD></DL><DL><DT><B>Version:</B></DT><DD>%I%, %G%</DD></DL><DL><DT><B>Since:</B></DT><DD>JDK1.0</DD></DL>

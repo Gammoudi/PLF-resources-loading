@@ -1,0 +1,11 @@
+
+     * Replaces all of the elements of the specified list with the specified
+     * element. <p>
+     *
+     * This method runs in linear time.
+     *
+     * @param  list the list to be filled with the specified element.
+     * @param  obj The element with which to fill the specified list.
+     * @throws UnsupportedOperationException if the specified list or its
+     *	       list-iterator does not support the <tt>set</tt> operation.
+     

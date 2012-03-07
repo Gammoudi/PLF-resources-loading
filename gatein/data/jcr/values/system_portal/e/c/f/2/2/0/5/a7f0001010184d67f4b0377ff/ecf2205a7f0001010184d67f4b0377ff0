@@ -1,0 +1,4 @@
+
+     * Returns the ERA.  We need a special method for this because the
+     * default ERA is CE, but a zero (unset) ERA is BCE.
+     

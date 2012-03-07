@@ -1,0 +1,5 @@
+ We need this class in addition to CheckedSet as Map.Entry permits
+ modification of the backing Map via the setValue operation.  This
+ class is subtle: there are many possible attacks that must be
+ thwarted.<DL><DT><B>serial:</B></DT><DD>exclude</DD></DL>
+         

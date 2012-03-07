@@ -1,0 +1,35 @@
+#classic-access-QuickEditingBlock {
+	float: right;
+}
+
+.UIWCMLoginPortlet {
+	padding-top: 15px;
+}
+
+.UIWCMLoginPortlet .Content {
+	float: right;	
+	width: auto;
+	line-height: 20px;
+}
+
+.UIWCMLoginPortlet .Welcome {
+	color: #898989;
+	height: 20px;
+	font-size: 10px;
+}
+
+.UIWCMLoginPortlet span {
+	color: #5ca6ce;
+	font-weight: bold;
+}
+
+.UIWCMLoginPortlet .LoginInfo {
+	margin: 0px 5px;
+	color: #595858;
+	cursor: pointer;
+	text-decoration: none;
+}
+
+.UIWCMLoginPortlet .LoginInfo:hover {
+	text-decoration: underline;
+}

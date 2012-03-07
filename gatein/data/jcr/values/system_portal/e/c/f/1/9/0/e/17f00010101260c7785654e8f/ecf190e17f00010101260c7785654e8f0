@@ -1,0 +1,5 @@
+
+     * Unlocks file previously locked by lockFile0().
+     * @param lockHandle Handle to the file lock.
+     * @return Returns zero if OK, UNIX error code if failure.
+     

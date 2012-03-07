@@ -1,0 +1,11 @@
+
+     * Returns the greater of two <code>int</code> values. That is, the 
+     * result is the argument closer to the value of 
+     * <code>Integer.MAX_VALUE</code>. If the arguments have the same value, 
+     * the result is that same value.
+     *
+     * @param   a   an argument.
+     * @param   b   another argument.
+     * @return  the larger of <code>a</code> and <code>b</code>.
+     * @see     java.lang.Long#MAX_VALUE
+     

@@ -1,0 +1,4 @@
+
+     * Copy characters from this string into dst starting at dstBegin.
+     * This method doesn't perform any range checking.
+     

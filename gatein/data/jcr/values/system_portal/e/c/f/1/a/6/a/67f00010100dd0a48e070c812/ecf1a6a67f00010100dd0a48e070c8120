@@ -1,0 +1,8 @@
+
+	 * Registers a listener for PropertyChange events on the properties map.
+	 * This is typically used by applications to update a progress bar.
+	 *
+	 * @see #properties
+	 * @see #PROGRESS
+	 * @param listener  An object to be invoked when a property is changed.
+	 

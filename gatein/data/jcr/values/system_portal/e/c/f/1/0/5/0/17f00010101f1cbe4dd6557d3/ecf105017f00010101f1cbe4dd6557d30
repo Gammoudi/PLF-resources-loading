@@ -1,0 +1,13 @@
+ A reflection-based utility that enables atomic updates to
+ designated <TT>volatile long</TT> fields of designated classes.
+ This class is designed for use in atomic data structures in which
+ several fields of the same node are independently subject to atomic
+ updates.
+
+ <p>Note that the guarantees of the <TT>compareAndSet</TT>
+ method in this class are weaker than in other atomic classes.
+ Because this class cannot ensure that all uses of the field
+ are appropriate for purposes of atomic access, it can
+ guarantee atomicity only with respect to other invocations of
+ <TT>compareAndSet</TT> and <TT>set</TT> on the same updater.
+ <DL><DT><B>Parameters:</B></DT><DD><code><T></code> -  The type of the object holding the updatable field</DD></DL><DL><DT><B>Authors:</B></DT><DD>Doug Lea</DD></DL><DL><DT><B>Since:</B></DT><DD>1.5</DD></DL>

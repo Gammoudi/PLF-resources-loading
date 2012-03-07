@@ -1,0 +1,5 @@
+ An Entry maintaining an immutable key and value.  This class
+ does not support method <tt>setValue</tt>.  This class may be
+ convenient in methods that return thread-safe snapshots of
+ key-value mappings.
+     <DL><DT><B>Since:</B></DT><DD>1.6</DD></DL>

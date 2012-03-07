@@ -1,0 +1,7 @@
+
+     * Attempts to compose input by combining the first character
+     * with the first combining mark following it. Returns a String
+     * that is the composition of the leading character with its first
+     * combining mark followed by the remaining combining marks. Returns
+     * null if the first two characters cannot be further composed.
+     

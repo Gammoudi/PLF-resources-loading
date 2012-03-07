@@ -1,0 +1,12 @@
+ Condition implementation for a <a href='../java/util/concurrent/locks/AbstractQueuedLongSynchronizer.html' title='AbstractQueuedLongSynchronizer'>AbstractQueuedLongSynchronizer</a> serving as the basis of a <a href='../java/util/concurrent/locks/Lock.html' title='Lock'>Lock</a> implementation.
+
+ <p>Method documentation for this class describes mechanics,
+ not behavioral specifications from the point of view of Lock
+ and Condition users. Exported versions of this class will in
+ general need to be accompanied by documentation describing
+ condition semantics that rely on those of the associated
+ <tt>AbstractQueuedLongSynchronizer</tt>.
+
+ <p>This class is Serializable, but all fields are transient,
+ so deserialized conditions have no waiters.
+     <DL><DT><B>Since:</B></DT><DD>1.6</DD></DL>

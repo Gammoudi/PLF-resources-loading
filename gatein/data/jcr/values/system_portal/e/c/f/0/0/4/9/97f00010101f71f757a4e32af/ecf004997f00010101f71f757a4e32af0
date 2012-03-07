@@ -1,0 +1,27 @@
+
+     * Finds cycles of threads that are in deadlock waiting to acquire 
+     * object monitors or 
+     * <a href="LockInfo.html#OwnableSynchronizer">ownable synchronizers</a>.
+     *
+     * Threads are <em>deadlocked</em> in a cycle waiting for a lock of
+     * these two types if each thread owns one lock while
+     * trying to acquire another lock already held 
+     * by another thread in the cycle.
+     * <p>
+     * This method is designed for troubleshooting use, but not for
+     * synchronization control.  It might be an expensive operation.
+     *
+     * @return an array of IDs of the threads that are 
+     * deadlocked waiting for object monitors or ownable synchronizers, if any;
+     * <tt>null</tt> otherwise.
+     *
+     * @throws java.lang.SecurityException if a security manager
+     *         exists and the caller does not have
+     *         ManagementPermission("monitor").
+     * @throws java.lang.UnsupportedOperationException if the Java virtual 
+     * machine does not support monitoriing of ownable synchronizer usage.
+     *
+     * @see #isSynchronizerUsageSupported
+     * @see #findMonitorDeadlockedThreads
+     * @since 1.6 
+     

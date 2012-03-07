@@ -1,0 +1,98 @@
+<%	
+	import org.exoplatform.web.application.JavascriptManager;
+	import org.exoplatform.portal.webui.util.Util;
+	import org.exoplatform.wcm.webui.Utils;
+	import org.exoplatform.portal.application.PortalRequestContext ;
+	import org.exoplatform.platform.webui.NavigationURLUtils;
+	import org.exoplatform.wcm.webui.seo.UISEOToolbarForm;
+
+	def rcontext = _ctx.getRequestContext();
+	 
+
+	String addPageLabel = _ctx.appRes("UIAdminToolbarPortlet.action.AddPage");	
+	String editPageLabel = _ctx.appRes("UIAdminToolbarPortlet.action.Layout");
+	String editSiteLayout = _ctx.appRes("UIAdminToolbarPortlet.action.Layout");
+	String editNavigation = _ctx.appRes("UIAdminToolbarPortlet.action.EditNavigation");
+	String quickEditLabel = _ctx.appRes("UIAdminToolbarPortlet.action.Content");
+	String editorLabel = _ctx.appRes("UIAdminToolbarPortlet.action.Editor");
+	String seoLabel = _ctx.appRes("UIAdminToolbarPortlet.action.Properties");
+  String siteLabel = _ctx.appRes("UIAdminToolbarPortlet.action.Site");
+	String addSiteLabel = _ctx.appRes("UIAdminToolbarPortlet.action.AddSite");
+
+	String quiEditClass = "QuickEditUnchecked";
+	PortalRequestContext context = Util.getPortalRequestContext();
+	Boolean quickEdit = (Boolean)context.getRequest().getSession().getAttribute(Utils.TURN_ON_QUICK_EDIT);
+	if(quickEdit != null && quickEdit) {
+	  quiEditClass = "QuickEditChecked"
+	}
+
+	boolean userCouldEditNavigation = uicomponent.hasEditPermissionOnNavigation() && !uicomponent.isUserNavigation();
+	boolean userCouldEditPage = uicomponent.hasEditPermissionOnPage();
+	boolean userCouldEditPortal = uicomponent.hasEditPermissionOnPortal();
+	
+%>
+<script src="/eXoWCMResources/javascript/eXo/wcm/frontoffice/private/QuickEdit.js" type="text/javascript" id="QuickEdit"></script>
+	
+<div id="<%=uicomponent.getId()%>">
+<ul class="UIAdminToolbarPortlet UIHorizontalTabs" id="<%=uicomponent.getId()%>_UL">
+	<li class="UITab NormalToolbarTab">
+		<a class="EditorIcon TBIcon" href="#">$editorLabel</a>
+		<ul class="MenuItemContainer" style="display:none;">
+            <% if(uicomponent.isSpaceManager()) { %>
+			<li class="MenuItem">
+				<a href="<%=uicomponent.event("ChangeEditing")%>" title="" class="ItemIcon $quiEditClass">$quickEditLabel</a>
+			</li>
+            <% } %>
+			<% if(userCouldEditPage){ %>
+			<li class="MenuItem ArrowIcon">
+				<a href="#" class="ItemIcon DefaultPageIcon"><%=_ctx.appRes("UIAdminToolbarPortlet.action.Page")%></a>
+				<ul class="MenuItemContainer">
+                    <%
+                      String editPageRequest = "javascript:ajaxGet(eXo.env.server.createPortalURL('" + uicomponent.getUIPageId() + "', 'EditCurrentPage', true))";
+                    %>
+					<li class="MenuItem">
+						<a href="$editPageRequest" title="" class="ItemIcon EditPageIcon">$editPageLabel</a>
+					</li>
+					<li class="MenuItem SEOMenuItem">
+                        <div class="seolabel FL">
+                          <%=seoLabel %>
+                        </div>
+						<div class="FL SEOImgBlock">
+							<%uicomponent.renderChild(UISEOToolbarForm.class);%>
+						</div>
+					</li>	  				
+					<li class="HorizontalLine">&nbsp;</li>
+					<li class="MenuItem">	
+						<a href="javascript:ajaxGet(eXo.env.server.createPortalURL('UIWorkingWorkspace', 'PageCreationWizard', true))" title="" class="ItemIcon AddPageIcon">$addPageLabel</a>
+					</li>
+				</ul>
+			</li>
+			<% } %>
+			<% if(userCouldEditPortal || userCouldEditNavigation) { %>
+			<li class="MenuItem ArrowIcon">
+				<a href="#" class="ItemIcon DefaultPageIcon">$siteLabel</a>
+				<ul class="MenuItemContainer">
+					<% if(userCouldEditPortal){ %>
+					<li class="MenuItem">	
+						<a href="javascript:ajaxGet(eXo.env.server.createPortalURL('UIWorkingWorkspace', 'EditInline', true))" title="" class="ItemIcon EditSiteIcon">$editSiteLayout</a>
+					</li>
+					<% } %>
+					<% if(userCouldEditNavigation){ %>
+					<li class="MenuItem">	
+						<a href="<%=uicomponent.event("EditNavigation", null);%>" title="" class="ItemIcon Navigation">$editNavigation</a>
+					</li>
+					<% } %>
+					<% if(userCouldEditPortal){ %>
+					<li class="HorizontalLine">&nbsp;</li>
+					<li class="MenuItem">	
+						<a href="javascript:void(0);" onclick="javascript:ajaxGet(eXo.env.server.createPortalURL('UIWorkingWorkspace', 'CreatePortal', true))" title="" class="ItemIcon AddSiteIcon">$addSiteLabel</a>
+					</li>
+					<% } %>
+				</ul>
+			</li>
+			<% } %>
+		</ul>
+	</li>
+</ul>
+	<%uicomponent.renderChildren();%>
+</div>

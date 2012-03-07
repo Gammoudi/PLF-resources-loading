@@ -1,0 +1,3 @@
+ Reference queues, to which registered reference objects are appended by the
+ garbage collector after the appropriate reachability changes are detected.
+ <DL><DT><B>Authors:</B></DT><DD>Mark Reinhold</DD></DL><DL><DT><B>Version:</B></DT><DD>%I%, %G%</DD></DL><DL><DT><B>Since:</B></DT><DD>1.2</DD></DL>

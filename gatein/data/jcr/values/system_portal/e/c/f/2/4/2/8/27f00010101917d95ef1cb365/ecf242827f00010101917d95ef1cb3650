@@ -1,0 +1,53 @@
+ Linked list implementation of the <tt>List</tt> interface.  Implements all
+ optional list operations, and permits all elements (including
+ <tt>null</tt>).  In addition to implementing the <tt>List</tt> interface,
+ the <tt>LinkedList</tt> class provides uniformly named methods to
+ <tt>get</tt>, <tt>remove</tt> and <tt>insert</tt> an element at the
+ beginning and end of the list.  These operations allow linked lists to be
+ used as a stack, {<DL><DT><B>linkplain:</B></DT><DD>Queue queue}, or {@linkplain Deque
+ double-ended queue}. <p>
+
+ The class implements the <tt>Deque</tt> interface, providing
+ first-in-first-out queue operations for <tt>add</tt>,
+ <tt>poll</tt>, along with other stack and deque operations.<p>
+
+ All of the operations perform as could be expected for a doubly-linked
+ list.  Operations that index into the list will traverse the list from
+ the beginning or the end, whichever is closer to the specified index.<p>
+
+ <p><strong>Note that this implementation is not synchronized.</strong>
+ If multiple threads access a linked list concurrently, and at least
+ one of the threads modifies the list structurally, it <i>must</i> be
+ synchronized externally.  (A structural modification is any operation
+ that adds or deletes one or more elements; merely setting the value of
+ an element is not a structural modification.)  This is typically
+ accomplished by synchronizing on some object that naturally
+ encapsulates the list.
+
+ If no such object exists, the list should be "wrapped" using the
+ <a href='../java/util/Collections.html#synchronizedList' title='Collections.synchronizedList'>Collections.synchronizedList</a>
+ method.  This is best done at creation time, to prevent accidental
+ unsynchronized access to the list:<pre>
+   List list = Collections.synchronizedList(new LinkedList(...));</pre>
+
+ <p>The iterators returned by this class's <tt>iterator</tt> and
+ <tt>listIterator</tt> methods are <i>fail-fast</i>: if the list is
+ structurally modified at any time after the iterator is created, in
+ any way except through the Iterator's own <tt>remove</tt> or
+ <tt>add</tt> methods, the iterator will throw a <a href='../java/util/ConcurrentModificationException.html' title='ConcurrentModificationException'>ConcurrentModificationException</a>.  Thus, in the face of concurrent
+ modification, the iterator fails quickly and cleanly, rather than
+ risking arbitrary, non-deterministic behavior at an undetermined
+ time in the future.
+
+ <p>Note that the fail-fast behavior of an iterator cannot be guaranteed
+ as it is, generally speaking, impossible to make any hard guarantees in the
+ presence of unsynchronized concurrent modification.  Fail-fast iterators
+ throw <tt>ConcurrentModificationException</tt> on a best-effort basis.
+ Therefore, it would be wrong to write a program that depended on this
+ exception for its correctness:   <i>the fail-fast behavior of iterators
+ should be used only to detect bugs.</i>
+
+ <p>This class is a member of the
+ <a href="{@docRoot}/../technotes/guides/collections/index.html">
+ Java Collections Framework</a>.</DD></DL>
+ <DL><DT><B>Parameters:</B></DT><DD><code><E></code> -  the type of elements held in this collection</DD></DL><DL><DT><B>Authors:</B></DT><DD>Josh Bloch</DD></DL><DL><DT><B>Version:</B></DT><DD>%I%, %G%</DD></DL><DL><DT><B>See Also:</B></DT><DD><a href='../java/util/List.html' title='List'>List</a></DD><DD><a href='../java/util/ArrayList.html' title='ArrayList'>ArrayList</a></DD><DD><a href='../java/util/Vector.html' title='Vector'>Vector</a></DD></DL><DL><DT><B>Since:</B></DT><DD>1.2</DD></DL>

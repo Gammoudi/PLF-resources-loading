@@ -1,0 +1,19 @@
+
+     * Returns a comparator that imposes the reverse of the <i>natural
+     * ordering</i> on a collection of objects that implement the
+     * <tt>Comparable</tt> interface.  (The natural ordering is the ordering
+     * imposed by the objects' own <tt>compareTo</tt> method.)  This enables a
+     * simple idiom for sorting (or maintaining) collections (or arrays) of
+     * objects that implement the <tt>Comparable</tt> interface in
+     * reverse-natural-order.  For example, suppose a is an array of
+     * strings. Then: <pre>
+     * 		Arrays.sort(a, Collections.reverseOrder());
+     * </pre> sorts the array in reverse-lexicographic (alphabetical) order.<p>
+     *
+     * The returned comparator is serializable.
+     *
+     * @return a comparator that imposes the reverse of the <i>natural
+     * 	       ordering</i> on a collection of objects that implement
+     *	       the <tt>Comparable</tt> interface.
+     * @see Comparable
+     

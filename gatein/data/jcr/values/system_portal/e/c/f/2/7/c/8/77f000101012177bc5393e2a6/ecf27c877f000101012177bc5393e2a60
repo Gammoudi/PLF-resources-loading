@@ -1,0 +1,13 @@
+
+     * Returns <tt>true</tt> if this map maps one or more keys to the
+     * specified value.  More formally, returns <tt>true</tt> if and only if
+     * this map contains at least one mapping to a value <tt>v</tt> such
+     * that <tt>(value==null ? v==null : value.equals(v))</tt>.  This
+     * operation will probably require time linear in the map size for
+     * most implementations.
+     *
+     * @param value value whose presence in this map is to be tested
+     * @return <tt>true</tt> if a mapping to <tt>value</tt> exists;
+     *	       <tt>false</tt> otherwise
+     * @since 1.2
+     

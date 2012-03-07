@@ -1,0 +1,9 @@
+
+         * Returns an estimate of the number of threads waiting on
+         * this condition.
+         * Implements {@link AbstractQueuedLongSynchronizer#getWaitQueueLength}.
+         *
+         * @return the estimated number of waiting threads
+         * @throws IllegalMonitorStateException if {@link #isHeldExclusively}
+         *         returns {@code false}
+         

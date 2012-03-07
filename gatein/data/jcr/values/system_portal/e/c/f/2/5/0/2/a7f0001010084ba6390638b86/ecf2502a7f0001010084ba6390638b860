@@ -1,0 +1,15 @@
+
+     * Returns a name for the locale that is appropriate for display to the
+     * user.  This will be the values returned by getDisplayLanguage(), getDisplayCountry(),
+     * and getDisplayVariant() assembled into a single string.  The display name will have
+     * one of the following forms:<p><blockquote>
+     * language (country, variant)<p>
+     * language (country)<p>
+     * language (variant)<p>
+     * country (variant)<p>
+     * language<p>
+     * country<p>
+     * variant<p></blockquote>
+     * depending on which fields are specified in the locale.  If the language, country,
+     * and variant fields are all empty, this function returns the empty string.
+     

@@ -1,0 +1,5 @@
+
+     * Given a specific sequence composed of a regular character and
+     * combining marks that follow it, produce the alternation that will
+     * match all canonical equivalences of that sequence.
+     

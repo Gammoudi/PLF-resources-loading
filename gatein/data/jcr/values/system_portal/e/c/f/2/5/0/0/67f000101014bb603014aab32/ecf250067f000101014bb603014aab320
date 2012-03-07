@@ -1,0 +1,103 @@
+
+ A <code>Locale</code> object represents a specific geographical, political,
+ or cultural region. An operation that requires a <code>Locale</code> to perform
+ its task is called <em>locale-sensitive</em> and uses the <code>Locale</code>
+ to tailor information for the user. For example, displaying a number
+ is a locale-sensitive operation--the number should be formatted
+ according to the customs/conventions of the user's native country,
+ region, or culture.
+
+ <P>
+ Create a <code>Locale</code> object using the constructors in this class:
+ <blockquote>
+ <pre>
+ Locale(String language)
+ Locale(String language, String country)
+ Locale(String language, String country, String variant)
+ </pre>
+ </blockquote>
+ The language argument is a valid <STRONG>ISO Language Code.</STRONG>
+ These codes are the lower-case, two-letter codes as defined by ISO-639.
+ You can find a full list of these codes at a number of sites, such as:
+ <BR><a href ="http://www.loc.gov/standards/iso639-2/englangn.html">
+ <code>http://www.loc.gov/standards/iso639-2/englangn.html</code></a>
+
+ <P>
+ The country argument is a valid <STRONG>ISO Country Code.</STRONG> These
+ codes are the upper-case, two-letter codes as defined by ISO-3166.
+ You can find a full list of these codes at a number of sites, such as:
+ <BR><a href="http://www.iso.ch/iso/en/prods-services/iso3166ma/02iso-3166-code-lists/list-en1.html">
+ <code>http://www.iso.ch/iso/en/prods-services/iso3166ma/02iso-3166-code-lists/list-en1.html</code></a>
+
+ <P>
+ The variant argument is a vendor or browser-specific code.
+ For example, use WIN for Windows, MAC for Macintosh, and POSIX for POSIX.
+ Where there are two variants, separate them with an underscore, and
+ put the most important one first. For example, a Traditional Spanish collation
+ might construct a locale with parameters for language, country and variant as:
+ "es", "ES", "Traditional_WIN".
+
+ <P>
+ Because a <code>Locale</code> object is just an identifier for a region,
+ no validity check is performed when you construct a <code>Locale</code>.
+ If you want to see whether particular resources are available for the
+ <code>Locale</code> you construct, you must query those resources. For
+ example, ask the <code>NumberFormat</code> for the locales it supports
+ using its <code>getAvailableLocales</code> method.
+ <BR><STRONG>Note:</STRONG> When you ask for a resource for a particular
+ locale, you get back the best available match, not necessarily
+ precisely what you asked for. For more information, look at
+ <a href='../java/util/ResourceBundle.html' title='ResourceBundle'>ResourceBundle</a>.
+
+ <P>
+ The <code>Locale</code> class provides a number of convenient constants
+ that you can use to create <code>Locale</code> objects for commonly used
+ locales. For example, the following creates a <code>Locale</code> object
+ for the United States:
+ <blockquote>
+ <pre>
+ Locale.US
+ </pre>
+ </blockquote>
+
+ <P>
+ Once you've created a <code>Locale</code> you can query it for information about
+ itself. Use <code>getCountry</code> to get the ISO Country Code and
+ <code>getLanguage</code> to get the ISO Language Code. You can
+ use <code>getDisplayCountry</code> to get the
+ name of the country suitable for displaying to the user. Similarly,
+ you can use <code>getDisplayLanguage</code> to get the name of
+ the language suitable for displaying to the user. Interestingly,
+ the <code>getDisplayXXX</code> methods are themselves locale-sensitive
+ and have two versions: one that uses the default locale and one
+ that uses the locale specified as an argument.
+
+ <P>
+ The Java Platform provides a number of classes that perform locale-sensitive
+ operations. For example, the <code>NumberFormat</code> class formats
+ numbers, currency, or percentages in a locale-sensitive manner. Classes
+ such as <code>NumberFormat</code> have a number of convenience methods
+ for creating a default object of that type. For example, the
+ <code>NumberFormat</code> class provides these three convenience methods
+ for creating a default <code>NumberFormat</code> object:
+ <blockquote>
+ <pre>
+ NumberFormat.getInstance()
+ NumberFormat.getCurrencyInstance()
+ NumberFormat.getPercentInstance()
+ </pre>
+ </blockquote>
+ These methods have two variants; one with an explicit locale
+ and one without; the latter using the default locale.
+ <blockquote>
+ <pre>
+ NumberFormat.getInstance(myLocale)
+ NumberFormat.getCurrencyInstance(myLocale)
+ NumberFormat.getPercentInstance(myLocale)
+ </pre>
+ </blockquote>
+ A <code>Locale</code> is the mechanism for identifying the kind of object
+ (<code>NumberFormat</code>) that you would like to get. The locale is
+ <STRONG>just</STRONG> a mechanism for identifying objects,
+ <STRONG>not</STRONG> a container for the objects themselves.
+ <DL><DT><B>Authors:</B></DT><DD>Mark Davis</DD></DL><DL><DT><B>See Also:</B></DT><DD><a href='../java/util/ResourceBundle.html' title='ResourceBundle'>ResourceBundle</a></DD><DD>java.text.Format</DD><DD>java.text.NumberFormat</DD><DD>java.text.Collator</DD></DL><DL><DT><B>Since:</B></DT><DD>1.1</DD></DL>

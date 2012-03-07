@@ -1,0 +1,6 @@
+
+     * Retrieves, but does not remove, the last element of this deque,
+     * or returns <tt>null</tt> if this deque is empty.
+     *
+     * @return the tail of this deque, or <tt>null</tt> if this deque is empty
+     

@@ -1,0 +1,5 @@
+
+     * <i>This operation is not supported</i>.
+     *
+     * @param limit maximum bytes that can be read before invalidating the position marker
+     

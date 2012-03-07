@@ -1,0 +1,13 @@
+
+     * Associates the specified value with the specified key in this map.
+     * If the map previously contained a mapping for the key, the old
+     * value is replaced.
+     *
+     * @param key key with which the specified value is to be associated
+     * @param value value to be associated with the specified key
+     * @return the previous value associated with the specified key, or
+     *         <tt>null</tt> if there was no mapping for the key
+     * @throws ClassCastException if the specified key cannot be compared
+     *         with the keys currently in the map
+     * @throws NullPointerException if the specified key or value is null
+     

@@ -1,0 +1,8 @@
+
+     * Adds all of the elements in the specified collection to this set.
+     *
+     * @param c collection whose elements are to be added to this set
+     * @return <tt>true</tt> if this set changed as a result of the call
+     * @throws NullPointerException if the specified collection or any of
+     *     its elements are null
+     

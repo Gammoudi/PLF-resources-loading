@@ -1,0 +1,5 @@
+
+     * Initializes or resets state. Needed by constructors, clone,
+     * clear, readObject. and ConcurrentSkipListSet.clone.
+     * (Note that comparator must be separately initialized.)
+     

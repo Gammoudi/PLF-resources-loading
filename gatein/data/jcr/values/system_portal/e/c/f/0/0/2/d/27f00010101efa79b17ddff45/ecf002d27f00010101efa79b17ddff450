@@ -1,0 +1,49 @@
+ Thread information. <tt>ThreadInfo</tt> contains the information 
+ about a thread including:
+ <h4>General thread information</h4>
+ <ul>
+   <li>Thread ID.</li>
+   <li>Name of the thread.</li>
+ </ul>
+
+ <h4>Execution information</h4>
+ <ul>
+   <li>Thread state.</li>
+   <li>The object upon which the thread is blocked due to:
+       <ul>
+       <li>waiting to enter a synchronization block/method, or</li>
+       <li>waiting to be notified in a java.lang.Object#wait method,
+           or</li>
+       <li>parking due to a java.util.concurrent.locks.LockSupport#park call.</li>
+       </ul>
+   </li>
+   <li>The ID of the thread that owns the object
+       that the thread is blocked.</li>
+   <li>Stack trace of the thread.</li>
+   <li>List of object monitors locked by the thread.</li>
+   <li>List of <a href="LockInfo.html#OwnableSynchronizer">
+       ownable synchronizers</a> locked by the thread.</li>
+ </ul>
+
+ <h4><a name="SyncStats">Synchronization Statistics</a></h4>
+ <ul>
+   <li>The number of times that the thread has blocked for 
+       synchronization or waited for notification.</li>
+   <li>The accumulated elapsed time that the thread has blocked
+       for synchronization or waited for notification
+       since <a href='../java/lang/management/ThreadMXBean.html#setThreadContentionMonitoringEnabled' title=''></a>
+       was enabled. Some Java virtual machine implementation 
+       may not support this.  The 
+       <a href='../java/lang/management/ThreadMXBean.html#isThreadContentionMonitoringSupported()' title='ThreadMXBean.isThreadContentionMonitoringSupported'>ThreadMXBean.isThreadContentionMonitoringSupported</a>
+       method can be used to determine if a Java virtual machine
+       supports this.</li>
+ </ul>
+
+ <p>This thread information class is designed for use in monitoring of
+ the system, not for synchronization control.
+
+ <h4>MXBean Mapping</h4>
+ <tt>ThreadInfo</tt> is mapped to a javax.management.openmbean.CompositeData
+ with attributes as specified in 
+ the <a href='#from'>from</a> method.
+ <DL><DT><B>Authors:</B></DT><DD>Mandy Chung</DD></DL><DL><DT><B>Version:</B></DT><DD>%I%, %G%</DD></DL><DL><DT><B>See Also:</B></DT><DD><a href='../java/lang/management/ThreadMXBean.html#getThreadInfo' title='ThreadMXBean.getThreadInfo'>ThreadMXBean.getThreadInfo</a></DD><DD><a href='../java/lang/management/ThreadMXBean.html#dumpAllThreads' title='ThreadMXBean.dumpAllThreads'>ThreadMXBean.dumpAllThreads</a></DD></DL><DL><DT><B>Since:</B></DT><DD>1.5</DD></DL>

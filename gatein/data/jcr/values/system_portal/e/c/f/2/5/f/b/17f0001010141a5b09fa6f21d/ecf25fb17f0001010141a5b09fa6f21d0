@@ -1,0 +1,17 @@
+
+     * Checks if this PropertyPermission object "implies" the specified
+     * permission.
+     * <P>
+     * More specifically, this method returns true if:<p>
+     * <ul>
+     * <li> <i>p</i> is an instanceof PropertyPermission,<p>
+     * <li> <i>p</i>'s actions are a subset of this
+     * object's actions, and <p>
+     * <li> <i>p</i>'s name is implied by this object's
+     *      name. For example, "java.*" implies "java.home".
+     * </ul>
+     * @param p the permission to check against.
+     *
+     * @return true if the specified permission is implied by this object,
+     * false if not.
+     

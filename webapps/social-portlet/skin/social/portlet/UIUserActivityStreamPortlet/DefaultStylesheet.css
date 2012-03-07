@@ -1,0 +1,80 @@
+/**
+ * Copyright (C) 2003-2010 eXo Platform SAS.
+ *
+ * This program is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU Affero General Public License
+ * as published by the Free Software Foundation; either version 3
+ * of the License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.	See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program; if not, see<http://www.gnu.org/licenses/>.
+ */
+
+/*UIComposer style*/
+@import url('/social-resources/skin/social/webui/UIComposer/DefaultSkin.css');
+@import url('/social-resources/skin/social/webui/activity/UIDefaultActivity/DefaultSkin.css');
+@import url('/social-resources/skin/social/webui/UIActivitiesLoader/DefaultSkin.css');
+
+
+.UIUserActivityStreamPortlet {
+	font-family: lucida sans;
+}
+
+.UIUserActivitiesContainer {
+	padding: 5px 10px 20px;
+	background: #fff;
+}
+
+.UIUserActivityStreamPortlet .TitleBar {
+	height: 22px;
+	color: #7d7d7d;
+	line-height: 22px;
+	text-align: center;
+	font-weight: bold;
+	background: #EBEBEB;
+}
+
+.UIUserActivityStreamPortlet .UIAction {
+	border: none;
+	border-bottom: 1px solid #e1e1e1;
+	text-align: left;
+	padding: 20px 0px;
+}
+
+.UIUserActivityStreamPortlet .UIActivitiesLoadButton {
+	background: #f8f8f8;
+	text-align: center;
+	line-height: 26px;
+	border-bottom: 1px solid #e1e1e1;
+	color: #535656;
+	cursor: pointer;
+}
+
+.UIUserActivityStreamPortlet .UIAction .LightBlueStyle {
+	background: none;
+	line-height: 26px;
+	color: #484848;
+	border-radius: 0px;
+	border: none;
+}
+
+.UIUserActivityStreamPortlet .UIAction .DarkBlueStyle {
+	background: #757575;
+	line-height: 23px;
+	padding: 0 12px;
+	text-align: center;
+	white-space: nowrap;
+	color: white;
+	border-radius: 4px;
+ }
+
+.UIUserActivityStreamPortlet .UIActivity .Content li {
+  list-style: disc inside none;
+  padding: 0px 0px 0px 20px;
+  margin: 0px 0px 0px 0px;
+}

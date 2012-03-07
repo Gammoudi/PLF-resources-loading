@@ -1,0 +1,9 @@
+ A map entry (key-value pair).  The <tt>Map.entrySet</tt> method returns
+ a collection-view of the map, whose elements are of this class.  The
+ <i>only</i> way to obtain a reference to a map entry is from the
+ iterator of this collection-view.  These <tt>Map.Entry</tt> objects are
+ valid <i>only</i> for the duration of the iteration; more formally,
+ the behavior of a map entry is undefined if the backing map has been
+ modified after the entry was returned by the iterator, except through
+ the <tt>setValue</tt> operation on the map entry.
+     <DL><DT><B>See Also:</B></DT><DD><a href='../java/util/Map.html#entrySet()' title='Map.entrySet'>Map.entrySet</a></DD></DL><DL><DT><B>Since:</B></DT><DD>1.2</DD></DL>

@@ -1,0 +1,94 @@
+<div class="UIPlatformDefault">
+	<div class="UIBanner">
+		<div class="BgPattern">
+			<div class="Header">
+				<img alt="" src="/rest/jcr/repository/collaboration/sites content/live/default/web contents/site artifacts/welcome/medias/images/Logo.png" />
+				<h2>
+					Welcome to</h2>
+				<h1>
+					eXo Platform <span class="ColorYellow">3.5</span></h1>
+			</div>
+		</div>
+	</div>
+	<div class="UIContentDefault">
+		<div class="BoxButton ClearFix">
+			<div class="Container FL">
+				<span class="TxtBoxButton">What&#39;s New in<br />
+				<b>eXo Platform 3.5</b> </span> <a class="MoreYellow" href="http://www.exoplatform.com/company/en/resource-viewer/Getting-Started-Guide/whats-new-in-exo-platform-35">Read the article</a></div>
+			<div class="Container FL ContainerCenter">
+				<span class="TxtBoxButton">Advanced <b>Content</b><br />
+				<b>Management</b> </span> <a class="MoreBlue" href="/portal/acme">Login to the ACME website</a></div>
+			<div class="Container FR">
+				<span class="TxtBoxButton">Rich <b>Social</b> and<br />
+				<b>Collaboration</b> Features </span> <a class="MoreBlueLigh" href="/portal/intranet">Login to the ACME social intranet</a></div>
+		</div>
+		<div class="MainContent ClearFix">
+			<div class="ContainerLeft FL">
+				<h1>
+					eXo Platform 3.5<br />
+					<span class="TxtCloudReady">The Cloud-Ready Portal and User Experience Platform</span></h1>
+				<span class="TxtTitle">eXo Platform is the first and only integrated user experience platform for building and deploying transactional websites, managing web and social content and creating gadgets and dashboards. </span>
+				<ul class="ContenLeft">
+					<li>
+						<b>An Enterprise Portal Foundation:</b> a lightweight, standards-based portal for integrating applications, portlets and gadgets, with security features like access control and single sign-on.</li>
+					<li>
+						<b>Complete Enterprise Content Management:</b> easily build websites, author and publish content, capture and organize documents and unstructured content, and store everything in the built-in Java Content Repository.</li>
+					<li>
+						<b>Social Networks &amp; Collaboration:</b> transform your portal-based app into a vibrant online community by adding forum, chat, calendars, wikis and more; support for OpenSocial allows users to create and connect rich user profiles, publish activity streams, and collaborate in dedicated spaces.</li>
+					<li>
+						<b>Development Platform:</b> a full-featured development environment for building and integrating applications, gadgets and mashups</li>
+					<li>
+						<b>Cloud-Ready:</b> multi-tenancy at the JVM level optimizes resource utilization and reduces the cost of deploying intranets and websites within a customer&#39;s private cloud environment.</li>
+					<li>
+						<b>Mobile:</b> native iPhone, iPad, and Android apps let you take your intranet with you. Access your personalized gadget dashboard, activity stream, document repository, and more. <a class="ColorBlue" href="http://www.exoplatform.com/company/en/platform/mobile">Learn more about eXo Mobile Apps</a></li>
+				</ul>
+				<h1>
+					What Can You Do with eXo Platform 3.5 ?</h1>
+				<span class="TxtTitle">You can do just about anything with eXo Platform, but the two most common scenarios we see with our customers are building social intranets and websites. So we&rsquo;ve built two sample portals for Acme, a fictitious company, that demonstrate the key features and customizability of eXo Platform.</span> <b class="ClearFix">Explore the ACME website and social intranet:</b>
+				<div class="VisitACME FL">
+					<a class="BntWebsite" href="/portal/acme">Visit the ACME website</a> <a href="/portal/login?username=mary&amp;password=gtn&amp;initialURI=/portal/acme">or login as Mary (author)</a></div>
+				<div class="VisitACME FR">
+					<a class="BntIntranet" href="/portal/intranet">Enter the ACME social intranet</a> <a href="/portal/login?username=john&amp;password=gtn&amp;initialURI=/portal/intranet">or login as John (administrator)</a></div>
+			</div>
+			<div class="ContainerRight FR">
+				<h1>
+					Getting Started</h1>
+				Existing eXo Platform users may want to check out the <a class="ColorBlue" href="http://www.exoplatform.com/company/en/platform/exo-platform-3">What&#39;s New</a> article.<br />
+				Comprehensive documentation provides admins, developers and end users with all the information they need to develop and deploy successful projects with eXo Platform.
+				<h2>
+					<a href="http://docs.exoplatform.org"> Developer Guide</a></h2>
+				Step-by-step tutorials to help you build your project.
+				<h2>
+					<a href="http://docs.exoplatform.org"> Administrator Guide</a></h2>
+				How to install and manage eXo Platform.
+				<h2>
+					<a href="http://docs.exoplatform.org"> User Guide</a></h2>
+				For end users to learn how to use eXo features.
+				<h1 class="MoreResoures">
+					More Resources</h1>
+				<div class="BlockResoures">
+					<ul class="LinkResoures">
+						<li>
+							<img alt="" src="/rest/jcr/repository/collaboration/sites content/live/default/web contents/site artifacts/welcome/medias/images/IconResources.png" /><br />
+							<a href="http://exoplatform.com">Resource Center</a></li>
+						<li>
+							<img alt="" src="/rest/jcr/repository/collaboration/sites content/live/default/web contents/site artifacts/welcome/medias/images/IconCommunity.png" /><br />
+							<a href="http://forums.exoplatform.org">eXo Community</a></li>
+						<li class="Last">
+							<img alt="" src="/rest/jcr/repository/collaboration/sites content/live/default/web contents/site artifacts/welcome/medias/images/IconBlog.png" /><br />
+							<a href="http://blog.exoplatform.org">eXo<br />
+							Blog</a></li>
+					</ul>
+				</div>
+				<h1>
+					Prepare Your Team</h1>
+				<a class="ColorBlue" href="http://www.exoplatform.com/company/en/services/development-training">Training:</a> Gain knowledge and hands-on experience for the successful development, deployment and administration of eXo-based solutions.<br />
+				<a class="ColorBlue" href="http://www.exoplatform.com/company/en/services/development-consulting">Consulting:</a> Certified consultants ensure the success of customer projects, from design to implementation.<br />
+				<a class="ColorBlue" href="http://support.exoplatform.com">Support:</a> eXo product experts provide eXo Platform subscription customers with dedicated support and guaranteed response times.</div>
+		</div>
+	</div>
+	<div class="UIFooter">
+		<div class="TxtFooter">
+			Copyright &copy; 2000-2011. All rights Reserved, eXo Platform SAS.</div>
+	</div>
+</div>

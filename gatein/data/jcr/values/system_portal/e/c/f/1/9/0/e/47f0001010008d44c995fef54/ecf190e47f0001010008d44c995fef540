@@ -1,0 +1,9 @@
+
+     * Attempt to write back prefsCache to the backing store.  If the attempt
+     * succeeds, lastSyncTime will be updated (the new value will correspond
+     * exactly to the data thust written back, as we hold the file lock, which
+     * prevents a concurrent write.  If the attempt fails, a
+     * BackingStoreException is thrown and both the backing store (prefsFile)
+     * and lastSyncTime will be unaffected by this call.  This call will
+     * NEVER leave prefsFile in a corrupt state.
+     

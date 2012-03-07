@@ -1,0 +1,7 @@
+
+     * Inserts the specified element into this delay queue. As the queue is
+     * unbounded this method will never block.
+     *
+     * @param e the element to add
+     * @throws NullPointerException {@inheritDoc}
+     

@@ -1,0 +1,5 @@
+
+     * <i>This operation is not supported</i>.
+     *
+     * @throws IOException always thrown
+     

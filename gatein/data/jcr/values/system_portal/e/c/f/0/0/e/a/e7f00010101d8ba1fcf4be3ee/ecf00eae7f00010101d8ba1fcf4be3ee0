@@ -1,0 +1,11 @@
+ The Boolean class wraps a value of the primitive type 
+ <code>boolean</code> in an object. An object of type 
+ <code>Boolean</code> contains a single field whose type is 
+ <code>boolean</code>. 
+ <p>
+ In addition, this class provides many methods for 
+ converting a <code>boolean</code> to a <code>String</code> and a 
+ <code>String</code> to a <code>boolean</code>, as well as other 
+ constants and methods useful when dealing with a 
+ <code>boolean</code>.
+ <DL><DT><B>Authors:</B></DT><DD>Arthur van Hoff</DD></DL><DL><DT><B>Version:</B></DT><DD>%I%, %G%</DD></DL><DL><DT><B>Since:</B></DT><DD>JDK1.0</DD></DL>

@@ -1,0 +1,19 @@
+
+     * Main deletion method. Locates node, nulls value, appends a
+     * deletion marker, unlinks predecessor, removes associated index
+     * nodes, and possibly reduces head index level.
+     *
+     * Index nodes are cleared out simply by calling findPredecessor.
+     * which unlinks indexes to deleted nodes found along path to key,
+     * which will include the indexes to this node.  This is done
+     * unconditionally. We can't check beforehand whether there are
+     * index nodes because it might be the case that some or all
+     * indexes hadn't been inserted yet for this node during initial
+     * search for it, and we'd like to ensure lack of garbage
+     * retention, so must call to be sure.
+     *
+     * @param okey the key
+     * @param value if non-null, the value that must be
+     * associated with key
+     * @return the node, or null if not found
+     

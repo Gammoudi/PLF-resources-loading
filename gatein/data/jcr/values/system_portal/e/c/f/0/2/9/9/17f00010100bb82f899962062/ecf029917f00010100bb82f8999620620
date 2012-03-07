@@ -1,0 +1,5 @@
+ Thrown to indicate that an index of some sort (such as to an array, to a
+ string, or to a vector) is out of range. 
+ <p>
+ Applications can subclass this class to indicate similar exceptions.
+ <DL><DT><B>Authors:</B></DT><DD>Frank Yellin</DD></DL><DL><DT><B>Version:</B></DT><DD>%I%, %G%</DD></DL><DL><DT><B>Since:</B></DT><DD>JDK1.0</DD></DL>

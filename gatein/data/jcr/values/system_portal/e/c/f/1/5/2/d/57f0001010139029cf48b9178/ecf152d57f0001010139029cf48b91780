@@ -1,0 +1,6 @@
+
+     * Append the element if not present.
+     *
+     * @param e element to be added to this list, if absent
+     * @return <tt>true</tt> if the element was added
+     

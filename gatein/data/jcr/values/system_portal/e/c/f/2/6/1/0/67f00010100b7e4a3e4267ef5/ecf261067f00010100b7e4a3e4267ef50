@@ -1,0 +1,9 @@
+
+     * Check and see if this set of permissions implies the permissions
+     * expressed in "permission".
+     *
+     * @param p the Permission object to compare
+     *
+     * @return true if "permission" is a proper subset of a permission in
+     * the set, false if not.
+     

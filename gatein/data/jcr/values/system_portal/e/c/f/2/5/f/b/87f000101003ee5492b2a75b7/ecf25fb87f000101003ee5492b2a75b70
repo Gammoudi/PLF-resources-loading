@@ -1,0 +1,4 @@
+
+     * readObject is called to restore the state of the PropertyPermission from
+     * a stream.
+     

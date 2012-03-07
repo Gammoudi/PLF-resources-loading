@@ -1,0 +1,9 @@
+
+     * Returns <code>true</code> if and only if the argument is not 
+     * <code>null</code> and is a <code>Boolean</code> object that 
+     * represents the same <code>boolean</code> value as this object. 
+     *
+     * @param   obj   the object to compare with.
+     * @return  <code>true</code> if the Boolean objects represent the 
+     *          same value; <code>false</code> otherwise.
+     

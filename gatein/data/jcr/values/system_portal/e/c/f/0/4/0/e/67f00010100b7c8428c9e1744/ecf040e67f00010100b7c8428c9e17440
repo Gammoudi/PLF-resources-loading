@@ -1,0 +1,8 @@
+
+     * Returns the string representation of the <code>boolean</code> argument.
+     *
+     * @param   b   a <code>boolean</code>.
+     * @return  if the argument is <code>true</code>, a string equal to
+     *          <code>"true"</code> is returned; otherwise, a string equal to
+     *          <code>"false"</code> is returned.
+     

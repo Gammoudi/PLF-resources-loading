@@ -1,0 +1,6 @@
+
+     * Return this node's preference/node change listeners.  Even though
+     * we're using a copy-on-write lists, we use synchronized accessors to
+     * ensure information transmission from the writing thread to the
+     * reading thread.
+     

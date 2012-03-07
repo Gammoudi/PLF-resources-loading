@@ -1,0 +1,14 @@
+
+     * Removes from the list the last element that was returned by
+     * <tt>next</tt> or <tt>previous</tt> (optional operation).  This call can
+     * only be made once per call to <tt>next</tt> or <tt>previous</tt>.  It
+     * can be made only if <tt>ListIterator.add</tt> has not been called after
+     * the last call to <tt>next</tt> or <tt>previous</tt>.
+     *
+     * @exception UnsupportedOperationException if the <tt>remove</tt>
+     *            operation is not supported by this list iterator.
+     * @exception IllegalStateException neither <tt>next</tt> nor
+     *            <tt>previous</tt> have been called, or <tt>remove</tt> or
+     *            <tt>add</tt> have been called after the last call to
+     *            <tt>next</tt> or <tt>previous</tt>.
+     

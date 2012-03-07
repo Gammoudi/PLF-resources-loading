@@ -1,0 +1,107 @@
+/**
+ * Copyright (C) 2009 eXo Platform SAS.
+ * 
+ * This is free software; you can redistribute it and/or modify it
+ * under the terms of the GNU Lesser General Public License as
+ * published by the Free Software Foundation; either version 2.1 of
+ * the License, or (at your option) any later version.
+ * 
+ * This software is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * Lesser General Public License for more details.
+ * 
+ * You should have received a copy of the GNU Lesser General Public
+ * License along with this software; if not, write to the Free
+ * Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA
+ * 02110-1301 USA, or see the FSF site: http://www.fsf.org.
+ */
+
+.UIWebOSTabPaneDashboard {
+	margin: 0 9px;
+	padding: 1px 5px 4px 5px;
+	background: #ffcf01;
+	-moz-border-radius: 5px 5px 0px 0px;
+	-webkit-border-radius: 5px 5px 0px 0px;
+}
+
+.UIWebOSTabPaneDashboard .GrayTabStyle {
+	margin: 4px 3px 0 0;
+}
+
+.UIWebOSTabPaneDashboard .UITab {
+    float: left;
+}
+
+.UIWebOSTabPaneDashboard .GrayTabStyle .NormalTab,
+.UIWebOSTabPaneDashboard .GrayTabStyle .HighlightNavigationTab,
+.UIWebOSTabPaneDashboard .GrayTabStyle .SelectedTab {
+	padding: 0px 9px;
+	_padding: 3px 9px;
+	white-space:nowrap;
+	font-weight: normal;
+	line-height: 22px;
+}
+
+.UIWebOSTabPaneDashboard .UITab .CloseIcon {
+	background: url('background/IconClose.gif') no-repeat center 1px;
+	width: 16px; height: 16px;
+	cursor: pointer;
+}
+
+.UIWebOSTabPaneDashboard .AddDashboard {
+	background: url('background/AddDashboard.gif') no-repeat bottom;
+	width: 34px; height: 24px;
+	float: left; /* orientation=lt */
+	float: right; /* orientation=rt */
+	display: block;
+	margin-top: 4px;
+}
+
+.UIWebOSTabPaneDashboard .GrayTabStyle .NormalTab {
+	background: #e6e6e6;
+	border: 1px solid #fefcf3;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+}
+
+.UIWebOSTabPaneDashboard .GrayTabStyle .HighlightNavigationTab {
+	background: #e6e6e6;
+	border: 1px solid #fefcf3;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+}
+
+.UIWebOSTabPaneDashboard .GrayTabStyle .SelectedTab {
+	background: #fff;
+	border: 1px solid #fff;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+}
+
+.UIWebOSTabPaneDashboard .GrayTabStyle .EditnewTab {
+	background: #fff;
+	border: 1px solid #fff;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+}
+
+.UIWebOSTabPaneDashboard .GrayTabStyle .SelectedTab .EditTab {
+	_padding: 2px 5px;
+}
+
+.UIWebOSTabPaneDashboard .GrayTabStyle .MiddleTab span {
+	margin-top: 1px;
+}
+
+.UIWebOSTabPaneDashboard .GrayTabStyle input {
+	font-size: 11px;
+	background: white;
+	padding: 0 !important;
+	text-align: left !important;
+	font-family: Tahoma !important;
+	margin: 0;
+	!height: 16px;
+	!line-height: 14px;
+	vertical-align: middle;
+}

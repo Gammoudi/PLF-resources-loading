@@ -1,0 +1,6 @@
+
+     * Returns the last (highest) element currently in this set.
+     *
+     * @return the last (highest) element currently in this set
+     * @throws NoSuchElementException if this set is empty
+     

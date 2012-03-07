@@ -1,0 +1,2 @@
+serviceClass: org.xwiki.gwt.wysiwyg.client.wiki.WikiService
+path: BB34E83EF6D9F1745EED6C7159947F8E.gwt.rpc

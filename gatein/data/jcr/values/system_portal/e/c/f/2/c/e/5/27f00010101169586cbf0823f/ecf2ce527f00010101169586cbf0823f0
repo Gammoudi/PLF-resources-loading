@@ -1,0 +1,12 @@
+
+     * Releases the lock.
+     *
+     * <p><b>Implementation Considerations</b>
+     *
+     * <p>A {@code Lock} implementation will usually impose
+     * restrictions on which thread can release a lock (typically only the
+     * holder of the lock can release it) and may throw
+     * an (unchecked) exception if the restriction is violated.
+     * Any restrictions and the exception
+     * type must be documented by that {@code Lock} implementation.
+     

@@ -1,0 +1,21 @@
+
+     * Returns a field mask indicating which calendar field values
+     * to be used to calculate the time value. The calendar fields are
+     * returned as a bit mask, each bit of which corresponds to a field, i.e.,
+     * the mask value of <code>field</code> is <code>(1 &lt;&lt;
+     * field)</code>. For example, 0x26 represents the <code>YEAR</code>,
+     * <code>MONTH</code>, and <code>DAY_OF_MONTH</code> fields (i.e., 0x26 is
+     * equal to
+     * <code>(1&lt;&lt;YEAR)|(1&lt;&lt;MONTH)|(1&lt;&lt;DAY_OF_MONTH))</code>.
+     *
+     * <p>This method supports the calendar fields resolution as described in
+     * the class description. If the bit mask for a given field is on and its
+     * field has not been set (i.e., <code>isSet(field)</code> is
+     * <code>false</code>), then the default value of the field has to be
+     * used, which case means that the field has been selected because the
+     * selected combination involves the field.
+     *
+     * @return a bit mask of selected fields
+     * @see #isExternallySet(int)
+     * @see #setInternallySetState(int)
+     

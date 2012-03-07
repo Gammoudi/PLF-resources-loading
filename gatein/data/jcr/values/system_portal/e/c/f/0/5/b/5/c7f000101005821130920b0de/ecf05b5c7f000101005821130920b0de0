@@ -1,0 +1,5 @@
+
+     * Returns the array of bytes that contains the new class file.
+     *
+     * @return    the class file bytes.
+     

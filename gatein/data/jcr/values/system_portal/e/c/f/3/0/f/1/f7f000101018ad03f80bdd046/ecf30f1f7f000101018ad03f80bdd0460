@@ -1,0 +1,7 @@
+
+     * Returns an array of all locales for which this locale service provider 
+     * can provide localized objects or names.
+     *
+     * @return An array of all locales for which this locale service provider 
+     * can provide localized objects or names.
+     

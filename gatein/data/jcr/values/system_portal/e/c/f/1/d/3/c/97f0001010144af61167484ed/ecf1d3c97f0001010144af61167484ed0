@@ -1,0 +1,14 @@
+
+     * Returns a comparator that imposes the reverse ordering of the specified
+     * comparator.  If the specified comparator is null, this method is
+     * equivalent to {@link #reverseOrder()} (in other words, it returns a
+     * comparator that imposes the reverse of the <i>natural ordering</i> on a
+     * collection of objects that implement the Comparable interface).
+     *
+     * <p>The returned comparator is serializable (assuming the specified
+     * comparator is also serializable or null).
+     *
+     * @return a comparator that imposes the reverse ordering of the
+     *     specified comparator.
+     * @since 1.5
+     

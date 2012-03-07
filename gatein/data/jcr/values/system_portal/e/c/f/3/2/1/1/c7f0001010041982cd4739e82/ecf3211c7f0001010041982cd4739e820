@@ -1,0 +1,6 @@
+ Logging is the implementation class of LoggingMXBean.
+
+ The <tt>LoggingMXBean</tt> interface provides a standard
+ method for management access to the individual
+ java.util.Logger objects available at runtime.
+ <DL><DT><B>Authors:</B></DT><DD>Ron Mann</DD><DD>Mandy Chung</DD></DL><DL><DT><B>Version:</B></DT><DD>%I%, %G%</DD></DL><DL><DT><B>See Also:</B></DT><DD>javax.management</DD><DD>java.util.Logger</DD><DD>java.util.LogManager</DD></DL><DL><DT><B>Since:</B></DT><DD>1.5</DD></DL>

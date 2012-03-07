@@ -1,0 +1,6 @@
+
+     * Performs map.get via findNode.  Used as a backup if doGet
+     * encounters an in-progress deletion.
+     * @param key the key
+     * @return the value, or null if absent
+     

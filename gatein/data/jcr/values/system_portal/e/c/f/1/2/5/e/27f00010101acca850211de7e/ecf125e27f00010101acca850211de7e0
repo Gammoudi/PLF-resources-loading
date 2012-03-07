@@ -1,0 +1,7 @@
+
+     * Save the state to a stream (that is, serialize it).
+     *
+     * @serialData All of the elements (each an {@code E}) in
+     * the proper order, followed by a null
+     * @param s the stream
+     

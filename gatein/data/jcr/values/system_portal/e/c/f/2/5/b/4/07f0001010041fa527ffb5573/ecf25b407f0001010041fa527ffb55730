@@ -1,0 +1,6 @@
+
+     * Retrieves and removes the last (highest) element,
+     * or returns {@code null} if this set is empty.
+     *
+     * @return the last element, or {@code null} if this set is empty
+     

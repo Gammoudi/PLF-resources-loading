@@ -1,0 +1,4 @@
+
+     * Non spacing marks only count as word characters in bounds calculations
+     * if they have a base character.
+     

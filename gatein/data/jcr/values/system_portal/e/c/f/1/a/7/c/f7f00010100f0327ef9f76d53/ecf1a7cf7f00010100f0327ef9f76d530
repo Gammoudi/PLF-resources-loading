@@ -1,0 +1,9 @@
+
+	 * Read a Pack200 archive, and write the encoded JAR to
+	 * a JarOutputStream.
+	 * <p>
+	 * Does not close its output.  (The output can accumulate more elements.)
+	 * @param in a File.
+	 * @param out a JarOutputStream.
+	 * @exception IOException if an error is encountered.
+	 

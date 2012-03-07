@@ -1,0 +1,4 @@
+
+     * Internal method used for handling all syntax errors. The pattern is
+     * displayed with a pointer to aid in locating the syntax error.
+     

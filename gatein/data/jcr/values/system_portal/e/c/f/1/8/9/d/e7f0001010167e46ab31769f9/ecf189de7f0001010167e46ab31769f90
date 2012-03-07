@@ -1,0 +1,8 @@
+
+     * Attempt to load prefsCache from the backing store.  If the attempt
+     * succeeds, lastSyncTime will be updated (the new value will typically
+     * correspond to the data loaded into the map, but it may be less,
+     * if another VM is updating this node concurrently).  If the attempt
+     * fails, a BackingStoreException is thrown and both prefsCache and
+     * lastSyncTime are unaffected by the call.
+     

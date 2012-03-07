@@ -1,0 +1,9 @@
+
+     * Creates a matcher that will match the given input against this pattern.
+     * </p>
+     *
+     * @param  input
+     *         The character sequence to be matched
+     *
+     * @return  A new matcher for this pattern
+     

@@ -1,0 +1,4 @@
+ 
+     * Returns logger for error messages. Backing store exceptions are logged at
+     * WARNING level.
+     

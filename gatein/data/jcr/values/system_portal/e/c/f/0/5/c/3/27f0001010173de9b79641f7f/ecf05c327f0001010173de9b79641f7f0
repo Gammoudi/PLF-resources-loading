@@ -1,0 +1,56 @@
+
+     * Specifies a JAR file with instrumentation classes to be defined by the
+     * system class loader.
+     *
+     * When the system class loader for delegation (see 
+     * {@link java.lang.ClassLoader#getSystemClassLoader getSystemClassLoader()})
+     * unsuccessfully searches for a class, the entries in the {@link
+     * java.util.jar.JarFile JarFile} will be searched as well.
+     *
+     * <p> This method may be used multiple times to add multiple JAR files to be
+     * searched in the order that this method was invoked.
+     *
+     * <p> The agent should take care to ensure that the JAR does not contain any
+     * classes or resources other than those to be defined by the system class 
+     * loader for the purpose of instrumentation.
+     * Failure to observe this warning could result in unexpected
+     * behaviour that is difficult to diagnose (see 
+     * {@link #appendToBootstrapClassLoaderSearch 
+     * appendToBootstrapClassLoaderSearch}.
+     *
+     * <p> The system class loader supports adding a JAR file to be searched if
+     * it implements a method named <code>appendToClassPathForInstrumentation</code>
+     * which takes a single parameter of type <code>java.lang.String</code>. The
+     * method is not required to have <code>public</code> access. The name of
+     * the JAR file is obtained by invoking the {@link java.util.zip.ZipFile#getName 
+     * getName()} method on the <code>jarfile</code> and this is provided as the
+     * parameter to the <code>appendtoClassPathForInstrumentation</code> method.
+     *
+     * <p> The <a href="http://java.sun.com/docs/books/vmspec/">Java Virtual Machine
+     * Specification</a> specifies that a subsequent attempt to resolve a symbolic
+     * reference that the Java virtual machine has previously unsuccessfully attempted
+     * to resolve always fails with the same error that was thrown as a result of the
+     * initial resolution attempt. Consequently, if the JAR file contains an entry
+     * that corresponds to a class for which the Java virtual machine has
+     * unsuccessfully attempted to resolve a reference, then subsequent attempts to
+     * resolve that reference will fail with the same error as the initial attempt.
+     *
+     * <p> This method does not change the value of <code>java.class.path</code>
+     * {@link java.lang.System#getProperties system property}.
+     *
+     * @param   jarfile
+     *          The JAR file to be searched when the system class loader
+     *          unsuccessfully searches for a class.
+     *
+     * @throws	UnsupportedOperationException
+     *		If the system class loader does not support appending a 
+     *		a JAR file to be searched.
+     *
+     * @throws  NullPointerException
+     *          If <code>jarfile</code> is <code>null</code>.
+     *
+     * @see     #appendToBootstrapClassLoaderSearch
+     * @see     java.lang.ClassLoader#getSystemClassLoader
+     * @see     java.util.jar.JarFile
+     * @since 1.6
+     

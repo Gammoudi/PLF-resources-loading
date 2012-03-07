@@ -1,0 +1,41 @@
+eXo.require("eXo.wcm.backoffice.private.WCMUtils", "/eXoWCMResources/javascript/");
+
+function validateUser() { 
+	//var url  = location.protocol+"//"+location.host + eXo.env.portal.context + "/rest/bundle/getBundle?key=Signin.welcome,Signin.login,Signin.logout,Signin.language,Signin.register&locale="+eXo.env.portal.language;
+	//xmlLang = eXo.ecm.WCMUtils.request(url);	
+	//if(!xmlLang) return;
+	var user = eXo.env.portal.userName; 	
+	var loginContentObj = document.getElementById("UIWCMLoginPortlet");
+	var welcomeObj = eXo.core.DOMUtil.findFirstDescendantByClass(loginContentObj, "span", "Welcome"); 
+	var userObj = eXo.core.DOMUtil.findFirstDescendantByClass(loginContentObj, "span", "LoggedUser");
+	var languageObj = eXo.core.DOMUtil.findFirstDescendantByClass(loginContentObj, "a", "LanguageIcon");
+	var logXXXObj = eXo.core.DOMUtil.findPreviousElementByTagName(languageObj, "a");
+	var registerObj = eXo.core.DOMUtil.findFirstDescendantByClass(loginContentObj, "a", "RegisterIcon");
+
+	if (user != "null") {	
+		welcomeObj.innerHTML = "Welcome: ";//xmlLang.getElementsByTagName("Signin.welcome")[0].getAttribute("value")+": ";		
+		userObj.innerHTML = user;
+		logXXXObj.innerHTML = "Logout";//xmlLang.getElementsByTagName("Signin.logout")[0].getAttribute("value");
+		if (eXo.core.DOMUtil.hasClass(logXXXObj, "LoginIcon")) {
+			eXo.core.DOMUtil.removeClass(logXXXObj, "LoginIcon");
+			eXo.core.DOMUtil.addClass(logXXXObj, "LogoutIcon");
+		}
+		logXXXObj.onclick = function() { eXo.portal.logout(); }
+	} else {	
+		if (eXo.core.DOMUtil.hasClass(logXXXObj, "LogoutIcon")) {
+			eXo.core.DOMUtil.removeClass(logXXXObj, "LogoutIcon");
+			eXo.core.DOMUtil.addClass(logXXXObj, "LoginIcon");
+		}
+		logXXXObj.innerHTML = "Login";//xmlLang.getElementsByTagName("Signin.login")[0].getAttribute("value");
+		logXXXObj.onclick = function() { if(document.getElementById('UIMaskWorkspace')) ajaxGet(eXo.env.server.createPortalURL('UIPortal', 'ShowLoginForm', true)); };
+	}
+
+	languageObj.onclick = function () { if(document.getElementById('UIMaskWorkspace')) ajaxGet(eXo.env.server.createPortalURL('UIPortal', 'ChangeLanguage', true)); }
+	languageObj.innerHTML = "Change Language";//xmlLang.getElementsByTagName("Signin.language")[0].getAttribute("value");
+	
+	registerObj.onclick = function () {
+		var url = window.location.protocol + "//" + window.location.host + eXo.env.portal.context + "/" + eXo.env.portal.accessMode + "/" + eXo.env.portal.portalName + "/newAccount";
+		location.href=url;
+	}
+	registerObj.innerHTML = "Register";//xmlLang.getElementsByTagName("Signin.register")[0].getAttribute("value");
+}

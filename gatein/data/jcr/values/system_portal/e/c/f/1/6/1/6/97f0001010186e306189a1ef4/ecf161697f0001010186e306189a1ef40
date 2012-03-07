@@ -1,0 +1,7 @@
+
+     * Retrieves and removes the head of this queue, waiting if necessary
+     * until an element with an expired delay is available on this queue.
+     *
+     * @return the head of this queue
+     * @throws InterruptedException {@inheritDoc}
+     

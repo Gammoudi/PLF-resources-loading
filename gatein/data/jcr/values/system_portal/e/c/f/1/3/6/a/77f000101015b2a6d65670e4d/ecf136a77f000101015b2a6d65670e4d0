@@ -1,0 +1,14 @@
+ Represents a key with a comparator as a Comparable.
+
+ Because most sorted collections seem to use natural ordering on
+ Comparables (Strings, Integers, etc), most internal methods are
+ geared to use them. This is generally faster than checking
+ per-comparison whether to use comparator or comparable because
+ it doesn't require a (Comparable) cast for each comparison.
+ (Optimizers can only sometimes remove such redundant checks
+ themselves.) When Comparators are used,
+ ComparableUsingComparators are created so that they act in the
+ same way as natural orderings. This penalizes use of
+ Comparators vs Comparables, which seems like the right
+ tradeoff.
+     

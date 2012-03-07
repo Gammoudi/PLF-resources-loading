@@ -1,0 +1,4 @@
+ Unchecked exception thrown when the precision is a negative value other than
+ <tt>-1</tt>, the conversion does not support a precision, or the value is
+ otherwise unsupported.
+ <DL><DT><B>Version:</B></DT><DD>%I%, %G%</DD></DL><DL><DT><B>Since:</B></DT><DD>1.5</DD></DL>

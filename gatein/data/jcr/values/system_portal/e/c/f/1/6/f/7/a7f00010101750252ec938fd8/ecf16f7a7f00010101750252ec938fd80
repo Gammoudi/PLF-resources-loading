@@ -1,0 +1,9 @@
+
+     * Returns the comparator used to order the elements in this queue,
+     * or <tt>null</tt> if this queue uses the {@linkplain Comparable
+     * natural ordering} of its elements.
+     *
+     * @return the comparator used to order the elements in this queue,
+     *         or <tt>null</tt> if this queue uses the natural
+     *         ordering of its elements
+     

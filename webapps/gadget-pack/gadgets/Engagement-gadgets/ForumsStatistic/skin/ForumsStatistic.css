@@ -1,0 +1,30 @@
+
+.WeeklyStatisticArea .ChartContent{
+  clear: both;
+  height: 200px;
+  margin-bottom: 10px;
+  margin-left: 20px;
+  margin-top: 10px;
+  width: 200px;
+}
+
+.TotalStatisticArea{
+  min-height:150px;
+}
+
+.icon{
+  cursor:pointer;
+}
+.users li {
+ list-style:none;
+}
+
+/* override css of chart jqplot */
+.jqplot-yaxis {
+  margin-right:7px;
+}
+
+.jqplot-xaxis {
+  margin-top:7px;
+}
+

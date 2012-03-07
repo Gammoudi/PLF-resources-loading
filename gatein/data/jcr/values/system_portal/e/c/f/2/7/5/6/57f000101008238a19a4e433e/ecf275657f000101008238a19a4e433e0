@@ -1,0 +1,8 @@
+
+     * Sets the <code>TimeZone</code> that is
+     * returned by the <code>getDefault</code> method.  If <code>zone</code>
+     * is null, reset the default to the value it had originally when the
+     * VM first started.
+     * @param zone the new default time zone
+     * @see #getDefault
+     

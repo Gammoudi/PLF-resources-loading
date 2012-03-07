@@ -1,0 +1,12 @@
+
+         * UnmodifiableRandomAccessList instances are serialized as
+         * UnmodifiableList instances to allow them to be deserialized
+         * in pre-1.4 JREs (which do not have UnmodifiableRandomAccessList).
+         * This method inverts the transformation.  As a beneficial
+         * side-effect, it also grafts the RandomAccess marker onto
+         * UnmodifiableList instances that were serialized in pre-1.4 JREs.
+         *
+         * Note: Unfortunately, UnmodifiableRandomAccessList instances
+         * serialized in 1.4.1 and deserialized in 1.4 will become
+         * UnmodifiableList instances, as this method was missing in 1.4.
+         

@@ -1,0 +1,83 @@
+.UIMailPortlet .UIInsertAddress {
+  background: #f3f3f3;
+}
+
+.UIMailPortlet .UIInsertAddress .InsertAddressContainer {
+  padding: 10px;
+}
+
+.UIMailPortlet .UIInsertAddress .AddressContainer {
+  padding-top: 10px;
+}
+
+.UIMailPortlet .UIInsertAddress .UIGrid th {
+  background: url('background/ThGridTitle1x20.gif') repeat-x;
+  line-height: 17px; height: 18px;
+  text-align: left;
+  padding: 0px 5px;
+}
+
+.UIMailPortlet .UIInsertAddress .UIGrid th input {
+  text-align: center;
+  margin: 2px 0px 0px 0px;
+}
+
+.UIMailPortlet .UIInsertAddress .UIGrid tbody {
+  background: white;  
+  padding-bottom: 10px;
+}
+
+.UIMailPortlet .UIInsertAddress .UIGrid td {
+  height: 23px;
+  padding: 4px 0px 0px 5px;
+}
+
+/*********************************************UISearch*****************************************/
+
+
+.UIMailPortlet .UIInsertAddress .UISearch .SearchIcon {
+  background: url('icons/SearchIcon.gif') no-repeat center;
+  padding: 10px 12px;
+}
+
+
+
+.UIMailPortlet .UIInsertAddress .AddressLabel {
+  width: 120px;
+  padding: 0px 4px;
+}
+
+.UIMailPortlet .UIInsertAddress select {
+  width: 160px;
+  margin: 10px 0px 0px 0px;
+  font-size: 11px;
+}
+
+/*********************************************ListAddress*****************************************/
+
+.UIMailPortlet .UIInsertAddress .ListAddress {
+  height: auto;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.UIMailPortlet .UIInsertAddress .ListAddress .UIGrid .BlueDownArrowIcon{
+  padding: 0px 10px 0px 4px; 
+  width: 34px;
+  float: left;
+  cursor: pointer;
+}
+
+.UIMailPortlet .UIInsertAddress .ListAddress .UIGrid thead {
+  border: none;
+}
+
+.UIMailPortlet .UIInsertAddress .ListAddress .UIGrid th {
+  border-left: none;
+  border-top: none;
+}
+
+.UIMailPortlet .UIInsertAddress .ListAddress .UIGrid td {
+  border-left: none;
+}
+

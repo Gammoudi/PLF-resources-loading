@@ -1,0 +1,19 @@
+Manifest-Version: 1.0
+Archiver-Version: Plexus Archiver
+Created-By: Apache Maven
+Built-By: nagui
+Build-Jdk: 1.6.0_24
+Implementation-Vendor-Id: org.exoplatform.cs
+Implementation-Title: eXo ChatBar Application
+Implementation-URL: http://wiki.exoplatform.org/xwiki/bin/view/CS/exo.
+ cs.eXoApplication/exo.cs.eXoApplication.chatbar/exo.cs.eXoApplication
+ .chatbar.webapp/
+Implementation-Vendor: eXo Platform SAS
+Implementation-Version: 2.2.8-SNAPSHOT
+SCM-URL: scm:svn:http://svn.exoplatform.org/projects/cs/branches/2.2.x
+ /exo.cs.eXoApplication/exo.cs.eXoApplication.chatbar/exo.cs.eXoApplic
+ ation.chatbar.webapp
+Specification-Title: eXo Platform
+Specification-Vendor: eXo Platform SAS
+Specification-Version: N/A
+

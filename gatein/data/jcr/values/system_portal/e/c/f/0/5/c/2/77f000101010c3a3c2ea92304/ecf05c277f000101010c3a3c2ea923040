@@ -1,0 +1,27 @@
+
+     * Registers the supplied transformer. All future class definitions
+     * will be seen by the transformer, except definitions of classes upon which any
+     * registered transformer is dependent.
+     * The transformer is called when classes are loaded, when they are
+     * {@linkplain #redefineClasses redefined}. and if <code>canRetransform</code> is true,
+     * when they are {@linkplain #retransformClasses retransformed}.
+     * See {@link java.lang.instrument.ClassFileTransformer#transform
+     * ClassFileTransformer.transform} for the order
+     * of transform calls.
+     * If a transformer throws
+     * an exception during execution, the JVM will still call the other registered 
+     * transformers in order. The same transformer may be added more than once, 
+     * but it is strongly discouraged -- avoid this by creating a new instance of
+     * tranformer class.
+     * <P>
+     * This method is intended for use in instrumentation, as described in the
+     * {@linkplain Instrumentation class specification}.
+     *
+     * @param transformer          the transformer to register
+     * @param canRetransform       can this transformer's transformations be retransformed
+     * @throws java.lang.NullPointerException if passed a <code>null</code> transformer
+     * @throws java.lang.UnsupportedOperationException if <code>canRetransform</code> 
+     * is true and the current configuration of the JVM does not allow 
+     * retransformation ({@link #isRetransformClassesSupported} is false)
+     * @since 1.6
+     

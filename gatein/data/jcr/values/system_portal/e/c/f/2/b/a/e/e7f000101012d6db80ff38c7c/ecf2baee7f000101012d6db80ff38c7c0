@@ -1,0 +1,6 @@
+
+     * Returns the total number of compressed bytes input so far.</p>
+     *
+     * @return the total (non-negative) number of compressed bytes input so far
+     * @since 1.5
+     

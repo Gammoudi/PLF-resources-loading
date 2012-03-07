@@ -1,0 +1,23 @@
+
+     * Returns true if the specified object is another
+     * <tt>StackTraceElement</tt> instance representing the same execution
+     * point as this instance.  Two stack trace elements <tt>a</tt> and
+     * <tt>b</tt> are equal if and only if:
+     * <pre>
+     *     equals(a.getFileName(), b.getFileName()) &&
+     *     a.getLineNumber() == b.getLineNumber()) &&
+     *     equals(a.getClassName(), b.getClassName()) &&
+     *     equals(a.getMethodName(), b.getMethodName())
+     * </pre>
+     * where <tt>equals</tt> is defined as:
+     * <pre>
+     *     static boolean equals(Object a, Object b) {
+     *         return a==b || (a != null && a.equals(b));
+     *     }
+     * </pre>
+     * 
+     * @param  obj the object to be compared with this stack trace element.
+     * @return true if the specified object is another
+     *         <tt>StackTraceElement</tt> instance representing the same
+     *         execution point as this instance.
+     

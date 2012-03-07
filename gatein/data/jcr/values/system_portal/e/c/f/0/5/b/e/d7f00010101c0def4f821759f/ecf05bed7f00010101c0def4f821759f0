@@ -1,0 +1,6 @@
+ Thrown by an implementation of
+ <a href='../java/lang/instrument/ClassFileTransformer.html#transform' title='ClassFileTransformer.transform'>ClassFileTransformer.transform</a>
+ when its input parameters are invalid. 
+ This may occur either because the initial class file bytes were 
+ invalid or a previously applied transform corrupted the bytes.
+ <DL><DT><B>See Also:</B></DT><DD><a href='../java/lang/instrument/ClassFileTransformer.html#transform' title='ClassFileTransformer.transform'>ClassFileTransformer.transform</a></DD></DL><DL><DT><B>Since:</B></DT><DD>1.5</DD></DL>

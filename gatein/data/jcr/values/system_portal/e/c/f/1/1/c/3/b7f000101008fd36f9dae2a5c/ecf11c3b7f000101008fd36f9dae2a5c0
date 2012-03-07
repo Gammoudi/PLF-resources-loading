@@ -1,0 +1,5 @@
+
+     * {@inheritDoc}
+     *
+     * @throws NullPointerException if any of the arguments are null
+     

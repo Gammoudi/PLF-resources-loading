@@ -1,0 +1,6 @@
+ Key used for cached resource bundles.  The key checks the base
+ name, the locale, and the class loader to determine if the
+ resource is a match to the requested one. The loader may be
+ null, but the base name and the locale must have a non-null
+ value.
+     

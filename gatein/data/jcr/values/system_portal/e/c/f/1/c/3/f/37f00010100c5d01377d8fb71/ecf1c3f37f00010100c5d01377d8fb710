@@ -1,0 +1,5 @@
+
+     * Recomputes the time and updates the status fields isTimeSet
+     * and areFieldsSet.  Callers should check isTimeSet and only
+     * call this method if isTimeSet is false.
+     

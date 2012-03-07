@@ -1,0 +1,11 @@
+
+     * Removes the <code>key</code> (and its corresponding 
+     * <code>value</code>) from this dictionary. This method does nothing 
+     * if the <code>key</code> is not in this dictionary. 
+     *
+     * @param   key   the key that needs to be removed.
+     * @return  the value to which the <code>key</code> had been mapped in this
+     *          dictionary, or <code>null</code> if the key did not have a
+     *          mapping.
+     * @exception NullPointerException if <tt>key</tt> is <tt>null</tt>.
+     

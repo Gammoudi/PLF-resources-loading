@@ -1,0 +1,7 @@
+
+     * Retrieves and removes the head (first element) of this list.
+     *
+     * @return the head of this list
+     * @throws NoSuchElementException if this list is empty
+     * @since 1.5
+     

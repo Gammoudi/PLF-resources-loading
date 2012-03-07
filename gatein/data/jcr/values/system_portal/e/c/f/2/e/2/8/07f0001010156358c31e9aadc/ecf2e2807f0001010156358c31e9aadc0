@@ -1,0 +1,4 @@
+
+     * Recompile the Pattern instance from a stream.  The original pattern
+     * string is read in and the object tree is recompiled from it.
+     

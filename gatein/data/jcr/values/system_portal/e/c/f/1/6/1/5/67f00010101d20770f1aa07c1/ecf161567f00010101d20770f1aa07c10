@@ -1,0 +1,10 @@
+
+     * Retrieves, but does not remove, the head of this queue, or
+     * returns <tt>null</tt> if this queue is empty.  Unlike
+     * <tt>poll</tt>, if no expired elements are available in the queue,
+     * this method returns the element that will expire next,
+     * if one exists.
+     *
+     * @return the head of this queue, or <tt>null</tt> if this
+     *         queue is empty.
+     

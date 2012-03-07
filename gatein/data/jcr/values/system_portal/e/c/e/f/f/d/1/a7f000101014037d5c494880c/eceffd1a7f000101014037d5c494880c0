@@ -1,0 +1,155 @@
+ The management interface for the memory system of
+ the Java virtual machine.
+
+ <p> A Java virtual machine has a single instance of the implementation
+ class of this interface.  This instance implementing this interface is
+ an <a href="ManagementFactory.html#MXBean">MXBean</a>
+ that can be obtained by calling
+ the <a href='../java/lang/management/ManagementFactory.html#getMemoryMXBean' title='ManagementFactory.getMemoryMXBean'>ManagementFactory.getMemoryMXBean</a> method or
+ from the <a href='../java/lang/management/ManagementFactory.html#getPlatformMBeanServer' title=' platform <tt>MBeanServer</tt>'> platform <tt>MBeanServer</tt></a> method.
+
+ <p>The <tt>ObjectName</tt> for uniquely identifying the MXBean for
+ the memory system within an MBeanServer is:
+ <blockquote>
+    <a href='../java/lang/management/ManagementFactory.html#MEMORY_MXBEAN_NAME' title=''></a>
+ </blockquote>
+
+ <h4> Memory </h4>
+ The memory system of the Java virtual machine manages 
+ the following kinds of memory:
+
+ <h4> 1. Heap </h4>
+ The Java virtual machine has a <i>heap</i> that is the runtime
+ data area from which memory for all class instances and arrays 
+ are allocated.  It is created at the Java virtual machine start-up.
+ Heap memory for objects is reclaimed by an automatic memory management
+ system which is known as a <i>garbage collector</i>.
+
+ <p>The heap may be of a fixed size or may be expanded and shrunk.
+ The memory for the heap does not need to be contiguous.
+
+ <h4> 2. Non-Heap Memory</h4>
+ The Java virtual machine manages memory other than the heap
+ (referred as <i>non-heap memory</i>).
+ 
+ <p> The Java virtual machine has a <i>method area</i> that is shared
+ among all threads.
+ The method area belongs to non-heap memory.  It stores per-class structures
+ such as a runtime constant pool, field and method data, and the code for
+ methods and constructors.  It is created at the Java virtual machine
+ start-up.
+ 
+ <p> The method area is logically part of the heap but a Java virtual
+ machine implementation may choose not to either garbage collect
+ or compact it.  Similar to the heap, the method area may be of a
+ fixed size or may be expanded and shrunk.  The memory for the
+ method area does not need to be contiguous.
+
+ <p>In addition to the method area, a Java virtual machine
+ implementation may require memory for internal processing or 
+ optimization which also belongs to non-heap memory.
+ For example, the JIT compiler requires memory for storing the native
+ machine code translated from the Java virtual machine code for
+ high performance.
+
+ <h4>Memory Pools and Memory Managers</h4>
+ <a href='../java/lang/management/MemoryPoolMXBean.html' title='Memory pools'>Memory pools</a> and 
+ <a href='../java/lang/management/MemoryManagerMXBean.html' title='memory managers'>memory managers</a> are the abstract entities
+ that monitor and manage the memory system
+ of the Java virtual machine.
+
+ <p>A memory pool represents a memory area that the Java virtual machine 
+ manages.  The Java virtual machine has at least one memory pool
+ and it may create or remove memory pools during execution.  
+ A memory pool can belong to either the heap or the non-heap memory. 
+ 
+ <p>A memory manager is responsible for managing one or more memory pools.
+ The garbage collector is one type of memory manager responsible 
+ for reclaiming memory occupied by unreachable objects.  A Java virtual
+ machine may have one or more memory managers.   It may
+ add or remove memory managers during execution.
+ A memory pool can be managed by more than one memory manager.
+
+ <h4>Memory Usage Monitoring</h4>
+
+ Memory usage is a very important monitoring attribute for the memory system.
+ The memory usage, for example, could indicate:
+ <ul>
+   <li>the memory usage of an application,</li>
+   <li>the workload being imposed on the automatic memory management system,</li>
+   <li>potential memory leakage.</li>
+ </ul>
+
+ <p>
+ The memory usage can be monitored in three ways:
+ <ul>
+   <li>Polling</li>
+   <li>Usage Threshold Notification</li>
+   <li>Collection Usage Threshold Notification</li>
+ </ul>
+
+ Details are specified in the <a href='../java/lang/management/MemoryPoolMXBean.html' title='MemoryPoolMXBean'>MemoryPoolMXBean</a> interface.
+
+ <p>The memory usage monitoring mechanism is intended for load-balancing
+ or workload distribution use.  For example, an application would stop
+ receiving any new workload when its memory usage exceeds a
+ certain threshold. It is not intended for an application to detect
+ and recover from a low memory condition.
+
+ <h4>Notifications</h4>
+
+ <p>This <tt>MemoryMXBean</tt> is a 
+ javax.management.NotificationEmitter
+ that emits two types of memory javax.management.Notification if any one of the memory pools
+ supports a <a href="MemoryPoolMXBean.html#UsageThreshold">usage threshold</a>
+ or a <a href="MemoryPoolMXBean.html#CollectionThreshold">collection usage
+ threshold</a> which can be determined by calling the
+ <a href='../java/lang/management/MemoryPoolMXBean.html#isUsageThresholdSupported' title='MemoryPoolMXBean.isUsageThresholdSupported'>MemoryPoolMXBean.isUsageThresholdSupported</a> and
+ <a href='../java/lang/management/MemoryPoolMXBean.html#isCollectionUsageThresholdSupported' title='MemoryPoolMXBean.isCollectionUsageThresholdSupported'>MemoryPoolMXBean.isCollectionUsageThresholdSupported</a> methods. 
+ <ul>
+   <li><a href='../java/lang/management/MemoryNotificationInfo.html#MEMORY_THRESHOLD_EXCEEDED' title='       usage threshold exceeded notification'>       usage threshold exceeded notification</a> - for notifying that
+       the memory usage of a memory pool is increased and has reached
+       or exceeded its
+       <a href="MemoryPoolMXBean.html#UsageThreshold"> usage threshold</a> value.
+       </li>
+   <li><a href='../java/lang/management/MemoryNotificationInfo.html#MEMORY_COLLECTION_THRESHOLD_EXCEEDED' title='       collection usage threshold exceeded notification'>       collection usage threshold exceeded notification</a> - for notifying that
+       the memory usage of a memory pool is greater than or equal to its
+       <a href="MemoryPoolMXBean.html#CollectionThreshold">
+       collection usage threshold</a> after the Java virtual machine
+       has expended effort in recycling unused objects in that
+       memory pool.</li>
+ </ul>
+
+ <p>
+ The notification emitted is a javax.management.Notification
+ instance whose javax.management.Notification#setUserData is set to a javax.management.openmbean.CompositeData 
+ that represents a <a href='../java/lang/management/MemoryNotificationInfo.html' title='MemoryNotificationInfo'>MemoryNotificationInfo</a> object
+ containing information about the memory pool when the notification
+ was constructed. The <tt>CompositeData</tt> contains the attributes
+ as described in <a href='../java/lang/management/MemoryNotificationInfo.html#from' title=''></a>.
+
+ <hr>
+ <h4>NotificationEmitter</h4>
+ The <tt>MemoryMXBean</tt> object returned by
+ <a href='../java/lang/management/ManagementFactory.html#getMemoryMXBean' title='ManagementFactory.getMemoryMXBean'>ManagementFactory.getMemoryMXBean</a> implements
+ the javax.management.NotificationEmitter
+ interface that allows a listener to be registered within the
+ <tt>MemoryMXBean</tt> as a notification listener.  
+ 
+ Below is an example code that registers a <tt>MyListener</tt> to handle 
+ notification emitted by the <tt>MemoryMXBean</tt>. 
+
+ <blockquote><pre>
+ class MyListener implements javax.management.NotificationListener {
+     public void handleNotification(Notification notif, Object handback) {
+         // handle notification
+         ....
+     }
+ }
+
+ MemoryMXBean mbean = ManagementFactory.getMemoryMXBean();
+ NotificationEmitter emitter = (NotificationEmitter) mbean;
+ MyListener listener = new MyListener();
+ emitter.addNotificationListener(listener, null, null);
+ </pre></blockquote>
+ <DL><DT><B>Authors:</B></DT><DD>Mandy Chung</DD></DL><DL><DT><B>Version:</B></DT><DD>%I%, %G%</DD></DL><DL><DT><B>See Also:</B></DT><DD></DD><DD></DD></DL><DL><DT><B>Since:</B></DT><DD>1.5</DD></DL>

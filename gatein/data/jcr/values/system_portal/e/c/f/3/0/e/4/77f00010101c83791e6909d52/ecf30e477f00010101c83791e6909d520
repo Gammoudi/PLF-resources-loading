@@ -1,0 +1,8 @@
+ An abstract class for service providers that
+ provide localized currency symbols for the 
+ java.util.Currency class.
+ Note that currency symbols are considered names when determining 
+ behaviors described in the 
+ <a href='../java/util/spi/LocaleServiceProvider.html' title='LocaleServiceProvider'>LocaleServiceProvider</a> 
+ specification.
+ <DL><DT><B>Version:</B></DT><DD>%W% %E%</DD></DL><DL><DT><B>Since:</B></DT><DD>1.6</DD></DL>

@@ -1,0 +1,4 @@
+ Thrown when the "verifier" detects that a class file, 
+ though well formed, contains some sort of internal inconsistency 
+ or security problem.
+ <DL><DT><B>Authors:</B></DT><DD>unascribed</DD></DL><DL><DT><B>Version:</B></DT><DD>%I%, %G%</DD></DL><DL><DT><B>Since:</B></DT><DD>JDK1.0</DD></DL>

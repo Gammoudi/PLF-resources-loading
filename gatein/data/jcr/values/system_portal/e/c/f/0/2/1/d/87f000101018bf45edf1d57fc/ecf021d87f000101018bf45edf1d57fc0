@@ -1,0 +1,11 @@
+ The inner class NativeLibrary denotes a loaded native library instance.
+ Every classloader contains a vector of loaded native libraries in the
+ private field <tt>nativeLibraries</tt>.  The native libraries loaded
+ into the system are entered into the <tt>systemNativeLibraries</tt>
+ vector.
+
+ <p> Every native library requires a particular version of JNI. This is
+ denoted by the private <tt>jniVersion</tt> field.  This field is set by
+ the VM when it loads the library, and used by the VM to pass the correct
+ version of JNI to the native methods.  </p>
+     <DL><DT><B>Version:</B></DT><DD>1.189 11/17/05</DD></DL><DL><DT><B>See Also:</B></DT><DD><a href='../java/lang/ClassLoader.html' title='ClassLoader'>ClassLoader</a></DD></DL><DL><DT><B>Since:</B></DT><DD>1.2</DD></DL>

@@ -1,0 +1,7 @@
+
+         * Returns the next live successor of p, or null if no such.
+         *  
+         * Unlike other traversal methods, iterators need to handle both:
+         * - dequeued nodes (p.next == p)
+         * -  (possibly multiple) interior removed nodes (p.item == null)
+         

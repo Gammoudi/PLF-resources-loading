@@ -1,0 +1,6 @@
+
+     * Verifies that this (possibly subclass) instance can be constructed
+     * without violating security constraints: the subclass must not override
+     * security-sensitive non-final methods, or else the
+     * "enableContextClassLoaderOverride" RuntimePermission is checked.
+     

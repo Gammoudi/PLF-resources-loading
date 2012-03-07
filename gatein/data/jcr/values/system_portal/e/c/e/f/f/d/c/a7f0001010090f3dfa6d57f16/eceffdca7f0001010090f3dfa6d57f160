@@ -1,0 +1,17 @@
+ The management interface for a memory manager.
+ A memory manager manages one or more memory pools of the 
+ Java virtual machine.
+
+ <p> A Java virtual machine has one or more memory managers.
+ An instance implementing this interface is
+ an <a href="ManagementFactory.html#MXBean">MXBean</a>
+ that can be obtained by calling
+ the <a href='../java/lang/management/ManagementFactory.html#getMemoryManagerMXBeans' title='ManagementFactory.getMemoryManagerMXBeans'>ManagementFactory.getMemoryManagerMXBeans</a> method or
+ from the <a href='../java/lang/management/ManagementFactory.html#getPlatformMBeanServer' title=' platform <tt>MBeanServer</tt>'> platform <tt>MBeanServer</tt></a> method.
+
+ <p>The <tt>ObjectName</tt> for uniquely identifying the MXBean for
+ a memory manager within an MBeanServer is:
+ <blockquote>
+   <a href='../java/lang/management/ManagementFactory.html#MEMORY_MANAGER_MXBEAN_DOMAIN_TYPE' title='    <tt>java.lang:type=MemoryManager</tt>'>    <tt>java.lang:type=MemoryManager</tt></a><tt>,name=</tt><i>manager's name</i>
+ </blockquote>
+ <DL><DT><B>Authors:</B></DT><DD>Mandy Chung</DD></DL><DL><DT><B>Version:</B></DT><DD>%I%, %G%</DD></DL><DL><DT><B>See Also:</B></DT><DD><a href='../java/lang/management/MemoryMXBean.html' title='MemoryMXBean'>MemoryMXBean</a></DD><DD></DD><DD></DD></DL><DL><DT><B>Since:</B></DT><DD>1.5</DD></DL>

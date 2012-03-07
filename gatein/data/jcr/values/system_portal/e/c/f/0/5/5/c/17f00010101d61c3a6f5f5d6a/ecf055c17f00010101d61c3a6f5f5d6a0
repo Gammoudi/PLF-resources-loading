@@ -1,0 +1,6 @@
+
+         * Construct a new map including all Inheritable ThreadLocals
+         * from given parent map. Called only by createInheritedMap.
+         *
+         * @param parentMap the map associated with parent thread.
+         

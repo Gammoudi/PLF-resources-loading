@@ -1,0 +1,7 @@
+ An <TT>AtomicStampedReference</TT> maintains an object reference
+ along with an integer "stamp", that can be updated atomically.
+
+ <p> Implementation note. This implementation maintains stamped
+ references by creating internal objects representing "boxed"
+ [reference, integer] pairs.
+ <DL><DT><B>Parameters:</B></DT><DD><code><V></code> -  The type of object referred to by this reference</DD></DL><DL><DT><B>Authors:</B></DT><DD>Doug Lea</DD></DL><DL><DT><B>Since:</B></DT><DD>1.5</DD></DL>

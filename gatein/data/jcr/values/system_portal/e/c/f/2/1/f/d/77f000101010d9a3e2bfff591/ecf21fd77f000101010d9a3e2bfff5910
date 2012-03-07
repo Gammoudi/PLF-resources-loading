@@ -1,0 +1,9 @@
+
+     * Converts the time value (millisecond offset from the <a
+     * href="Calendar.html#Epoch">Epoch</a>) to calendar field values.
+     * The time is <em>not</em>
+     * recomputed first; to recompute the time, then the fields, call the
+     * <code>complete</code> method.
+     *
+     * @see Calendar#complete
+     

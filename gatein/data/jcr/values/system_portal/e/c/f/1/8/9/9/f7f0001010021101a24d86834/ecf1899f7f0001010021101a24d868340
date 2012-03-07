@@ -1,0 +1,4 @@
+
+     * Special constructor for roots (both user and system).  This constructor
+     * will only be called twice, by the static initializer.
+     

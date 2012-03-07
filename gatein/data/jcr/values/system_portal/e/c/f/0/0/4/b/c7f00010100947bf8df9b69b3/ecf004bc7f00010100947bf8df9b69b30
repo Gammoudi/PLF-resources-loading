@@ -1,0 +1,46 @@
+
+     * Returns a thread info for a thread of the specified <tt>id</tt>,
+     * with stack trace of a specified number of stack trace elements.
+     * The <tt>maxDepth</tt> parameter indicates the maximum number of 
+     * {@link StackTraceElement} to be retrieved from the stack trace.
+     * If <tt>maxDepth == Integer.MAX_VALUE</tt>, the entire stack trace of 
+     * the thread will be dumped. 
+     * If <tt>maxDepth == 0</tt>, no stack trace of the thread 
+     * will be dumped. 
+     * This method does not obtain the locked monitors and locked 
+     * synchronizers of the thread.
+     * <p>
+     * When the Java virtual machine has no stack trace information 
+     * about a thread or <tt>maxDepth == 0</tt>, 
+     * the stack trace in the 
+     * <tt>ThreadInfo</tt> object will be an empty array of 
+     * <tt>StackTraceElement</tt>.
+     *
+     * <p>
+     * If a thread of the given ID is not alive or does not exist, 
+     * this method will return <tt>null</tt>.  A thread is alive if 
+     * it has been started and has not yet died.
+     *
+     * <p>
+     * <b>MBeanServer access</b>:<br>
+     * The mapped type of <tt>ThreadInfo</tt> is
+     * <tt>CompositeData</tt> with attributes as specified in the
+     * {@link ThreadInfo#from ThreadInfo.from} method.
+     *
+     * @param id the thread ID of the thread. Must be positive. 
+     * @param maxDepth the maximum number of entries in the stack trace 
+     * to be dumped. <tt>Integer.MAX_VALUE</tt> could be used to request
+     * the entire stack to be dumped.
+     * 
+     * @return a {@link ThreadInfo} of the thread of the given ID
+     * with no locked monitor and synchronizer info.
+     * <tt>null</tt> if the thread of the given ID is not alive or
+     * it does not exist.
+     *
+     * @throws IllegalArgumentException if <tt>id &lt= 0</tt>.
+     * @throws IllegalArgumentException if <tt>maxDepth is negative</tt>.
+     * @throws java.lang.SecurityException if a security manager
+     *         exists and the caller does not have
+     *         ManagementPermission("monitor").
+     *
+     

@@ -1,0 +1,28 @@
+
+     * Returns a new character sequence that is a subsequence of this sequence.
+     *
+     * <p> An invocation of this method of the form
+     *
+     * <blockquote><pre>
+     * str.subSequence(begin,&nbsp;end)</pre></blockquote>
+     *
+     * behaves in exactly the same way as the invocation
+     *
+     * <blockquote><pre>
+     * str.substring(begin,&nbsp;end)</pre></blockquote>
+     *
+     * This method is defined so that the <tt>String</tt> class can implement
+     * the {@link CharSequence} interface. </p>
+     *
+     * @param      beginIndex   the begin index, inclusive.
+     * @param      endIndex     the end index, exclusive.
+     * @return     the specified subsequence.
+     *
+     * @throws  IndexOutOfBoundsException
+     *          if <tt>beginIndex</tt> or <tt>endIndex</tt> are negative,
+     *          if <tt>endIndex</tt> is greater than <tt>length()</tt>,
+     *          or if <tt>beginIndex</tt> is greater than <tt>startIndex</tt>
+     *
+     * @since 1.4
+     * @spec JSR-51
+     

@@ -1,0 +1,13 @@
+
+     * Returns the value to which the key is mapped in this dictionary. 
+     * The general contract for the <tt>isEmpty</tt> method is that if this 
+     * dictionary contains an entry for the specified key, the associated 
+     * value is returned; otherwise, <tt>null</tt> is returned. 
+     *
+     * @return  the value to which the key is mapped in this dictionary;
+     * @param   key   a key in this dictionary.
+     *          <code>null</code> if the key is not mapped to any value in
+     *          this dictionary.
+     * @exception NullPointerException if the <tt>key</tt> is <tt>null</tt>.
+     * @see     java.util.Dictionary#put(java.lang.Object, java.lang.Object)
+     

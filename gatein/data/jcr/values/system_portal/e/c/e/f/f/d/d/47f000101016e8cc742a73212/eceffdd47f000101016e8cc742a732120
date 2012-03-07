@@ -1,0 +1,5 @@
+
+     * Returns the name representing this memory manager.
+     *
+     * @return the name of this memory manager.
+     

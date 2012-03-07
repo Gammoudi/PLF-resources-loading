@@ -1,0 +1,5 @@
+
+     * Enqueue a "node added" event for delivery to registered node change
+     * listeners unless there are no registered listeners.  Invoked with
+     * this.lock held.
+     

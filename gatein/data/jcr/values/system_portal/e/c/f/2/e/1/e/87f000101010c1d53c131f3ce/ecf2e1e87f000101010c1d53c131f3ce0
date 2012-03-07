@@ -1,0 +1,4 @@
+
+     * Preprocess any \Q...\E sequences in `temp', meta-quoting them.
+     * See the description of `quotemeta' in perlfunc(1).
+     

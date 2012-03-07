@@ -1,0 +1,3 @@
+ A class can implement the <code>Observer</code> interface when it
+ wants to be informed of changes in observable objects.
+ <DL><DT><B>Authors:</B></DT><DD>Chris Warth</DD></DL><DL><DT><B>Version:</B></DT><DD>%I%, %G%</DD></DL><DL><DT><B>See Also:</B></DT><DD><a href='../java/util/Observable.html' title='Observable'>Observable</a></DD></DL><DL><DT><B>Since:</B></DT><DD>JDK1.0</DD></DL>

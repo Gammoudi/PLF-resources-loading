@@ -1,0 +1,8 @@
+
+     * Creates a new slot at given index.  Called only when the slot
+     * appears to be null.  Relies on double-check using builtin
+     * locks, since they rarely contend.  This in turn relies on the
+     * arena array being declared volatile.
+     *
+     * @param index the index to add slot at
+     

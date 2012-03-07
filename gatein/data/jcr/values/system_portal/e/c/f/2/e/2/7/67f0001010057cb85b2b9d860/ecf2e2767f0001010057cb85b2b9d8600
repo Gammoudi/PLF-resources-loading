@@ -1,0 +1,4 @@
+
+     * Parse a single character or a character range in a character class
+     * and return its representative node.
+     

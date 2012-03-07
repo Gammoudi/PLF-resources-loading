@@ -1,0 +1,3 @@
+ Abstract node class to match one character satisfying some
+ boolean property.
+     

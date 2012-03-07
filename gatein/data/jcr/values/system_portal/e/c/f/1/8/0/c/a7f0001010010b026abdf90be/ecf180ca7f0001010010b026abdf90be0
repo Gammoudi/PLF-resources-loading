@@ -1,0 +1,13 @@
+
+     * Implements the <tt>isUserNode</tt> method as per the specification in
+     * {@link Preferences#isUserNode()}.
+     *
+     * <p>This implementation compares this node's root node (which is stored
+     * in a private field) with the value returned by
+     * {@link Preferences#userRoot()}.  If the two object references are
+     * identical, this method returns true.
+     *
+     * @return <tt>true</tt> if this preference node is in the user
+     *         preference tree, <tt>false</tt> if it's in the system
+     *         preference tree.
+     

@@ -1,0 +1,16 @@
+
+     * Returns the index within this string of the rightmost occurrence
+     * of the specified substring.  The rightmost empty string "" is
+     * considered to occur at the index value <code>this.length()</code>.
+     * The returned index is the largest value <i>k</i> such that
+     * <blockquote><pre>
+     * this.startsWith(str, k)
+     * </pre></blockquote>
+     * is true.
+     *
+     * @param   str   the substring to search for.
+     * @return  if the string argument occurs one or more times as a substring
+     *          within this object, then the index of the first character of
+     *          the last such substring is returned. If it does not occur as
+     *          a substring, <code>-1</code> is returned.
+     

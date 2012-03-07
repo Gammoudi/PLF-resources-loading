@@ -1,0 +1,10 @@
+
+     * Returns the string representation of the <code>char</code> array
+     * argument. The contents of the character array are copied; subsequent
+     * modification of the character array does not affect the newly
+     * created string.
+     *
+     * @param   data   a <code>char</code> array.
+     * @return  a newly allocated string representing the same sequence of
+     *          characters contained in the character array argument.
+     

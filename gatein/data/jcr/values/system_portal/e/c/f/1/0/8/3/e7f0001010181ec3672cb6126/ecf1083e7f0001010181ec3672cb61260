@@ -1,0 +1,7 @@
+
+     * Creates a new {@code AtomicMarkableReference} with the given
+     * initial values.
+     *
+     * @param initialRef the initial reference
+     * @param initialMark the initial mark
+     

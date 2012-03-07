@@ -1,0 +1,26 @@
+
+     * Copies into the specified array references to every active 
+     * subgroup in this thread group. 
+     * <p>
+     * First, the <code>checkAccess</code> method of this thread group is 
+     * called with no arguments; this may result in a security exception. 
+     * <p>
+     * An application might use the <code>activeGroupCount</code> method to 
+     * get an estimate of how big the array should be, however <i>if the
+     * array is too short to hold all the thread groups, the extra thread
+     * groups are silently ignored.</i>  If it is critical to obtain every
+     * active subgroup in this thread group, the caller should verify that
+     * the returned int value is strictly less than the length of
+     * <tt>list</tt>.
+     * <p>
+     * Due to the inherent race condition in this method, it is recommended
+     * that the method only be used for informational purposes.
+     *
+     * @param   list   an array into which to place the list of thread groups.
+     * @return  the number of thread groups put into the array.
+     * @exception  SecurityException  if the current thread does not
+     *               have permission to enumerate this thread group.
+     * @see     java.lang.ThreadGroup#activeGroupCount()
+     * @see     java.lang.ThreadGroup#checkAccess()
+     * @since   JDK1.0
+     

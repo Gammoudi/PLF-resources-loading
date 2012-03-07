@@ -1,0 +1,25 @@
+<div id="navigation-generator">
+	<div class="UIWCMNavigationPortlet">
+		<div class="UINavigationBar">
+			<div class="ControlButton HoverButton" href="aaa">
+				<div class="Button">
+					Overview</div>
+			</div>
+			<div class="ControlButton" href="aaa">
+				<div class="Button">
+					News</div>
+			</div>
+			<div class="ControlButton" href="aaa">
+				<div class="Button">
+					Events</div>
+			</div>
+			<div class="ControlButton" href="aaa">
+				<div class="Button">
+					Publications</div>
+			</div>
+			<div style="clear: left;">
+				 </div>
+		</div>
+	</div>
+</div>
+<script type="text/javascript">/* <![CDATA[ */ renderNavigations("AddContentIconLiveMode"); /* ]]> */</script>

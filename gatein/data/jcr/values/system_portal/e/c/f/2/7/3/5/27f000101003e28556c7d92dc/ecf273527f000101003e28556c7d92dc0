@@ -1,0 +1,10 @@
+
+     * Establishes the heap invariant (described above) in the subtree
+     * rooted at k, which is assumed to satisfy the heap invariant except
+     * possibly for node k itself (which may have a nextExecutionTime greater
+     * than its children's).
+     *
+     * This method functions by "demoting" queue[k] down the hierarchy
+     * (by swapping it with its smaller child) repeatedly until queue[k]'s
+     * nextExecutionTime is less than or equal to those of its children.
+     

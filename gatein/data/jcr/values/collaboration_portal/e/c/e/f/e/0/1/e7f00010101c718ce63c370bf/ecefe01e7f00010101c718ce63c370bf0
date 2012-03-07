@@ -1,0 +1,41 @@
+﻿  <div class="UIWCMLoginPortlet" id="UIWCMLoginPortlet">
+    <span class="LoggedUser" id="AcmeWebSiteLoggedUser">&nbsp;</span>
+    <a class="LogoutIcon" id="AcmeWebSiteLogInLogOut">&nbsp;</a>
+      | 
+    <a class="LanguageIcon" href="javascript:void(0)" onclick="javascript:changeLanguage();">Changer de langue</a>
+    <span id="AcmeWebSiteRegister">
+      | <a class="RegisterIcon" href="javascript:void(0)" onclick="javascript:Register();">S&#39;inscrire</a>
+    </span>
+  </div>
+  <script type="text/javascript">
+  var userName = eXo.env.portal.userName;
+  if(userName != "null"){
+    document.getElementById("AcmeWebSiteLoggedUser").innerHTML = "Bienvenue: " + eXo.env.portal.userName;
+    document.getElementById("AcmeWebSiteLogInLogOut").innerHTML = "Déconnexion";
+    document.getElementById("AcmeWebSiteLogInLogOut").onclick = function () {
+      window.location = eXo.env.server.portalBaseURL + "?portal:componentId=" + "UIPortal" + "&portal:action=" + "Logout";
+    }
+    document.getElementById("AcmeWebSiteRegister").innerHTML = "";
+  }else{
+    document.getElementById("AcmeWebSiteLoggedUser").innerHTML = "";
+    document.getElementById("AcmeWebSiteLogInLogOut").innerHTML = "Connexion";
+    document.getElementById("AcmeWebSiteLogInLogOut").onclick = function () {
+      if(document.getElementById('UIMaskWorkspace')){
+        var login = eXo.env.server.portalBaseURL + "?portal:componentId=" + "UIPortal" + "&portal:action=" + "ShowLoginForm" + "&ajaxRequest=true";
+        ajaxGet(login);
+      }
+    }
+  }
+
+  changeLanguage = function(){
+    if(document.getElementById('UIMaskWorkspace')){
+      var changeLanguage = eXo.env.server.portalBaseURL + "?portal:componentId=" + "UIPortal" + "&portal:action=" + "ChangeLanguage" + "&ajaxRequest=true";
+      ajaxGet(changeLanguage);
+    }
+  }
+
+  Register = function(){
+    var url = window.location.protocol + "//" + window.location.host + eXo.env.portal.context + "/" + eXo.env.portal.accessMode + "/" + eXo.env.portal.portalName + "/newAccount";
+    location.href=url;
+  }
+  </script>

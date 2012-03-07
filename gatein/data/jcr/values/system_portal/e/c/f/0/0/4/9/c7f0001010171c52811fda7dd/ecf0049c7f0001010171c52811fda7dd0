@@ -1,0 +1,33 @@
+
+     * Finds cycles of threads that are in deadlock waiting to acquire
+     * object monitors. That is, threads that are blocked waiting to enter a
+     * synchronization block or waiting to reenter a synchronization block
+     * after an {@link Object#wait Object.wait} call, 
+     * where each thread owns one monitor while
+     * trying to obtain another monitor already held by another thread
+     * in a cycle.
+     * <p>
+     * More formally, a thread is <em>monitor deadlocked</em> if it is
+     * part of a cycle in the relation "is waiting for an object monitor
+     * owned by".  In the simplest case, thread A is blocked waiting
+     * for a monitor owned by thread B, and thread B is blocked waiting
+     * for a monitor owned by thread A.
+     * <p>
+     * This method is designed for troubleshooting use, but not for
+     * synchronization control.  It might be an expensive operation.
+     * <p>
+     * This method finds deadlocks involving only object monitors.
+     * To find deadlocks involving both object monitors and  
+     * <a href="LockInfo.html#OwnableSynchronizer">ownable synchronizers</a>,
+     * the {@link #findDeadlockedThreads findDeadlockedThreads} method
+     * should be used. 
+     *
+     * @return an array of IDs of the threads that are monitor
+     * deadlocked, if any; <tt>null</tt> otherwise.
+     *
+     * @throws java.lang.SecurityException if a security manager
+     *         exists and the caller does not have
+     *         ManagementPermission("monitor").
+     *
+     * @see #findDeadlockedThreads
+     

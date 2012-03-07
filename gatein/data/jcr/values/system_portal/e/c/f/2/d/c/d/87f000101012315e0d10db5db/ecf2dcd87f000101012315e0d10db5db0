@@ -1,0 +1,6 @@
+
+     * Initiates a search for an anchored match to a Pattern within the given
+     * bounds. The groups are filled with default values and the match of the
+     * root of the state machine is called. The state machine will hold the
+     * state of the match as it proceeds in this matcher.
+     

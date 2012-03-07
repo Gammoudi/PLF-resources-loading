@@ -1,0 +1,5 @@
+
+     * Create group head and tail nodes using double return. If the group is
+     * created with anonymous true then it is a pure group and should not
+     * affect group counting.
+     

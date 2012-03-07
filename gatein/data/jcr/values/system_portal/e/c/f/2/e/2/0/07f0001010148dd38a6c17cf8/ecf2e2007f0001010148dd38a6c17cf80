@@ -1,0 +1,7 @@
+
+     * Parse a character class, and return the node that matches it.
+     *
+     * Consumes a ] on the way out if consume is true. Usually consume
+     * is true except for the case of [abc&&def] where def is a separate
+     * right hand node with "understood" brackets.
+     

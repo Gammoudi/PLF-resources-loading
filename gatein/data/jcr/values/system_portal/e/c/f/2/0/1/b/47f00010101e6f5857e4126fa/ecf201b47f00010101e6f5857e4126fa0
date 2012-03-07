@@ -1,0 +1,6 @@
+
+     * Retrieves and removes the first element of this deque,
+     * or returns <tt>null</tt> if this deque is empty.
+     *
+     * @return the head of this deque, or <tt>null</tt> if this deque is empty
+     

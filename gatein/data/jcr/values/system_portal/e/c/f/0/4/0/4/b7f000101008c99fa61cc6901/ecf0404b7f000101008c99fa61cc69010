@@ -1,0 +1,11 @@
+
+     * Tests if this string ends with the specified suffix.
+     *
+     * @param   suffix   the suffix.
+     * @return  <code>true</code> if the character sequence represented by the
+     *          argument is a suffix of the character sequence represented by
+     *          this object; <code>false</code> otherwise. Note that the
+     *          result will be <code>true</code> if the argument is the
+     *          empty string or is equal to this <code>String</code> object
+     *          as determined by the {@link #equals(Object)} method.
+     

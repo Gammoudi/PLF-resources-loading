@@ -1,0 +1,32 @@
+ A thread-safe variant of java.util.ArrayList in which all mutative
+ operations (<tt>add</tt>, <tt>set</tt>, and so on) are implemented by
+ making a fresh copy of the underlying array.
+
+ <p> This is ordinarily too costly, but may be <em>more</em> efficient
+ than alternatives when traversal operations vastly outnumber
+ mutations, and is useful when you cannot or don't want to
+ synchronize traversals, yet need to preclude interference among
+ concurrent threads.  The "snapshot" style iterator method uses a
+ reference to the state of the array at the point that the iterator
+ was created. This array never changes during the lifetime of the
+ iterator, so interference is impossible and the iterator is
+ guaranteed not to throw <tt>ConcurrentModificationException</tt>.
+ The iterator will not reflect additions, removals, or changes to
+ the list since the iterator was created.  Element-changing
+ operations on iterators themselves (<tt>remove</tt>, <tt>set</tt>, and
+ <tt>add</tt>) are not supported. These methods throw
+ <tt>UnsupportedOperationException</tt>.
+
+ <p>All elements are permitted, including <tt>null</tt>.
+
+ <p>Memory consistency effects: As with other concurrent
+ collections, actions in a thread prior to placing an object into a
+ <TT>CopyOnWriteArrayList</TT>
+ <a href="package-summary.html#MemoryVisibility"><i>happen-before</i></a>
+ actions subsequent to the access or removal of that element from
+ the <TT>CopyOnWriteArrayList</TT> in another thread.
+
+ <p>This class is a member of the
+ <a href="{@docRoot}/../technotes/guides/collections/index.html">
+ Java Collections Framework</a>.
+ <DL><DT><B>Parameters:</B></DT><DD><code><E></code> -  the type of elements held in this collection</DD></DL><DL><DT><B>Authors:</B></DT><DD>Doug Lea</DD></DL><DL><DT><B>Since:</B></DT><DD>1.5</DD></DL>

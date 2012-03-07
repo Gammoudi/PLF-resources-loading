@@ -1,0 +1,4 @@
+ This class implements a stream filter for uncompressing data in the
+ "deflate" compression format. It is also used as the basis for other
+ decompression filters, such as GZIPInputStream.
+ <DL><DT><B>Authors:</B></DT><DD>David Connelly</DD></DL><DL><DT><B>Version:</B></DT><DD>%I%, %G%</DD></DL><DL><DT><B>See Also:</B></DT><DD><a href='../java/util/zip/Inflater.html' title='Inflater'>Inflater</a></DD></DL>

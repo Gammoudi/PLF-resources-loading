@@ -1,0 +1,8 @@
+ 
+     * Returns the amount of memory in bytes that is committed for
+     * the Java virtual machine to use.  This amount of memory is
+     * guaranteed for the Java virtual machine to use. 
+     *
+     * @return the amount of committed memory in bytes.
+     *
+     

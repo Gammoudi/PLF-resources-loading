@@ -1,0 +1,20 @@
+
+     * Implements the <tt>nodeExists</tt> method as per the specification in
+     * {@link Preferences#nodeExists(String)}.
+     *
+     * <p>This implementation is very similar to {@link #node(String)},
+     * except that {@link #getChild(String)} is used instead of {@link
+     * #childSpi(String)}.
+     *
+     * @param path the path name of the node whose existence is to be checked.
+     * @return true if the specified node exists.
+     * @throws BackingStoreException if this operation cannot be completed
+     *         due to a failure in the backing store, or inability to 
+     *         communicate with it.
+     * @throws IllegalArgumentException if the path name is invalid (i.e.,
+     *         it contains multiple consecutive slash characters, or ends
+     *         with a slash character and is more than one character long).
+     * @throws IllegalStateException if this node (or an ancestor) has been
+     *         removed with the {@link #removeNode()} method and
+     *         <tt>pathname</tt> is not the empty string (<tt>""</tt>).
+     

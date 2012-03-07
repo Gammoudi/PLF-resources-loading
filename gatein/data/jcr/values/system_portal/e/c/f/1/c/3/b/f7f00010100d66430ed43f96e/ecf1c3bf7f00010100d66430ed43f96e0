@@ -1,0 +1,6 @@
+
+     * Both firstDayOfWeek and minimalDaysInFirstWeek are locale-dependent.
+     * They are used to figure out the week count for a specific date for
+     * a given locale. These must be set when a Calendar is constructed.
+     * @param desiredLocale the given locale.
+     

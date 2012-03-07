@@ -1,0 +1,4 @@
+
+     * Gets the array.  Non-private so as to also be accessible
+     * from CopyOnWriteArraySet class.
+     

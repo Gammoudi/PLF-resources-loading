@@ -1,0 +1,6 @@
+ Handles word boundaries. Includes a field to allow this one class to
+ deal with the different types of word boundaries we can match. The word
+ characters include underscores, letters, and digits. Non spacing marks
+ can are also part of a word if they have a base character, otherwise
+ they are ignored for purposes of finding word boundaries.
+     

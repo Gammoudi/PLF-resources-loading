@@ -1,0 +1,5 @@
+
+     * This override alters behavior of superclass put method. It causes newly
+     * allocated entry to get inserted at the end of the linked list and
+     * removes the eldest entry if appropriate.
+     

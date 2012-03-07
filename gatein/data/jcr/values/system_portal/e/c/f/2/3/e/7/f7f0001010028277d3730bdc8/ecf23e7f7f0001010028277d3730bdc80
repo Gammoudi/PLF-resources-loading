@@ -1,0 +1,4 @@
+
+     * This override differs from addEntry in that it doesn't resize the
+     * table or remove the eldest entry.
+     

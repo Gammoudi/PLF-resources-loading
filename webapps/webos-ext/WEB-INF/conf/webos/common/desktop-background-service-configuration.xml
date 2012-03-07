@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+    Copyright (C) 2009 eXo Platform SAS.
+    
+    This is free software; you can redistribute it and/or modify it
+    under the terms of the GNU Lesser General Public License as
+    published by the Free Software Foundation; either version 2.1 of
+    the License, or (at your option) any later version.
+    
+    This software is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+    Lesser General Public License for more details.
+    
+    You should have received a copy of the GNU Lesser General Public
+    License along with this software; if not, write to the Free
+    Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA
+    02110-1301 USA, or see the FSF site: http://www.fsf.org.
+
+-->
+<configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.exoplaform.org/xml/ns/kernel_1_0.xsd http://www.exoplaform.org/xml/ns/kernel_1_0.xsd" xmlns="http://www.exoplaform.org/xml/ns/kernel_1_0.xsd">
+
+  <component>
+     <key>org.exoplatform.webos.services.desktop.DesktopBackgroundService</key>
+     <type>org.exoplatform.webos.services.desktop.impl.DesktopBackgroundServiceImpl</type>
+     <init-params>
+      <value-param>
+        <name>image.limit.quantity</name>
+        <description>Maximum number of the files each user can upload</description>
+        <value>10</value>
+      </value-param>
+      <value-param>
+        <name>image.limit.size</name>
+        <description>Maximum size of the image that user can upload</description>
+        <value>2</value>
+      </value-param> 
+	  <value-param>
+        <name>default.image.path</name>
+        <description>
+        	Path to folder that contains all image folders for all sites.
+        	By default, It is in webosResources 
+        </description>
+        <value>/backgrounds</value>
+      </value-param> 
+    </init-params>
+  </component>
+  
+  <external-component-plugins>
+    <target-component>org.exoplatform.commons.chromattic.ChromatticManager</target-component>
+    <component-plugin>
+      <name>chromattic</name>
+      <set-method>addLifeCycle</set-method>
+      <type>org.exoplatform.portal.pom.config.MOPChromatticLifeCycle</type>
+      <init-params>
+        <value-param>
+          <name>domain-name</name>
+          <value>mop</value>
+        </value-param>
+        <value-param>
+          <name>workspace-name</name>
+          <value>portal-system</value>
+        </value-param>
+        <values-param>
+          <name>entities</name>
+          <value>org.gatein.mop.core.api.workspace.WorkspaceImpl</value>
+          <value>org.gatein.mop.core.api.workspace.UIContainerImpl</value>
+          <value>org.gatein.mop.core.api.workspace.UIWindowImpl</value>
+          <value>org.gatein.mop.core.api.workspace.UIBodyImpl</value>
+          <value>org.gatein.mop.core.api.workspace.PageImpl</value>
+          <value>org.gatein.mop.core.api.workspace.PageContainer</value>
+          <value>org.gatein.mop.core.api.workspace.NavigationImpl</value>
+          <value>org.gatein.mop.core.api.workspace.NavigationContainer</value>
+          <value>org.gatein.mop.core.api.workspace.PageLinkImpl</value>
+          <value>org.gatein.mop.core.api.workspace.URLLinkImpl</value>
+          <value>org.gatein.mop.core.api.workspace.PortalSiteContainer</value>
+          <value>org.gatein.mop.core.api.workspace.PortalSite</value>
+          <value>org.gatein.mop.core.api.workspace.GroupSiteContainer</value>
+          <value>org.gatein.mop.core.api.workspace.GroupSite</value>
+          <value>org.gatein.mop.core.api.workspace.UserSiteContainer</value>
+          <value>org.gatein.mop.core.api.workspace.UserSite</value>
+          <value>org.gatein.mop.core.api.workspace.TemplatizedImpl</value>
+          <value>org.gatein.mop.core.api.AttributesImpl</value>
+          <value>org.gatein.mop.core.api.Attribute</value>
+          <value>org.gatein.mop.core.api.PathAttribute</value>
+          <value>org.gatein.mop.core.api.StringAttribute</value>
+          <value>org.gatein.mop.core.api.BooleanAttribute</value>
+          <value>org.gatein.mop.core.api.IntegerAttribute</value>
+          <value>org.gatein.mop.core.api.DateAttribute</value>
+          <value>org.gatein.mop.core.api.workspace.content.CustomizationContainer</value>
+          <value>org.gatein.mop.core.api.workspace.content.ContextTypeContainer</value>
+          <value>org.gatein.mop.core.api.workspace.content.ContextType</value>
+          <value>org.gatein.mop.core.api.workspace.content.ContextSpecialization</value>
+          <value>org.gatein.mop.core.api.workspace.content.WorkspaceClone</value>
+          <value>org.gatein.mop.core.api.workspace.content.WorkspaceSpecialization</value>
+          <value>org.exoplatform.portal.pom.spi.portlet.PortletState</value>
+          <value>org.exoplatform.portal.pom.spi.portlet.PreferenceState</value>
+          <value>org.exoplatform.portal.pom.spi.gadget.GadgetState</value>
+          <value>org.exoplatform.portal.pom.spi.wsrp.WSRPState</value>
+          <value>org.exoplatform.portal.mop.ProtectedResource</value>
+          <value>org.exoplatform.portal.mop.Described</value>
+          <value>org.exoplatform.portal.mop.Visible</value>
+          <value>org.exoplatform.webos.services.desktop.impl.DesktopPageMetadata</value>
+          <value>org.exoplatform.webos.services.desktop.impl.PersonalBackgroundSpace</value>
+          <value>org.chromattic.ext.ntdef.NTFile</value>
+          <value>org.chromattic.ext.ntdef.NTFolder</value>
+          <value>org.chromattic.ext.ntdef.NTResource</value>
+          <value>org.exoplatform.portal.mop.i18n.I18Nized</value>
+          <value>org.exoplatform.portal.mop.i18n.LanguageSpace</value>
+          <value>org.exoplatform.portal.mop.i18n.Language</value>
+          <value>org.exoplatform.portal.mop.importer.Imported</value>
+        </values-param>
+        <properties-param>
+          <name>options</name>
+          <property name="org.chromattic.api.Option.root_node.path" value="/production"/>
+          <property name="org.chromattic.api.Option.root_node.create" value="true"/>
+        </properties-param>
+      </init-params>
+    </component-plugin>
+  </external-component-plugins>
+</configuration>

@@ -1,0 +1,5 @@
+
+     * Removes last entry; returns its snapshot.
+     * Specialized variant of doRemove.
+     * @return null if empty, else snapshot of last entry
+     

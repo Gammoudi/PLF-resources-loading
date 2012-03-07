@@ -1,0 +1,16 @@
+
+     * Enables or disables thread contention monitoring.
+     * Thread contention monitoring is disabled by default.
+     *
+     * @param enable <tt>true</tt> to enable;
+     *               <tt>false</tt> to disable.
+     *
+     * @throws java.lang.UnsupportedOperationException if the Java 
+     * virtual machine does not support thread contention monitoring.
+     *
+     * @throws java.lang.SecurityException if a security manager
+     *         exists and the caller does not have
+     *         ManagementPermission("control").
+     *
+     * @see #isThreadContentionMonitoringSupported
+     

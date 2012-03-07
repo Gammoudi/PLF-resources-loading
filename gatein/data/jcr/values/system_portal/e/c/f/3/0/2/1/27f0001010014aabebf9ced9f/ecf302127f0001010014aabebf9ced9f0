@@ -1,0 +1,6 @@
+ The following classes are the building components of the object
+ tree that represents a compiled regular expression. The object tree
+ is made of individual elements that handle constructs in the Pattern.
+ Each type of object knows how to match its equivalent construct with
+ the match() method.
+     

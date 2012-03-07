@@ -1,0 +1,58 @@
+<%	
+    import org.exoplatform.web.application.JavascriptManager;
+    import org.exoplatform.portal.webui.util.Util;
+    import org.exoplatform.portal.webui.workspace.UIPortalApplication;
+    import org.exoplatform.portal.webui.page.UIPage;
+    import org.exoplatform.portal.mop.user.UserNavigation;
+	
+	def rcontext = _ctx.getRequestContext();
+	 
+	JavascriptManager jsmanager = rcontext.getJavascriptManager();
+	jsmanager.importJavascript('eXo.portal.UIPortalNavigation');
+	jsmanager.importJavascript('eXo.portal.UIAdminToolbar');
+	jsmanager.addCustomizedOnLoadScript('eXo.portal.UIAdminToolbar.onLoad("' + uicomponent.id + '");');
+	
+	String addPageLabel = _ctx.appRes("UIWebOSAdminToolbarPortlet.action.AddPage");
+	String editPageLabel = _ctx.appRes("UIWebOSAdminToolbarPortlet.action.EditPage");
+	String editSiteLayout = _ctx.appRes("UIWebOSAdminToolbarPortlet.action.EditSiteLayout");
+	String editorLabel = _ctx.appRes("UIWebOSAdminToolbarPortlet.action.Editor");
+	
+	boolean userCouldEditNavigation = uicomponent.hasEditPermissionOnNavigation();
+	boolean userCouldEditPage = uicomponent.hasEditPermissionOnPage();
+	boolean userCouldEditPortal = uicomponent.hasEditPermissionOnPortal();
+
+	UserNavigation selectedNav = uicomponent.getSelectedNavigation();
+	if (selectedNav != null) {
+			editorLabel = _ctx.appRes("UIWebOSAdminToolbarPortlet.action." + selectedNav.getKey().getTypeName() + ".Editor");
+	}
+	String accountSetting = "javascript:if(document.getElementById('UIMaskWorkspace')) ajaxGet(eXo.env.server.createPortalURL('UIPortal', 'AccountSettings', true));"
+%>
+	<ul class="UIWebOSAdminToolbarPortlet UIHorizontalTabs ClearFix" id="$uicomponent.id">
+		<li class="UITab NormalToolbarTab">
+			<a class="EditorIcon TBIcon" href="#">$editorLabel</a>
+			<ul class="MenuItemContainer" style="display:none;">
+				<% if(userCouldEditNavigation) { %>
+					<li class="MenuItem">	
+						<a href="javascript:ajaxGet(eXo.env.server.createPortalURL('UIWorkingWorkspace', 'PageCreationWizard', true))" title="" class="ItemIcon AddPageIcon">$addPageLabel</a>
+					</li>
+				<% } %>
+				
+				<% if(userCouldEditPage) {
+				
+					UIPortalApplication portalApp = Util.getUIPortalApplication();
+					UIPage uiPage = portalApp.findFirstComponentOfType(UIPage.class);//TODO: Find a better solution than this traversing
+					String editPageRequest = "javascript:ajaxGet(eXo.env.server.createPortalURL('" + uiPage.getId() + "', 'EditCurrentPage', true))";
+				%>
+					<li class="MenuItem">
+						<a href="$editPageRequest" title="" class="ItemIcon EditPageIcon">$editPageLabel</a>
+					</li>
+				<% } %>
+				
+				<% if(userCouldEditPortal){ %>
+					<li class="MenuItem">
+						<a href="javascript:ajaxGet(eXo.env.server.createPortalURL('UIWorkingWorkspace', 'EditInline', true))" title="" class="ItemIcon EditSiteIcon">$editSiteLayout</a>
+					</li>
+				<% } %>
+			</ul>
+		</li>
+	</ul>

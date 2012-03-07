@@ -1,0 +1,7 @@
+
+     * Inserts the specified element into this delay queue.
+     *
+     * @param e the element to add
+     * @return <tt>true</tt> (as specified by {@link Collection#add})
+     * @throws NullPointerException if the specified element is null
+     

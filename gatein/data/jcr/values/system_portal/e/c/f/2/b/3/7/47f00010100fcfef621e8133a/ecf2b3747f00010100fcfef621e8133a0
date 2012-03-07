@@ -1,0 +1,6 @@
+
+     * Sets the compression strategy to the specified value.
+     * @param strategy the new compression strategy
+     * @exception IllegalArgumentException if the compression strategy is
+     *				           invalid
+     

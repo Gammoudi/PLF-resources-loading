@@ -1,0 +1,36 @@
+
+     * Returns the hyperbolic tangent of a <code>double</code> value.
+     * The hyperbolic tangent of <i>x</i> is defined to be
+     * (<i>e<sup>x</sup>&nbsp;-&nbsp;e<sup>-x</sup></i>)/(<i>e<sup>x</sup>&nbsp;+&nbsp;e<sup>-x</sup></i>),
+     * in other words, {@linkplain Math#sinh
+     * sinh(<i>x</i>)}/{@linkplain Math#cosh cosh(<i>x</i>)}.  Note
+     * that the absolute value of the exact tanh is always less than
+     * 1.
+     *
+     * <p>Special cases:
+     * <ul>
+     *
+     * <li>If the argument is NaN, then the result is NaN.
+     *
+     * <li>If the argument is zero, then the result is a zero with the
+     * same sign as the argument.
+     *
+     * <li>If the argument is positive infinity, then the result is
+     * <code>+1.0</code>.
+     *
+     * <li>If the argument is negative infinity, then the result is
+     * <code>-1.0</code>.
+     *  
+     * </ul>
+     *
+     * <p>The computed result must be within 2.5 ulps of the exact result.
+     * The result of <code>tanh</code> for any finite input must have
+     * an absolute value less than or equal to 1.  Note that once the
+     * exact result of tanh is within 1/2 of an ulp of the limit value
+     * of &plusmn;1, correctly signed &plusmn;<code>1.0</code> should
+     * be returned.
+     *
+     * @param   x The number whose hyperbolic tangent is to be returned.
+     * @return  The hyperbolic tangent of <code>x</code>.
+     * @since 1.5
+     

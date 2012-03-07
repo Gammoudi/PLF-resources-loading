@@ -1,0 +1,5 @@
+ Used for REs that can start anywhere within the input string.
+ This basically tries to match repeatedly at each spot in the
+ input string, moving forward after each try. An anchored search
+ or a BnM will bypass this node completely.
+     

@@ -1,0 +1,20 @@
+ An object that implements the Enumeration interface generates a
+ series of elements, one at a time. Successive calls to the
+ <code>nextElement</code> method return successive elements of the
+ series.
+ <p>
+ For example, to print all elements of a <tt>Vector&lt;E&gt;</tt> <i>v</i>:
+ <pre>
+   for (Enumeration&lt;E&gt; e = v.elements(); e.hasMoreElements();)
+       System.out.println(e.nextElement());</pre>
+ <p>
+ Methods are provided to enumerate through the elements of a
+ vector, the keys of a hashtable, and the values in a hashtable.
+ Enumerations are also used to specify the input streams to a
+ <code>SequenceInputStream</code>.
+ <p>
+ NOTE: The functionality of this interface is duplicated by the Iterator
+ interface.  In addition, Iterator adds an optional remove operation, and
+ has shorter method names.  New implementations should consider using
+ Iterator in preference to Enumeration.
+ <DL><DT><B>Authors:</B></DT><DD>Lee Boynton</DD></DL><DL><DT><B>Version:</B></DT><DD>%I%, %G%</DD></DL><DL><DT><B>See Also:</B></DT><DD><a href='../java/util/Iterator.html' title='Iterator'>Iterator</a></DD><DD>java.io.SequenceInputStream</DD><DD><a href='../java/util/Enumeration.html#nextElement()' title='Enumeration.nextElement'>Enumeration.nextElement</a></DD><DD><a href='../java/util/Hashtable.html' title='Hashtable'>Hashtable</a></DD><DD><a href='../java/util/Hashtable.html#elements()' title='Hashtable.elements'>Hashtable.elements</a></DD><DD><a href='../java/util/Hashtable.html#keys()' title='Hashtable.keys'>Hashtable.keys</a></DD><DD><a href='../java/util/Vector.html' title='Vector'>Vector</a></DD><DD><a href='../java/util/Vector.html#elements()' title='Vector.elements'>Vector.elements</a></DD></DL><DL><DT><B>Since:</B></DT><DD>JDK1.0</DD></DL>

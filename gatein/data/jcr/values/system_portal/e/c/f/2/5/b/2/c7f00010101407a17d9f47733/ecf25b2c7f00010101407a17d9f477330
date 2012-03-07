@@ -1,0 +1,15 @@
+
+     * Returns a reverse order view of the elements contained in this set.
+     * The descending set is backed by this set, so changes to the set are
+     * reflected in the descending set, and vice-versa.  If either set is
+     * modified while an iteration over either set is in progress (except
+     * through the iterator's own {@code remove} operation), the results of
+     * the iteration are undefined.
+     *
+     * <p>The returned set has an ordering equivalent to
+     * <tt>{@link Collections#reverseOrder(Comparator) Collections.reverseOrder}(comparator())</tt>.
+     * The expression {@code s.descendingSet().descendingSet()} returns a
+     * view of {@code s} essentially equivalent to {@code s}.
+     *
+     * @return a reverse order view of this set
+     

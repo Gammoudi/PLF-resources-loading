@@ -1,0 +1,10 @@
+
+	 * Replaces the value corresponding to this entry with the specified
+	 * value (optional operation).  This implementation simply throws
+         * <tt>UnsupportedOperationException</tt>, as this class implements
+         * an <i>immutable</i> map entry.
+	 *
+	 * @param value new value to be stored in this entry
+	 * @return (Does not return)
+	 * @throws UnsupportedOperationException always
+         

@@ -1,0 +1,6 @@
+
+     * Removes and returns the first element from this list.
+     *
+     * @return the first element from this list
+     * @throws NoSuchElementException if this list is empty
+     

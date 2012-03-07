@@ -1,0 +1,7 @@
+
+     * Queries if the given date is in daylight savings time in
+     * this time zone.
+     * @param date the given Date.
+     * @return true if the given date is in daylight savings time,
+     * false, otherwise.
+     

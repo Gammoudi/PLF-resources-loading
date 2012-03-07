@@ -1,0 +1,45 @@
+ A scalable concurrent <a href='../java/util/concurrent/ConcurrentNavigableMap.html' title='ConcurrentNavigableMap'>ConcurrentNavigableMap</a> implementation.
+ The map is sorted according to the {<DL><DT><B>linkplain:</B></DT><DD>Comparable natural
+ ordering} of its keys, or by a java.util.Comparator provided at map
+ creation time, depending on which constructor is used.
+
+ <p>This class implements a concurrent variant of <a
+ href="http://www.cs.umd.edu/~pugh/">SkipLists</a> providing
+ expected average <i>log(n)</i> time cost for the
+ <tt>containsKey</tt>, <tt>get</tt>, <tt>put</tt> and
+ <tt>remove</tt> operations and their variants.  Insertion, removal,
+ update, and access operations safely execute concurrently by
+ multiple threads.  Iterators are <i>weakly consistent</i>, returning
+ elements reflecting the state of the map at some point at or since
+ the creation of the iterator.  They do <em>not</em> throw java.util.ConcurrentModificationException, and may proceed concurrently with
+ other operations. Ascending key ordered views and their iterators
+ are faster than descending ones.
+
+ <p>All <tt>Map.Entry</tt> pairs returned by methods in this class
+ and its views represent snapshots of mappings at the time they were
+ produced. They do <em>not</em> support the <tt>Entry.setValue</tt>
+ method. (Note however that it is possible to change mappings in the
+ associated map using <tt>put</tt>, <tt>putIfAbsent</tt>, or
+ <tt>replace</tt>, depending on exactly which effect you need.)
+
+ <p>Beware that, unlike in most collections, the <tt>size</tt>
+ method is <em>not</em> a constant-time operation. Because of the
+ asynchronous nature of these maps, determining the current number
+ of elements requires a traversal of the elements.  Additionally,
+ the bulk operations <tt>putAll</tt>, <tt>equals</tt>, and
+ <tt>clear</tt> are <em>not</em> guaranteed to be performed
+ atomically. For example, an iterator operating concurrently with a
+ <tt>putAll</tt> operation might view only some of the added
+ elements.
+
+ <p>This class and its views and iterators implement all of the
+ <em>optional</em> methods of the java.util.Map and java.util.Iterator
+ interfaces. Like most other concurrent collections, this class does
+ <em>not</em> permit the use of <tt>null</tt> keys or values because some
+ null return values cannot be reliably distinguished from the absence of
+ elements.
+
+ <p>This class is a member of the
+ <a href="{@docRoot}/../technotes/guides/collections/index.html">
+ Java Collections Framework</a>.</DD></DL>
+ <DL><DT><B>Parameters:</B></DT><DD><code><K></code> -  the type of keys maintained by this map</DD><DD><code><V></code> -  the type of mapped values</DD></DL><DL><DT><B>Authors:</B></DT><DD>Doug Lea</DD></DL><DL><DT><B>Since:</B></DT><DD>1.6</DD></DL>

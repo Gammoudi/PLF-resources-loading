@@ -1,0 +1,3 @@
+ Synchronization control For CountDownLatch.
+ Uses AQS state to represent count.
+     

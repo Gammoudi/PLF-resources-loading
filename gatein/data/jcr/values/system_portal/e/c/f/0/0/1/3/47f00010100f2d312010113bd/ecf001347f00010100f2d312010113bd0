@@ -1,0 +1,14 @@
+ 
+     * Returns the maximum amount of memory in bytes that can be 
+     * used for memory management.  This method returns <tt>-1</tt> 
+     * if the maximum memory size is undefined.
+     *
+     * <p> This amount of memory is not guaranteed to be available 
+     * for memory management if it is greater than the amount of 
+     * committed memory.  The Java virtual machine may fail to allocate 
+     * memory even if the amount of used memory does not exceed this 
+     * maximum size.
+     * 
+     * @return the maximum amount of memory in bytes; 
+     * <tt>-1</tt> if undefined.
+     

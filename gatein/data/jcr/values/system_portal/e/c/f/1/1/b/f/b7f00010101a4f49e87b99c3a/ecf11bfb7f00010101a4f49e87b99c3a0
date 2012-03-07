@@ -1,0 +1,4 @@
+
+     * Creates a new, empty map with a default initial capacity (16),
+     * load factor (0.75) and concurrencyLevel (16).
+     

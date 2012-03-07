@@ -1,0 +1,9 @@
+
+     * Returns <tt>true</tt> iff this node (or an ancestor) has been
+     * removed with the {@link #removeNode()} method.  This method
+     * locks this node prior to returning the contents of the private
+     * field used to track this state.
+     *
+     * @return <tt>true</tt> iff this node (or an ancestor) has been
+     *       removed with the {@link #removeNode()} method.
+     

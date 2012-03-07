@@ -1,0 +1,18 @@
+
+     * Returns whether the current JVM configuration supports
+     * {@linkplain #setNativeMethodPrefix(ClassFileTransformer,String)
+     * setting a native method prefix}.
+     * The ability to set a native method prefix is an optional
+     * capability of a JVM.
+     * Setting a native method prefix will only be supported if the 
+     * <code>Can-Set-Native-Method-Prefix</code> manifest attribute is set to
+     * <code>true</code> in the agent JAR file (as described in the 
+     * {@linkplain java.lang.instrument package specification}) and the JVM supports
+     * this capability.
+     * During a single instantiation of a single JVM, multiple
+     * calls to this method will always return the same answer.
+     * @return  true if the current JVM configuration supports
+     * setting a native method prefix, false if not.
+     * @see #setNativeMethodPrefix
+     * @since 1.6
+     

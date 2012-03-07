@@ -1,0 +1,5 @@
+ Handles the repetition count for a greedy Curly. The matchInit
+ is called from the Prolog to save the index of where the group
+ beginning is stored. A zero length group check occurs in the
+ normal match but is skipped in the matchInit.
+     

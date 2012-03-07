@@ -1,0 +1,57 @@
+ A comparison function, which imposes a <i>total ordering</i> on some
+ collection of objects.  Comparators can be passed to a sort method (such
+ as <a href='../java/util/Collections.html#sort(List, Comparator)' title='Collections.sort'>Collections.sort</a> or java.util.Arrays#sort(Object[], Comparator)) to allow precise control
+ over the sort order.  Comparators can also be used to control the order of
+ certain data structures (such as <a href='../java/util/SortedSet.html' title='sorted sets'>sorted sets</a> or <a href='../java/util/SortedMap.html' title='sorted maps'>sorted maps</a>), or to provide an ordering for collections of
+ objects that don't have a java.lang.Comparable.<p>
+
+ The ordering imposed by a comparator <tt>c</tt> on a set of elements
+ <tt>S</tt> is said to be <i>consistent with equals</i> if and only if
+ <tt>c.compare(e1, e2)==0</tt> has the same boolean value as
+ <tt>e1.equals(e2)</tt> for every <tt>e1</tt> and <tt>e2</tt> in
+ <tt>S</tt>.<p>
+
+ Caution should be exercised when using a comparator capable of imposing an
+ ordering inconsistent with equals to order a sorted set (or sorted map).
+ Suppose a sorted set (or sorted map) with an explicit comparator <tt>c</tt>
+ is used with elements (or keys) drawn from a set <tt>S</tt>.  If the
+ ordering imposed by <tt>c</tt> on <tt>S</tt> is inconsistent with equals,
+ the sorted set (or sorted map) will behave "strangely."  In particular the
+ sorted set (or sorted map) will violate the general contract for set (or
+ map), which is defined in terms of <tt>equals</tt>.<p>
+
+ For example, suppose one adds two elements <TT>a</TT> and <TT>b</TT> such that
+ <TT>(a.equals(b) && c.compare(a, b) != 0)</TT>
+ to an empty <TT>TreeSet</TT> with comparator <TT>c</TT>.
+ The second <TT>add</TT> operation will return
+ true (and the size of the tree set will increase) because <TT>a</TT> and
+ <TT>b</TT> are not equivalent from the tree set's perspective, even though
+ this is contrary to the specification of the
+ <a href='../java/util/Set.html#add' title='Set.add'>Set.add</a> method.<p>
+
+ Note: It is generally a good idea for comparators to also implement
+ <tt>java.io.Serializable</tt>, as they may be used as ordering methods in
+ serializable data structures (like <a href='../java/util/TreeSet.html' title='TreeSet'>TreeSet</a>, <a href='../java/util/TreeMap.html' title='TreeMap'>TreeMap</a>).  In
+ order for the data structure to serialize successfully, the comparator (if
+ provided) must implement <tt>Serializable</tt>.<p>
+
+ For the mathematically inclined, the <i>relation</i> that defines the
+ <i>imposed ordering</i> that a given comparator <tt>c</tt> imposes on a
+ given set of objects <tt>S</tt> is:<pre>
+       {(x, y) such that c.compare(x, y) &lt;= 0}.
+ </pre> The <i>quotient</i> for this total order is:<pre>
+       {(x, y) such that c.compare(x, y) == 0}.
+ </pre>
+
+ It follows immediately from the contract for <tt>compare</tt> that the
+ quotient is an <i>equivalence relation</i> on <tt>S</tt>, and that the
+ imposed ordering is a <i>total order</i> on <tt>S</tt>.  When we say that
+ the ordering imposed by <tt>c</tt> on <tt>S</tt> is <i>consistent with
+ equals</i>, we mean that the quotient for the ordering is the equivalence
+ relation defined by the objects' java.lang.Object#equals(java.lang.Object) method(s):<pre>
+     {(x, y) such that x.equals(y)}. </pre><p>
+
+ This interface is a member of the
+ <a href="{@docRoot}/../technotes/guides/collections/index.html">
+ Java Collections Framework</a>.
+ <DL><DT><B>Parameters:</B></DT><DD><code><T></code> -  the type of objects that may be compared by this comparator</DD></DL><DL><DT><B>Authors:</B></DT><DD>Josh Bloch</DD><DD>Neal Gafter</DD></DL><DL><DT><B>Version:</B></DT><DD>%I%, %G%</DD></DL><DL><DT><B>See Also:</B></DT><DD>java.lang.Comparable</DD><DD>java.io.Serializable</DD></DL><DL><DT><B>Since:</B></DT><DD>1.2</DD></DL>

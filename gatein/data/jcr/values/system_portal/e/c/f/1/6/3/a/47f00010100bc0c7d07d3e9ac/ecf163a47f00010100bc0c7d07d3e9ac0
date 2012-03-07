@@ -1,0 +1,17 @@
+
+     * Waits for (by spinning and/or blocking) and gets the hole
+     * filled in by another thread.  Fails if interrupted before
+     * hole filled.
+     *
+     * When a node/thread is about to block, it sets its waiter field
+     * and then rechecks state at least one more time before actually
+     * parking, thus covering race vs fulfiller noticing that waiter
+     * is non-null so should be woken.
+     *
+     * Thread interruption status is checked only surrounding calls to
+     * park.  The caller is assumed to have checked interrupt status
+     * on entry.
+     *
+     * @param node the waiting node
+     * @return on success, the hole; on failure, CANCEL
+     

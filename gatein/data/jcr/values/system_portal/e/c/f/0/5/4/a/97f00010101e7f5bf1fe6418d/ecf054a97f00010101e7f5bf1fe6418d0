@@ -1,0 +1,8 @@
+
+     * Create the map associated with a ThreadLocal. Overridden in
+     * InheritableThreadLocal.
+     *
+     * @param t the current thread
+     * @param firstValue value for the initial entry of the map
+     * @param map the map to store.
+     

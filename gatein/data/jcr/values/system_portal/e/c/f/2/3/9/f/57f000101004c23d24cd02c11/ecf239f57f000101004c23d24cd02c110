@@ -1,0 +1,3 @@
+ Unchecked exception thrown when the format width is a negative value other
+ than <tt>-1</tt> or is otherwise unsupported.
+ <DL><DT><B>Version:</B></DT><DD>%I%, %G%</DD></DL><DL><DT><B>Since:</B></DT><DD>1.5</DD></DL>

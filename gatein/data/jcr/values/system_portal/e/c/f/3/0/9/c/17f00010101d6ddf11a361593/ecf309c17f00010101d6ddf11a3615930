@@ -1,0 +1,3 @@
+ Node class for a case insensitive sequence of literal characters.
+ Uses unicode case folding.
+     

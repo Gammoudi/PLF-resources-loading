@@ -1,0 +1,36 @@
+
+     * Returns the thread info for each thread 
+     * whose ID is in the input array <tt>ids</tt> with no stack trace.
+     * This method is equivalent to calling:
+     * <blockquote><pre>
+     *   {@link #getThreadInfo(long[], int) getThreadInfo}(ids, 0);
+     * </pre></blockquote>
+     *
+     * <p>
+     * This method returns an array of the <tt>ThreadInfo</tt> objects.
+     * The stack trace, locked monitors, and locked synchronizers 
+     * in each <tt>ThreadInfo</tt> object will be empty.
+     *
+     * If a thread of a given ID is not alive or does not exist,
+     * the corresponding element in the returned array will
+     * contain <tt>null</tt>.  A thread is alive if 
+     * it has been started and has not yet died.
+     *
+     * <p>
+     * <b>MBeanServer access</b>:<br>
+     * The mapped type of <tt>ThreadInfo</tt> is
+     * <tt>CompositeData</tt> with attributes as specified in the
+     * {@link ThreadInfo#from ThreadInfo.from} method.
+     *
+     * @param ids an array of thread IDs. 
+     * @return an array of the {@link ThreadInfo} objects, each containing
+     * information about a thread whose ID is in the corresponding
+     * element of the input array of IDs
+     * with no stack trace, no locked monitor and no synchronizer info.
+     *
+     * @throws IllegalArgumentException if any element in the input array 
+     *      <tt>ids</tt> is <tt>&lt= 0</tt>.
+     * @throws java.lang.SecurityException if a security manager
+     *         exists and the caller does not have
+     *         ManagementPermission("monitor").
+     

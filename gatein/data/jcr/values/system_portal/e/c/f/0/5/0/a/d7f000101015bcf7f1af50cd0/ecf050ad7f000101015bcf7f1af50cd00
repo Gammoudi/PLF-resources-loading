@@ -1,0 +1,30 @@
+ A thread state.  A thread can be in one of the following states: 
+ <ul>
+ <li><a href='#NEW'>NEW</a><br>
+     A thread that has not yet started is in this state.
+     </li>
+ <li><a href='#RUNNABLE'>RUNNABLE</a><br>
+     A thread executing in the Java virtual machine is in this state. 
+     </li>
+ <li><a href='#BLOCKED'>BLOCKED</a><br>
+     A thread that is blocked waiting for a monitor lock 
+     is in this state. 
+     </li>
+ <li><a href='#WAITING'>WAITING</a><br>
+     A thread that is waiting indefinitely for another thread to 
+     perform a particular action is in this state. 
+     </li>
+ <li><a href='#TIMED_WAITING'>TIMED_WAITING</a><br>
+     A thread that is waiting for another thread to perform an action 
+     for up to a specified waiting time is in this state. 
+     </li>
+ <li><a href='#TERMINATED'>TERMINATED</a><br> 
+     A thread that has exited is in this state.
+     </li>
+ </ul>
+
+ <p>
+ A thread can be in only one state at a given point in time. 
+ These states are virtual machine states which do not reflect
+ any operating system thread states.
+     <DL><DT><B>See Also:</B></DT><DD><a href='#getState'>getState</a></DD></DL><DL><DT><B>Since:</B></DT><DD>1.5</DD></DL>

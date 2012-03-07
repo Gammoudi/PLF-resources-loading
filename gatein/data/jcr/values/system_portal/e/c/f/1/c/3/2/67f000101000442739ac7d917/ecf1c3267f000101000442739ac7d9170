@@ -1,0 +1,4 @@
+
+     * Returns whether the calendar fields are partially in sync with the time
+     * value or fully in sync but not stamp values are not normalized yet.
+     

@@ -1,0 +1,7 @@
+ An Entry maintaining a key and a value.  The value may be
+ changed using the <tt>setValue</tt> method.  This class
+ facilitates the process of building custom map
+ implementations. For example, it may be convenient to return
+ arrays of <tt>SimpleEntry</tt> instances in method
+ <tt>Map.entrySet().toArray</tt>.
+     <DL><DT><B>Since:</B></DT><DD>1.6</DD></DL>

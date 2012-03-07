@@ -1,0 +1,4 @@
+
+     * Returns the length (in days) of the year provided by
+     * internalGet(YEAR).
+     

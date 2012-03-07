@@ -1,0 +1,6 @@
+
+             * This method is overridden to protect the backing set against
+             * an object with a nefarious equals function that senses
+             * that the equality-candidate is Map.Entry and calls its
+             * setValue method.
+             

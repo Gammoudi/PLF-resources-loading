@@ -1,0 +1,11 @@
+
+     * Blocks until all tasks have completed execution after a shutdown
+     * request, or the timeout occurs, or the current thread is
+     * interrupted, whichever happens first.
+     *
+     * @param timeout the maximum time to wait
+     * @param unit the time unit of the timeout argument
+     * @return <tt>true</tt> if this executor terminated and
+     *         <tt>false</tt> if the timeout elapsed before termination
+     * @throws InterruptedException if interrupted while waiting
+     

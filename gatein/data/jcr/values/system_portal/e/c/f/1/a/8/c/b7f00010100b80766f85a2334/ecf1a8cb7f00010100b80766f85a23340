@@ -1,0 +1,10 @@
+
+     * Reallocates the array being used within toArray when the iterator
+     * returned more elements than expected, and finishes filling it from
+     * the iterator.
+     *
+     * @param r the array, replete with previously stored elements
+     * @param it the in-progress iterator over this collection
+     * @return array containing the elements in the given array, plus any
+     *         further elements returned by the iterator, trimmed to size
+     

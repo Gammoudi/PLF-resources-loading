@@ -1,0 +1,26 @@
+
+     * Returns an array of <tt>Type</tt> objects that represent the formal
+     * parameter types, in declaration order, of the method represented by
+     * this <tt>Constructor</tt> object. Returns an array of length 0 if the
+     * underlying method takes no parameters.
+     * 
+     * <p>If a formal parameter type is a parameterized type,
+     * the <tt>Type</tt> object returned for it must accurately reflect
+     * the actual type parameters used in the source code.
+     *
+     * <p>If a formal parameter type is a type variable or a parameterized 
+     * type, it is created. Otherwise, it is resolved.
+     *
+     * @return an array of <tt>Type</tt>s that represent the formal
+     *     parameter types of the underlying method, in declaration order
+     * @throws GenericSignatureFormatError
+     *     if the generic method signature does not conform to the format
+     *     specified in the Java Virtual Machine Specification, 3rd edition
+     * @throws TypeNotPresentException if any of the parameter
+     *     types of the underlying method refers to a non-existent type
+     *     declaration
+     * @throws MalformedParameterizedTypeException if any of
+     *     the underlying method's parameter types refer to a parameterized
+     *     type that cannot be instantiated for any reason
+     * @since 1.5
+     

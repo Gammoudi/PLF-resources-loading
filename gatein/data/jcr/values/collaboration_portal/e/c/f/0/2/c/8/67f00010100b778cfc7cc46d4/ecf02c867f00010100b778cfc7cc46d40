@@ -1,0 +1,120 @@
+eXo.require("eXo.wcm.backoffice.private.WCMUtils", "/eXoWCMResources/javascript/");
+eXo.require("eXo.wcm.frontoffice.public.Breadcrumb", "/eXoWCMResources/javascript/");
+eXo.require("eXo.wcm.frontoffice.public.Navigation", "/eXoWCMResources/javascript/");
+
+var strJsonMenu = $.ajax({ type: "GET", url: "/portal/rest/content-navigation/navigation", async: false }).responseText;
+var jsonMenu = eval("(" + strJsonMenu + ")");
+ 
+function renderNavigations() {
+  var navigations = eXo.env.portal.navigations;
+  var html = 	"<div class=\"UIWCMNavigationPortlet\"><ul class=\"UINavigationBar ClearFix\">";
+  var date = (new Date()).getTime();
+  for (var ownerType in navigations) {
+    if (Array.prototype[ownerType]) continue;
+    for (var i in navigations[ownerType].nodes) {
+      var navigation = navigations[ownerType].nodes[i];
+      if (Array.prototype[i]) continue;
+      else{
+		  var title = navigation.resolvedLabel;
+	      if (navigation.resolvedLabel.length > 30)
+	        navigation.resolvedLabel = navigation.resolvedLabel.substring(0,29) + "...";
+	      var tabStyleNavigation = "ControlButton";
+	      var currentNodes = eXo.ecm.WCMBreadcrumbPortlet.getCurrentNodes(navigations, eXo.env.portal.selectedNodeUri);
+	      if (currentNodes.length>0 && navigation.uri == currentNodes[currentNodes.length - 1].uri)	
+	        tabStyleNavigation = "ControlButton HoverButton";
+	      var link = eXo.ecm.WCMUtils.getHostName() + eXo.env.portal.context + "/" + eXo.env.portal.portalName + "/" +  navigation.uri;
+	      var arrowIcon = "";
+	      if (ownerType==0) {
+	        html +=  "<li class=\"UITab "+tabStyleNavigation+"\">"+
+	                   "<div class=\"Button\">";
+	        if (navigation.uri)
+	          html +=    "<a title=\"" + title + "\" href=\"" + link + "\">" + navigation.resolvedLabel + "</a>";
+	        else 
+	          html +=    "<a class=\"TabLabel " + navigation.icon + "\" title=\"" + title + "\">" + navigation.resolvedLabel + "</a>";
+	        html +=    "</div>";
+			
+			for(var k=0; k<jsonMenu.menu.length; k++) {
+				if(jsonMenu.menu[k].navigationNode == navigation.name) {
+					html += renderContentNavigation(jsonMenu.menu[k]);
+				}
+			}
+			
+	        html +=    "</li>";
+	      }
+	  }
+    }
+  }
+  html += '<li class="ScrollButtons"><a class="ScrollLeftButton" title="Previous"></a><a class="ScrollRightButton" title="Next"></a></li>';
+  html += '</ul></div>';  
+  document.getElementById("navigation-generator").innerHTML = html;
+  eXo.ecm.WCMNavigationPortlet.loadScroll();
+	jQuery(".ControlButton").bind("mouseover", showMenu);
+	jQuery(".ControlButton").bind("mouseout",hideMenu);
+}
+
+function renderContentNavigation(rootNavigableNode) {
+	var ElementCount=rootNavigableNode.nodes.length;
+	var htmlContent = "<div class=\"MenuItemContainer ClearFix\" >"; 
+	if (ElementCount==3)var htmlContent = "<div class=\"MenuItemContainer ClearFix\" style=\"width:450px\">"; 
+	if (ElementCount==2)var htmlContent = "<div class=\"MenuItemContainer ClearFix\" style=\"width:308px\">"; 
+	if (ElementCount==1)var htmlContent = "<div class=\"MenuItemContainer ClearFix\" style=\"width:166px\">"; 
+	if (ElementCount>3)var htmlContent = "<div class=\"MenuItemContainer ClearFix\" style=\"width:592px\">"; 
+	htmlContent += renderContentNavigationChildren(rootNavigableNode.nodes, true, 1);
+	htmlContent += "</div>";	
+	return htmlContent;
+}
+
+function renderContentNavigationChildren(elements, isRootContainer, level) {
+	var htmlContent = "";
+	for(var i=0; i<elements.length; i++) {
+		var element = elements[i];
+		if(level==1)htmlContent += "<ul class=\"SubBlock\"";
+		else htmlContent += "<ul class=\"level"+level+"\"";
+
+		htmlContent += ">";	
+		if(((typeof(eXo.env.portal.QuickEdit) == "undefined") && element.viewable)||((eXo.env.portal.QuickEdit == "false") && element.viewable)||(eXo.env.portal.QuickEdit == "true")){
+				if(element.uri != null && element.uri != "") {
+					htmlContent += "<li>";
+					htmlContent += "<a class=\"MenuItem"+level+"\" href=\""+eXo.env.portal.context + "/" + eXo.env.portal.portalName + "/"+element.uri+"?"+element.pageParamId+"="+element.contentPath+"\">" + element.label + "</a>";
+				} else {
+					htmlContent += "<li>";
+					htmlContent += "<div>";
+					htmlContent += element.label;
+					htmlContent += "</div>";
+				}
+
+				//display manage contents link only for viewable elements in edit mode
+				if(eXo.env.portal.QuickEdit == "true"){
+					var editorPage = "/" + "editor";
+					var editorParam = "?" + "path=";
+					var elementRealPath = element.contentPath.replace(/:/gi, "/");
+					var backTo = "&" + "backto=" + window.location.pathname;
+					var link = eXo.env.portal.context + "/" + eXo.env.portal.portalName + editorPage + editorParam + elementRealPath + backTo;
+					htmlContent += "<a href=\"" + link + "\" class=\"ManageContentIcon\">?</a>";
+				}
+				
+				if(element.nodes != null) {
+					htmlContent += renderContentNavigationChildren(element.nodes, false, level+1);
+				}
+		}		
+
+		htmlContent += "</li>";
+		htmlContent += "</ul>";
+	}
+	
+	return htmlContent;
+}
+
+function showMenu() {
+	var menu = jQuery(this).find(".MenuItemContainer");	
+	if(menu) {
+		menu.show();
+	}
+}
+
+function hideMenu() {
+	var menu = jQuery(this).find(".MenuItemContainer");	
+	if(menu) {
+		menu.hide();
+	}
+}

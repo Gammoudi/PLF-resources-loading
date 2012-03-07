@@ -1,0 +1,9 @@
+
+     * static version of indexOf, to allow repeated calls without
+     * needing to re-acquire array each time.
+     * @param o element to search for
+     * @param elements the array
+     * @param index first index to search
+     * @param fence one past last index to search
+     * @return index of element, or -1 if absent
+     

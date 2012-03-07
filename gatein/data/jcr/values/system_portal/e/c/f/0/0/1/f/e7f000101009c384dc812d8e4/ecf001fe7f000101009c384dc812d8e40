@@ -1,0 +1,20 @@
+ The management interface for the operating system on which
+ the Java virtual machine is running.
+
+ <p> A Java virtual machine has a single instance of the implementation
+ class of this interface.  This instance implementing this interface is
+ an <a href="ManagementFactory.html#MXBean">MXBean</a>
+ that can be obtained by calling
+ the <a href='../java/lang/management/ManagementFactory.html#getOperatingSystemMXBean' title='ManagementFactory.getOperatingSystemMXBean'>ManagementFactory.getOperatingSystemMXBean</a> method or
+ from the <a href='../java/lang/management/ManagementFactory.html#getPlatformMBeanServer' title=' platform <tt>MBeanServer</tt>'> platform <tt>MBeanServer</tt></a> method.
+
+ <p>The <tt>ObjectName</tt> for uniquely identifying the MXBean for
+ the operating system within an MBeanServer is:
+ <blockquote>
+    <a href='../java/lang/management/ManagementFactory.html#OPERATING_SYSTEM_MXBEAN_NAME' title='      <tt>java.lang:type=OperatingSystem</tt>'>      <tt>java.lang:type=OperatingSystem</tt></a>
+ </blockquote>
+
+ <p> This interface defines several convenient methods for accessing 
+ system properties about the operating system on which the Java 
+ virtual machine is running.
+ <DL><DT><B>Authors:</B></DT><DD>Mandy Chung</DD></DL><DL><DT><B>Version:</B></DT><DD>%I%, %G%</DD></DL><DL><DT><B>See Also:</B></DT><DD></DD><DD></DD></DL><DL><DT><B>Since:</B></DT><DD>1.5</DD></DL>

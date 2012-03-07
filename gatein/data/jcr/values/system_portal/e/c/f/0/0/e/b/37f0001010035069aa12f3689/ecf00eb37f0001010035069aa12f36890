@@ -1,0 +1,6 @@
+
+     * Returns the value of this <tt>Boolean</tt> object as a boolean 
+     * primitive.
+     *
+     * @return  the primitive <code>boolean</code> value of this object.
+     

@@ -1,0 +1,3 @@
+ Obtains a localized locale names from a LocaleNameProvider
+ implementation.
+     

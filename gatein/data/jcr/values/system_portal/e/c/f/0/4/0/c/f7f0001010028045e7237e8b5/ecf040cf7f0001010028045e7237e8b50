@@ -1,0 +1,19 @@
+
+     * Converts all of the characters in this <code>String</code> to lower
+     * case using the rules of the default locale. This is equivalent to calling
+     * <code>toLowerCase(Locale.getDefault())</code>.
+     * <p>
+     * <b>Note:</b> This method is locale sensitive, and may produce unexpected
+     * results if used for strings that are intended to be interpreted locale
+     * independently.
+     * Examples are programming language identifiers, protocol keys, and HTML
+     * tags.
+     * For instance, <code>"TITLE".toLowerCase()</code> in a Turkish locale
+     * returns <code>"tıtle"</code>, where 'ı' is the LATIN SMALL
+     * LETTER DOTLESS I character.
+     * To obtain correct results for locale insensitive strings, use
+     * <code>toLowerCase(Locale.ENGLISH)</code>.
+     * <p>
+     * @return  the <code>String</code>, converted to lowercase.
+     * @see     java.lang.String#toLowerCase(Locale)
+     

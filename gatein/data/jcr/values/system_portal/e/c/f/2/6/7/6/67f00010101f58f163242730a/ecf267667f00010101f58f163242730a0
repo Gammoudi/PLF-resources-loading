@@ -1,0 +1,3 @@
+ The common interface to get a CacheKey in LoaderReference and
+ BundleReference.
+     

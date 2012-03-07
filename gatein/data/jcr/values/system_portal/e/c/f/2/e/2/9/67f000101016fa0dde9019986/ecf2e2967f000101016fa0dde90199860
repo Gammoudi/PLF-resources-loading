@@ -1,0 +1,4 @@
+
+     * Parses the second part of inlined match flags and turns off
+     * flags appropriately.
+     

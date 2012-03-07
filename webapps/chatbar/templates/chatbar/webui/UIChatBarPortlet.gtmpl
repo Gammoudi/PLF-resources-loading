@@ -1,0 +1,731 @@
+<%
+  String user = uicomponent.getRemoteUser() ;
+  if(user != null && user.trim().length() > 0) { 
+  def rcontext = _ctx.getRequestContext() ;
+  def jsManager = rcontext.getJavascriptManager();
+  jsManager.addJavascript("eXo.communication.chatbar.eXoChatBar.applicationId = '" + uicomponent.getId() + "';");
+  jsManager.addJavascript("eXo.communication.chatbar.eXoChatBar.restcontextname = '" + uicomponent.getRestContextName() + "';");
+  jsManager.addJavascript("eXo.communication.chatbar.eXoChatBar.cometdcontextname = '" + uicomponent.getCometdContextName() + "';");
+  jsManager.addOnLoadJavascript("eXo.communication.chatbar.eXoChatBar.init");
+%>
+<!-- Begin UIChat -->
+<div class="UICharBarPortletCoveringSpace">&nbsp;</div>
+<div class="UIChatBarPortlet" id="<%=uicomponent.id%>" oncontextmenu="return false;"
+    exotoken="<%=uicomponent.getUserToken();%>" username="<%=uicomponent.getRemoteUser();%>">
+
+
+	<div class="UIChatbarStatusRB ClearFix" style="display:none;" statusNotice="<%=_ctx.appRes("UIChatBarPortlet.label.status-notice");%>" onLine="<%=_ctx.appRes("UIChatBarPortlet.label.onLine");%>" extendAway="<%=_ctx.appRes("UIChatBarPortlet.label.extendAway");%>" away="<%=_ctx.appRes("UIChatBarPortlet.label.away");%>" freeToChat="<%=_ctx.appRes("UIChatBarPortlet.label.freeToChat");%>" offLine="<%=_ctx.appRes("UIChatBarPortlet.label.offLine");%>"></div>
+    <div class="UIActionbar ClearFix">
+		<div class="StatusArea IconButton" onclick="eXo.communication.chatbar.webui.UIChatBar.showMenu(this,event);">
+			<!-- Right Click Popup Online -->
+				<div class="UIRightClickPopupMenu UIContextMenuContainer" style="display: none;">
+					<ul>
+						<li><a href="JavaScript:void(0);" class="ItemIcon OnlineIcon" onclick="eXo.communication.chatbar.webui.UIMainChatWindow.preChangeStatus(eXo.communication.chatbar.webui.UIMainChatWindow.ONLINE_STATUS, null, event);">
+							<%=_ctx.appRes("UIChatBarPortlet.label.onLine");%></a></li>
+						<li><a href="JavaScript:void(0);" class="ItemIcon AwayIcon" onclick="eXo.communication.chatbar.webui.UIMainChatWindow.preChangeStatus(eXo.communication.chatbar.webui.UIMainChatWindow.AWAY_STATUS, null, event);">
+							<%=_ctx.appRes("UIChatBarPortlet.label.away");%></a></li>
+						<li><a href="JavaScript:void(0);" class="ItemIcon ExtendAwayIcon" onclick="eXo.communication.chatbar.webui.UIMainChatWindow.preChangeStatus(eXo.communication.chatbar.webui.UIMainChatWindow.EXTEND_AWAY_STATUS, null, event);">
+							<%=_ctx.appRes("UIChatBarPortlet.label.extendAway");%></a></li>
+						<li><a href="JavaScript:void(0);" class="ItemIcon FreeToChat" onclick="eXo.communication.chatbar.webui.UIMainChatWindow.preChangeStatus(eXo.communication.chatbar.webui.UIMainChatWindow.FREE_TO_CHAT_STATUS, null, event);">
+							<%=_ctx.appRes("UIChatBarPortlet.label.freeToChat");%></a></li>
+						<li><a href="JavaScript:void(0);" class="ItemIcon OfflineIcon" onclick="eXo.communication.chatbar.webui.UIMainChatWindow.preChangeStatus(eXo.communication.chatbar.webui.UIMainChatWindow.OFFLINE_STATUS, null, event);">
+							<%=_ctx.appRes("UIChatBarPortlet.label.offLine");%></a></li>
+					</ul>
+					<span class="ArrowRightclick"></span>
+				</div>
+			<!-- Right Click Popup Online-->
+			<a class="StatusIcon IconHolder" href="JavaScript:void(0);" title="" id="id-state-chat" user="<%=uicomponent.getRemoteUser()%>"></a>
+		</div>
+		<div class="RoomArea IconButton" onclick="eXo.communication.chatbar.webui.UIChatBar.showMenu(this,event);">
+			<!-- Right Click Popup Group -->
+				<div class="UIRightClickPopupMenu UIContextMenuContainer" style="display: none;">
+						<ul class="ScrollGroup RoomData"></ul>
+						<a class="Icon JoinRoomIcon" href="JavaScript:void(0);" onclick="eXo.communication.chatbar.webui.UIJoinRoomPopupWindow.setVisible(true);">
+							<%=_ctx.appRes("UIChatBarPortlet.label.joinRoom");%></a>
+						<a class="Icon NewRoomIcon" onclick="eXo.communication.chatbar.webui.UICreateNewRoomPopupWindow.setVisible(true);">
+								<%=_ctx.appRes("UIChatBarPortlet.label.addRoom");%></a>
+						<span class="ArrowRightclick"></span>
+				</div>
+			<!-- End Right Click Popup Group-->
+			<a class="IconHolder RoomManageIcon" href="JavaScript:void(0);" title="<%=_ctx.appRes("UIChatBarPortlet.label.joinRoom");%>"></a>
+		</div>
+		<div class="ContactArea IconButton" onclick="eXo.communication.chatbar.webui.UIChatBar.showMenu(this,event);" >
+			<% _ctx.include("app:/templates/chatbar/webui/UITooltipAtTop.gtmpl"); %>
+			<!-- Right Click Popup Contact -->
+				<div class="UIRightClickPopupMenu UIContextMenuContainer" style="display: none;">
+					<ul class="ScrollGroup BuddyList"></ul>
+					<a href="JavaScript:void(0);" class="Icon AddContactIcon"><%=_ctx.appRes("UIChatBarPortlet.label.addContact");%></a>
+					<span class="ArrowRightclick"></span>
+				</div>
+			<!--  End Right Click Popup Contact-->
+			<a class="IconHolder ContactManageIcon" href="JavaScript:void(0);" title="<%=_ctx.appRes("UIChatBarPortlet.label.addContact");%>"></a> 
+		</div>
+		<!-- Start MiniBoxChat -->
+		<div class="MiniBoxChat" style="display: none;" onclick="eXo.communication.chatbar.webui.UIChatWindow.setVisible(true, event, true);">
+			<div class="NormalMiniBoxChat ClearFix">
+				<a href="JavaScript:void(0);" class="ControlIconChat CloseIcon" title="<%=_ctx.appRes("UIChatBarPortlet.label.closeAllConversations");%>." onclick="eXo.communication.chatbar.webui.UIChatWindow.closeAllWindow();"></a>
+				<span class="OnlineNoticeIcon UnreadMessage"></span>
+				<span class="ArrowMiniBoxChat"></span>
+			</div>
+		</div>
+		<!-- End MiniBoxChat -->
+		
+		<!-- writed by hoa.do --> 
+			<% if(uicomponent.isShowEmailLink()) { %>
+			<a class="ItemBar Email" href="<%=uicomponent.getEmailLink()%>"></a>
+		  <% } 
+			 if(uicomponent.isShowContactLink()) {%>
+			<a class="ItemBar Contact" href="<%=uicomponent.getContactLink()%>"></a>
+		  <% }
+			 if(uicomponent.isShowCalendarLink()) {  
+		  %>
+			<a class="ItemBar Calendar" href="<%=uicomponent.getCalendarLink()%>"></a>
+		  <% }%>
+		<!-- end -->
+		</div>
+	</div>
+<!-- End UIChat -->
+<!-- Start BuddyItem action popup menu -->
+<div class="UIRightClickPopupMenu BuddyItemActionMenu UIContextMenuContainer" style="display: none;">
+	<a href="JavaScript:void(0);" class="ItemIcon MessageIcon" onclick="javascript:eXo.communication.chatbar.webui.UIMainChatWindow.postProcessBuddyItemAction(this, eXo.communication.chatbar.webui.UIMainChatWindow.CREATE_CONVERSATION_ACTION);">
+			<%=_ctx.appRes("UIChatBarPortlet.label.sendMessage");%>
+	</a>
+	<a href="JavaScript:void(0);" class="ItemIcon RemoveIcon" onclick="javascript:eXo.communication.chatbar.webui.UIMainChatWindow.postProcessBuddyItemAction(this, eXo.communication.chatbar.webui.UIMainChatWindow.REMOVE_USER_ACTION);">
+			<%=_ctx.appRes("UIChatBarPortlet.label.remove");%>
+	</a>
+</div>
+<!-- End of BuddyItem action popup menu -->
+<!-- Chat window with tab -->
+<div style="position: absolute; top: 115px; left: 255px; width: 655px; height: auto; z-index:2;
+    display: none; visibility:visible" class="UIPopupWindow DefaultTheme UIDragObject UIResizeObject ChatPopup ChatSharedIcons"
+    minwidth="545px" minheight="245px">
+    <div class="OverflowContainer ClearFix">
+			<a href="JavaScript:void(0);" onclick="eXo.communication.chatbar.webui.UIChatWindow.setVisible(false, event, true)"
+					title="<%=_ctx.appRes("UIChatBarPortlet.label.minimizeWindow");%>" class="ControlIcon MinimizedIconChatBar">
+			</a>
+			<span class="UnreadMessage" style="color: red"></span>
+			<span class="PopupTitle"><%=_ctx.appRes("UIChatBarPortlet.label.conversation");%></span>
+    </div>
+		<div class="UIWindowContent">
+			<div class="PopupContent">
+				<div class="UIApplication1">
+						<div class="UIConversation" oncontextmenu="return false;">
+								<div class="UITabPane">
+										<div class="UITabPaneContent">
+												<div class="WorkingArea">
+														<div class="UIHorizontalTabs">
+																<div class="LeftHorizontalTabs">
+																		<div class="RightHorizontalTabs">
+																				<div class="CenterHorizontalTabs">
+																						<div class="TabsContainer">
+																								<div class="ScrollButtons" style="display: block;">
+																										<div class="ScrollLeftButton" title="<%=_ctx.appRes("UIChatBarPortlet.label.previous");%>">
+																												<div class="ScrollRightButton" title="<%=_ctx.appRes("UIChatBarPortlet.label.next");%>">
+																														<span></span>
+																												</div>
+																										</div>
+																								</div>
+																						</div>
+																				</div>
+																		</div>
+																</div>
+														</div>
+														<div class="HorizontalLayout" id="HorizontalLayout">
+																<div class="UITabContentContainer">
+																		<span></span>
+																</div>
+														</div>
+												</div>
+										</div>
+								</div>
+						</div>
+				</div>
+			
+					<span title="<%=_ctx.appRes("UIChatBarPortlet.label.resizeWindow");%>" class="ResizeArea">
+					</span>
+					<span class="Information">
+							<%=_ctx.appRes("UIChatBarPortlet.label.done");%>
+					</span>
+			</div>
+		</div>
+		
+</div>
+<!-- Start Add Contact popup -->
+<div class="UIPopupWindow ExoMesseageDecorator UIDragObject AddContactPopup UIAddContact" style="position: absolute;
+    top: 150px; left: 250px; width: 550px; display: none; visibility: visible">
+		<div class="OverflowContainer ClearFix">
+			<a href="JavaScript:void(0);" class="CloseButton" title="<%=_ctx.appRes("UIChatBarPortlet.label.closeWindow");%>" onclick="eXo.communication.chatbar.webui.UIAddContactPopupWindow.setVisible(false);">
+			</a>
+			<span class="PopupTitle">
+				<%=_ctx.appRes("UIChatBarPortlet.label.addContact");%></span>
+		</div>
+		<div class="UIWindowContent">
+			<div class="PopupContent">
+				<!-- start contact -->
+				<div class="UIInsertAddress">
+					<div class="InsertAddressContainer">
+						<div class="UISearch UISearchForm ClearFix">
+							<div class="SearchTitle">
+								 <%=_ctx.appRes("UIChatBarPortlet.label.search");%>:</div>
+							<input type="text" class="SearchField" />
+							<a class="SearchIcon" href="JavaScript:void(0);" title="<%=_ctx.appRes("UIChatBarPortlet.label.quickSearch");%>"></a>
+						</div>
+						<div class="AddressContainer">
+							<div class="ListAddress">
+								<table cellspacing="0" cellpadding="0" border="0" class="UIGrid">
+									<thead>
+										<tr>
+											<th class="StyleInput">
+												<input type="checkbox" class="CheckBox ToggleSelect" onclick="eXo.communication.chatbar.webui.UIAddContactPopupWindow.toggleSelectAllContact()"
+													 title="<%=_ctx.appRes("UIChatBarPortlet.label.selectAllNone");%>" />
+											</th>
+											<th>
+												<div class="Label">
+													<%=_ctx.appRes("UIChatBarPortlet.label.firstName");%></div>
+											</th>
+											<th>
+												<div class="Label">
+													<%=_ctx.appRes("UIChatBarPortlet.label.lastName");%></div>
+											</th>
+											<th>
+												<div class="Label">
+													<%=_ctx.appRes("UIChatBarPortlet.label.userName");%></div>
+											</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td style="width: 20px; text-align: center;">
+												<input type="checkbox" class="CheckBox ToggleSelect" />
+											</td>
+											<td>
+												<div class="Label">
+													<%=_ctx.appRes("UIChatBarPortlet.label.firstName");%></div>
+											</td>
+											<td>
+												<div class="Label">
+													<%=_ctx.appRes("UIChatBarPortlet.label.lastName");%></div>
+											</td>
+											<td>
+												<div class="Label">
+													<%=_ctx.appRes("UIChatBarPortlet.label.userName");%></div>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+								<div class="UIPageIterator ClearFix">
+									<a href="JavaScript:void(0);" title="<%=_ctx.appRes("UIChatBarPortlet.label.nextTenPages");%>" class="Icon DisableNextTopPageIcon"></a><a
+										title="<%=_ctx.appRes("UIChatBarPortlet.label.nextPage");%>" class="Icon NextPageIcon"></a><a class="Number">2</a>
+									<a class="Number PageSelected">1</a> <a title="<%=_ctx.appRes("UIChatBarPortlet.label.previousPage");%>" class="Icon DisableLastPageIcon">
+										</a><a title="<%=_ctx.appRes("UIChatBarPortlet.label.backTenPages");%>" class="Icon DisableLastTopPageIcon"></a><a class="PagesTotalNumber">2</a> <a class="TotalPages"><%=_ctx.appRes("UIChatBarPortlet.label.totalPages");%>:</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="UIAction">
+						<a href="JavaScript:void(0);" onclick="javascript:eXo.communication.chatbar.webui.UIAddContactPopupWindow.reload();" class="ActionButton LightBlueStyle"><%=_ctx.appRes("UIChatBarPortlet.label.refresh");%></a>
+						<a href="JavaScript:void(0);" onclick="eXo.communication.chatbar.webui.UIAddContactPopupWindow.addContactAction();" class="ActionButton LightBlueStyle AddContactButton"><%=_ctx.appRes("UIChatBarPortlet.label.addContact");%></a>
+						<a href="JavaScript:void(0);" onclick="javascript:eXo.communication.chatbar.webui.UIAddContactPopupWindow.setVisible(false);" class="ActionButton LightBlueStyle"><%=_ctx.appRes("UIChatBarPortlet.label.cancel");%></a>
+					</div>
+				</div>
+				<!-- end contact -->
+			</div>
+		</div>
+</div>
+<!-- End Add Contact popup -->
+<!-- Popup Join Room -->
+<div class="UIPopupWindow ExoMesseageDecorator UIDragObject JoinRoomPopup UIJoinRoom" style="position: absolute;
+    top: 150px; left: 250px; width: 550px; display: none; visibility: visible;">
+		<div class="OverflowContainer ClearFix">
+			<a class="CloseButton" href="JavaScript:void(0);" title="<%=_ctx.appRes("UIChatBarPortlet.label.closeWindow");%>" onclick="eXo.communication.chatbar.webui.UIJoinRoomPopupWindow.setVisible(false);">
+			</a>
+			<span class="PopupTitle">
+				<%=_ctx.appRes("UIChatBarPortlet.label.joinRoom");%></span>
+		</div>
+		<div class="UIWindowContent">
+			<div class="PopupContent">
+				<!-- start contact -->
+				<div class="UIInsertAddress">
+					<div class="InsertAddressContainer">
+						<div class="UISearch UISearchForm ClearFix" style="display: none;">
+							<div class="SearchTitle">
+								<%=_ctx.appRes("UIChatBarPortlet.label.search");%>:</div>
+							<input type="text" disabled/>
+							<a class="SearchIcon" href="JavaScript:void(0);" title="<%=_ctx.appRes("UIChatBarPortlet.label.quickSearch");%>"></a>
+						</div>
+						<div class="AddressContainer">
+							<div class="ListAddress">
+								<table cellspacing="0px" cellpadding="0px" border="0px" class="UIGrid">
+									<thead>
+										<tr>
+											<th class="StyleInput">
+												<div>
+													<span></span>
+												</div>
+											</th>
+											<th class="FieldName">
+												<div>
+													<%=_ctx.appRes("UIChatBarPortlet.label.roomName");%></div>
+											</th>
+											<th>
+												<div class="Label">
+													<%=_ctx.appRes("UIChatBarPortlet.label.roomDescription");%></div>
+											</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>
+												<span></span>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+								<div class="UIPageIterator ClearFix">
+									<a href="JavaScript:void(0);" title="<%=_ctx.appRes("UIChatBarPortlet.label.nextTenPages");%>" class="Icon DisableNextTopPageIcon"></a><a href="JavaScript:void(0);" title="<%=_ctx.appRes("UIChatBarPortlet.label.nextPage");%>"
+										class="Icon NextPageIcon"></a><a href="JavaScript:void(0);" class="Number">2</a> <a href="JavaScript:void(0);" class="Number PageSelected">
+											1</a> <a href="JavaScript:void(0);" title="<%=_ctx.appRes("UIChatBarPortlet.label.previousPage");%>" class="Icon DisableLastPageIcon">
+									</a><a href="JavaScript:void(0);" title="<%=_ctx.appRes("UIChatBarPortlet.label.backTenPages");%>" class="Icon DisableLastTopPageIcon"></a>
+									<a href="JavaScript:void(0);" class="PagesTotalNumber">2</a> <a href="JavaScript:void(0);" class="TotalPages"><%=_ctx.appRes("UIChatBarPortlet.label.totalPages");%>:</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="UIAction">
+						<a href="JavaScript:void(0);" onclick="javascript:eXo.communication.chatbar.webui.UIJoinRoomPopupWindow.reloadRoomList();" class="ActionButton LightBlueStyle"><%=_ctx.appRes("UIChatBarPortlet.label.refresh");%></a>
+						<a href="JavaScript:void(0);" onclick="javascript:eXo.communication.chatbar.webui.UIJoinRoomPopupWindow.joinRoomAction();" class="ActionButton LightBlueStyle JoinRoomButton"><%=_ctx.appRes("UIChatBarPortlet.label.joinRoom");%></a>
+						<a href="JavaScript:void(0);" onclick="javascript:eXo.communication.chatbar.webui.UIJoinRoomPopupWindow.setVisible(false);" class="ActionButton LightBlueStyle"><%=_ctx.appRes("UIChatBarPortlet.label.cancel");%></a>
+					</div>
+				</div>
+				<!-- end contact -->
+			</div>
+		</div>
+</div>
+<!--End form join room -->
+<!-- Popup New Room -->
+<div class="UIPopupWindow ExoMesseageDecorator UIDragObject CreateNewRoomPopup UINewRoom" style="position: absolute;
+    top: 150px; left: 250px; width: 550px; display: none; visibility: visible">
+		<div class="OverflowContainer ClearFix">
+			<a href="JavaScript:void(0);" class="CloseButton" title="<%=_ctx.appRes("UIChatBarPortlet.label.closeWindow");%>" onclick="eXo.communication.chatbar.webui.UICreateNewRoomPopupWindow.setVisible(false);">
+			</a>
+			<span class="PopupTitle">
+				<%=_ctx.appRes("UIChatBarPortlet.label.newRoom");%></span>
+		</div>
+		<div class="UIWindowContent">
+			<div class="PopupContent">
+				<form name="newRoomForm" action="#" onsubmit="eXo.communication.chatbar.webui.UICreateNewRoomPopupWindow.createNewRoomAction(); return false;">
+				<!-- start contact -->
+				<div class="UIInsertAddress">
+					<div class="InsertAddressContainer">
+						<div class="AddressContainer">
+							<div class="ListAddress">
+								<table cellspacing="0px" cellpadding="0px" border="0px" class="UIGrid">
+									<tbody>
+										<tr>
+											<td class="FieldName">
+												<div>
+													<%=_ctx.appRes("UIChatBarPortlet.label.roomName");%>:</div>
+											</td>
+											<td>
+												<input type="text" name="roomName" maxlength="50px" />
+												<span style="color: #f00">*</span>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+					<div class="UIAction">
+						<a href="JavaScript:void(0);" onclick="javascript:eXo.communication.chatbar.webui.UICreateNewRoomPopupWindow.createNewRoomAction();" class="ActionButton LightBlueStyle"><%=_ctx.appRes("UIChatBarPortlet.label.ok");%></a>
+						<a href="JavaScript:void(0);" onclick="javascript:eXo.communication.chatbar.webui.UICreateNewRoomPopupWindow.setVisible(false);" class="ActionButton LightBlueStyle"><%=_ctx.appRes("UIChatBarPortlet.label.cancel");%></a>
+					</div>
+				</div>
+				<!-- end contact -->
+				</form>
+			</div>
+		</div>
+</div>
+<!--End New Room -->
+<!--Start room config form-->
+<div class="UIPopupWindow ExoMesseageDecorator UINewForm UIDragObject RoomConfigPopup UIRoomConfig" style="position: absolute;
+    top: 150px; left: 250px; width: 550px; display: none; visibility: visible;">
+		<div class="OverflowContainer ClearFix">
+			<a href="JavaScript:void(0);" class="CloseButton" title="<%=_ctx.appRes("UIChatBarPortlet.label.closeWindow");%>" onclick="eXo.communication.chatbar.webui.UIRoomConfigPopupWindow.setVisible(false);">
+			</a>
+			<span class="PopupTitle">
+				<%=_ctx.appRes("UIChatBarPortlet.label.roomConfiguration");%></span>
+		</div>
+		<div class="UIWindowContent">
+		<div class="PopupContent">
+			<form method="post" class="ContainerForm" action="#">
+				<div class="BoxForm">
+					<div class="BorderForm">
+						<fieldset style="color: #333; margin-bottom: 10px; overflow: hidden:height:100%;"
+							maxheight="350">
+							<legend class="StyleLegend"><%=_ctx.appRes("UIChatBarPortlet.label.general");%></legend>
+							<table class="UIFormGrid" style="visibility: visible;">
+								<tr>
+									<td class="FieldLabel">
+										<label>
+											<%=_ctx.appRes("UIChatBarPortlet.label.roomName");%>:</label>
+									</td>
+									<td class="FieldComponent">
+										<input type="text" name="roomname" disabled />
+									</td>
+								</tr>
+								<tr>
+									<td class="FieldLabel">
+										<label>
+											<%=_ctx.appRes("UIChatBarPortlet.label.persistentRoom");%>:</label>
+									</td>
+									<td class="FieldComponent">
+										<input type="checkbox" name="persistentroom" />
+									</td>
+								</tr>
+								<tr>
+									<td class="FieldLabel">
+										<label>
+											<%=_ctx.appRes("UIChatBarPortlet.label.presenceBroadcast");%>:</label>
+									</td>
+									<td class="FieldComponent">
+										<select name="presencebroadcast" size="3" MULTIPLE>
+											<option value="moderator"><%=_ctx.appRes("UIChatBarPortlet.label.moderator");%></option>
+											<option value="participant"><%=_ctx.appRes("UIChatBarPortlet.label.participant");%></option>
+											<option value="visitor"><%=_ctx.appRes("UIChatBarPortlet.label.visitor");%></option>
+										</select>
+									</td>
+								</tr>
+								<tr>
+									<td class="FieldLabel">
+										<label>
+											<%=_ctx.appRes("UIChatBarPortlet.label.whoIs");%>:</label>
+									</td>
+									<td class="FieldComponent">
+										<select name="whois" size="3">
+											<option value="anyone"><%=_ctx.appRes("UIChatBarPortlet.label.anyOne");%></option>
+										</select>
+									</td>
+								</tr>
+								<tr>
+									<td class="FieldLabel">
+										<label>
+											<%=_ctx.appRes("UIChatBarPortlet.label.roomDescription");%>:</label>
+									</td>
+									<td class="FieldComponent">
+										<textarea name="roomdesc" rows="3" cols="12"></textarea>
+									</td>
+								</tr>
+								<tr>
+									<td class="FieldLabel">
+										<label>
+											<%=_ctx.appRes("UIChatBarPortlet.label.maxUsers");%>:</label>
+									</td>
+									<td class="FieldComponent">
+										<select name="maxusers">
+											<option value="30">30</option>
+										</select>
+									</td>
+								</tr>
+							</table>
+						</fieldset>
+						<fieldset style="overflow: hidden; height: 20px;" maxheight="350" state="closed">
+							<legend class="StyleLegend"><%=_ctx.appRes("UIChatBarPortlet.label.showSecurity");%></legend>
+							<table class="UIFormGrid" style="visibility: visible; opacity: 0;">
+								<tr>
+									<td class="FieldLabel">
+										<label>
+											<%=_ctx.appRes("UIChatBarPortlet.label.publicRoom");%>:</label>
+									</td>
+									<td class="FieldComponent">
+										<input type="checkbox" name="publicroom" />
+									</td>
+								</tr>
+								<tr>
+									<td class="FieldLabel">
+										<label>
+											<%=_ctx.appRes("UIChatBarPortlet.label.membersOnly");%>:</label>
+									</td>
+									<td class="FieldComponent">
+										<input type="checkbox" name="membersonly" />
+									</td>
+								</tr>
+								<tr>
+									<td class="FieldLabel">
+										<label>
+											<%=_ctx.appRes("UIChatBarPortlet.label.allowInvites");%>:</label>
+									</td>
+									<td class="FieldComponent">
+										<input type="checkbox" name="allowinvites" />
+									</td>
+								</tr>
+								<tr>
+									<td class="FieldLabel">
+										<label>
+											<%=_ctx.appRes("UIChatBarPortlet.label.reservedNick");%>:</label>
+									</td>
+									<td class="FieldComponent">
+										<input type="checkbox" name="reservednick" />
+									</td>
+								</tr>
+								<tr>
+									<td class="FieldLabel">
+										<label>
+											<%=_ctx.appRes("UIChatBarPortlet.label.passwordProtectedRoom");%>:</label>
+									</td>
+									<td class="FieldComponent">
+										<input type="checkbox" name="passwordprotectedroom" />
+									</td>
+								</tr>
+								<tr>
+									<td class="FieldLabel">
+										<label>
+											<%=_ctx.appRes("UIChatBarPortlet.label.password");%>:</label>
+									</td>
+									<td class="FieldComponent">
+										<input type="password" name="roomsecret" />
+									</td>
+								</tr>
+								<tr>
+									<td class="FieldLabel">
+										<label>
+											<%=_ctx.appRes("UIChatBarPortlet.label.moderatedRoom");%>:</label>
+									</td>
+									<td class="FieldComponent">
+										<input type="checkbox" name="moderatedroom" />
+									</td>
+								</tr>
+								<tr>
+									<td class="FieldLabel">
+										<label>
+											<%=_ctx.appRes("UIChatBarPortlet.label.roomAdmins");%>:</label>
+									</td>
+									<td class="FieldComponent">
+										<select name="roomadmins" size="3">
+											<option></option>
+										</select>
+									</td>
+								</tr>
+								<tr>
+									<td class="FieldLabel">
+										<label>
+											<%=_ctx.appRes("UIChatBarPortlet.label.roomOwners");%>:</label>
+									</td>
+									<td class="FieldComponent">
+										<select name="roomowners" size="3">
+											<option></option>
+										</select>
+									</td>
+								</tr>
+							</table>
+						</fieldset>
+					</div>
+				</div>
+				<div class="BoxForm">
+					<div class="BorderForm">
+						<div class="UIAction">
+							<a href="JavaScript:void(0);" onclick="javascript:eXo.communication.chatbar.webui.UIRoomConfigPopupWindow.okAction();" class="ActionButton LightBlueStyle"><%=_ctx.appRes("UIChatBarPortlet.label.ok");%></a>
+							<a href="JavaScript:void(0);" onclick="javascript:eXo.communication.chatbar.webui.UIRoomConfigPopupWindow.setVisible(false);" class="ActionButton LightBlueStyle"><%=_ctx.appRes("UIChatBarPortlet.label.cancel");%></a>
+						</div>
+					</div>
+				</div>
+			</form>
+			</div>
+		</div>
+</div>
+<!--end room config form -->
+<!-- Start template area -->
+<div id="templateArea" style="display: none;">
+	<ul>
+		<!-- BuddyItem  -->
+		<li class="TitleIconChat">
+			<a href="JavaScript:void(0);" class="IconChat"></a>
+		</li>
+		<!-- End BuddyItem -->
+		<!-- BuddyItem for group chat -->
+		<li class="GroupNick">
+			<a href="JavaScript:void(0);" class="StatusIcon NameId"></a>
+		</li>
+	</ul>
+    <!-- Message -->
+    <!-- User message -->
+    <div class="Message UserMessage">
+			<div class="MessageTitle ClearFix">
+				<h5 class="ChatName IconStatus ChatIcon">
+					<span></span>
+				</h5>
+				<div class="ChatDate">
+					<span></span>
+					</div>
+				<div class="ChatTime">
+					<span></span>
+				</div>
+			</div>
+			<div class="MessageBody ContextChat">
+			</div>
+    </div>
+    <!-- Guest message -->
+    <div class="Message GuestMessage">
+			<div class="MessageTitle ClearFix">
+				<h5 class="ChatName IconStatus ChatIcon">
+				</h5>
+				<div class="ChatDate">
+					<span></span>
+				</div>
+				<div class="ChatTime">
+					<span></span>
+				</div>
+			</div>
+			<div class="MessageBody ContextChat">
+			</div>
+    </div>
+    <!-- FileExchange -->
+    <div class="SendFile ClearFix">
+			<a href="JavaScript:void(0);" class="ImageFile"></a>
+			<div class="ContentSendFile ClearFix">
+					<h5 class="LableSendFile">
+							<%=_ctx.appRes("UIChatBarPortlet.label.waitingForYouToAcceptOneFile");%>:</h5>
+					<p class="NameFile">
+							<span></span>
+					</p>
+					<a href="JavaScript:void(0);" class="ActionFile" onclick="eXo.communication.chatbar.webui.UIChatWindow.acceptFileExchange(this);">
+							<%=_ctx.appRes("UIChatBarPortlet.label.accept");%></a>
+					<a href="JavaScript:void(0);" class="ActionFile" onclick="eXo.communication.chatbar.webui.UIChatWindow.denieFileExchange(this);">
+							<%=_ctx.appRes("UIChatBarPortlet.label.deny");%></a>
+					<div class="LoadingIcon">
+							<span></span>
+					</div>
+			</div>
+    </div>
+    <!--/-->
+    <!-- UITab -->
+    <div class="UITab NormalTabStyle ChatTab">
+        <div class="SelectedTab">
+            <div class="LeftTab">
+                <div class="RightTab">
+                    <div class="MiddleTab">
+                        <div class="TabName" style="display: inline;">
+                            <span class="UnreadMessage" style="color: red;"></span><span class="ContactName">
+                            </span>
+                        </div>
+                        <a href="JavaScript:void(0);" class="CloseTabButton" title="<%=_ctx.appRes("UIChatBarPortlet.label.clickToRemoveThisTab");%>!">
+                            x</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--/-->
+    <!-- UITabContent -->
+    <div class="UITab NormalTabStyle ChatTabContent">
+        <div class="UITabContent ChatSession">
+			<div class="UIActionbar ClearFix">
+				<a href="JavaScript:void(0);" class="Icon ExportMessageIcon" title="<%=_ctx.appRes("UIChatBarPortlet.label.exportMessagesHistory");%>" onclick="eXo.communication.chatbar.webui.UIChatWindow.exportHistory(event);">
+					<%=_ctx.appRes("UIChatBarPortlet.label.exportHistory");%></a>
+				<span class="SeperatorLine"></span>
+				<div class="SendFileIcon" title="<%=_ctx.appRes("UIChatBarPortlet.label.sendFile");%>">
+				   <form method="POST" enctype="multipart/form-data" class="ChatSendFileForm" target="chatFileExchangeIframe" action="#">
+					<input type="file" size="1" class="InputSendFile"  name="uploadfile" onchange="eXo.communication.chatbar.webui.UIChatWindow.sendFile(this, event);" />
+					<span class="SendFileLabel"><%=_ctx.appRes("UIChatBarPortlet.label.sendFile");%></span>
+				   </form>
+				  </div>
+				<span class="SeperatorLine"></span>
+				<div class="Icon HistoryIcon" onclick="eXo.communication.chatbar.webui.UIChatWindow.showPopupMenu(this, event)">
+					<a href="JavaScript:void(0);" class="Label DownArrow1Icon"><%=_ctx.appRes("UIChatBarPortlet.label.history") %></a>
+				  
+				  <% /*Begin Popup Menu*/ %>
+				  <ul class="UIRightClickPopupMenu UIContextMenuContainer" style="display: none;">
+						<li class="MenuItem" onclick="eXo.communication.chatbar.webui.UIChatWindow.getMessageHistory(event,0);" href="JavaScript:void(0);">
+						  <a href="JavaScript:void(0);" class="ItemIcon"><%=_ctx.appRes("UIChatBarPortlet.label.today");%></a>
+						</li>
+						
+						<li class="MenuItem" onclick="eXo.communication.chatbar.webui.UIChatWindow.getMessageHistory(event,7);" href="JavaScript:void(0);">
+						  <a href="JavaScript:void(0);" class="ItemIcon"><%=_ctx.appRes("UIChatBarPortlet.label.thisWeek");%></a>                                                              
+						</li>
+						
+						<li class="MenuItem" onclick="eXo.communication.chatbar.webui.UIChatWindow.getMessageHistory(event,30);" href="JavaScript:void(0);">
+						  <a href="JavaScript:void(0);" class="ItemIcon"><%=_ctx.appRes("UIChatBarPortlet.label.last30Days");%></a>                                                              
+						</li>
+						
+						<li class="MenuItem" onclick="eXo.communication.chatbar.webui.UIChatWindow.getMessageHistory(event,-1);" href="JavaScript:void(0);">
+						  <a href="JavaScript:void(0);" class="ItemIcon"><%=_ctx.appRes("UIChatBarPortlet.label.beginning");%></a>                                                              
+						</li>
+					</ul>
+				  <% /*End Popup Menu*/ %>
+				</div>
+				<div style="padding: 5px 5px 0px 0px">
+					<div class="FilterField">
+						<span></span>
+					</div>
+				</div>
+			</div>
+			<div class="ChatContainer">
+				<div class="MessagesContainer">
+					<div class="OverflowMessagesContainer MessagesBox">
+							<span></span>
+					</div>
+				</div>
+			</div>
+			<div class="UIAction ClearFix">
+				<a href="JavaScript:void(0);" class="SendButton">Send</a>
+				<textarea rows="3" name="msg" cols="6" class="MsgBox"></textarea>
+			</div>
+        </div>
+    </div>
+    <!-- UITabContent for group chat -->
+    <div class="UITab NormalTabStyle GroupChatTabContent">
+			<div class="UITabContent ChatSession">
+				<div class="UIActionbar ClearFix">
+					<a href="JavaScript:void(0);" class="Icon AddChatIcon" title="<%=_ctx.appRes("UIChatBarPortlet.label.inviteNewFriends");%>" onclick="eXo.communication.chatbar.webui.UIChatWindow.inviteToJoinRoom(event);">
+						<%=_ctx.appRes("UIChatBarPortlet.label.add");%> </a>
+					<span class="SeperatorLine"></span>
+					<a href="JavaScript:void(0);" class="Icon LeaveIcon" title="<%=_ctx.appRes("UIChatBarPortlet.label.leaveChatRoom");%>" onclick="eXo.communication.chatbar.webui.UIChatWindow.leaveRoomChat(event);">
+						<%=_ctx.appRes("UIChatBarPortlet.label.leave");%> </a>
+					<span class="SeperatorLine"></span>
+					<a href="JavaScript:void(0);" class="Icon OptionsIcon" title="<%=_ctx.appRes("UIChatBarPortlet.label.roomConfiguration");%>" onclick="eXo.communication.chatbar.webui.UIChatWindow.configRoom(event);">
+						<%=_ctx.appRes("UIChatBarPortlet.label.options");%> </a>
+						
+					<span class="SeperatorLine"></span>
+					<div class="Icon HistoryIcon" onclick="eXo.communication.chatbar.webui.UIChatWindow.showPopupMenu(this, event)">
+						<a href="JavaScript:void(0);" class="Label DownArrow1Icon"><%=_ctx.appRes("UIChatBarPortlet.label.history") %></a>
+						
+						<% /*Begin Popup Menu*/ %>
+						<ul class="UIRightClickPopupMenu UIContextMenuContainer" style="display: none;">
+							<li class="MenuItem" onclick="eXo.communication.chatbar.webui.UIChatWindow.getMessageHistory(event,0);" href="JavaScript:void(0);">
+								<a href="JavaScript:void(0);" class="ItemIcon"><%=_ctx.appRes("UIChatBarPortlet.label.today");%></a>
+							</li>
+							<li class="MenuItem" onclick="eXo.communication.chatbar.webui.UIChatWindow.getMessageHistory(event,7);" href="JavaScript:void(0);">
+								<a href="JavaScript:void(0);" class="ItemIcon"><%=_ctx.appRes("UIChatBarPortlet.label.thisWeek");%></a>
+							</li>
+							<li class="MenuItem" onclick="eXo.communication.chatbar.webui.UIChatWindow.getMessageHistory(event,30);" href="JavaScript:void(0);">
+								<a href="JavaScript:void(0);" class="ItemIcon"><%=_ctx.appRes("UIChatBarPortlet.label.last30Days");%></a>
+							</li>
+							<li class="MenuItem" onclick="eXo.communication.chatbar.webui.UIChatWindow.getMessageHistory(event,-1);" href="JavaScript:void(0);">
+								<a href="JavaScript:void(0);" class="ItemIcon"><%=_ctx.appRes("UIChatBarPortlet.label.beginning");%></a>
+							</li>
+						</ul>
+						<% /*End Popup Menu*/ %>
+					</div>
+				</div>
+				<div class="ChatContainer ClearFix">
+					<div class="RightPage">
+						<ul class="OverflowGroupNick">
+							<li></li>
+						</ul>
+					</div>
+					<div class="MessagesContainer LeftPane">
+						<div class="OverflowMessagesContainer MessagesBox">
+							<span></span>
+						</div>
+					</div>
+				</div>
+				<div class="UIAction ClearFix">
+					<a href="JavaScript:void(0);" class="SendButton">Send</a>
+					<textarea rows="3" name="msg" cols="6" class="MsgBox"></textarea>
+				</div>
+			</div>
+    </div>
+    <!--/-->
+</div>
+<!-- End template area -->
+<%}%>

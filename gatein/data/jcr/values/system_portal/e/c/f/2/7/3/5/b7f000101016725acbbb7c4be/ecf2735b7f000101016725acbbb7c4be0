@@ -1,0 +1,4 @@
+
+     * Return the "head task" of the priority queue.  (The head task is an
+     * task with the lowest nextExecutionTime.)
+     

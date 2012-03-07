@@ -1,0 +1,13 @@
+
+     * Close the current output stream.
+     * <p>
+     * The <tt>Formatter</tt>'s "tail" string is written to the stream before it
+     * is closed.  In addition, if the <tt>Formatter</tt>'s "head" string has not
+     * yet been written to the stream, it will be written before the
+     * "tail" string.
+     *
+     * @exception  SecurityException  if a security manager exists and if
+     *             the caller does not have LoggingPermission("control").
+     * @exception  SecurityException  if a security manager exists and if
+     *             the caller does not have LoggingPermission("control").
+     

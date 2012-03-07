@@ -1,0 +1,5 @@
+
+     * Returns the segment that should be used for key with given hash
+     * @param hash the hash code for the key
+     * @return the segment
+     

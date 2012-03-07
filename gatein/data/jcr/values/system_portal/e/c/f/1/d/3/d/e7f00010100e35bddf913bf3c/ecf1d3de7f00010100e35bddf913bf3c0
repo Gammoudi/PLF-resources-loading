@@ -1,0 +1,8 @@
+
+     * Returns an immutable list containing only the specified object.
+     * The returned list is serializable.
+     *
+     * @param o the sole object to be stored in the returned list.
+     * @return an immutable list containing only the specified object.
+     * @since 1.3
+     

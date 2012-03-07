@@ -1,0 +1,39 @@
+
+     * Replaces each substring of this string that matches the given <a
+     * href="../util/regex/Pattern.html#sum">regular expression</a> with the
+     * given replacement.
+     *
+     * <p> An invocation of this method of the form
+     * <i>str</i><tt>.replaceAll(</tt><i>regex</i><tt>,</tt> <i>repl</i><tt>)</tt>
+     * yields exactly the same result as the expression
+     *
+     * <blockquote><tt>
+     * {@link java.util.regex.Pattern}.{@link java.util.regex.Pattern#compile
+     * compile}(</tt><i>regex</i><tt>).{@link
+     * java.util.regex.Pattern#matcher(java.lang.CharSequence)
+     * matcher}(</tt><i>str</i><tt>).{@link java.util.regex.Matcher#replaceAll
+     * replaceAll}(</tt><i>repl</i><tt>)</tt></blockquote>
+     *
+     *<p>
+     * Note that backslashes (<tt>\</tt>) and dollar signs (<tt>$</tt>) in the
+     * replacement string may cause the results to be different than if it were
+     * being treated as a literal replacement string; see
+     * {@link java.util.regex.Matcher#replaceAll Matcher.replaceAll}.
+     * Use {@link java.util.regex.Matcher#quoteReplacement} to suppress the special
+     * meaning of these characters, if desired.
+     *
+     * @param   regex
+     *          the regular expression to which this string is to be matched
+     * @param   replacement
+     *          the string to be substituted for each match
+     *
+     * @return  The resulting <tt>String</tt>
+     *
+     * @throws  PatternSyntaxException
+     *          if the regular expression's syntax is invalid
+     *
+     * @see java.util.regex.Pattern
+     *
+     * @since 1.4
+     * @spec JSR-51
+     

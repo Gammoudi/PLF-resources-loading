@@ -1,0 +1,4 @@
+
+     * The pattern is converted to normalizedD form and then a pure group
+     * is constructed to match canonical equivalences of the characters.
+     

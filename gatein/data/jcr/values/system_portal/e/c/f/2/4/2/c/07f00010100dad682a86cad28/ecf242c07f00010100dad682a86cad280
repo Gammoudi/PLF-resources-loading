@@ -1,0 +1,8 @@
+
+     * Retrieves, but does not remove, the first element of this list,
+     * or returns <tt>null</tt> if this list is empty.
+     *
+     * @return the first element of this list, or <tt>null</tt>
+     *         if this list is empty
+     * @since 1.6
+     

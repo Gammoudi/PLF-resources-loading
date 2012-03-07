@@ -1,0 +1,4 @@
+
+     * Returns the fixed date value of this object. The time value and
+     * calendar fields must be in synch.
+     

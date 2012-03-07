@@ -1,0 +1,14 @@
+ Sublist for CopyOnWriteArrayList.
+ This class extends AbstractList merely for convenience, to
+ avoid having to define addAll, etc. This doesn't hurt, but
+ is wasteful.  This class does not need or use modCount
+ mechanics in AbstractList, but does need to check for
+ concurrent modification using similar mechanics.  On each
+ operation, the array that we expect the backing list to use
+ is checked and updated.  Since we do this for all of the
+ base operations invoked by those defined in AbstractList,
+ all is well.  While inefficient, this is not worth
+ improving.  The kinds of list operations inherited from
+ AbstractList are already so slow on COW sublists that
+ adding a bit more space/time doesn't seem even noticeable.
+     

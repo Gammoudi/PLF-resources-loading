@@ -1,0 +1,3 @@
+ References to bundles are soft references so that they can be garbage
+ collected when they have no hard references.
+     

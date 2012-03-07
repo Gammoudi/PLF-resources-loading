@@ -1,0 +1,12 @@
+ Thrown when an application tries to create an instance of a class
+ using the <TT>newInstance</TT> method in class
+ <TT>Class</TT>, but the specified class object cannot be
+ instantiated.  The instantiation can fail for a variety of
+ reasons including but not limited to:
+
+ <ul>
+ <li> the class object represents an abstract class, an interface,
+      an array class, a primitive type, or <TT>void</TT>
+ <li> the class has no nullary constructor
+</ul>
+ <DL><DT><B>Authors:</B></DT><DD>unascribed</DD></DL><DL><DT><B>Version:</B></DT><DD>%I%, %G%</DD></DL><DL><DT><B>See Also:</B></DT><DD><a href='../java/lang/Class.html#newInstance()' title='Class.newInstance'>Class.newInstance</a></DD></DL><DL><DT><B>Since:</B></DT><DD>JDK1.0</DD></DL>

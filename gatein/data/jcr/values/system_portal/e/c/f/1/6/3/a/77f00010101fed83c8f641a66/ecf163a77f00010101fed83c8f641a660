@@ -1,0 +1,9 @@
+
+     * Waits for (at index 0) and gets the hole filled in by another
+     * thread.  Fails if timed out or interrupted before hole filled.
+     * Same basic logic as untimed version, but a bit messier.
+     *
+     * @param node the waiting node
+     * @param nanos the wait time
+     * @return on success, the hole; on failure, CANCEL
+     

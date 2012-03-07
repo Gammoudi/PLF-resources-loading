@@ -1,0 +1,4 @@
+ References to class loaders are weak references, so that they can be
+ garbage collected when nobody else is using them. The ResourceBundle
+ class has no reason to keep class loaders alive.
+     

@@ -1,0 +1,7 @@
+
+     * Creates an empty enum set with the specified element type.
+     *
+     * @param elementType the class object of the element type for this enum
+     *     set
+     * @throws NullPointerException if <tt>elementType</tt> is null
+     

@@ -1,0 +1,20 @@
+
+     * Possibly reduce head level if it has no nodes.  This method can
+     * (rarely) make mistakes, in which case levels can disappear even
+     * though they are about to contain index nodes. This impacts
+     * performance, not correctness.  To minimize mistakes as well as
+     * to reduce hysteresis, the level is reduced by one only if the
+     * topmost three levels look empty. Also, if the removed level
+     * looks non-empty after CAS, we try to change it back quick
+     * before anyone notices our mistake! (This trick works pretty
+     * well because this method will practically never make mistakes
+     * unless current thread stalls immediately before first CAS, in
+     * which case it is very unlikely to stall again immediately
+     * afterwards, so will recover.)
+     *
+     * We put up with all this rather than just let levels grow
+     * because otherwise, even a small map that has undergone a large
+     * number of insertions and removals will have a lot of levels,
+     * slowing down access more than would an occasional unwanted
+     * reduction.
+     

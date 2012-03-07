@@ -1,0 +1,109 @@
+
+     * Retransform the supplied set of classes.
+     *
+     * <P>
+     * This function facilitates the instrumentation
+     * of already loaded classes.
+     * When classes are initially loaded or when they are 
+     * {@linkplain #redefineClasses redefined},
+     * the initial class file bytes can be transformed with the
+     * {@link java.lang.instrument.ClassFileTransformer ClassFileTransformer}.
+     * This function reruns the transformation process
+     * (whether or not a transformation has previously occurred).
+     * This retransformation follows these steps:
+     *  <ul>
+     *    <li>starting from the initial class file bytes 
+     *    </li>
+     *    <li>for each transformer that was added with <code>canRetransform</code>
+     *      false, the bytes returned by
+     *      {@link java.lang.instrument.ClassFileTransformer#transform transform}
+     *      during the last class load or redefine are
+     *      reused as the output of the transformation; note that this is
+     *      equivalent to reapplying the previous transformation, unaltered;
+     *      except that
+     *      {@link java.lang.instrument.ClassFileTransformer#transform transform}
+     *      is not called
+     *    </li>
+     *    <li>for each transformer that was added with <code>canRetransform</code>
+     *      true, the
+     *      {@link java.lang.instrument.ClassFileTransformer#transform transform}
+     *      method is called in these transformers
+     *    </li>
+     *    <li>the transformed class file bytes are installed as the new
+     *      definition of the class
+     *    </li>
+     *  </ul>
+     * <P>
+     *
+     * The order of transformation is described in the
+     * ({@link java.lang.instrument.ClassFileTransformer#transform transform} method.
+     * This same order is used in the automatic reapplication of retransformation
+     * incapable transforms.
+     * <P>
+     *
+     * The initial class file bytes represent the bytes passed to 
+     * {@link java.lang.ClassLoader#defineClass ClassLoader.defineClass} or
+     * {@link #redefineClasses redefineClasses}
+     * (before any transformations
+     *  were applied), however they might not exactly match them.
+     *  The constant pool might not have the same layout or contents.
+     *  The constant pool may have more or fewer entries.
+     *  Constant pool entries may be in a different order; however,
+     *  constant pool indices in the bytecodes of methods will correspond.
+     *  Some attributes may not be present.
+     *  Where order is not meaningful, for example the order of methods,
+     *  order might not be preserved.
+     *
+     * <P>
+     * This method operates on
+     * a set in order to allow interdependent changes to more than one class at the same time
+     * (a retransformation of class A can require a retransformation of class B).
+     *
+     * <P>
+     * If a retransformed method has active stack frames, those active frames continue to
+     * run the bytecodes of the original method. 
+     * The retransformed method will be used on new invokes.
+     *
+     * <P>
+     * This method does not cause any initialization except that which would occur
+     * under the customary JVM semantics. In other words, redefining a class
+     * does not cause its initializers to be run. The values of static variables
+     * will remain as they were prior to the call.
+     *
+     * <P>
+     * Instances of the retransformed class are not affected.
+     *
+     * <P>
+     * The retransformation may change method bodies, the constant pool and attributes.
+     * The retransformation must not add, remove or rename fields or methods, change the 
+     * signatures of methods, or change inheritance.  These restrictions maybe be
+     * lifted in future versions.  The class file bytes are not checked, verified and installed
+     * until after the transformations have been applied, if the resultant bytes are in
+     * error this method will throw an exception.
+     *
+     * <P>
+     * If this method throws an exception, no classes have been retransformed.
+     * <P>
+     * This method is intended for use in instrumentation, as described in the
+     * {@linkplain Instrumentation class specification}.
+     *
+     * @param classes array of classes to retransform; 
+     *                a zero-length array is allowed, in this case, this method does nothing
+     * @throws java.lang.instrument.UnmodifiableClassException if a specified class cannot be modified
+     * ({@link #isModifiableClass} would return <code>false</code>)
+     * @throws java.lang.UnsupportedOperationException if the current configuration of the JVM does not allow 
+     * retransformation ({@link #isRetransformClassesSupported} is false) or the retransformation attempted
+     * to make unsupported changes
+     * @throws java.lang.ClassFormatError if the data did not contain a valid class
+     * @throws java.lang.NoClassDefFoundError if the name in the class file is not equal to the name of the class
+     * @throws java.lang.UnsupportedClassVersionError if the class file version numbers are not supported
+     * @throws java.lang.ClassCircularityError if the new classes contain a circularity
+     * @throws java.lang.LinkageError if a linkage error occurs
+     * @throws java.lang.NullPointerException if the supplied classes  array or any of its components
+     *                                        is <code>null</code>.
+     *
+     * @see #isRetransformClassesSupported
+     * @see #addTransformer
+     * @see java.lang.instrument.ClassFileTransformer
+     * @since 1.6
+     

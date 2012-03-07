@@ -1,0 +1,9 @@
+
+     * Tests if this memory manager is valid in the Java virtual
+     * machine.  A memory manager becomes invalid once the Java virtual
+     * machine removes it from the memory system.
+     *
+     * @return <tt>true</tt> if the memory manager is valid in the 
+     *               Java virtual machine;
+     *         <tt>false</tt> otherwise.
+     

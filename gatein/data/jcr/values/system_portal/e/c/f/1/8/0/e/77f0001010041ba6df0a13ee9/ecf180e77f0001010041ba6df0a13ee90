@@ -1,0 +1,19 @@
+
+     * Implements the <tt>put</tt> method as per the specification in
+     * {@link Preferences#put(String,String)}.
+     *
+     * <p>This implementation checks that the key and value are legal,
+     * obtains this preference node's lock, checks that the node
+     * has not been removed, invokes {@link #putSpi(String,String)}, and if
+     * there are any preference change listeners, enqueues a notification
+     * event for processing by the event dispatch thread.
+     *
+     * @param key key with which the specified value is to be associated.
+     * @param value value to be associated with the specified key.
+     * @throws NullPointerException if key or value is <tt>null</tt>.
+     * @throws IllegalArgumentException if <tt>key.length()</tt> exceeds
+     *       <tt>MAX_KEY_LENGTH</tt> or if <tt>value.length</tt> exceeds
+     *       <tt>MAX_VALUE_LENGTH</tt>.
+     * @throws IllegalStateException if this node (or an ancestor) has been
+     *         removed with the {@link #removeNode()} method.
+     

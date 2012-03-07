@@ -1,0 +1,10 @@
+
+     * Returns an array of all installed locales.
+     * The returned array represents the union of locales supported 
+     * by the Java runtime environment and by installed 
+     * {@link java.util.spi.LocaleServiceProvider LocaleServiceProvider}
+     * implementations.  It must contain at least a <code>Locale</code>
+     * instance equal to {@link java.util.Locale#US Locale.US}.
+     *
+     * @return An array of installed locales.
+     

@@ -1,0 +1,4 @@
+
+     * Returns a class loaded by the bootstrap class loader;
+     * or return null if not found.
+     

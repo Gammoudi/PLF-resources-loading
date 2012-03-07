@@ -1,0 +1,24 @@
+.Bookmarking {
+  padding: 0px 8px;
+}
+
+.Bookmarking .ShareApp {
+background:none repeat scroll 0 0 #FCFCFC;
+height:20px;
+padding:5px 11px 0 0;
+}
+
+.Bookmarking .ShareApp a {
+width: 20px;
+height: 20px;
+
+}
+
+.Bookmarking .ShareApp .Facebook {
+	background: url('/acme-websiteResources/skin/acmeSkin/ProductStyle/background/Icon20x20.png') no-repeat right -24px;
+	margin-left: 6px;
+}
+
+.Bookmarking .ShareApp .Twitter {
+	background: url('/acme-websiteResources/skin/acmeSkin/ProductStyle/background/Icon20x20.png') no-repeat right top;
+}

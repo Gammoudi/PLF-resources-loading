@@ -1,0 +1,15 @@
+
+     * Returns an immutable list consisting of <tt>n</tt> copies of the
+     * specified object.  The newly allocated data object is tiny (it contains
+     * a single reference to the data object).  This method is useful in
+     * combination with the <tt>List.addAll</tt> method to grow lists.
+     * The returned list is serializable.
+     *
+     * @param  n the number of elements in the returned list.
+     * @param  o the element to appear repeatedly in the returned list.
+     * @return an immutable list consisting of <tt>n</tt> copies of the
+     * 	       specified object.
+     * @throws IllegalArgumentException if n &lt; 0.
+     * @see    List#addAll(Collection)
+     * @see    List#addAll(int, Collection)
+     

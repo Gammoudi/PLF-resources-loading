@@ -1,0 +1,19 @@
+<script type="text/javascript">
+var strShare = window.location.href;
+strShare = strShare.replace(/:/gi, "%3A");
+strShare = strShare.replace(/\//gi, "%2F");
+strShare = strShare.replace("private", "public");
+strShareFB = "http://www.facebook.com/sharer.php?u="+strShare;
+var strShareTW = "http://twitter.com/share?url="+strShare;
+	shareFB = function(){
+	window.open(strShareFB, 'newWindow', 'width=626, height=436'); return false;
+	}
+	shareTW = function(){
+	window.open(strShareTW, 'newWindow', 'width=815, height=436'); return false;
+	}
+
+</script>
+<div class="Bookmarking">
+	<div class="ShareApp ClearFix">
+		<a class="Facebook FR" href="javascript:void(0)" onclick="shareFB()" title="Share on Facebook">&nbsp;</a> <a class="Twitter FR" href="javascript:void(0)" onclick="shareTW()" target="_blank" title="Share on Twitter">&nbsp;</a></div>
+</div>

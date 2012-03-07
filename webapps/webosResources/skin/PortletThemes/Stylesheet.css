@@ -1,0 +1,117 @@
+.WebosTheme .ResizeArea {
+	float: right; /* orientation=lt */
+	float: left; /* orientation=rt */
+	width: 18px; height: 18px;
+	cursor: nw-resize;
+	background: url('background/ResizeArea18x18.gif') no-repeat left top; /* orientation=lt */
+	background: url('background/ResizeArea18x18-rt.gif') no-repeat right top; /* orientation=rt */
+}
+
+.WebosTheme {
+	background: #fff;
+	-moz-border-radius: 7px;
+	-webkit-border-radius: 7px;
+	-moz-box-shadow: 0px 4px 5px 3px #bcbcbc;
+}
+
+.WebosTheme .WindowBarCenter {
+	background: url('background/WebosTheme.png') repeat-x left -27px;
+    height: 26px;
+    padding: 7px 3px 0px 8px;
+	-moz-border-radius: 7px 7px 0px 0px;
+	-webkit-border-radius: 7px 7px 0px 0px;
+}
+
+.WebosTheme .WindowBarCenter .WindowPortletInfo {
+    background: none;
+	padding: 0px;
+	line-height: 18px;
+	cursor: move;
+}
+
+.WebosTheme .WindowBarCenter .PortletName {
+	color: #515151;
+}
+
+.WebosTheme .MiddleDecoratorCenter {
+	background: none;
+	padding: 1px;
+}
+
+.WebosTheme .BottomDecoratorCenter {
+	background: url('background/WebosTheme.png') repeat-x left top;
+	padding: 8px 3px 0px 3px;
+    height: 17px;
+	-moz-border-radius: 0px 0px 7px 7px;
+	-webkit-border-radius: 0px 0px 7px 7px;
+}
+
+.WebosTheme .BottomDecoratorCenter .ResizeArea {
+    background: url("background/ResizeArea.png") no-repeat left top;
+    cursor: nw-resize;
+    float: right; /* orientation=lt */
+    float: left; /* orientation=rt */
+    height: 12px;
+    width: 12px;
+}
+
+.WebosTheme .BottomDecoratorCenter .Information {
+    display: none;
+}
+
+.WebosTheme .WindowBarCenter .ControlIcon {
+    background: url("background/WebosTheme.png") no-repeat left top;
+    cursor: pointer;
+    float: right; /* orientation=lt */
+    float: left; /* orientation=rt */
+    height: 18px;
+    width: 22px;
+}
+
+.WebosTheme .WindowBarCenter .CloseIcon {
+	background-position: center -143px;
+}
+
+.WebosTheme .WindowBarCenter .OverCloseIcon {
+	background-position: center -243px;
+}
+
+.WebosTheme .WindowBarCenter .MaximizedIcon {
+	background-position: center -83px;
+}
+
+.WebosTheme .WindowBarCenter .OverMaximizedIcon {
+	background-position: center -183px;
+}
+
+.WebosTheme .WindowBarCenter .MinimizedIcon {
+    background-position: center -103px;
+}
+
+.WebosTheme .WindowBarCenter .OverMinimizedIcon {
+    background-position: center -203px;
+}
+
+.WebosTheme .WindowBarCenter .ArrowDownIcon {
+    background-position: center -123px;
+}
+
+.WebosTheme .WindowBarCenter .OverArrowDownIcon {
+    background-position: center -223px;
+}
+
+.WebosTheme .WindowBarCenter .NormalIcon {
+    background-position: center -63px;
+}
+
+.WebosTheme .WindowBarCenter .OverNormalIcon {
+    background-position: center -163px;
+}
+
+.WebosTheme .WindowBarCenter .RestoreIcon {
+    background-position: center -63px;
+}
+
+.WebosTheme .WindowBarCenter .OverRestoreIcon {
+    background-position: center -163px;
+}

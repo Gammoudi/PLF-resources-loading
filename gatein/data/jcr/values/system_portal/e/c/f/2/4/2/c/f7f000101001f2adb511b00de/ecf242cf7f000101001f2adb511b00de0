@@ -1,0 +1,9 @@
+
+     * Pushes an element onto the stack represented by this list.  In other
+     * words, inserts the element at the front of this list.
+     *
+     * <p>This method is equivalent to {@link #addFirst}.
+     *
+     * @param e the element to push
+     * @since 1.6
+     

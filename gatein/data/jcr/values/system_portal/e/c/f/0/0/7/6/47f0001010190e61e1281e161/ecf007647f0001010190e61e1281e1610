@@ -1,0 +1,7 @@
+
+     * Returns this reference object's referent.  Because the referent of a
+     * phantom reference is always inaccessible, this method always returns
+     * <code>null</code>.
+     *
+     * @return  <code>null</code>
+     

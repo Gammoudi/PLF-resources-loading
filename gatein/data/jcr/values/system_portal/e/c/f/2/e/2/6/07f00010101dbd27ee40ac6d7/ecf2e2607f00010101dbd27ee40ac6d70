@@ -1,0 +1,6 @@
+
+     * Returns the regular expression from which this pattern was compiled.
+     * </p>
+     *
+     * @return  The source of this pattern
+     

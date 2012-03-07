@@ -1,0 +1,12 @@
+
+     * Returns a <tt>Package</tt> that has been defined by this class loader
+     * or any of its ancestors.  </p>
+     *
+     * @param  name
+     *         The package name
+     *
+     * @return  The <tt>Package</tt> corresponding to the given name, or
+     *          <tt>null</tt> if not found
+     *
+     * @since  1.2
+     

@@ -1,0 +1,4 @@
+
+     * Sets the WEEK_OF_MONTH and WEEK_OF_YEAR fields to new values with the
+     * new parameter value if they have been calculated internally.
+     

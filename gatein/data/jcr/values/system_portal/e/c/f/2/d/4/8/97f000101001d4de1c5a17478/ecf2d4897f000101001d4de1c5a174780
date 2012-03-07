@@ -1,0 +1,41 @@
+
+         * Acquires the read lock unless the current thread is
+         * {@linkplain Thread#interrupt interrupted}.
+         *
+         * <p>Acquires the read lock if the write lock is not held
+         * by another thread and returns immediately.
+         *
+         * <p>If the write lock is held by another thread then the
+         * current thread becomes disabled for thread scheduling
+         * purposes and lies dormant until one of two things happens:
+         *
+         * <ul>
+         *
+         * <li>The read lock is acquired by the current thread; or
+         *
+         * <li>Some other thread {@linkplain Thread#interrupt interrupts}
+         * the current thread.
+         *
+         * </ul>
+         *
+         * <p>If the current thread:
+         *
+         * <ul>
+         *
+         * <li>has its interrupted status set on entry to this method; or
+         *
+         * <li>is {@linkplain Thread#interrupt interrupted} while
+         * acquiring the read lock,
+         *
+         * </ul>
+         *
+         * then {@link InterruptedException} is thrown and the current
+         * thread's interrupted status is cleared.
+         *
+         * <p>In this implementation, as this method is an explicit
+         * interruption point, preference is given to responding to
+         * the interrupt over normal or reentrant acquisition of the
+         * lock.
+         *
+         * @throws InterruptedException if the current thread is interrupted
+         

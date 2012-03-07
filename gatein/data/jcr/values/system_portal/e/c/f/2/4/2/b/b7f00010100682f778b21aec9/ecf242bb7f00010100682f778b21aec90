@@ -1,0 +1,7 @@
+
+     * Inserts the specified element at the end of this list.
+     *
+     * @param e the element to insert
+     * @return <tt>true</tt> (as specified by {@link Deque#offerLast})
+     * @since 1.6
+     

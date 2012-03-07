@@ -1,0 +1,2 @@
+serviceClass: org.xwiki.gwt.wysiwyg.client.plugin.importer.ImportService
+path: 07212F22C6B96D294B31039878552B89.gwt.rpc

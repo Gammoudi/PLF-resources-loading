@@ -1,0 +1,5 @@
+
+         * Performs no action, but the presence of this object in changeLog
+         * will force the node and its ancestors to be made permanent at the
+         * next sync.
+         

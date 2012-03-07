@@ -1,0 +1,23 @@
+Manifest-Version: 1.0
+Archiver-Version: Plexus Archiver
+Created-By: Apache Maven
+Built-By: jenkins
+Build-Jdk: 1.6.0_29
+Implementation-Vendor-Id: org.exoplatform.commons
+Hudson-Build-Number: 327
+Hudson-Project: commons-trunk-ci
+Hudson-Version: 1.451
+Implementation-Title: eXo Platform Web FCK
+Implementation-URL: http://www.exoplatform.com/exo.platform.commons/ex
+ o.platform.commons.fck
+Implementation-Vendor: eXo Platform SAS
+Implementation-Version: 1.1.7-SNAPSHOT
+Jenkins-Build-Number: 327
+Jenkins-Project: commons-trunk-ci
+Jenkins-Version: 1.451
+SCM-URL: scm:svn:http://svn.exoplatform.org/projects/commons/trunk/exo
+ .platform.commons.fck
+Specification-Title: eXo Platform
+Specification-Vendor: eXo Platform SAS
+Specification-Version: N/A
+

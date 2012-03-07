@@ -1,0 +1,3 @@
+ Obtains a localized currency names from a CurrencyNameProvider
+ implementation.
+     

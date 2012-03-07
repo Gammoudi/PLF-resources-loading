@@ -1,0 +1,125 @@
+/**
+ * Copyright (C) 2009 eXo Platform SAS.
+ * 
+ * This is free software; you can redistribute it and/or modify it
+ * under the terms of the GNU Lesser General Public License as
+ * published by the Free Software Foundation; either version 2.1 of
+ * the License, or (at your option) any later version.
+ * 
+ * This software is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * Lesser General Public License for more details.
+ * 
+ * You should have received a copy of the GNU Lesser General Public
+ * License along with this software; if not, write to the Free
+ * Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA
+ * 02110-1301 USA, or see the FSF site: http://www.fsf.org.
+ */
+
+.UIPageIterator {	
+	margin: 5px auto;
+	height:22px;
+}
+
+*+html .UIPageIterator {	
+	overflow:hidden;
+}
+
+.UIPageIterator a {
+	float: right; /* orientation=lt */
+	float: left; /* orientation=rt */
+	color: #333333;
+	display: block;
+}
+
+.UIPageIterator .Number {
+	background: url('background/ArrowPageIterator.gif') repeat-x left -195px; /* orientation=lt */
+	background: url('background/ArrowPageIterator.gif') repeat-x left -195px; /* orientation=rt */
+	padding: 0 6px;
+	margin-left: 5px; /* orientation=lt */
+	margin-right: 5px; /* orientation=rt */
+	cursor: pointer;
+	line-height: 20px;
+	font-weight:bold;
+	font-family:Arial, Tahoma,Verdana,Helvetica,sans-serif;
+	font-size:14px;
+	border:1px solid #bdbcbd;	
+	text-shadow: 0px 1px 0px #fff;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+}
+
+.UIPageIterator .Number:hover, .UIPageIterator .PageSelected{
+	background: url('background/ArrowPageIterator.gif') repeat-x left -175px; /* orientation=lt */
+	background: url('background/ArrowPageIterator.gif') repeat-x left -175px; /* orientation=rt */
+}
+
+
+.UIPageIterator .Icon {
+	margin-left: 5px; /* orientation=lt */
+	margin-right: 5px; /* orientation=rt */
+	width: 20px;
+	height: 20px;
+	cursor: pointer;
+	border:1px solid #bdbcbd;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+}
+
+.UIPageIterator .PagesTotalNumber {
+	margin: 0 10px 0 5px; /* orientation=lt */
+	margin: 0 5px 0 10px; /* orientation=rt */
+	line-height: 22px;	
+	font-size: 12px;
+}
+
+.UIPageIterator .TotalPages {
+	font-size: 12px;
+	line-height: 22px;
+	font-style:italic;
+}
+
+.UIPageIterator .LastTopPageIcon {
+	background: url('background/ArrowPageIterator.gif') no-repeat left -22px; /* orientation=lt */
+	background: url('background/ArrowPageIterator-rt.gif') no-repeat right -22px; /* orientation=rt */
+}
+
+.UIPageIterator .NextTopPageIcon {
+	background: url('background/ArrowPageIterator.gif') no-repeat left -66px; /* orientation=lt */
+	background: url('background/ArrowPageIterator-rt.gif') no-repeat right -66px; /* orientation=rt */
+}
+
+.UIPageIterator .LastPageIcon {
+	background: url('background/ArrowPageIterator.gif') no-repeat left -110px; /* orientation=lt */
+	background: url('background/ArrowPageIterator-rt.gif') no-repeat right -110px; /* orientation=rt */
+}
+
+.UIPageIterator .NextPageIcon {
+	background: url('background/ArrowPageIterator.gif') no-repeat left -154px;	/* orientation=lt */
+	background: url('background/ArrowPageIterator-rt.gif') no-repeat right -154px;	/* orientation=rt */
+}
+
+.UIPageIterator .DisableLastTopPageIcon {
+	background: url('background/ArrowPageIterator.gif') no-repeat left top; /* orientation=lt */
+	background: url('background/ArrowPageIterator-rt.gif') no-repeat right top; /* orientation=rt */
+}
+
+.UIPageIterator .DisableNextTopPageIcon {
+	background: url('background/ArrowPageIterator.gif') no-repeat left -44px; /* orientation=lt */
+	background: url('background/ArrowPageIterator-rt.gif') no-repeat right -44px; /* orientation=rt */
+}
+
+.UIPageIterator .DisableLastPageIcon {
+	background: url('background/ArrowPageIterator.gif') no-repeat left -88px; /* orientation=lt */
+	background: url('background/ArrowPageIterator-rt.gif') no-repeat right -88px; /* orientation=rt */
+}
+
+.UIPageIterator .DisableNextPageIcon {
+	background: url('background/ArrowPageIterator.gif') no-repeat left -132px; /* orientation=lt */
+	background: url('background/ArrowPageIterator-rt.gif') no-repeat right -132px; /* orientation=rt */
+}
+
+

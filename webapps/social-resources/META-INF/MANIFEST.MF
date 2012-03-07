@@ -1,0 +1,17 @@
+Manifest-Version: 1.0
+Archiver-Version: Plexus Archiver
+Created-By: Apache Maven
+Built-By: nagui
+Build-Jdk: 1.6.0_24
+Implementation-Vendor-Id: org.exoplatform.social
+Implementation-Title: eXo Social Resources Web App
+Implementation-URL: http://www.exoplatform.com/social-project/exo.soci
+ al.webapp/exo.social.webapp.resources
+Implementation-Vendor: eXo Platform SAS
+Implementation-Version: 1.2.8-SNAPSHOT
+SCM-URL: scm:svn:http://svn.exoplatform.org/projects/social/branches/1
+ .2.x/exo.social.webapp/exo.social.webapp.resources
+Specification-Title: eXo Platform
+Specification-Vendor: eXo Platform SAS
+Specification-Version: N/A
+

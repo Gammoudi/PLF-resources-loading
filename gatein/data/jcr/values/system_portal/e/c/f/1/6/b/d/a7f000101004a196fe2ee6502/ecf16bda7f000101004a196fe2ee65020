@@ -1,0 +1,3 @@
+
+         * Implements AQS base acquire to succeed if ran or cancelled
+         

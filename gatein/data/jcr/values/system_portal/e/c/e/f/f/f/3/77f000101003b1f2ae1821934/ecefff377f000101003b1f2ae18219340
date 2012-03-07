@@ -1,0 +1,6 @@
+
+     * Tests if this memory pool supports usage threshold.
+     *
+     * @return <tt>true</tt> if this memory pool supports usage threshold; 
+     * <tt>false</tt> otherwise.
+     

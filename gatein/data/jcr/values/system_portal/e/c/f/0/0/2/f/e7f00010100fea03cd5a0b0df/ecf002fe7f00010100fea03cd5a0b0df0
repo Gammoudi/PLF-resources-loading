@@ -1,0 +1,19 @@
+
+     * Returns the stack trace of the thread 
+     * associated with this <tt>ThreadInfo</tt>.
+     * If no stack trace was requested for this thread info, this method
+     * will return a zero-length array.
+     * If the returned array is of non-zero length then the first element of
+     * the array represents the top of the stack, which is the most recent
+     * method invocation in the sequence.  The last element of the array
+     * represents the bottom of the stack, which is the least recent method
+     * invocation in the sequence.
+     *
+     * <p>Some Java virtual machines may, under some circumstances, omit one
+     * or more stack frames from the stack trace.  In the extreme case,
+     * a virtual machine that has no stack trace information concerning
+     * the thread associated with this <tt>ThreadInfo</tt> 
+     * is permitted to return a zero-length array from this method.
+     *
+     * @return an array of <tt>StackTraceElement</tt> objects of the thread.
+     

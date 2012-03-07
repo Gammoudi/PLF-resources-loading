@@ -1,0 +1,13 @@
+
+     * Unregisters the supplied transformer. Future class definitions will
+     * not be shown to the transformer. Removes the most-recently-added matching
+     * instance of the transformer. Due to the multi-threaded nature of
+     * class loading, it is possible for a transformer to receive calls
+     * after it has been removed. Transformers should be written defensively
+     * to expect this situation. 
+     *
+     * @param transformer          the transformer to unregister
+     * @return  true if the transformer was found and removed, false if the
+     *           transformer was not found
+     * @throws java.lang.NullPointerException if passed a <code>null</code> transformer
+     

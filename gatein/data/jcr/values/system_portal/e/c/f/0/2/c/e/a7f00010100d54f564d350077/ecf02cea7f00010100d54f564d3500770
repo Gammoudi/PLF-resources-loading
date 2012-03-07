@@ -1,0 +1,25 @@
+
+     * Returns sqrt(<i>x</i><sup>2</sup>&nbsp;+<i>y</i><sup>2</sup>)
+     * without intermediate overflow or underflow.
+     *
+     * <p>Special cases:
+     * <ul>
+     *
+     * <li> If either argument is infinite, then the result
+     * is positive infinity.
+     *
+     * <li> If either argument is NaN and neither argument is infinite,
+     * then the result is NaN.
+     *
+     * </ul>
+     *
+     * <p>The computed result must be within 1 ulp of the exact
+     * result.  If one parameter is held constant, the results must be
+     * semi-monotonic in the other parameter.
+     *
+     * @param x a value
+     * @param y a value
+     * @return sqrt(<i>x</i><sup>2</sup>&nbsp;+<i>y</i><sup>2</sup>)
+     * without intermediate overflow or underflow
+     * @since 1.5
+     

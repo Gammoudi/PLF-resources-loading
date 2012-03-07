@@ -1,0 +1,21 @@
+<% 
+  import org.exoplatform.web.application.JavascriptManager;
+  def rcontext = _ctx.getRequestContext() ;
+  JavascriptManager jsmanager = rcontext.getJavascriptManager();
+  jsmanager.addJavascript("eXo.faq.UIAnswersPortlet.submitSearch('"+uiform.id+"');") ;
+%>
+
+<div class="UIQuickSeach">
+  <% uiform.begin() %>  
+  <div class="UISearchForm ClearFix">
+    <div class="FL"><label for="<%=uiform.FIELD_SEARCHVALUE%>"><%= _ctx.appRes("UIQuickSeach.label.search"); %></label></div>
+    <div class="Input FL">
+      <%  
+        uiform.renderChild(uiform.FIELD_SEARCHVALUE) ;
+      %>
+    </div>
+    <div class="AdvancedSearch FL" title="<%= _ctx.appRes("UIQuickSeach.title.advance-search"); %>" onclick="<%=uicomponent.event("AdvancedSearch");%>"><span></span></div>
+    <div class="SearchIcon ActionSearch FL" title="<%= _ctx.appRes("UIQuickSeach.title.search"); %>" onclick="<%=uicomponent.event("Search");%>"><span></span></div>
+  </div>
+  <%uiform.end()%>
+</div>

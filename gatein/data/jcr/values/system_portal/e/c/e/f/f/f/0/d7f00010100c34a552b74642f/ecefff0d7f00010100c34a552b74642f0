@@ -1,0 +1,7 @@
+
+     * Returns the name of memory managers that manages this memory pool.
+     * Each memory pool will be managed by at least one memory manager.
+     *
+     * @return an array of <tt>String</tt> objects, each is the name of
+     * a memory manager managing this memory pool.
+     

@@ -1,0 +1,10 @@
+
+     * Examines the argument type and its fields and perform some documented
+     * operation. No specific operations are required.
+     *
+     * @param   any   an argument.
+     * @return  a compiler-specific value, or <code>null</code> if no compiler
+     *          is available.
+     * @exception NullPointerException if <code>any</code> is 
+     *          <code>null</code>.
+     

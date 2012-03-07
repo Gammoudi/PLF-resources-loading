@@ -1,0 +1,10 @@
+
+     * Inserts the specified element into this delay queue. As the queue is
+     * unbounded this method will never block.
+     *
+     * @param e the element to add
+     * @param timeout This parameter is ignored as the method never blocks
+     * @param unit This parameter is ignored as the method never blocks
+     * @return <tt>true</tt>
+     * @throws NullPointerException {@inheritDoc}
+     

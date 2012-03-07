@@ -1,0 +1,27 @@
+/* Flag */
+#ContactUSColumnContainerRight {
+	width: 200px !important;
+}
+
+.ContactUSColumnContainerRightTDContainer .UILocation {
+	background: url('/portal/rest/jcr/repository/collaboration/sites content/live/acme/medias/images/flags/LocationBg.gif') no-repeat left top;
+	height: 340px;
+}
+
+.ContactUSColumnContainerRightTDContainer .UILocation .Title {
+	padding: 7px 0 7px 22px;
+	text-align: left;
+	font-weight: bold;
+	color: #414042;
+	font-size: 12px;
+}
+
+.ContactUSColumnContainerRightTDContainer .UILocation .Place {
+	padding: 8px 0 8px 8px;
+	color: #414042;
+	font-weight: bold;
+}
+
+.ContactUSColumnContainerRightTDContainer .UILocation td {
+	padding: 8px 0px 8px 20px;
+}

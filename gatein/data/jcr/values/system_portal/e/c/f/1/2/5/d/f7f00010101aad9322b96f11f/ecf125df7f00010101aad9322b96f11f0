@@ -1,0 +1,4 @@
+
+     * Try to CAS head to p. If successful, repoint old head to itself
+     * as sentinel for succ(), below.
+     

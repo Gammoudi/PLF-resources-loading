@@ -1,0 +1,9 @@
+
+     * Initializes a Thread.
+     *
+     * @param g the Thread group
+     * @param target the object whose run() method gets called
+     * @param name the name of the new Thread
+     * @param stackSize the desired stack size for the new thread, or
+     *        zero to indicate that this parameter is to be ignored.
+     

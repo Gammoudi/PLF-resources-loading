@@ -1,0 +1,7 @@
+
+     * Wakes up one waiting thread.
+     *
+     * <p>If any threads are waiting on this condition then one
+     * is selected for waking up. That thread must then re-acquire the
+     * lock before returning from {@code await}.
+     

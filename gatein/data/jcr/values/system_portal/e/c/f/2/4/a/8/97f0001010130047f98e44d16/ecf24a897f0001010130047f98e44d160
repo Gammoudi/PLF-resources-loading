@@ -1,0 +1,7 @@
+
+     * Removes all of the elements from this list (optional operation).
+     * The list will be empty after this call returns.
+     *
+     * @throws UnsupportedOperationException if the <tt>clear</tt> operation
+     *         is not supported by this list
+     

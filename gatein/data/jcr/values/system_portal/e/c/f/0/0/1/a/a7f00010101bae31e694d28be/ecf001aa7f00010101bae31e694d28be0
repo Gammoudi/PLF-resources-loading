@@ -1,0 +1,8 @@
+ Information about an object monitor lock.  An object monitor is locked
+ when entering a synchronization block or method on that object.
+
+ <h4>MXBean Mapping</h4>
+ <tt>MonitorInfo</tt> is mapped to a javax.management.openmbean.CompositeData
+ with attributes as specified in
+ the <a href='#from'>from</a> method.
+ <DL><DT><B>Authors:</B></DT><DD>Mandy Chung</DD></DL><DL><DT><B>Version:</B></DT><DD>%I%, %G%</DD></DL><DL><DT><B>Since:</B></DT><DD>1.6</DD></DL>

@@ -1,0 +1,40 @@
+
+     * Returns a <tt>MemoryUsage</tt> object represented by the
+     * given <tt>CompositeData</tt>. The given <tt>CompositeData</tt>
+     * must contain the following attributes:
+     * <p>
+     * <blockquote>
+     * <table border>
+     * <tr>
+     *   <th align=left>Attribute Name</th>
+     *   <th align=left>Type</th>
+     * </tr>
+     * <tr>
+     *   <td>init</td>
+     *   <td><tt>java.lang.Long</tt></td>
+     * </tr>
+     * <tr>
+     *   <td>used</td>
+     *   <td><tt>java.lang.Long</tt></td>
+     * </tr>
+     * <tr>
+     *   <td>committed</td>
+     *   <td><tt>java.lang.Long</tt></td>
+     * </tr>
+     * <tr>
+     *   <td>max</td>
+     *   <td><tt>java.lang.Long</tt></td>
+     * </tr>
+     * </table>
+     * </blockquote>
+     *
+     * @param cd <tt>CompositeData</tt> representing a <tt>MemoryUsage</tt>
+     *
+     * @throws IllegalArgumentException if <tt>cd</tt> does not
+     *   represent a <tt>MemoryUsage</tt> with the attributes described
+     *   above.
+     *
+     * @return a <tt>MemoryUsage</tt> object represented by <tt>cd</tt>
+     *         if <tt>cd</tt> is not <tt>null</tt>;
+     *         <tt>null</tt> otherwise.
+     

@@ -1,0 +1,13 @@
+
+     * Inserts the specified element into this priority queue. As the queue is
+     * unbounded this method will never block.
+     *
+     * @param e the element to add
+     * @param timeout This parameter is ignored as the method never blocks
+     * @param unit This parameter is ignored as the method never blocks
+     * @return <tt>true</tt>
+     * @throws ClassCastException if the specified element cannot be compared
+     *         with elements currently in the priority queue according to the
+     *         priority queue's ordering
+     * @throws NullPointerException if the specified element is null
+     

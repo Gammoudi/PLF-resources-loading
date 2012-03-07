@@ -1,0 +1,9 @@
+
+     * Save the state of the <tt>ConcurrentHashMap</tt> instance to a
+     * stream (i.e., serialize it).
+     * @param s the stream
+     * @serialData
+     * the key (Object) and value (Object)
+     * for each key-value mapping, followed by a null pair.
+     * The key-value mappings are emitted in no particular order.
+     

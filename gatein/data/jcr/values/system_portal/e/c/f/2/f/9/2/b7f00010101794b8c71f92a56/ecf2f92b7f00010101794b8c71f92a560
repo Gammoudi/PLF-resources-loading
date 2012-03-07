@@ -1,0 +1,4 @@
+ Handles the curly-brace style repetition with a specified minimum and
+ maximum occurrences. The * quantifier is handled as a special case.
+ This class handles the three types.
+     

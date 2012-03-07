@@ -1,0 +1,5 @@
+
+     * Removes the specified Thread group from this group.
+     * @param g the Thread group to be removed
+     * @return if this Thread has already been destroyed.
+     

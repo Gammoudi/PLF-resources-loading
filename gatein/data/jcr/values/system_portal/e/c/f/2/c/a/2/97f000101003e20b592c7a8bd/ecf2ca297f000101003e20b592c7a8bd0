@@ -1,0 +1,4 @@
+
+         * Adds a new waiter to wait queue.
+         * @return its new wait node
+         

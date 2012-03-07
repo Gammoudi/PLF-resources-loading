@@ -1,0 +1,15 @@
+
+     * Sets the state of the calendar fields that are <em>not</em> specified
+     * by <code>fieldMask</code> to <em>unset</em>. If <code>fieldMask</code>
+     * specifies all the calendar fields, then the state of this
+     * <code>Calendar</code> becomes that all the calendar fields are in sync
+     * with the time value (millisecond offset from the Epoch).
+     *
+     * @param fieldMask the field mask indicating which calendar fields are in
+     * sync with the time value.
+     * @exception IndexOutOfBoundsException if the specified
+     *                <code>field</code> is out of range
+     *               (<code>field &lt; 0 || field &gt;= FIELD_COUNT</code>).
+     * @see #isExternallySet(int)
+     * @see #selectFields()
+     

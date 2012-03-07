@@ -1,0 +1,19 @@
+Manifest-Version: 1.0
+Archiver-Version: Plexus Archiver
+Created-By: Apache Maven
+Built-By: nagui
+Build-Jdk: 1.6.0_24
+Implementation-Vendor-Id: org.exoplatform.platform
+Implementation-Title: eXo Platform - Gadgets
+Implementation-URL: http://www.exoplatform.com/exo.platform.parent/exo
+ .platform.sample/exo.platform.sample.gadgets-sample/exo.platform.samp
+ le.gadgets-sample.gadgets
+Implementation-Vendor: eXo Platform SAS
+Implementation-Version: 3.5.2-SNAPSHOT
+SCM-URL: scm:svn:http://svn.exoplatform.org/projects/platform/trunk/ex
+ o.platform.sample/exo.platform.sample.gadgets-sample/exo.platform.sam
+ ple.gadgets-sample.gadgets
+Specification-Title: eXo Platform
+Specification-Vendor: eXo Platform SAS
+Specification-Version: N/A
+

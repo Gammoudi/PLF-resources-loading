@@ -1,0 +1,8 @@
+
+     * Eventually sets the field of the given object managed by this
+     * updater to the given updated value.
+     *
+     * @param obj An object whose field to set
+     * @param newValue the new value
+     * @since 1.6
+     

@@ -1,0 +1,142 @@
+
+     * Returns a <tt>ThreadInfo</tt> object represented by the
+     * given <tt>CompositeData</tt>.
+     * The given <tt>CompositeData</tt> must contain the following attributes
+     * unless otherwise specified below:
+     * <blockquote>
+     * <table border>
+     * <tr>
+     *   <th align=left>Attribute Name</th>
+     *   <th align=left>Type</th>
+     * </tr>
+     * <tr>
+     *   <td>threadId</td>
+     *   <td><tt>java.lang.Long</tt></td>
+     * </tr>
+     * <tr>
+     *   <td>threadName</td>
+     *   <td><tt>java.lang.String</tt></td>
+     * </tr>
+     * <tr>
+     *   <td>threadState</td>
+     *   <td><tt>java.lang.String</tt></td>
+     * </tr>
+     * <tr>
+     *   <td>suspended</td>
+     *   <td><tt>java.lang.Boolean</tt></td>
+     * </tr>
+     * <tr>
+     *   <td>inNative</td>
+     *   <td><tt>java.lang.Boolean</tt></td>
+     * </tr>
+     * <tr>
+     *   <td>blockedCount</td>
+     *   <td><tt>java.lang.Long</tt></td>
+     * </tr>
+     * <tr>
+     *   <td>blockedTime</td>
+     *   <td><tt>java.lang.Long</tt></td>
+     * </tr>
+     * <tr>
+     *   <td>waitedCount</td>
+     *   <td><tt>java.lang.Long</tt></td>
+     * </tr>
+     * <tr>
+     *   <td>waitedTime</td>
+     *   <td><tt>java.lang.Long</tt></td>
+     * </tr>
+     * <tr>
+     *   <td>lockInfo</td>
+     *   <td><tt>javax.management.openmbean.CompositeData</tt>
+     *       - the mapped type for {@link LockInfo} as specified in the 
+     *       <a href="../../../javax/management/MXBean.html#mapping-rules">
+     *       type mapping rules</a> of 
+     *       {@linkplain javax.management.MXBean MXBeans}.
+     *       <p>
+     *       If <tt>cd</tt> does not contain this attribute, 
+     *       the <tt>LockInfo</tt> object will be constructed from 
+     *       the value of the <tt>lockName</tt> attribute. </td>
+     * </tr>
+     * <tr>
+     *   <td>lockName</td>
+     *   <td><tt>java.lang.String</tt></td>
+     * </tr>
+     * <tr>
+     *   <td>lockOwnerId</td>
+     *   <td><tt>java.lang.Long</tt></td>
+     * </tr>
+     * <tr>
+     *   <td>lockOwnerName</td>
+     *   <td><tt>java.lang.String</tt></td>
+     * </tr>
+     * <tr>
+     *   <td><a name="StackTrace">stackTrace</a></td>
+     *   <td><tt>javax.management.openmbean.CompositeData[]</tt>
+     *       <p>
+     *       Each element is a <tt>CompositeData</tt> representing
+     *       StackTraceElement containing the following attributes:
+     *       <blockquote>
+     *       <table cellspacing=1 cellpadding=0>
+     *       <tr>
+     *         <th align=left>Attribute Name</th>
+     *         <th align=left>Type</th>
+     *       </tr>
+     *       <tr>
+     *         <td>className</td>
+     *         <td><tt>java.lang.String</tt></td>
+     *       </tr>
+     *       <tr>
+     *         <td>methodName</td>
+     *         <td><tt>java.lang.String</tt></td>
+     *       </tr>
+     *       <tr>
+     *         <td>fileName</td>
+     *         <td><tt>java.lang.String</tt></td>
+     *       </tr>
+     *       <tr>
+     *         <td>lineNumber</td>
+     *         <td><tt>java.lang.Integer</tt></td>
+     *       </tr>
+     *       <tr>
+     *         <td>nativeMethod</td>
+     *         <td><tt>java.lang.Boolean</tt></td>
+     *       </tr>
+     *       </table>
+     *       </blockquote>
+     *   </td>
+     * </tr>
+     * <tr>
+     *   <td>lockedMonitors</td>
+     *   <td><tt>javax.management.openmbean.CompositeData[]</tt>
+     *       whose element type is the mapped type for 
+     *       {@link MonitorInfo} as specified in the 
+     *       {@link MonitorInfo#from Monitor.from} method.
+     *       <p>
+     *       If <tt>cd</tt> does not contain this attribute, 
+     *       this attribute will be set to an empty array. </td>
+     * </tr>
+     * <tr>
+     *   <td>lockedSynchronizers</td>
+     *   <td><tt>javax.management.openmbean.CompositeData[]</tt>
+     *       whose element type is the mapped type for
+     *       {@link LockInfo} as specified in the 
+     *       <a href="../../../javax/management/MXBean.html#mapping-rules">
+     *       type mapping rules</a> of 
+     *       {@linkplain javax.management.MXBean MXBeans}.
+     *       <p>
+     *       If <tt>cd</tt> does not contain this attribute, 
+     *       this attribute will be set to an empty array. </td>
+     * </tr>
+     * </table>
+     * </blockquote>
+     *
+     * @param cd <tt>CompositeData</tt> representing a <tt>ThreadInfo</tt>
+     *
+     * @throws IllegalArgumentException if <tt>cd</tt> does not
+     *   represent a <tt>ThreadInfo</tt> with the attributes described
+     *   above.
+     *
+     * @return a <tt>ThreadInfo</tt> object represented
+     *         by <tt>cd</tt> if <tt>cd</tt> is not <tt>null</tt>;
+     *         <tt>null</tt> otherwise.
+     

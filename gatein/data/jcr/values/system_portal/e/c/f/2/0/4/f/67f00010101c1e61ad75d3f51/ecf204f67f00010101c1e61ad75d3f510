@@ -1,0 +1,13 @@
+ The <code>Dictionary</code> class is the abstract parent of any 
+ class, such as <code>Hashtable</code>, which maps keys to values. 
+ Every key and every value is an object. In any one <tt>Dictionary</tt> 
+ object, every key is associated with at most one value. Given a 
+ <tt>Dictionary</tt> and a key, the associated element can be looked up. 
+ Any non-<code>null</code> object can be used as a key and as a value.
+ <p>
+ As a rule, the <code>equals</code> method should be used by 
+ implementations of this class to decide if two keys are the same. 
+ <p>
+ <strong>NOTE: This class is obsolete.  New implementations should
+ implement the Map interface, rather than extending this class.</strong>
+ <DL><DT><B>Authors:</B></DT><DD>unascribed</DD></DL><DL><DT><B>Version:</B></DT><DD>%I%, %G%</DD></DL><DL><DT><B>See Also:</B></DT><DD><a href='../java/util/Map.html' title='Map'>Map</a></DD><DD>java.lang.Object#equals(java.lang.Object)</DD><DD>java.lang.Object#hashCode()</DD><DD><a href='../java/util/Hashtable.html' title='Hashtable'>Hashtable</a></DD></DL><DL><DT><B>Since:</B></DT><DD>JDK1.0</DD></DL>

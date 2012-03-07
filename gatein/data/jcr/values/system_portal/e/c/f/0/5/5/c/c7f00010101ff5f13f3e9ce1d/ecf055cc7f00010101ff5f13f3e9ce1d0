@@ -1,0 +1,11 @@
+
+         * Expunge a stale entry by rehashing any possibly colliding entries
+         * lying between staleSlot and the next null slot.  This also expunges
+         * any other stale entries encountered before the trailing null.  See
+         * Knuth, Section 6.4
+         *
+         * @param staleSlot index of slot known to have null key
+         * @return the index of the next null slot after staleSlot
+         * (all between staleSlot and this slot will have been checked
+         * for expunging).
+         

@@ -1,0 +1,25 @@
+
+     * Returns an estimate of the memory usage of this memory pool.
+     * This method returns <tt>null</tt>
+     * if this memory pool is not valid (i.e. no longer exists).
+     *
+     * <p>
+     * This method requests the Java virtual machine to make
+     * a best-effort estimate of the current memory usage of this
+     * memory pool. For some memory pools, this method may be an
+     * expensive operation that requires some computation to determine
+     * the estimate.  An implementation should document when
+     * this is the case.
+     *
+     * <p>This method is designed for use in monitoring system
+     * memory usage and detecting low memory condition.
+     *
+     * <p>
+     * <b>MBeanServer access</b>:<br>
+     * The mapped type of <tt>MemoryUsage</tt> is
+     * <tt>CompositeData</tt> with attributes as specified in
+     * {@link MemoryUsage#from MemoryUsage}.
+     *
+     * @return a {@link MemoryUsage} object; or <tt>null</tt> if 
+     * this pool not valid.
+     

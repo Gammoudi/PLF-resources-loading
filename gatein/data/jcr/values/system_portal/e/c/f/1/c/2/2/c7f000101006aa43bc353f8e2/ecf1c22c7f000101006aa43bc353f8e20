@@ -1,0 +1,15 @@
+
+     * Returns the minimum value for the given calendar field of this
+     * <code>Calendar</code> instance. The minimum value is defined as
+     * the smallest value returned by the {@link #get(int) get} method
+     * for any possible time value.  The minimum value depends on
+     * calendar system specific parameters of the instance.
+     *
+     * @param field the calendar field.
+     * @return the minimum value for the given calendar field.
+     * @see #getMaximum(int)
+     * @see #getGreatestMinimum(int)
+     * @see #getLeastMaximum(int)
+     * @see #getActualMinimum(int)
+     * @see #getActualMaximum(int)
+     

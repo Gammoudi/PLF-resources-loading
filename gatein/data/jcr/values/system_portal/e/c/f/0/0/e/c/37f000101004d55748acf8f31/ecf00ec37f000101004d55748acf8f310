@@ -1,0 +1,13 @@
+
+     * Parses the string argument as a boolean.  The <code>boolean</code> 
+     * returned represents the value <code>true</code> if the string argument 
+     * is not <code>null</code> and is equal, ignoring case, to the string 
+     * {@code "true"}. <p>
+     * Example: {@code Boolean.parseBoolean("True")} returns <tt>true</tt>.<br>
+     * Example: {@code Boolean.parseBoolean("yes")} returns <tt>false</tt>.
+     *
+     * @param      s   the <code>String</code> containing the boolean
+     *                 representation to be parsed
+     * @return     the boolean represented by the string argument
+     * @since 1.5
+     

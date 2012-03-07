@@ -1,0 +1,7 @@
+
+     * Creates a <code>Locale</code> instance with the given
+     * <code>language</code> and <code>counry</code> and puts the
+     * instance under the given <code>key</code> in the cache. This
+     * method must be called only when initializing the Locale
+     * constants.
+     

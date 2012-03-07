@@ -1,0 +1,133 @@
+<%
+  import org.exoplatform.mail.service.Message;
+  import org.exoplatform.mail.service.Account;
+  import org.exoplatform.mail.service.Utils; 
+  import org.exoplatform.mail.MailUtils;  
+  import org.exoplatform.mail.service.Attachment;
+  import javax.mail.internet.InternetAddress;
+  import org.exoplatform.download.DownloadService;
+  import org.exoplatform.web.application.JavascriptManager;
+  import org.exoplatform.webui.application.WebuiRequestContext;
+  import org.exoplatform.container.PortalContainer;
+  import java.util.Locale;
+  def rcontext = _ctx.getRequestContext() ;
+  JavascriptManager jsmanager = rcontext.getJavascriptManager();
+  jsmanager.addCustomizedOnLoadScript("eXo.mail.UIMailPortlet.showPrintPreview(document.getElementById('printWrapper'));");
+  WebuiRequestContext context = WebuiRequestContext.getCurrentInstance() ;
+  Locale locale = context.getParentAppRequestContext().getLocale() ;
+  
+%>
+
+<div id="printWrapper" class="printWrapper">
+<% uiform.begin() %>
+<!--  Start PrintPriview -->
+  <%
+    Message msg = uicomponent.getPrintMessage();
+    Account acc = uicomponent.getAccount();
+    if (msg != null) {
+      InternetAddress[] fromAddress = Utils.getInternetAddress(msg.getFrom());
+      InternetAddress from = fromAddress[0];
+      def addressFrom = _ctx.appRes(uicomponent.id+ ".label.from") + " : <span style='font-weight:bold;'>" + Utils.getPersonal(from) + "</span>" + 
+        ((from != null) ? ("&lt; " + from.getAddress() + " &gt;") : "");
+      def toList = "";
+      if (!MailUtils.isFieldEmpty(msg.getMessageTo())) { 
+        InternetAddress[] toAddress = InternetAddress.parse(msg.getMessageTo());
+        for (i in 0..(toAddress.length-1)) {
+          InternetAddress address = toAddress[i];
+          if (i > 0) toList += ",";
+          toList += Utils.getPersonal(address) + ((address != null) ? ("&lt; " + address.getAddress() + " &gt;") : "");
+        } 
+      } 
+      def addressTo = _ctx.appRes(uicomponent.id+ ".label.to") + " : " + toList;
+      def sentDate = MailUtils.formatDate('EEEE, MMMM dd, yyyy HH:mm aaa', msg.getReceivedDate(), locale);
+  %>
+  <div class="PrintPreview">
+    <div class="PrintHeader" >
+      <div class="PrintUser"><%=acc.getUserDisplayName()%> &lt; <%=acc.getEmailAddress()%> &gt;</div>
+    </div>
+    <div id="headerPrintData" style='display:none;' >
+      <div style='border-bottom: 1px solid #BBBBBB; font-size:13px; font-weight:bolder; height: 14px; margin: 8px; padding: 5px 0;'>
+        <%=msg.getSubject()%>
+      </div>
+      <div style='border-bottom: 1px solid #BBBBBB; padding: 8px;font-size:10px;'>
+        <div style='float: left;'>
+            <div>$addressFrom</div>
+            <div>$addressTo</div>
+        </div>
+        <div style='float: right;'>$sentDate</div>
+        <div style='clear:both;'></div>
+      </div>
+    </div>
+    
+    <div id="attachmentPrintArea" style='display:none;'>
+      <div style="padding: 5px 8px; border-top: 1px solid #BBBBBB;">
+        <div style="background: 3px center #E7E7E7; margin: 10px 0;"><%=_ctx.appRes(uicomponent.id+ ".label.attachments") %>:</div>
+        <%
+        DownloadService dservice = uicomponent.getDownloadService() ;
+        String attLink ;
+        for (Attachment attach : msg.getAttachments()) {
+          attLink = "/"+ PortalContainer.getInstance().getRestContextName() + "/jcr/" +uicomponent.getRepository() + attach.getPath() ;
+          //attLink = MailUtils.getImageSource(attach, dservice) ;
+          boolean isImage = false ;
+          boolean isSupportedIcon = false ;
+          if (attLink != null ) {
+            if (attach.getMimeType().toLowerCase().indexOf("image") > -1) {
+              isImage = true ;
+            } else if (attach.getMimeType().indexOf("msword") > -1) {
+              isSupportedIcon = true ;
+              attLink = "/mail/skin/DefaultSkin/webui/skinIcons/24x24/icons/WordIcon.gif";
+            } else if (attach.getMimeType().indexOf("pdf") > -1) {
+              isSupportedIcon = true ;
+              attLink = "/mail/skin/DefaultSkin/webui/skinIcons/24x24/icons/PDFIcon.gif";
+            }
+          }
+      %>
+        <div class="ClearFix">
+          <div>
+          <%
+            if (isImage) {
+          %> 
+              <img style="height:auto ;width:200px;padding-right:5px" src="$attLink">
+          <%
+            } else if (isSupportedIcon) {
+          %>
+              <img src="$attLink">
+          <%     
+            }
+          %> 
+          </div>
+          <div style="float:left;padding:10px 4px 0 0;">
+            <div style="font-weight:bolder;"><%=MailUtils.decodeAttachName(attach.getName())%></div>
+            <div><%=_ctx.appRes(uicomponent.id+ ".label.size") %>: <%=MailUtils.convertSize(attach.getSize())%></div>
+          </div>
+        </div>
+      <% } %>
+      </div>
+    </div>
+    <div class="PrintContent"><textarea rows="#" cols="#">
+        <%
+          if (msg.getContentType() !=null && msg.getContentType().toLowerCase().indexOf("text/plain") > -1) {    
+            println(msg.getMessageBody().replaceAll("\n", "<br/>")) ;
+        } else {    
+          println(MailUtils.encodeHTML(msg.getMessageBody())) ; 
+        } %>
+        </textarea></div>
+  </div>
+  <%}%>
+  <% uiform.end() %>
+
+  <style type="text/css" media="print">
+    .DisablePrint{display:none;}
+  </style>
+  <div class="UIAction DisablePrint">
+      <% 
+         String actionLabel = _ctx.appRes(uicomponent.getName() + ".action.Print") ;             
+      %>
+      <a href="javascript:void(0);" onclick="eXo.mail.UIMailPortlet.printMessage()" class="ActionButton LightBlueStyle">$actionLabel</a>
+      <% 
+        String actionLabel2 = _ctx.appRes(uicomponent.getName() + ".action.Cancel") ;   
+        String link = uicomponent.event("Cancel") ;
+      %>
+      <a href="$link" class="ActionButton LightBlueStyle">$actionLabel2</a>
+  </div>
+</div>

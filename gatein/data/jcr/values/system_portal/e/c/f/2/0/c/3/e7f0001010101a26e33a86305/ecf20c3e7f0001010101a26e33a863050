@@ -1,0 +1,4 @@
+
+     * Adds the specified range to this enum set, which is empty prior
+     * to the call.
+     

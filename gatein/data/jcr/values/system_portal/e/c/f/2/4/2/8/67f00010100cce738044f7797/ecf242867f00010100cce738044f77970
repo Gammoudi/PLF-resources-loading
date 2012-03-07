@@ -1,0 +1,8 @@
+
+     * Appends the specified element to the end of this list.
+     *
+     * <p>This method is equivalent to {@link #addLast}.
+     *
+     * @param e element to be appended to this list
+     * @return <tt>true</tt> (as specified by {@link Collection#add})
+     

@@ -1,0 +1,26 @@
+
+     * Returns a string representation of this stack trace element.  The
+     * format of this string depends on the implementation, but the following
+     * examples may be regarded as typical:
+     * <ul>
+     * <li>
+     *   <tt>"MyClass.mash(MyClass.java:9)"</tt> - Here, <tt>"MyClass"</tt>
+     *   is the <i>fully-qualified name</i> of the class containing the
+     *   execution point represented by this stack trace element,
+     *   <tt>"mash"</tt> is the name of the method containing the execution
+     *   point, <tt>"MyClass.java"</tt> is the source file containing the
+     *   execution point, and <tt>"9"</tt> is the line number of the source
+     *   line containing the execution point.
+     * <li>
+     *   <tt>"MyClass.mash(MyClass.java)"</tt> - As above, but the line
+     *   number is unavailable.
+     * <li>
+     *   <tt>"MyClass.mash(Unknown Source)"</tt> - As above, but neither
+     *   the file name nor the line  number are available.
+     * <li>
+     *   <tt>"MyClass.mash(Native Method)"</tt> - As above, but neither
+     *   the file name nor the line  number are available, and the method
+     *   containing the execution point is known to be a native method.
+     * </ul>
+     * @see    Throwable#printStackTrace()
+     

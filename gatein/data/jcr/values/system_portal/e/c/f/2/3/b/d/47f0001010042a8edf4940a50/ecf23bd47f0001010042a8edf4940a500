@@ -1,0 +1,9 @@
+
+     * Returns <tt>true</tt> if this set contains all of the elements
+     * in the specified collection.
+     *
+     * @param c collection to be checked for containment in this set
+     * @return <tt>true</tt> if this set contains all of the elements
+     *        in the specified collection
+     * @throws NullPointerException if the specified collection is null
+     

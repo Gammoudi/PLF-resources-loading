@@ -1,0 +1,16 @@
+
+     * Returns Euler's number <i>e</i> raised to the power of a
+     * <code>double</code> value.  Special cases:
+     * <ul><li>If the argument is NaN, the result is NaN.
+     * <li>If the argument is positive infinity, then the result is 
+     * positive infinity.
+     * <li>If the argument is negative infinity, then the result is 
+     * positive zero.</ul>
+     * 
+     * <p>The computed result must be within 1 ulp of the exact result.
+     * Results must be semi-monotonic.
+     *
+     * @param   a   the exponent to raise <i>e</i> to.
+     * @return  the value <i>e</i><sup><code>a</code></sup>, 
+     *          where <i>e</i> is the base of the natural logarithms.
+     

@@ -1,0 +1,12 @@
+
+     * Returns the name of the source file containing the execution point
+     * represented by this stack trace element.  Generally, this corresponds
+     * to the <tt>SourceFile</tt> attribute of the relevant <tt>class</tt>
+     * file (as per <i>The Java Virtual Machine Specification</i>, Section
+     * 4.7.7).  In some systems, the name may refer to some source code unit
+     * other than a file, such as an entry in source repository.
+     *
+     * @return the name of the file containing the execution point
+     *         represented by this stack trace element, or <tt>null</tt> if
+     *         this information is unavailable.
+     

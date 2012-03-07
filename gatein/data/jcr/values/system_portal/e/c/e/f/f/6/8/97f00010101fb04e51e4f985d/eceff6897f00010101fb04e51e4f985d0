@@ -1,0 +1,8 @@
+
+     * Returns the <tt>GenericDeclaration</tt> object representing the 
+     * generic declaration declared this type variable.
+     *
+     * @return the generic declaration declared for this type variable.
+     *
+     * @since 1.5
+     

@@ -1,0 +1,12 @@
+
+     * Returns true if an annotation for the specified type
+     * is present on this element, else false.  This method
+     * is designed primarily for convenient access to marker annotations.
+     *
+     * @param annotationClass the Class object corresponding to the
+     *        annotation type
+     * @return true if an annotation for the specified annotation
+     *     type is present on this element, else false
+     * @throws NullPointerException if the given annotation class is null
+     * @since 1.5
+     

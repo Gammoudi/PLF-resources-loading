@@ -1,0 +1,5 @@
+
+     * WriteObject is called to save the state of the PropertyPermission
+     * to a stream. The actions are serialized, and the superclass
+     * takes care of the name.
+     

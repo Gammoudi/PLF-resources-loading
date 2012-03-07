@@ -1,0 +1,3 @@
+
+             * Tries to cancel a wait by matching node to itself.
+             

@@ -1,0 +1,8 @@
+ <code>Constructor</code> provides information about, and access to, a single
+ constructor for a class.
+
+ <p><code>Constructor</code> permits widening conversions to occur when matching the
+ actual parameters to newInstance() with the underlying
+ constructor's formal parameters, but throws an
+ <code>IllegalArgumentException</code> if a narrowing conversion would occur.
+ <DL><DT><B>Parameters:</B></DT><DD><code><T></code> -  the class in which the constructor is declared</DD></DL><DL><DT><B>Authors:</B></DT><DD>Kenneth Russell</DD><DD>Nakul Saraiya</DD></DL><DL><DT><B>See Also:</B></DT><DD><a href='../java/lang/reflect/Member.html' title='Member'>Member</a></DD><DD>java.lang.Class</DD><DD>java.lang.Class#getConstructors()</DD><DD>java.lang.Class#getConstructor(Class[])</DD><DD>java.lang.Class#getDeclaredConstructors()</DD></DL>

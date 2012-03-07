@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Module>
+  <ModulePrefs title="Bookmarks" description="Bookmarks list.">
+    <Locale messages="locale/default.xml" />
+    <Locale lang="fr" messages="locale/fr.xml" />
+    <Require feature="dynamic-height"/>
+  </ModulePrefs>
+  
+  <Content type="html">
+  <![CDATA[     
+    
+  <head>
+    <link type="text/css" rel="stylesheet" href="/exo-gadget-resources/skin/exo-gadget/gadget-common.css" />
+    <link type="text/css" rel="stylesheet" href="css/bookmark.css" />
+
+    <script language="javascript" type="text/javascript" src="/exo-gadget-resources/script/jquery/1.6.2/jquery.min.js"></script>
+      
+    <script type="text/javascript">
+      $(function(){
+      
+        function addBookmark(id, name, link) {
+          var icon = '<div class="ArrowIcon"><img class="listIcon off CustomImage" src="/exo-gadget-resources/skin/exo-gadget/images/ArrowRight.gif" alt=""></img></div>';
+          var item = '<a id="bookmark' + id + '" href="' + link + '" target="_parent">' + name + '</a>';
+          var form = '<div class="Form" style="display:none;"> \
+                        <div class="Label"><input type="text" class="EditFormName"></input></div> \
+                        <div class="Label LabelBelow"><input type="text" class="EditFormLink"></input> \
+                          <a class="Button EditFormOK" href="#"><img alt="Form OK" src="/exo-gadget-resources/skin/exo-gadget/images/Ok.gif"></img></a> \
+                          <a class="Button EditFormDelete" href="#"><img alt="Form Delete" src="/exo-gadget-resources/skin/exo-gadget/images/Del.gif"></img></a> \
+                        </div> \
+                      </div>';
+          $("#BookmarkList").append("<div class='ListItem'>" + icon + item + form + "</div>");
+        }
+
+        var imageSource = "/exo-gadget-resources/skin/exo-gadget/images/ArrowRight.gif";
+        var imageSource2 = "/exo-gadget-resources/skin/exo-gadget/images/ArrowDown.gif";
+        var prefs = new gadgets.Prefs();
+
+        $.getJSON("/rest/bookmarks/get", function(bookmarks){
+          $.each(bookmarks, function(i, bookmark){
+            addBookmark(i, bookmark.name.replace(/__SLASH__/g, "/"), bookmark.link.replace(/__SLASH__/g, "/"));
+          });
+          gadgets.window.adjustHeight($("#content").get(0).offsetHeight);
+        });
+
+        var preventDefault = function(e){e.preventDefault()};
+
+
+        function changeToEditMode() {
+          $("a[id^=bookmark]").bind("click", preventDefault);
+          $("a[id^=bookmark]").addClass("Editable");    
+          $("#btnAdd").show();
+          $("img.listIcon").addClass("EditImage CustomImage");
+        }
+
+        function changeToViewMode(){
+          $("a[id^=bookmark]").removeClass("Editable");
+          $("a[id^=bookmark]").unbind("click", preventDefault);
+          $(".Form").hide();
+          $("a[id^=bookmark]").show();
+          $("img.listIcon").removeClass('on').addClass('off').attr({src:imageSource});
+          $("#btnAdd").hide();
+          $("img.listIcon").removeClass("EditImage CustomImage");
+          $.getJSON("/rest/bookmarks/set/" + toJson().replace(/\//g, "__SLASH__"), null);
+        }
+        
+
+        $("#customize").live("click", function(){
+      
+          if ($(this).hasClass('on')) {
+            $(this).removeClass('on').addClass('off').attr({src:"/exo-gadget-resources/skin/exo-gadget/images/Save.png"});
+            changeToEditMode();
+          } else if ($(this).hasClass('off')) {
+            $(this).removeClass('off').addClass('on').attr({src:"/exo-gadget-resources/skin/exo-gadget/images/settings.png"});
+            changeToViewMode();
+          }          
+          
+          gadgets.window.adjustHeight($("#content").get(0).offsetHeight);
+        });
+
+
+        $("body").delegate(".Editable", "click", function(){
+          var $thisForm = $(this).closest(".ListItem").find(".Form");
+          $thisForm.find("input:text[class=EditFormName]").val($(this).text());
+          $thisForm.find("input:text[class=EditFormLink]").val($(this).attr("href"));
+
+          var $imgNew = $(this).closest(".ListItem").find("img.listIcon");
+
+          if ($thisForm.is(':hidden')) {
+            $(".Form").hide();
+            $("a[id^=bookmark]").show();
+            $("img.listIcon").removeClass('on').addClass('off').attr({src:imageSource});
+            $thisForm.show();
+            $imgNew.removeClass('on').addClass('off').attr({src:imageSource2});
+            $(this).hide();
+          } else {
+            $thisForm.hide();
+            $imgNew.removeClass('on').addClass('off').attr({src:imageSource});
+            $(this).show();
+          }
+          gadgets.window.adjustHeight($("#content").get(0).offsetHeight);
+        });
+      
+
+        $("body").delegate(".EditFormOK", "click", function(){
+          var newName = $(this).closest(".Form").find("input:text[class=EditFormName]").val();
+          var newLink = $(this).closest(".Form").find("input:text[class=EditFormLink]").val();
+          var $thisBookmark = $(this).closest(".ListItem").find("a[id^=bookmark]");
+          $thisBookmark.text(newName);
+          $thisBookmark.attr("href", newLink);
+          $(this).closest(".Form").hide();
+          var $link = $(this).closest(".ListItem").find("a[id^=bookmark]");
+          $link.show();
+          var $imgNew = $(this).closest(".ListItem").find("img.listIcon");
+          $imgNew.removeClass('on').addClass('off').attr({src:imageSource});
+          gadgets.window.adjustHeight($("#content").get(0).offsetHeight);
+        });
+
+
+        $("body").delegate(".EditFormDelete", "click", function(){
+          $(this).closest('.ListItem').remove();
+          gadgets.window.adjustHeight($("#content").get(0).offsetHeight);
+        });
+      
+        $("#btnAdd").live("click", function(){
+          $(".Form").hide();
+          $("a[id^=bookmark]").show();
+          $("img.listIcon").removeClass('on').addClass('off').attr({src:imageSource});
+          $("#txtNewName").val("");
+          $("#txtNewLink").val("");
+          $("#frmNew").show();
+          gadgets.window.adjustHeight($("#content").get(0).offsetHeight);
+        });
+      
+
+        $("#btnNewOK").live("click", function(){
+          var newId = $("#BookmarkList .ListItem").size();
+          var newName = $("#txtNewName").val();
+          var newLink = $("#txtNewLink").val();
+          if(newName.length==0 || newLink.length==0) return false;
+          addBookmark(newId, newName, newLink);
+          var $thisBookmark = $("#bookmark" + newId);
+          $thisBookmark.bind("click", preventDefault);
+          $thisBookmark.addClass("Editable");
+          $("#txtNewName").val("");
+          $("#txtNewLink").val("");
+          $thisBookmark.closest(".ListItem").find("img.listIcon").addClass("EditImage");
+          gadgets.window.adjustHeight($("#content").get(0).offsetHeight);
+        });
+            
+      
+        $("#btnNewCancel").live("click", function(){
+          $("#frmNew").hide();
+          gadgets.window.adjustHeight($("#content").get(0).offsetHeight);
+        });
+
+      
+        $("body").delegate(".EditImage", "click", function(){
+          if ($(this).hasClass('on')) {
+            $(this).removeClass('on').addClass('off').attr({src:imageSource});
+            $(this).closest(".ListItem").find("a[id^=bookmark]").click();
+          } else if ($(this).hasClass('off')) {
+            $(this).removeClass('off').addClass('on').attr({src:imageSource2});
+            $(this).closest(".ListItem").find("a[id^=bookmark]").click();
+          }
+        });
+
+        function toJson(){
+          var bookmarks = [];  
+          $("#BookmarkList .ListItem").each(function(index) {
+            $bookmark = $(this).find("a[id^=bookmark]");
+            var bookmark="{";
+            bookmark += '"name":"' + $bookmark.text() + '",';
+            bookmark += '"link":"' + $bookmark.attr("href") + '"}';
+            bookmarks.push(bookmark);
+          });
+          return "[" + bookmarks.join(",") + "]";
+        }
+            
+      });
+    </script>
+  </head>
+
+    <div id="content" class="UIGadgetThemes">
+      
+       <div class="TitGad ClearFix">
+
+          <div style="float:right; margin-top:2px; margin-right:10px;">
+                <img id="customize" class="on" src="/exo-gadget-resources/skin/exo-gadget/images/settings.png" alt=""></img>
+          </div>
+          <div class="ContTit">__MSG_title__</div>
+       </div>
+    
+      <div class="ContBookmark GadCont">
+        <div id="BookmarkList" class="BookMarks"></div>
+        <div style="clear: both; padding-top: 6px;">
+        <a id="btnAdd" class="btnAdd" style="display:none; cursor: pointer;">__MSG_addbutton__</a>
+      
+        <table id="frmNew" class="Form" style="display:none; margin-left: 8px;">
+          <tr>
+            <td><label for="txtNewName">__MSG_name__</label></td>
+            <td><input type="text" id="txtNewName"></input></td>
+          </tr>
+          <tr>
+            <td><label for="txtNewLink">__MSG_url__</label></td>
+            <td><input type="text" id="txtNewLink"></input></td>
+            <td>
+              <a id="btnNewOK" class="Button" href="#"><img alt="New OK" src="images/Ok.gif"></img></a>
+              <a id="btnNewCancel" class="ButtonDel" href="#"><img alt="New Delete" src="images/Del.gif"></img></a>
+            </td>
+          </tr>
+        </table>
+        </div>
+      </div>
+      
+     </div>
+  ]]>
+</Content>
+</Module>

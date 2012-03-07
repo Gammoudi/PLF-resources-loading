@@ -1,0 +1,5 @@
+
+             * The next two methods are overridden to protect against
+             * an unscrupulous collection whose contains(Object o) method
+             * senses when o is a Map.Entry, and calls o.setValue.
+             

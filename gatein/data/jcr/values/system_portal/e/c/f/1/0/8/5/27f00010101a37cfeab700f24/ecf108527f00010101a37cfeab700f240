@@ -1,0 +1,6 @@
+
+     * Unconditionally sets the value of both the reference and mark.
+     *
+     * @param newReference the new value for the reference
+     * @param newMark the new value for the mark
+     

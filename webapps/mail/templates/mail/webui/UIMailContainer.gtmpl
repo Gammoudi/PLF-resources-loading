@@ -1,0 +1,22 @@
+<div class="MailContainer ClearFix">
+  <div class="UINavigationContainer">
+    
+    // render UISelectAccount here
+    
+    // render UIFolderContainer here
+    
+    // render UITagContainer here                  
+  </div>
+<!-- End Mail UINavigationContainer -->          
+<!--  Start Mail Message Area  -->
+  <div class="UIMessageArea">
+    
+    // render MessageActionBar here
+    
+    
+    // reder UIMessageList here
+    
+    
+    //render UIMessagePreview here
+  </div>
+</div>

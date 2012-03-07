@@ -1,0 +1,4 @@
+
+     * Returns the entry associated with the specified key in this map.
+     * Returns null if the map contains no mapping for this key.
+     

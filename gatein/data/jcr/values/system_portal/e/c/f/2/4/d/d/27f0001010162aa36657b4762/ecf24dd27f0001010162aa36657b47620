@@ -1,0 +1,10 @@
+
+     * Returns the next element in the list.  This method may be called
+     * repeatedly to iterate through the list, or intermixed with calls to
+     * <tt>previous</tt> to go back and forth.  (Note that alternating calls
+     * to <tt>next</tt> and <tt>previous</tt> will return the same element
+     * repeatedly.)
+     *
+     * @return the next element in the list.
+     * @exception NoSuchElementException if the iteration has no next element.
+     

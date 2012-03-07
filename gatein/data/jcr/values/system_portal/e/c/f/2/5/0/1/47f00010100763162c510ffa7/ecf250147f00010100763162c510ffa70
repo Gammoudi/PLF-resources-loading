@@ -1,0 +1,7 @@
+
+     * Returns true if this Locale is equal to another object.  A Locale is
+     * deemed equal to another Locale with identical language, country,
+     * and variant, and unequal to all other objects.
+     *
+     * @return true if this Locale is equal to the specified object.
+     

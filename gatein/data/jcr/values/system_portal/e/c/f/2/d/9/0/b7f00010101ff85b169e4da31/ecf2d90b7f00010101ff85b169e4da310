@@ -1,0 +1,3 @@
+ ThreadLocal subclass. Easiest to explicitly define for sake
+ of deserialization mechanics.
+         

@@ -1,0 +1,8 @@
+
+     * Returns the length of the specified array object, as an <code>int</code>.
+     *
+     * @param array the array
+     * @return the length of the array
+     * @exception IllegalArgumentException if the object argument is not
+     * an array
+     

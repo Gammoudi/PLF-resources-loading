@@ -1,0 +1,9 @@
+
+     * Returns an iterator over the elements contained in this set.  The
+     * iterator traverses the elements in their <i>natural order</i> (which is
+     * the order in which the enum constants are declared). The returned
+     * Iterator is a "weakly consistent" iterator that will never throw {@link
+     * ConcurrentModificationException}.
+     *
+     * @return an iterator over the elements contained in this set
+     

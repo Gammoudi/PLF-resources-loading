@@ -1,0 +1,10 @@
+
+     * Returns a String that represents the character sequence in the
+     * array specified.
+     *
+     * @param   data     the character array.
+     * @param   offset   initial offset of the subarray.
+     * @param   count    length of the subarray.
+     * @return  a <code>String</code> that contains the characters of the
+     *          specified subarray of the character array.
+     

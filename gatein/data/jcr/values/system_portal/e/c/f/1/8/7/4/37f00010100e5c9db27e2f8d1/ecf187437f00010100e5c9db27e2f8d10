@@ -1,0 +1,3 @@
+ A single background thread ("the event notification thread") monitors
+ the event queue and delivers events that are placed on the queue.
+     

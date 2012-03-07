@@ -1,0 +1,4 @@
+
+         * Utility to create submaps, where given bounds override
+         * unbounded(null) ones and/or are checked against bounded ones.
+         

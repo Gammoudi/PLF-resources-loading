@@ -1,0 +1,6 @@
+
+     * Utility for ceiling, floor, lower, higher methods.
+     * @param kkey the key
+     * @param rel the relation -- OR'ed combination of EQ, LT, GT
+     * @return nearest node fitting relation, or null if no such
+     

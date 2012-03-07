@@ -1,0 +1,2 @@
+serviceClass: org.xwiki.gwt.wysiwyg.client.cleaner.HTMLCleaner
+path: 0C7E4BF5CF1BD41897F08C1FF040DE18.gwt.rpc

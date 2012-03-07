@@ -1,0 +1,3 @@
+ Implements the Unicode category ALL and the dot metacharacter when
+ in dotall mode.
+     

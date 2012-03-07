@@ -1,0 +1,5 @@
+
+     * If using comparator, return a ComparableUsingComparator, else
+     * cast key as Comparable, which may cause ClassCastException,
+     * which is propagated back to caller.
+     

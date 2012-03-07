@@ -1,0 +1,7 @@
+ Synchronization control for FutureTask. Note that this must be
+ a non-static inner class in order to invoke the protected
+ <tt>done</tt> method. For clarity, all inner class support
+ methods are same as outer, prefixed with "inner".
+
+ Uses AQS sync state to represent run status
+     

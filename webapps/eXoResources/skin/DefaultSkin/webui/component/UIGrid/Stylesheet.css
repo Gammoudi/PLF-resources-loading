@@ -1,0 +1,150 @@
+/**
+ * Copyright (C) 2009 eXo Platform SAS.
+ * 
+ * This is free software; you can redistribute it and/or modify it
+ * under the terms of the GNU Lesser General Public License as
+ * published by the Free Software Foundation; either version 2.1 of
+ * the License, or (at your option) any later version.
+ * 
+ * This software is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * Lesser General Public License for more details.
+ * 
+ * You should have received a copy of the GNU Lesser General Public
+ * License along with this software; if not, write to the Free
+ * Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA
+ * 02110-1301 USA, or see the FSF site: http://www.fsf.org.
+ */
+
+.UIGrid {
+	margin: auto;	
+	table-layout:fixed;
+}
+
+.UIGrid .center {
+	text-align:center;
+}
+
+.UIGrid th {
+	line-height: 20px;
+	background: #e1e1e1 url('background/ThGridRepeatBg1x28.png') repeat-x;
+	padding: 5px 10px;
+	text-align:left;/* orientation=lt */
+	text-align:right;/* orientation=rt */
+	border-left: 1px solid #fff;/* orientation=lt */
+	border-right: 1px solid #fff;/* orientation=rt */
+}
+
+
+.UIGrid td {
+	padding: 5px 10px;
+	border: 1px solid #fff;
+	border-right: 0; /* orientation=lt */
+	border-left: 0; /* orientation=rt */	
+	vertical-align: middle;
+}
+
+.UIGrid .OddRow {
+	background-color:#f9f9f9;
+}
+
+.UIGrid .EvenRow {
+	background-color:#f4f4f4;
+}
+
+.UIGrid .OddRow td {
+	border-bottom:0;
+	border-top:0;
+}
+
+.UIGrid .ActionContainer {
+	white-space: nowrap;
+	text-align: center;
+}
+
+.UIGrid .ActionContainer a {
+	margin: 0px 4px;
+	color: #024369;
+}
+
+.UIGrid .ActionContainer img {
+	margin: 0px 4px;
+	width: 20px;
+	height: 20px;
+	background-position: center;
+	background-repeat: no-repeat;
+	float: none; 
+	cursor: pointer;
+}
+
+.UIGrid .Text {
+	overflow: hidden;
+}
+
+.UIGrid .Number {
+	text-align: center;
+}
+
+.UIGrid .ValueWithIcon {
+	float: left; /* orientation=lt */
+	float: right; /* orientation=rt */
+	text-align: right;
+}
+
+.UIGrid .ViewIcon {
+	width: 16px; height: 16px;
+	background: url('/eXoResources/skin/DefaultSkin/skinIcons/16x16/icons/LightBulbOn.gif') no-repeat;
+}
+
+.UIGrid .DeleteIcon {
+	width: 16px; height: 16px;
+	background: url('/eXoResources/skin/DefaultSkin/skinIcons/16x16/icons/DustBin.gif') no-repeat;
+}
+
+.UIGrid .EditInfoIcon {
+	width: 16px; height: 16px;
+	background: url('/eXoResources/skin/DefaultSkin/skinIcons/16x16/icons/EditIcon.gif') no-repeat;
+}
+
+.UIGrid .ExcuteIcon {
+	width: 16px; height: 16px;
+	background: url('/eXoResources/skin/DefaultSkin/skinIcons/16x16/icons/PageYellowLight.gif') no-repeat;
+}
+
+.UIGrid .AddNewIcon {	
+	width: 16px; height: 16px;
+	background: url('/eXoResources/skin/DefaultSkin/skinIcons/16x16/icons/BlueCirclePlus.gif') no-repeat;
+}
+
+/*###################### UIListUsers Icon ######################*/
+
+.UIGrid .DeleteUserIcon {
+	width: 16px; height: 16px;
+	background: url('/eXoResources/skin/DefaultSkin/skinIcons/16x16/icons/DustBin.gif') no-repeat;
+	margin: auto;
+}
+
+.UIGrid .ViewUserInfoIcon {
+	width: 16px; height: 16px;
+	background: url('/eXoResources/skin/DefaultSkin/skinIcons/16x16/icons/EditIcon.gif') no-repeat;
+	margin: auto;
+}
+
+/*###################### UIListMembershipType Icon ######################*/
+
+.UIGrid .DeleteMembershipIcon {
+	width: 16px; height: 16px;
+	background: url('/eXoResources/skin/DefaultSkin/skinIcons/16x16/icons/DustBin.gif') no-repeat;
+	margin: auto;	
+}
+
+.UIGrid .EditMembershipIcon {
+	width: 16px; height: 16px;
+	background: url('/eXoResources/skin/DefaultSkin/skinIcons/16x16/icons/EditIcon.gif') no-repeat;
+	margin: auto;
+}
+
+.UIGrid input.checkbox {
+	width: 15px; height: 15px;
+}

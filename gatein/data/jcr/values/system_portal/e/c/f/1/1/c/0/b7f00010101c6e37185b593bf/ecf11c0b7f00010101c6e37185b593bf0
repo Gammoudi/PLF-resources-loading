@@ -1,0 +1,11 @@
+
+     * Returns <tt>true</tt> if this map maps one or more keys to the
+     * specified value. Note: This method requires a full internal
+     * traversal of the hash table, and so is much slower than
+     * method <tt>containsKey</tt>.
+     *
+     * @param value value whose presence in this map is to be tested
+     * @return <tt>true</tt> if this map maps one or more keys to the
+     *         specified value
+     * @throws NullPointerException if the specified value is null
+     

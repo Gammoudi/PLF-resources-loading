@@ -1,0 +1,3 @@
+ A PropertyPermissionCollection stores a set of PropertyPermission
+ permissions.<DL><DT><B>serial:</B></DT><DD>include</DD></DL>
+ <DL><DT><B>Authors:</B></DT><DD>Roland Schemers</DD></DL><DL><DT><B>Version:</B></DT><DD>%I%, %G%</DD></DL><DL><DT><B>See Also:</B></DT><DD>java.security.Permission</DD><DD>java.security.Permissions</DD><DD>java.security.PermissionCollection</DD></DL>

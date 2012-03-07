@@ -1,0 +1,3 @@
+ Node to anchor at the end of input. This is the absolute end, so this
+ should not match at the last newline before the end as $ will.
+     

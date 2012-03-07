@@ -1,0 +1,507 @@
+/************************
+ *** GENERIC
+ ************************/
+
+#UIPortalApplication, .UIFooterPortlet {
+	background-color: #DEDFDF !important;
+}
+
+.UIWorkingWorkspace {
+	background-color: #B4B4B4 !important;
+}
+
+.UIPageBody .VIEW-PAGEBODY .UIPage {
+	padding: 0 8px !important;
+}
+
+#ACMEBanner {
+	margin:0 10px;
+}
+
+.TextBanner {
+	padding: 5px;
+}
+
+#ACMESignin, #siteSearchBox {
+	padding: 10px 0px;
+}
+
+
+.RegisterTDContainer  {
+	width:550;
+}
+
+.ACMELeftTDContainer  {
+	padding: 10px 10px 0 10px;
+}
+
+.ACMERightTDContainer {
+	width: 230px;
+	padding: 10px 10px 0 0;
+}
+
+.ACMELeftTDContainer #UIContainer-ACMELeft {
+	width: auto !important;
+}
+
+.ACMERightTDContainer #UIContainer-ACMERight {
+	width: auto !important;
+}
+
+.ACMELeftTDContainer .UICLVPortlet {
+	min-width: 0px !important;
+	padding-bottom: 10px;
+}
+
+.ACMERightTDContainer .UICLVPortlet {
+	min-width: 0px !important;
+	padding-bottom: 10px;
+}
+
+.PCV .Title {
+    color: #2A5D3F;
+    font-size: 24px;
+}
+
+
+.PCV .DateAndMail {
+    color: #999999;
+    font-size: 10px;
+}
+
+
+
+.UIOptionBar {
+  border-style: dotted none;
+  border-color: #999999;
+  border-width: 1px;
+  margin: 0px 0px 5px;
+  background: #FFFFFF;
+  height: 21px; line-height: 21px;
+  overflow: hidden;
+}
+
+.UIOptionBar .BackButton {
+  padding-left: 0px;
+}
+
+.UIOptionBar .ActionIcon {
+  float: right;
+  margin: 0px 10px;
+  height: 21px;
+  color: #333333;
+  cursor: pointer;
+  display: block;
+}
+
+.UIOptionBar .ActionIcon:hover {
+  color: DA0005;
+}
+
+.UIOptionBar .PrintIcon {
+  background: url('/web-presentation/skin/SingleContentViewer/DefaultSkin/icons/16x16/ActionIcon.gif') no-repeat bottom left;
+  padding-left: 25px;
+}
+
+.UIOptionBar .EmailIcon {
+  background: url('/web-presentation/skin/SingleContentViewer/DefaultSkin/icons/16x16/ActionIcon.gif') no-repeat top left;
+  padding-left: 20px;
+}
+.UIOptionBar .CommentIcon {
+  background: url('/web-presentation/skin/SingleContentViewer/DefaultSkin/icons/16x16/ActionIcon.gif') no-repeat left -21px;
+  padding-left: 20px;
+}
+
+.UIPageBody{
+  background: #003C0F;
+}
+.UIPageBody .TitleBarL {
+  background: none;
+  padding-left: 0px;
+}
+.UIPageBody .TitleBarR {
+  background: none;
+  padding-right: 0px;
+}
+
+.UIPageBody .TitleBarM {
+  background: none;
+  height: 21px;
+  padding-left: 0px;
+  font-weight: normal;
+  color: #999999;
+  line-height: 20px;
+}
+
+
+
+/************************
+ *** NAVIGATION
+ ************************/
+
+
+.UIWCMNavigationPortlet {
+  !position: relative;
+  background: #003A0E;
+  padding: 0px 8px;
+}
+
+.UIWCMNavigationPortlet .UINavigationBar {
+  background: #E5681E;
+  -moz-border-radius-topleft:5px;
+  -webkit-border-top-left-radius:5px;
+  -moz-border-radius-topright:5px;
+  -webkit-border-top-right-radius:5px;
+  padding: 4px 8px 0px 20px;
+  height: 28px;
+}
+
+.UIWCMNavigationPortlet .UINavigationBar .ControlButton {
+  float:left;
+  line-height:21px;
+  height: 26px;
+  color: white;
+}
+
+.UIWCMNavigationPortlet .UINavigationBar .ControlButton a {
+  color: white;
+}
+
+.UIWCMNavigationPortlet .UINavigationBar .ControlButton a:hover {
+  color: #b7b7b7;
+}
+
+.UIWCMNavigationPortlet .UINavigationBar .HoverButton a {
+  color: #003C0F;
+    }
+
+.UIWCMNavigationPortlet .UINavigationBar .HoverButton {
+  background: url('/ecmdemo/rest-ecmdemo/jcr/repository/collaboration/sites%20content/live/acme/web%20contents/site%20artifacts/Navigation/medias/images/CenterHilineButton.gif') no-repeat center top;
+}
+
+.UIWCMNavigationPortlet .UINavigationBar .HoverButton .Button{
+  background: white;
+  -moz-border-radius:3px;
+  -webkit-border-radius:3px;
+  height: 21px;
+  padding: 0px 8px;
+  color: #003C0F;
+}
+
+.UIWCMNavigationPortlet .UINavigationBar .Button{
+  height: 26px;
+  margin-left: 6px;
+  margin-right: 6px;
+  cursor: pointer;
+}
+
+.UIWCMNavigationPortlet .UINavigationBar .Button:hover{
+  color: #b7b7b7;
+}
+
+.UIWCMNavigationPortlet .UIWorkingWorkspace{
+  background: white;
+  padding: 8px;
+  -moz-border-radius-bottomleft:5px;
+  -webkit-border-bottom-left-radius:5px;
+  -moz-border-radius-bottomright:5px;
+  -webkit-border-bottom-right-radius:5px;
+}
+
+
+/************************
+ *** DOCUMENTS CLV
+ ************************/
+
+.DocumentsCLVTemplate .Contents {
+  padding: 10px;
+  border: 1px solid #ededee;
+}
+
+.DocumentsCLVTemplate .TitleBarL {
+  background: url('/ecmdemo/rest-ecmdemo/jcr/repository/collaboration/sites%20content/live/acme/medias/images/GlobalImages/CompanyBarL.gif') no-repeat left top;
+  padding-left: 4px;
+}
+.DocumentsCLVTemplate .TitleBarR {
+  background: url('/ecmdemo/rest-ecmdemo/jcr/repository/collaboration/sites%20content/live/acme/medias/images/GlobalImages/CompanyBarR.gif') no-repeat right top;
+  padding-right: 4px;
+}
+
+.DocumentsCLVTemplate .TitleBarM {
+  background: url('/ecmdemo/rest-ecmdemo/jcr/repository/collaboration/sites%20content/live/acme/medias/images/GlobalImages/CompanyBarM.gif') repeat-x;
+  height: 27px;
+  color: #2A5D3F;
+  line-height: 26px;
+  padding-left: 10px;
+  font-weight: bold;
+}
+
+
+.DocumentsCLVTemplate .Contents .Column1 {
+  border-bottom: 1px solid #ededee;
+  margin-bottom: 5px;
+}
+
+.DocumentsCLVTemplate .Contents .Column1 .Image {
+  float: left;
+  margin-right: 8px;
+}
+
+.DocumentsCLVTemplate .Contents .Column1 .Title {
+  color: #2A5D3F;
+  line-height: 18px;
+  font-weight: bold;
+}
+
+.DocumentsCLVTemplate .Contents .Column1 .DateAndMail {
+  color: #2A5D3F;
+  line-height: 18px;
+  font-size: 10px;
+  float: right;
+}
+
+.DocumentsCLVTemplate .Contents .Column1 .ReadLink {
+  text-align: right;
+  margin-bottom: 6px;
+}
+
+.DocumentsCLVTemplate .Column1 .ReadLink a {
+  color: #E5681E;
+  font-size: 10px;
+}
+
+.DocumentsCLVTemplate .Column1 .ReadLink a:hover {
+  color: #058ee6;
+}
+
+.DocumentsCLVTemplate .Content {
+/*  margin-top: 8px;*/
+}
+
+.DocumentsCLVTemplate .Content .LastContent{
+  padding: 8px 0px 8px 70px;
+}
+
+.DocumentsCLVTemplate .Contents .Content .Title{
+  color: #2A5D3F;
+  font-weight: bold;
+  padding-left: 20px;
+}
+
+
+/************************
+ *** ONE COLUMN CLV
+ ************************/
+
+.OneColumnCLVTemplate .Contents {
+  padding: 10px;
+  border: 1px solid #ededee;
+}
+
+.OneColumnCLVTemplate .TitleBarL {
+  background: url('/ecmdemo/rest-ecmdemo/jcr/repository/collaboration/sites%20content/live/acme/medias/images/GlobalImages/CompanyBarL.gif') no-repeat left top;
+  padding-left: 4px;
+}
+.OneColumnCLVTemplate .TitleBarR {
+  background: url('/ecmdemo/rest-ecmdemo/jcr/repository/collaboration/sites%20content/live/acme/medias/images/GlobalImages/CompanyBarR.gif') no-repeat right top;
+  padding-right: 4px;
+}
+
+.OneColumnCLVTemplate .TitleBarM {
+  background: url('/ecmdemo/rest-ecmdemo/jcr/repository/collaboration/sites%20content/live/acme/medias/images/GlobalImages/CompanyBarM.gif') repeat-x;
+  height: 27px;
+  color: #2A5D3F;
+  line-height: 26px;
+  padding-left: 10px;
+  font-weight: bold;
+}
+
+
+.OneColumnCLVTemplate .Contents .Column1 {
+  border-bottom: 1px solid #ededee;
+  margin-bottom: 5px;
+}
+
+.OneColumnCLVTemplate .Contents .Column1 .Image {
+  float: left;
+  margin-right: 8px;
+}
+
+.OneColumnCLVTemplate .Contents .Column1 .Title {
+  color: #2A5D3F;
+  line-height: 18px;
+  font-weight: bold;
+}
+
+.OneColumnCLVTemplate .Contents .Column1 .DateAndMail {
+  color: #2A5D3F;
+  line-height: 18px;
+  font-size: 10px;
+}
+
+.OneColumnCLVTemplate .Contents .Column1 .ReadLink {
+  text-align: right;
+  margin-bottom: 6px;
+}
+
+.OneColumnCLVTemplate .Column1 .ReadLink a {
+  color: #E5681E;
+  font-size: 10px;
+}
+
+.OneColumnCLVTemplate .Column1 .ReadLink a:hover {
+  color: #058ee6;
+}
+
+.OneColumnCLVTemplate .Content {
+  margin-top: 8px;
+}
+
+.OneColumnCLVTemplate .Content .LastContent{
+  padding: 8px 0px 8px 70px;
+}
+
+
+.OneColumnCLVTemplate .Contents .Content .Title{
+  color: #2A5D3F;
+/*  margin-bottom: 8px;*/
+  font-weight: bold;
+}
+
+
+
+
+/************************
+ *** TWO COLUMNS CLV
+ ************************/
+
+
+.TwoColumnsCLVTemplate .CLV {
+  background: #fff;
+  padding: 10px;
+  -moz-border-radius-topleft: 5px;
+  -webkit-border-top-left-radius: 5px;
+  -moz-border-radius-topright: 5px;
+  -webkit-border-top-right-radius: 5px;
+}
+
+.TwoColumnsCLVTemplate .TitleBarM {
+  font-size: 16px;
+  color: #2A5D3F;
+  margin-bottom: 5px;
+}
+
+.TwoColumnsCLVTemplate .Contents {
+  padding-top: 10px;
+}
+
+.TwoColumnsCLVTemplate .Contents .Column2 {
+  float: left;
+  width: 48%;
+  padding: 0px 10px 10px 0px;
+}
+
+.TwoColumnsCLVTemplate .Contents .Image {
+  display: block;
+  float: left;
+}
+
+.TwoColumnsCLVTemplate .Contents .Image img {
+  width: 58px;
+  border: 1px solid #ebecec;
+}
+
+.TwoColumnsCLVTemplate .Contents .Content {
+  padding: 0px 0px 0px 70px;
+  color: #737373;
+  line-height: 15px;
+}
+
+.TwoColumnsCLVTemplate .Contents .Content .Title {
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.TwoColumnsCLVTemplate .Contents .LinkMore {
+  text-align: right;
+  padding: 5px 5px 0px 0px;
+}
+
+.TwoColumnsCLVTemplate .Contents .LinkMore a {
+  color: #E5681E;
+  text-decoration: none;
+}
+
+.TwoColumnsCLVTemplate .Contents .LinkMore a:hover {
+  text-decoration: underline;
+}
+
+
+
+
+
+
+/************************
+ *** PAGE SPECIFIC
+ ************************/
+
+.ACMEDocsTDContainer .UICLVPortlet{
+  min-width: none;
+}
+
+.ACMEDocsTDContainer .DocumentContent .Contents .Title {
+  background: url('/ecmdemo/rest-ecmdemo/jcr/repository/collaboration/sites%20content/live/acme/medias/images/GlobalImages/DocumentContentIcon.gif') no-repeat left center;
+  padding-left: 20px;
+  color: #565759;
+  line-height: 22px;
+  font-weight: bold;
+  margin-top: 8px;
+}
+
+.ACMESearchTDContainer{
+  width: 140px;
+}
+
+.ACMESigninTDContainer .LoginIcon, .ACMESigninTDContainer .LogoutIcon, .ACMESigninTDContainer .LanguageIcon, .ACMESigninTDContainer .RegisterIcon {
+  color: white;
+}
+
+.ACMESigninTDContainer a{
+  text-decoration: none;
+}
+
+.ACMESigninTDContainer a:hover{
+  color: #c9c9c9;
+}
+
+
+.ACMESigninTDContainer {
+  width: 350px;
+}
+
+#UIContainer-ACMEBanner{
+  background: #003C0F;
+  padding: 10px;
+}
+
+.ACMELogoTDContainer{
+  width: auto;
+}
+
+
+#acme-latest-news .CLV, #acme-latest-documents .CLV {
+  width: 230px;
+  padding-bottom: 10px;
+}
+
+#acme-navigation {
+ height: 30px;
+}
+.UIFooterPortlet {
+ background: #DEDFDF;
+}
+
+.ACMESearchTDContainer .UIPresentationContainer{
+  position: relative;
+  width: 150px;
+}

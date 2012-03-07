@@ -1,0 +1,6 @@
+
+     * This method gets called when a child node is added.
+     *
+     * @param evt A node change event object describing the parent
+     *            and child node.
+     

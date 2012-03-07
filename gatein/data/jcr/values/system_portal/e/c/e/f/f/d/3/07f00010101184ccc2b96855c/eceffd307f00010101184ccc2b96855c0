@@ -1,0 +1,18 @@
+
+     * Enables or disables verbose output for the memory
+     * system.  The verbose output information and the output stream
+     * to which the verbose information is emitted are implementation
+     * dependent.  Typically, a Java virtual machine implementation
+     * prints a message whenever it frees memory at garbage collection. 
+     *
+     * <p>
+     * Each invocation of this method enables or disables verbose
+     * output globally.
+     *
+     * @param value <tt>true</tt> to enable verbose output;
+     *              <tt>false</tt> to disable.
+     *
+     * @exception  java.lang.SecurityException if a security manager
+     *             exists and the caller does not have
+     *             ManagementPermission("control").
+     

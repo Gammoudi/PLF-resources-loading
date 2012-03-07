@@ -1,0 +1,19 @@
+
+     * Return the value associated with the specified key at this preference
+     * node, or <tt>null</tt> if there is no association for this key, or the
+     * association cannot be determined at this time.  It is guaranteed that
+     * <tt>key</tt> is non-null.  Also, it is guaranteed that this node has
+     * not been removed.  (The implementor needn't check for either of these
+     * things.) 
+     *
+     * <p> Generally speaking, this method should not throw an exception
+     * under any circumstances.  If, however, if it does throw an exception,
+     * the exception will be intercepted and treated as a <tt>null</tt>
+     * return value.
+     *
+     * <p>This method is invoked with the lock on this node held.
+     *
+     * @return the value associated with the specified key at this preference
+     *          node, or <tt>null</tt> if there is no association for this
+     *          key, or the association cannot be determined at this time.
+     

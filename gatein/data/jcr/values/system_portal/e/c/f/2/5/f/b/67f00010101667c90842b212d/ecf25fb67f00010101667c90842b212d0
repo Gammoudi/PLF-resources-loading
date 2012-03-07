@@ -1,0 +1,8 @@
+
+     * Returns a new PermissionCollection object for storing
+     * PropertyPermission objects.
+     * <p>
+     *
+     * @return a new PermissionCollection object suitable for storing
+     * PropertyPermissions.
+     

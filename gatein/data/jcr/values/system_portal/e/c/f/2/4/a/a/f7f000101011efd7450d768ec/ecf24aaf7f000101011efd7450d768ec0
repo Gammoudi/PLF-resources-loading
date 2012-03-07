@@ -1,0 +1,16 @@
+
+     * Removes from this list all of its elements that are contained in the
+     * specified collection (optional operation).
+     *
+     * @param c collection containing elements to be removed from this list
+     * @return <tt>true</tt> if this list changed as a result of the call
+     * @throws UnsupportedOperationException if the <tt>removeAll</tt> operation
+     *         is not supported by this list
+     * @throws ClassCastException if the class of an element of this list
+     *         is incompatible with the specified collection (optional)
+     * @throws NullPointerException if this list contains a null element and the
+     *         specified collection does not permit null elements (optional),
+     *         or if the specified collection is null
+     * @see #remove(Object)
+     * @see #contains(Object)
+     

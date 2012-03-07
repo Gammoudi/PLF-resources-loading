@@ -1,0 +1,22 @@
+
+     * Returns the character (Unicode code point) at the specified
+     * index. The index refers to <code>char</code> values
+     * (Unicode code units) and ranges from <code>0</code> to
+     * {@link #length()}<code> - 1</code>.
+     *
+     * <p> If the <code>char</code> value specified at the given index
+     * is in the high-surrogate range, the following index is less
+     * than the length of this <code>String</code>, and the
+     * <code>char</code> value at the following index is in the
+     * low-surrogate range, then the supplementary code point
+     * corresponding to this surrogate pair is returned. Otherwise,
+     * the <code>char</code> value at the given index is returned.
+     *
+     * @param      index the index to the <code>char</code> values
+     * @return     the code point value of the character at the
+     *             <code>index</code>
+     * @exception  IndexOutOfBoundsException  if the <code>index</code>
+     *             argument is negative or not less than the length of this
+     *             string.
+     * @since      1.5
+     

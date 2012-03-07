@@ -1,0 +1,10 @@
+ Each use of the barrier is represented as a generation instance.
+ The generation changes whenever the barrier is tripped, or
+ is reset. There can be many generations associated with threads
+ using the barrier - due to the non-deterministic way the lock
+ may be allocated to waiting threads - but only one of these
+ can be active at a time (the one to which <tt>count</tt> applies)
+ and all the rest are either broken or tripped.
+ There need not be an active generation if there has been a break
+ but no subsequent reset.
+     

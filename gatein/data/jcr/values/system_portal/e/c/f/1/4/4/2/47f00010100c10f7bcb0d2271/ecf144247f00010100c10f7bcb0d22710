@@ -1,0 +1,9 @@
+ Submaps returned by <a href='../java/util/concurrent/ConcurrentSkipListMap.html' title='ConcurrentSkipListMap'>ConcurrentSkipListMap</a> submap operations
+ represent a subrange of mappings of their underlying
+ maps. Instances of this class support all methods of their
+ underlying maps, differing in that mappings outside their range are
+ ignored, and attempts to add mappings outside their ranges result
+ in java.lang.IllegalArgumentException.  Instances of this class are
+ constructed only using the <tt>subMap</tt>, <tt>headMap</tt>, and
+ <tt>tailMap</tt> methods of their underlying maps.<DL><DT><B>serial:</B></DT><DD>include</DD></DL>
+     

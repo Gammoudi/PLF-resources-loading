@@ -1,0 +1,9 @@
+
+     * Returns the fixed date of the first day of the year (usually
+     * January 1) before the specified date.
+     *
+     * @param date the date for which the first day of the year is
+     * calculated. The date has to be in the cut-over year (Gregorian
+     * or Julian).
+     * @param fixedDate the fixed date representation of the date
+     

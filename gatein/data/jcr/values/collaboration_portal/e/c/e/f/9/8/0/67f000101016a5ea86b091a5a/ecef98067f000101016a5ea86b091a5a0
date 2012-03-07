@@ -1,0 +1,11 @@
+-- listing properties --
+product.groupId=org.exoplatform.platform
+org.exoplatform.platform=3.5.2-SNAPSHOT
+org.exoplatform.social=1.2.8-SNAPSHOT
+org.exoplatform.cs=2.2.8-SNAPSHOT
+org.exoplatform.portal=3.2.3-PLF-SNAPSHOT
+product.buildNumber=20120307
+org.exoplatform.ks=2.2.8-SNAPSHOT
+product.revision=80131
+org.exoplatform.ecms=2.3.6-SNAPSHOT
+org.exoplatform.ide=1.1.5-SNAPSHOT

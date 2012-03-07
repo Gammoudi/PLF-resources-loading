@@ -1,0 +1,8 @@
+
+     * Returns a String that represents the character sequence in the
+     * array specified.
+     *
+     * @param   data   the character array.
+     * @return  a <code>String</code> that contains the characters of the
+     *          character array.
+     

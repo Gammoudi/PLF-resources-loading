@@ -1,0 +1,12 @@
+
+     * Compares this <tt>Boolean</tt> instance with another.
+     *
+     * @param   b the <tt>Boolean</tt> instance to be compared
+     * @return  zero if this object represents the same boolean value as the
+     *          argument; a positive value if this object represents true
+     *          and the argument represents false; and a negative value if
+     *          this object represents false and the argument represents true
+     * @throws  NullPointerException if the argument is <tt>null</tt>
+     * @see     Comparable
+     * @since  1.5
+     

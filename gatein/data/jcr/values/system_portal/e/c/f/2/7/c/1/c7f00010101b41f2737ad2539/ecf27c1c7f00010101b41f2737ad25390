@@ -1,0 +1,14 @@
+ <p>
+ The <code> TooManyListenersException </code> Exception is used as part of
+ the Java Event model to annotate and implement a unicast special case of
+ a multicast Event Source.
+ </p>
+ <p>
+ The presence of a "throws TooManyListenersException" clause on any given
+ concrete implementation of the normally multicast "void addXyzEventListener"
+ event listener registration pattern is used to annotate that interface as
+ implementing a unicast Listener special case, that is, that one and only
+ one Listener may be registered on the particular event listener source
+ concurrently.
+ </p>
+ <DL><DT><B>Authors:</B></DT><DD>Laurence P. G. Cable</DD></DL><DL><DT><B>Version:</B></DT><DD>%I% %E%</DD></DL><DL><DT><B>See Also:</B></DT><DD><a href='../java/util/EventObject.html' title='EventObject'>EventObject</a></DD><DD><a href='../java/util/EventListener.html' title='EventListener'>EventListener</a></DD></DL><DL><DT><B>Since:</B></DT><DD>JDK1.1</DD></DL>

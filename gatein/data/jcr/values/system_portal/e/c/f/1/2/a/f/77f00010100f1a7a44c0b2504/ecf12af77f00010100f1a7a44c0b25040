@@ -1,0 +1,5 @@
+
+     * Streamlined bulk insertion to initialize from elements of
+     * given sorted map.  Call only from constructor or clone
+     * method.
+     

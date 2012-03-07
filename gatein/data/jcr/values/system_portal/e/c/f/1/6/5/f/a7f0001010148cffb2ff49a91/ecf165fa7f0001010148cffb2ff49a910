@@ -1,0 +1,12 @@
+
+     * Submits a Runnable task for execution and returns a Future
+     * representing that task. The Future's <tt>get</tt> method will
+     * return the given result upon successful completion.
+     *
+     * @param task the task to submit
+     * @param result the result to return
+     * @return a Future representing pending completion of the task
+     * @throws RejectedExecutionException if the task cannot be
+     *         scheduled for execution
+     * @throws NullPointerException if the task is null
+     

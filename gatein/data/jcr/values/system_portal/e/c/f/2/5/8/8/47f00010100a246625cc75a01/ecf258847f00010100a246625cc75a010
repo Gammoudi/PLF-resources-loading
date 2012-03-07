@@ -1,0 +1,13 @@
+
+     * Returns a key-value mapping associated with the least key
+     * greater than or equal to the given key, or {@code null} if
+     * there is no such key.
+     *
+     * @param key the key
+     * @return an entry with the least key greater than or equal to
+     *         {@code key}, or {@code null} if there is no such key
+     * @throws ClassCastException if the specified key cannot be compared
+     *         with the keys currently in the map
+     * @throws NullPointerException if the specified key is null
+     *         and this map does not permit null keys
+     

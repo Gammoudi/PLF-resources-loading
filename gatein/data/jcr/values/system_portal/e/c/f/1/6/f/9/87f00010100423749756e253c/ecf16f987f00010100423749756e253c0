@@ -1,0 +1,5 @@
+
+     * Always returns <tt>Integer.MAX_VALUE</tt> because
+     * a <tt>PriorityBlockingQueue</tt> is not capacity constrained.
+     * @return <tt>Integer.MAX_VALUE</tt>
+     

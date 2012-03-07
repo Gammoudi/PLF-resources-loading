@@ -1,0 +1,29 @@
+
+     * Returns a new string resulting from replacing all occurrences of
+     * <code>oldChar</code> in this string with <code>newChar</code>.
+     * <p>
+     * If the character <code>oldChar</code> does not occur in the
+     * character sequence represented by this <code>String</code> object,
+     * then a reference to this <code>String</code> object is returned.
+     * Otherwise, a new <code>String</code> object is created that
+     * represents a character sequence identical to the character sequence
+     * represented by this <code>String</code> object, except that every
+     * occurrence of <code>oldChar</code> is replaced by an occurrence
+     * of <code>newChar</code>.
+     * <p>
+     * Examples:
+     * <blockquote><pre>
+     * "mesquite in your cellar".replace('e', 'o')
+     *         returns "mosquito in your collar"
+     * "the war of baronets".replace('r', 'y')
+     *         returns "the way of bayonets"
+     * "sparring with a purple porpoise".replace('p', 't')
+     *         returns "starring with a turtle tortoise"
+     * "JonL".replace('q', 'x') returns "JonL" (no change)
+     * </pre></blockquote>
+     *
+     * @param   oldChar   the old character.
+     * @param   newChar   the new character.
+     * @return  a string derived from this string by replacing every
+     *          occurrence of <code>oldChar</code> with <code>newChar</code>.
+     

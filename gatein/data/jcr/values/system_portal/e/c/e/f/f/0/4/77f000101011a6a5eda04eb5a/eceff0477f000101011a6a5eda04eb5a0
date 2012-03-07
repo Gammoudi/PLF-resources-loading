@@ -1,0 +1,25 @@
+
+     * Returns an array of <tt>Type</tt> objects that represent the 
+     * exceptions declared to be thrown by this <tt>Constructor</tt> object. 
+     * Returns an array of length 0 if the underlying method declares
+     * no exceptions in its <tt>throws</tt> clause.  
+     * 
+     * <p>If an exception type is a parameterized type, the <tt>Type</tt>
+     * object returned for it must accurately reflect the actual type
+     * parameters used in the source code.
+     *
+     * <p>If an exception type is a type variable or a parameterized 
+     * type, it is created. Otherwise, it is resolved.
+     *
+     * @return an array of Types that represent the exception types
+     *     thrown by the underlying method
+     * @throws GenericSignatureFormatError
+     *     if the generic method signature does not conform to the format
+     *     specified in the Java Virtual Machine Specification, 3rd edition
+     * @throws TypeNotPresentException if the underlying method's
+     *     <tt>throws</tt> clause refers to a non-existent type declaration
+     * @throws MalformedParameterizedTypeException if
+     *     the underlying method's <tt>throws</tt> clause refers to a
+     *     parameterized type that cannot be instantiated for any reason
+     * @since 1.5
+     

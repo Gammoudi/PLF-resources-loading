@@ -1,0 +1,6 @@
+
+         * Allows instances to be deserialized in pre-1.4 JREs (which do
+         * not have UnmodifiableRandomAccessList).  UnmodifiableList has
+         * a readResolve method that inverts this transformation upon
+         * deserialization.
+         

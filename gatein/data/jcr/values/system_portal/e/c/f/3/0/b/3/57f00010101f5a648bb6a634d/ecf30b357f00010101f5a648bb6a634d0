@@ -1,0 +1,3 @@
+ Used to accumulate information about a subtree of the object graph
+ so that optimizations can be applied to the subtree.
+     

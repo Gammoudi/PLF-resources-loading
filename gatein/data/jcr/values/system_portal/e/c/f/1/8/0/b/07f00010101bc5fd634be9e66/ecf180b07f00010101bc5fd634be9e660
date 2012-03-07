@@ -1,0 +1,22 @@
+
+     * Implements the <tt>get</tt> method as per the specification in
+     * {@link Preferences#get(String,String)}.
+     *
+     * <p>This implementation first checks to see if <tt>key</tt> is
+     * <tt>null</tt> throwing a <tt>NullPointerException</tt> if this is
+     * the case.  Then it obtains this preference node's lock,
+     * checks that the node has not been removed, invokes {@link
+     * #getSpi(String)}, and returns the result, unless the <tt>getSpi</tt>
+     * invocation returns <tt>null</tt> or throws an exception, in which case
+     * this invocation returns <tt>def</tt>.
+     *
+     * @param key key whose associated value is to be returned.
+     * @param def the value to be returned in the event that this
+     *        preference node has no value associated with <tt>key</tt>.
+     * @return the value associated with <tt>key</tt>, or <tt>def</tt>
+     *         if no value is associated with <tt>key</tt>.
+     * @throws IllegalStateException if this node (or an ancestor) has been
+     *         removed with the {@link #removeNode()} method.
+     * @throws NullPointerException if key is <tt>null</tt>.  (A 
+     *         <tt>null</tt> default <i>is</i> permitted.)
+     

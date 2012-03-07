@@ -1,0 +1,4 @@
+
+     * Establishes the heap invariant (described above) in the entire tree,
+     * assuming nothing about the order of the elements prior to the call.
+     

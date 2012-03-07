@@ -1,0 +1,4 @@
+
+     * Returns whether the specified <code>field</code> is on in the
+     * <code>fieldMask</code>.
+     

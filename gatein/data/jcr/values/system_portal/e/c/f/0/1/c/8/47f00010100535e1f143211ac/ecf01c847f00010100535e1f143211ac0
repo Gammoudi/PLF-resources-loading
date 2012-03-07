@@ -1,0 +1,4 @@
+
+     * check to make sure the certs for the new class (certs) are the same as
+     * the certs for the first class inserted in the package (pcerts)
+     

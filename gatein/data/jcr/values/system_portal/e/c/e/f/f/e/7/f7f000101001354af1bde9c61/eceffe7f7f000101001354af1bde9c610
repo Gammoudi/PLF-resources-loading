@@ -1,0 +1,7 @@
+
+     * Returns the memory usage of the memory pool
+     * when this notification was constructed.
+     *
+     * @return the memory usage of the memory pool  
+     * when this notification was constructed.
+     

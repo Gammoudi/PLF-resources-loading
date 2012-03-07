@@ -1,0 +1,8 @@
+
+     * Returns a base-level node with key strictly less than given key,
+     * or the base-level header if there is no such node.  Also
+     * unlinks indexes to deleted nodes found along the way.  Callers
+     * rely on this side-effect of clearing indices to deleted nodes.
+     * @param key the key
+     * @return a predecessor of key
+     

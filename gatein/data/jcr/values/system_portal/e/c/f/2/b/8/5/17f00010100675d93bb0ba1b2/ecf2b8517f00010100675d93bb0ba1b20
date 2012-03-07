@@ -1,0 +1,4 @@
+ This class implements an output stream filter for compressing data in
+ the "deflate" compression format. It is also used as the basis for other
+ types of compression filters, such as GZIPOutputStream.
+ <DL><DT><B>Authors:</B></DT><DD>David Connelly</DD></DL><DL><DT><B>Version:</B></DT><DD>%I%, %G%</DD></DL><DL><DT><B>See Also:</B></DT><DD><a href='../java/util/zip/Deflater.html' title='Deflater'>Deflater</a></DD></DL>

@@ -1,0 +1,6 @@
+ This "wrapper class" serves two purposes: it prevents
+ the client from modifying the backing Map, by short-circuiting
+ the setValue method, and it protects the backing Map against
+ an ill-behaved Map.Entry that attempts to modify another
+ Map Entry when asked to perform an equality check.
+             

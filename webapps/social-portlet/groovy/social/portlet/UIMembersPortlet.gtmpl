@@ -1,0 +1,156 @@
+<!--
+
+    Copyright (C) 2003-2010 eXo Platform SAS.
+
+    This program is free software; you can redistribute it and/or
+    modify it under the terms of the GNU Affero General Public License
+    as published by the Free Software Foundation; either version 3
+    of the License, or (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program; if not, see<http://www.gnu.org/licenses/>.
+
+-->
+<%
+    import org.exoplatform.services.organization.User
+    import org.exoplatform.webui.core.UIPageIterator
+    import org.exoplatform.services.organization.User;
+    import org.exoplatform.social.core.space.model.Space;
+    import org.exoplatform.social.webui.profile.UIProfileUserSearch;
+    import org.exoplatform.social.core.service.LinkProvider;
+    import org.exoplatform.social.core.identity.model.Profile;
+    
+    def memberList = uicomponent.getMemberList();
+    def managerList = uicomponent.getManagerList();
+    
+    def uicomponentId = uicomponent.getId()
+    def adminLabel = _ctx.appRes("${uicomponentId}.label.Admin")
+    def administratorLabel = _ctx.appRes("${uicomponentId}.label.Administrator")
+    def spaceMemberLabel = _ctx.appRes("${uicomponentId}.label.SpaceMember")
+    def labelUserList = _ctx.appRes("${uicomponentId}.label.UserList")
+    def space = uicomponent.getSpace();
+    def visibility = space.getVisibility();
+    def spaceName = space.getDisplayName();
+    def position = adminName = "";
+    def adminProfileURL = "#";
+    def leaderIdx = memberIdx = 0;
+    def adminImageSource = LinkProvider.PROFILE_DEFAULT_AVATAR_URL;
+%>
+<div class="UIMembersPortlet UISocApplication" id="$uicomponentId">
+  <div class="UIProfileSpace">
+    <!-- Left section (Admin information) -->
+    <div class="LeftColumn">
+      <% if (managerList.size() > 0) {
+           def admin = managerList.get(0);
+           adminName = admin.getProfile().getFullName();
+           adminImageSource = admin.getProfile().getAvatarUrl();
+           adminProfileURL = LinkProvider.getUserProfileUri(admin.getRemoteId());
+           if (!adminImageSource) adminImageSource = LinkProvider.PROFILE_DEFAULT_AVATAR_URL;
+       } %>
+				<img class="ImgAvatarRoot" src="$adminImageSource" title="$adminName" alt="$adminName" />
+        <a href="${adminProfileURL}" class="TitleAvatarRoot">($adminLabel $adminName)</a>
+    </div>
+    <!-- End left section -->
+    <!-- Right section (Member information) -->
+    <div class="ContainerSpace">
+      <div class="UIHeaderSection">
+        <h2>$spaceName</h2>
+        <span>$visibility</span>
+      </div>
+      <!-- Leaders section -->
+      <div class="UISocTitleBar">
+				<div class="TitleBar Bold">$administratorLabel</div>
+      </div>
+      <div class="ClearFix">
+	      <% if (managerList.size() > 0) {
+	        for(user in managerList) {
+	          def userName = user.getProfile().getFullName();
+	          position = user.getProfile().getPosition();
+	          def profileURL = LinkProvider.getUserProfileUri(user.getRemoteId());
+	          if (!position) position = "";
+	          def leaderImageSource = user.profile.avatarUrl;
+	          if (!leaderImageSource) leaderImageSource = LinkProvider.PROFILE_DEFAULT_AVATAR_URL;
+	          leaderIdx += 1;
+	          clzz = "ContentSpace";
+	          if (leaderIdx % 2 == 0) clzz = "ContentSpaceGray";
+	      	%>
+	        <div class="$clzz ClearFix">
+						<img class="ImgAvatar" src="$leaderImageSource" title="$userName" alt="$userName" />
+						<div class="CommunityMane ClearFix">
+							<a href="${profileURL}" class="CommunityName InviteTitle">$userName</a>
+						</div>
+						<% if(position.length() > 0) { %>
+						 <div class="CommunityContent">
+							 <%=_ctx.appRes(uicomponent.getId() + ".label.Position") + ": "%>${position}
+						 </div>
+						<% } %>
+	        </div>
+	      <% }%>
+      </div>
+      <%
+      } else { %>
+				<div class="NotYet"><%=_ctx.appRes(uicomponent.getId() + ".label.NotLeaderYet")%></div>
+      <% } %>
+      
+      <!-- End leaders section -->
+      <!-- Members section -->
+      <div class="UISocTitleBar">
+				<div class="TitleBar Bold">$spaceMemberLabel</div>
+      </div>
+      <% uicomponent.renderChild(UIProfileUserSearch.class); %>
+      <div class="ClearFix">
+      <% if(memberList.size() > 0)  {
+        for(user in memberList) {
+          def memberUserName = user.getProfile().getFullName();
+          position = user.getProfile().position;
+          if (!position) position = "";
+          def profileURL = LinkProvider.getUserProfileUri(user.getRemoteId());
+          def memberImageSource = user.getProfile().avatarUrl;
+          if (!memberImageSource) memberImageSource = LinkProvider.PROFILE_DEFAULT_AVATAR_URL;
+          memberIdx += 1;
+					cssClass = "ContentSpace"; 
+          if (memberIdx % 2 == 0) {
+					cssClass = "ContentSpaceGray";
+				  }
+      %>
+        <div class="$cssClass ClearFix">
+					<img class="ImgAvatar" src="$memberImageSource" title="$memberUserName" alt="$memberUserName" />
+					<div class="CommunityMane ClearFix">
+							<a href="${profileURL}" class="CommunityName InviteTitle">$memberUserName</a>
+					</div>
+					<% if(position.length() > 0) { %>
+					 <div class="CommunityContent">
+						 <%=_ctx.appRes(uicomponent.getId() + ".label.Position") + ": "%>${position}
+					 </div>
+					 <% } %>
+        </div>
+        <% }
+      } else { %>
+				<div class="NotYet"><%=_ctx.appRes(uicomponent.getId() + ".label.NotMemberYet")%></div>
+      <% } %>
+       </div>
+       <% if(uicomponent.isEnableLoadNext()) { %>
+         <div id="LoadMoreButton" class="ShowMoreAction" onclick="<%=uicomponent.event('LoadMoreMember')%>" >
+           <%=_ctx.appRes(uicomponent.getId() + ".label.ShowMoreContacts")%>
+         </div>
+     <% } else { %>
+           <script type="text/javascript">
+             var loadMoreButton = document.getElementById("LoadMoreButton");
+             if (loadMoreButton) {
+               try {
+                 loadMoreButton.style.display = "none";
+               }catch(e){};
+               }
+           </script>
+     <%  } %>
+      <!-- End members section -->
+     </div>
+    </div>
+    <!-- End Right section -->
+  </div>
+</div>

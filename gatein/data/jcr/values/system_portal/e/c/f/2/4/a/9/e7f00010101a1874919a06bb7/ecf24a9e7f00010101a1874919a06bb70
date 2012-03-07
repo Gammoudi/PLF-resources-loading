@@ -1,0 +1,5 @@
+
+     * Returns an iterator over the elements in this list in proper sequence.
+     *
+     * @return an iterator over the elements in this list in proper sequence
+     

@@ -1,0 +1,8 @@
+
+     * Creates a {@code ConcurrentLinkedQueue}
+     * initially containing the elements of the given collection,
+     * added in traversal order of the collection's iterator.
+     * @param c the collection of elements to initially contain
+     * @throws NullPointerException if the specified collection or any
+     *         of its elements are null
+     

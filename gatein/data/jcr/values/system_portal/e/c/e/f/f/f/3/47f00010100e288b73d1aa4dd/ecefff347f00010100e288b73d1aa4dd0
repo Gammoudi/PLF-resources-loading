@@ -1,0 +1,11 @@
+
+     * Tests if the memory usage of this memory pool
+     * reaches or exceeds its usage threshold value.
+     *
+     * @return <tt>true</tt> if the memory usage of
+     * this memory pool reaches or exceeds the threshold value;
+     * <tt>false</tt> otherwise.
+     *
+     * @throws UnsupportedOperationException if this memory pool
+     *         does not support a usage threshold.
+     

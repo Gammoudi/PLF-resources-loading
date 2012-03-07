@@ -1,0 +1,8 @@
+
+     * Parses a custom time zone identifier and returns a corresponding zone.
+     * This method doesn't support the RFC 822 time zone format. (e.g., +hhmm)
+     *
+     * @param id a string of the <a href="#CustomID">custom ID form</a>.
+     * @return a newly created TimeZone with the given offset and
+     * no daylight saving time, or null if the id cannot be parsed.
+     

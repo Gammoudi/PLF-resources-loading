@@ -1,0 +1,7 @@
+
+         * Creates or resets fields of a node. Called only from transfer
+         * where the node to push on stack is lazily created and
+         * reused when possible to help reduce intervals between reads
+         * and CASes of head and to avoid surges of garbage when CASes
+         * to push nodes fail due to contention.
+         

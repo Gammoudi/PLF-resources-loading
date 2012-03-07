@@ -1,0 +1,14 @@
+
+     * Creates an enum set initially containing all of the elements in the
+     * range defined by the two specified endpoints.  The returned set will
+     * contain the endpoints themselves, which may be identical but must not
+     * be out of order.
+     *
+     * @param from the first element in the range
+     * @param to the last element in the range
+     * @throws NullPointerException if <tt>first</tt> or <tt>last</tt> are
+     *     null
+     * @throws IllegalArgumentException if <tt>first.compareTo(last) &gt; 0</tt>
+     * @return an enum set initially containing all of the elements in the
+     *     range defined by the two specified endpoints
+     

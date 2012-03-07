@@ -1,0 +1,11 @@
+
+     * Resets the peak thread count to the current number of
+     * live threads.
+     *
+     * @throws java.lang.SecurityException if a security manager
+     *         exists and the caller does not have
+     *         ManagementPermission("control").
+     *
+     * @see #getPeakThreadCount
+     * @see #getThreadCount
+     

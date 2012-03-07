@@ -1,0 +1,6 @@
+
+     * Converts an actions String to an actions mask.
+     *
+     * @param action the action string.
+     * @return the actions mask.
+     

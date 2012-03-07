@@ -1,0 +1,44 @@
+ A specialized <a href='../java/util/Set.html' title='Set'>Set</a> implementation for use with enum types.  All of
+ the elements in an enum set must come from a single enum type that is
+ specified, explicitly or implicitly, when the set is created.  Enum sets
+ are represented internally as bit vectors.  This representation is
+ extremely compact and efficient. The space and time performance of this
+ class should be good enough to allow its use as a high-quality, typesafe
+ alternative to traditional <tt>int</tt>-based "bit flags."  Even bulk
+ operations (such as <tt>containsAll</tt> and <tt>retainAll</tt>) should
+ run very quickly if their argument is also an enum set.
+
+ <p>The iterator returned by the <tt>iterator</tt> method traverses the
+ elements in their <i>natural order</i> (the order in which the enum
+ constants are declared).  The returned iterator is <i>weakly
+ consistent</i>: it will never throw <a href='../java/util/ConcurrentModificationException.html' title='ConcurrentModificationException'>ConcurrentModificationException</a>
+ and it may or may not show the effects of any modifications to the set that
+ occur while the iteration is in progress.
+
+ <p>Null elements are not permitted.  Attempts to insert a null element
+ will throw java.lang.NullPointerException.  Attempts to test for the
+ presence of a null element or to remove one will, however, function
+ properly.
+
+ <P>Like most collection implementations, <tt>EnumSet</tt> is not
+ synchronized.  If multiple threads access an enum set concurrently, and at
+ least one of the threads modifies the set, it should be synchronized
+ externally.  This is typically accomplished by synchronizing on some
+ object that naturally encapsulates the enum set.  If no such object exists,
+ the set should be "wrapped" using the <a href='../java/util/Collections.html#synchronizedSet' title='Collections.synchronizedSet'>Collections.synchronizedSet</a>
+ method.  This is best done at creation time, to prevent accidental
+ unsynchronized access:
+
+ <pre>
+ Set&lt;MyEnum&gt; s = Collections.synchronizedSet(EnumSet.noneOf(MyEnum.class));
+ </pre>
+
+ <p>Implementation note: All basic operations execute in constant time.
+ They are likely (though not guaranteed) to be much faster than their
+ <a href='../java/util/HashSet.html' title='HashSet'>HashSet</a> counterparts.  Even bulk operations execute in
+ constant time if their argument is also an enum set.
+
+ <p>This class is a member of the
+ <a href="{@docRoot}/../technotes/guides/collections/index.html">
+ Java Collections Framework</a>.<DL><DT><B>serial:</B></DT><DD>exclude</DD></DL>
+ <DL><DT><B>Authors:</B></DT><DD>Josh Bloch</DD></DL><DL><DT><B>Version:</B></DT><DD>%I%, %G%</DD></DL><DL><DT><B>See Also:</B></DT><DD><a href='../java/util/EnumMap.html' title='EnumMap'>EnumMap</a></DD></DL><DL><DT><B>Since:</B></DT><DD>1.5</DD></DL>

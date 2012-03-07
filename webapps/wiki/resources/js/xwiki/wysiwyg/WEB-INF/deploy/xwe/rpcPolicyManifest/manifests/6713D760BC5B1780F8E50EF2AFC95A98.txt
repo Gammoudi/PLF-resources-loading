@@ -1,0 +1,2 @@
+serviceClass: org.xwiki.gwt.wysiwyg.client.converter.HTMLConverter
+path: D1F0A2188476640AA2CC9A86CFA6C041.gwt.rpc

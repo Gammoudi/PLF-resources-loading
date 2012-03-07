@@ -1,0 +1,30 @@
+ Worker threads.
+
+ Worker threads can start out life either with an initial first
+ task, or without one. Normally, they are started with a first
+ task. This enables execute(), etc to bypass queuing when there
+ are fewer than corePoolSize threads (in which case we always
+ start one), or when the queue is full.(in which case we must
+ bypass queue.) Initially idle threads are created either by
+ users (prestartCoreThread and setCorePoolSize) or when methods
+ ensureQueuedTaskHandled and tryTerminate notice that the queue
+ is not empty but there are no active threads to handle them.
+
+ After completing a task, workers try to get another one,
+ via method getTask. If they cannot (i.e., getTask returns
+ null), they exit, calling workerDone to update pool state.
+
+ When starting to run a task, unless the pool is stopped, each
+ worker thread ensures that it is not interrupted, and uses
+ runLock to prevent the pool from interrupting it in the midst
+ of execution. This shields user tasks from any interrupts that
+ may otherwise be needed during shutdown (see method
+ interruptIdleWorkers), unless the pool is stopping (via
+ shutdownNow) in which case interrupts are let through to affect
+ both tasks and workers. However, this shielding does not
+ necessarily protect the workers from lagging interrupts from
+ other user threads directed towards tasks that have already
+ been completed. Thus, a worker thread may be interrupted
+ needlessly (for example in getTask), in which case it rechecks
+ pool state to see if it should exit.
+     

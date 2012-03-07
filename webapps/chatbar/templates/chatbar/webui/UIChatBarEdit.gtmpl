@@ -1,0 +1,14 @@
+<%
+  import org.exoplatform.chatbar.webui.UIConfigForm;
+  
+  String user = uicomponent.getRemoteUser() ;
+  if(user != null && user.trim().length() > 0) {
+%>
+<!-- Begin UIChat edit mode -->
+<div id="<%=uicomponent.id%>" oncontextmenu="return false;">
+     <%
+     uicomponent.renderChild(UIConfigForm.class);
+     %>
+</div>
+<%}%>
+ 

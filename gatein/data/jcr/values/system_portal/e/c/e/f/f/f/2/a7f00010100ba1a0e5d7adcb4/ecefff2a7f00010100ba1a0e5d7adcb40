@@ -1,0 +1,10 @@
+
+     * Returns the number of times that the memory usage has crossed
+     * the usage threshold.
+     *
+     * @return the number of times that the memory usage 
+     * has crossed its usage threshold value.
+     *
+     * @throws UnsupportedOperationException if this memory pool
+     * does not support a usage threshold.
+     

@@ -1,0 +1,3 @@
+ Synchronization implementation for ReentrantReadWriteLock.
+ Subclassed into fair and nonfair versions.
+     

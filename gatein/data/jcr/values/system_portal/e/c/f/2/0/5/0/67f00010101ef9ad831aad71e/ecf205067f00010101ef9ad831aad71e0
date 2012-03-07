@@ -1,0 +1,27 @@
+
+     * Maps the specified <code>key</code> to the specified 
+     * <code>value</code> in this dictionary. Neither the key nor the 
+     * value can be <code>null</code>.
+     * <p>
+     * If this dictionary already contains an entry for the specified 
+     * <tt>key</tt>, the value already in this dictionary for that 
+     * <tt>key</tt> is returned, after modifying the entry to contain the
+     *  new element. <p>If this dictionary does not already have an entry 
+     *  for the specified <tt>key</tt>, an entry is created for the 
+     *  specified <tt>key</tt> and <tt>value</tt>, and <tt>null</tt> is 
+     *  returned.
+     * <p>
+     * The <code>value</code> can be retrieved by calling the 
+     * <code>get</code> method with a <code>key</code> that is equal to 
+     * the original <code>key</code>. 
+     *
+     * @param      key     the hashtable key.
+     * @param      value   the value.
+     * @return     the previous value to which the <code>key</code> was mapped
+     *             in this dictionary, or <code>null</code> if the key did not
+     *             have a previous mapping.
+     * @exception  NullPointerException  if the <code>key</code> or
+     *               <code>value</code> is <code>null</code>.
+     * @see        java.lang.Object#equals(java.lang.Object)
+     * @see        java.util.Dictionary#get(java.lang.Object)
+     

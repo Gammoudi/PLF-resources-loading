@@ -1,0 +1,44 @@
+
+     * Returns node holding key or null if no such, clearing out any
+     * deleted nodes seen along the way.  Repeatedly traverses at
+     * base-level looking for key starting at predecessor returned
+     * from findPredecessor, processing base-level deletions as
+     * encountered. Some callers rely on this side-effect of clearing
+     * deleted nodes.
+     *
+     * Restarts occur, at traversal step centered on node n, if:
+     *
+     *   (1) After reading n's next field, n is no longer assumed
+     *       predecessor b's current successor, which means that
+     *       we don't have a consistent 3-node snapshot and so cannot
+     *       unlink any subsequent deleted nodes encountered.
+     *
+     *   (2) n's value field is null, indicating n is deleted, in
+     *       which case we help out an ongoing structural deletion
+     *       before retrying.  Even though there are cases where such
+     *       unlinking doesn't require restart, they aren't sorted out
+     *       here because doing so would not usually outweigh cost of
+     *       restarting.
+     *
+     *   (3) n is a marker or n's predecessor's value field is null,
+     *       indicating (among other possibilities) that
+     *       findPredecessor returned a deleted node. We can't unlink
+     *       the node because we don't know its predecessor, so rely
+     *       on another call to findPredecessor to notice and return
+     *       some earlier predecessor, which it will do. This check is
+     *       only strictly needed at beginning of loop, (and the
+     *       b.value check isn't strictly needed at all) but is done
+     *       each iteration to help avoid contention with other
+     *       threads by callers that will fail to be able to change
+     *       links, and so will retry anyway.
+     *
+     * The traversal loops in doPut, doRemove, and findNear all
+     * include the same three kinds of checks. And specialized
+     * versions appear in findFirst, and findLast and their
+     * variants. They can't easily share code because each uses the
+     * reads of fields held in locals occurring in the orders they
+     * were performed.
+     *
+     * @param key the key
+     * @return node holding key, or null if no such
+     

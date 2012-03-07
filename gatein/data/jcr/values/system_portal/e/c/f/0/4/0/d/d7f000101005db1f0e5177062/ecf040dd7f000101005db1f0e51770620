@@ -1,0 +1,9 @@
+
+     * Returns the string representation of the <code>Object</code> argument.
+     *
+     * @param   obj   an <code>Object</code>.
+     * @return  if the argument is <code>null</code>, then a string equal to
+     *          <code>"null"</code>; otherwise, the value of
+     *          <code>obj.toString()</code> is returned.
+     * @see     java.lang.Object#toString()
+     

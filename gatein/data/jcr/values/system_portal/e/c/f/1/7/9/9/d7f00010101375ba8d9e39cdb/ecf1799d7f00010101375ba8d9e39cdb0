@@ -1,0 +1,4 @@
+
+         * Tries to cas nh as new head; if successful, unlink
+         * old head's next node to avoid garbage retention.
+         

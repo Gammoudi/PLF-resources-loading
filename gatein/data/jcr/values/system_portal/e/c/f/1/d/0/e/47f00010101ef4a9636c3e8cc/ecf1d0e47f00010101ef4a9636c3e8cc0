@@ -1,0 +1,7 @@
+
+     * Removes all of the elements from this collection (optional operation).
+     * The collection will be empty after this method returns.
+     *
+     * @throws UnsupportedOperationException if the <tt>clear</tt> operation
+     *         is not supported by this collection
+     

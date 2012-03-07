@@ -1,0 +1,15 @@
+
+     * Returns the index of the first occurrence of the specified element in
+     * this list, searching forwards from <tt>index</tt>, or returns -1 if
+     * the element is not found.
+     * More formally, returns the lowest index <tt>i</tt> such that
+     * <tt>(i&nbsp;&gt;=&nbsp;index&nbsp;&amp;&amp;&nbsp;(e==null&nbsp;?&nbsp;get(i)==null&nbsp;:&nbsp;e.equals(get(i))))</tt>,
+     * or -1 if there is no such index.
+     *
+     * @param e element to search for
+     * @param index index to start searching from
+     * @return the index of the first occurrence of the element in
+     *         this list at position <tt>index</tt> or later in the list;
+     *         <tt>-1</tt> if the element is not found.
+     * @throws IndexOutOfBoundsException if the specified index is negative
+     

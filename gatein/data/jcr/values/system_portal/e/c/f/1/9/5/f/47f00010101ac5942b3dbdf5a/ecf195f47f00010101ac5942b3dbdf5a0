@@ -1,0 +1,4 @@
+ Factory for FileSystemPreferences.  This class allows FileSystemPreferences
+ to be installed as the Preferences implementations via the
+ java.util.prefs.PreferencesFactory system property.
+ <DL><DT><B>Authors:</B></DT><DD>Josh Bloch</DD></DL><DL><DT><B>Version:</B></DT><DD>%I%, %G%</DD></DL><DL><DT><B>See Also:</B></DT><DD><a href='../java/util/prefs/FileSystemPreferences.html' title='FileSystemPreferences'>FileSystemPreferences</a></DD><DD><a href='../java/util/prefs/Preferences.html' title='Preferences'>Preferences</a></DD></DL><DL><DT><B>Since:</B></DT><DD>1.4</DD></DL>

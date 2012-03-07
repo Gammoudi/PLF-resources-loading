@@ -1,0 +1,29 @@
+ This class consists exclusively of static methods that operate on or return
+ collections.  It contains polymorphic algorithms that operate on
+ collections, "wrappers", which return a new collection backed by a
+ specified collection, and a few other odds and ends.
+
+ <p>The methods of this class all throw a <tt>NullPointerException</tt>
+ if the collections or class objects provided to them are null.
+
+ <p>The documentation for the polymorphic algorithms contained in this class
+ generally includes a brief description of the <i>implementation</i>.  Such
+ descriptions should be regarded as <i>implementation notes</i>, rather than
+ parts of the <i>specification</i>.  Implementors should feel free to
+ substitute other algorithms, so long as the specification itself is adhered
+ to.  (For example, the algorithm used by <tt>sort</tt> does not have to be
+ a mergesort, but it does have to be <i>stable</i>.)
+
+ <p>The "destructive" algorithms contained in this class, that is, the
+ algorithms that modify the collection on which they operate, are specified
+ to throw <tt>UnsupportedOperationException</tt> if the collection does not
+ support the appropriate mutation primitive(s), such as the <tt>set</tt>
+ method.  These algorithms may, but are not required to, throw this
+ exception if an invocation would have no effect on the collection.  For
+ example, invoking the <tt>sort</tt> method on an unmodifiable list that is
+ already sorted may or may not throw <tt>UnsupportedOperationException</tt>.
+
+ <p>This class is a member of the
+ <a href="{@docRoot}/../technotes/guides/collections/index.html">
+ Java Collections Framework</a>.
+ <DL><DT><B>Authors:</B></DT><DD>Josh Bloch</DD><DD>Neal Gafter</DD></DL><DL><DT><B>Version:</B></DT><DD>%I%, %G%</DD></DL><DL><DT><B>See Also:</B></DT><DD><a href='../java/util/Collection.html' title='Collection'>Collection</a></DD><DD><a href='../java/util/Set.html' title='Set'>Set</a></DD><DD><a href='../java/util/List.html' title='List'>List</a></DD><DD><a href='../java/util/Map.html' title='Map'>Map</a></DD></DL><DL><DT><B>Since:</B></DT><DD>1.2</DD></DL>

@@ -1,0 +1,3 @@
+ The entries in this hash table extend WeakReference, using its main ref
+ field as the key.
+     

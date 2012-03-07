@@ -1,0 +1,9 @@
+
+     * Returns <tt>true</tt> if this list iterator has more elements when
+     * traversing the list in the forward direction. (In other words, returns
+     * <tt>true</tt> if <tt>next</tt> would return an element rather than
+     * throwing an exception.)
+     *
+     * @return <tt>true</tt> if the list iterator has more elements when
+     *		traversing the list in the forward direction.
+     

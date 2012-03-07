@@ -1,0 +1,6 @@
+
+     * Returns the length of the specified month in the year provided
+     * by internalGet(YEAR).
+     *
+     * @see #isLeapYear(int)
+     

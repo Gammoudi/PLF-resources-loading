@@ -1,0 +1,2 @@
+serviceClass: org.xwiki.gwt.wysiwyg.client.plugin.macro.MacroService
+path: 9E682FCBBFBB82E9CCD3D862FB43B5E5.gwt.rpc

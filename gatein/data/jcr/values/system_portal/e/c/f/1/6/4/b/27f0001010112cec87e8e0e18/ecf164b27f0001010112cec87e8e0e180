@@ -1,0 +1,6 @@
+ Nodes hold partially exchanged data.  This class
+ opportunistically subclasses AtomicReference to represent the
+ hole.  So get() returns hole, and compareAndSet CAS'es value
+ into hole.  This class cannot be parameterized as "V" because
+ of the use of non-V CANCEL sentinels.
+     

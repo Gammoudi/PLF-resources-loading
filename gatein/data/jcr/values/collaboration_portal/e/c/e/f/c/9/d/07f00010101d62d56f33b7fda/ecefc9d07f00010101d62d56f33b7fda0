@@ -1,0 +1,12 @@
+<div class="UIWCMSearchBoxPortlet">
+<div class="LeftSearchBox">
+<div class="RightSearchBox">
+<div class="CenterSearchBox">
+<div class="siteSearchBox" id="siteSearchBox">
+<div class="keywordInput"><input type="text" class="keyword" onkeypress="eXo.ecm.SearchPortlet.quickSearchOnEnter(event)" name="keyword" value="Search" /></div>
+</div>
+<div></div>
+</div>
+</div>
+</div>
+</div>

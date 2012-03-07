@@ -1,0 +1,10 @@
+
+     * Retrieves and removes the head of this queue, waiting if necessary
+     * until an element with an expired delay is available on this queue,
+     * or the specified wait time expires.
+     *
+     * @return the head of this queue, or <tt>null</tt> if the
+     *         specified waiting time elapses before an element with
+     *         an expired delay becomes available
+     * @throws InterruptedException {@inheritDoc}
+     

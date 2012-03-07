@@ -1,0 +1,7 @@
+
+     * initialize a PropertyPermission object. Common to all constructors.
+     * Also called during de-serialization.
+     *
+     * @param mask the actions mask to use.
+     *
+     

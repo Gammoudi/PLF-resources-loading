@@ -1,0 +1,5 @@
+
+     * Return an array of java.security.cert.Certificate objects for
+     * the given file in the jar. 
+     * Deprecated.
+     

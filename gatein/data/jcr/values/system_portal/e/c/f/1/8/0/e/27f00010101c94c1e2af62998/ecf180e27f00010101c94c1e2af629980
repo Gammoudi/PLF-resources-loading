@@ -1,0 +1,12 @@
+
+     * Implements the <tt>parent</tt> method as per the specification in
+     * {@link Preferences#parent()}.
+     *
+     * <p>This implementation obtains this preference node's lock, checks that
+     * the node has not been removed and returns the parent value that was
+     * passed to this node's constructor.
+     *
+     * @return the parent of this preference node.
+     * @throws IllegalStateException if this node (or an ancestor) has been
+     *         removed with the {@link #removeNode()} method.
+     

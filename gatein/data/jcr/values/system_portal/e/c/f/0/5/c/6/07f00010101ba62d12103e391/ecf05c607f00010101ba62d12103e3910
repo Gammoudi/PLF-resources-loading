@@ -1,0 +1,107 @@
+
+     * This method modifies the failure handling of
+     * native method resolution by allowing retry
+     * with a prefix applied to the name.
+     * When used with the 
+     * {@link java.lang.instrument.ClassFileTransformer ClassFileTransformer},
+     * it enables native methods to be
+     * instrumented.
+     * <p/>
+     * Since native methods cannot be directly instrumented
+     * (they have no bytecodes), they must be wrapped with
+     * a non-native method which can be instrumented.
+     * For example, if we had:
+     * <pre>
+     *   native boolean foo(int x);</pre>
+     * <p/>
+     * We could transform the class file (with the 
+     * ClassFileTransformer during the initial definition
+     * of the class) so that this becomes:
+     * <pre>
+     *   boolean foo(int x) {
+     *     <i>... record entry to foo ...</i>
+     *     return wrapped_foo(x);
+     *   }
+     *   
+     *   native boolean wrapped_foo(int x);</pre>
+     * <p/>
+     * Where <code>foo</code> becomes a wrapper for the actual native 
+     * method with the appended prefix "wrapped_".  Note that
+     * "wrapped_" would be a poor choice of prefix since it
+     * might conceivably form the name of an existing method
+     * thus something like "$$$MyAgentWrapped$$$_" would be
+     * better but would make these examples less readable.
+     * <p/>
+     * The wrapper will allow data to be collected on the native
+     * method call, but now the problem becomes linking up the  
+     * wrapped method with the native implementation.  
+     * That is, the method <code>wrapped_foo</code> needs to be 
+     * resolved to the native implementation of <code>foo</code>,
+     * which might be:
+     * <pre>
+     *   Java_somePackage_someClass_foo(JNIEnv* env, jint x)</pre>
+     * <p/>
+     * This function allows the prefix to be specified and the
+     * proper resolution to occur.  
+     * Specifically, when the standard resolution fails, the
+     * resolution is retried taking the prefix into consideration.
+     * There are two ways that resolution occurs, explicit
+     * resolution with the JNI function <code>RegisterNatives</code>
+     * and the normal automatic resolution.  For 
+     * <code>RegisterNatives</code>, the JVM will attempt this 
+     * association:
+     * <pre>
+     *   method(foo) -> nativeImplementation(foo)</pre>
+     * <p/>
+     * When this fails, the resolution will be retried with
+     * the specified prefix prepended to the method name, 
+     * yielding the correct resolution:
+     * <pre>
+     *   method(wrapped_foo) -> nativeImplementation(foo)</pre>
+     * <p/>
+     * For automatic resolution, the JVM will attempt:
+     * <pre>
+     *   method(wrapped_foo) -> nativeImplementation(wrapped_foo)</pre>
+     * <p/>
+     * When this fails, the resolution will be retried with
+     * the specified prefix deleted from the implementation name, 
+     * yielding the correct resolution:
+     * <pre>
+     *   method(wrapped_foo) -> nativeImplementation(foo)</pre>
+     * <p/>
+     * Note that since the prefix is only used when standard
+     * resolution fails, native methods can be wrapped selectively.
+     * <p/>
+     * Since each <code>ClassFileTransformer</code>
+     * can do its own transformation of the bytecodes, more 
+     * than one layer of wrappers may be applied. Thus each
+     * transformer needs its own prefix.  Since transformations
+     * are applied in order, the prefixes, if applied, will
+     * be applied in the same order
+     * (see {@link #addTransformer(ClassFileTransformer,boolean) addTransformer}). 
+     * Thus if three transformers applied
+     * wrappers, <code>foo</code> might become 
+     * <code>$trans3_$trans2_$trans1_foo</code>.  But if, say,
+     * the second transformer did not apply a wrapper to
+     * <code>foo</code> it would be just 
+     * <code>$trans3_$trans1_foo</code>.  To be able to 
+     * efficiently determine the sequence of prefixes,
+     * an intermediate prefix is only applied if its non-native
+     * wrapper exists.  Thus, in the last example, even though 
+     * <code>$trans1_foo</code> is not a native method, the
+     * <code>$trans1_</code> prefix is applied since 
+     * <code>$trans1_foo</code> exists.
+     *
+     * @param   transformer
+     *          The ClassFileTransformer which wraps using this prefix.
+     * @param   prefix
+     *          The prefix which has been applied to wrapped native methods.
+     * @throws java.lang.NullPointerException if passed a <code>null</code> transformer.
+     * @throws java.lang.UnsupportedOperationException if the current configuration of
+     *           the JVM does not allow setting a native method prefix
+     *           ({@link #isNativeMethodPrefixSupported} is false).
+     * @throws java.lang.IllegalArgumentException if the transformer is not registered
+     *           (see {@link #addTransformer(ClassFileTransformer,boolean) addTransformer}).
+     *
+     * @since 1.6
+     

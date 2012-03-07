@@ -1,0 +1,6 @@
+
+     * Returns the name of the memory pool that triggers this notification.
+     * The memory pool usage has crossed a threshold.
+     *
+     * @return the name of the memory pool that triggers this notification.
+     

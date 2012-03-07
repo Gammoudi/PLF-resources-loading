@@ -1,0 +1,7 @@
+
+     * Factory method to create map of inherited thread locals.
+     * Designed to be called only from Thread constructor.
+     *
+     * @param  parentMap the map associated with parent thread
+     * @return a map containing the parent's inheritable bindings
+     

@@ -1,0 +1,13 @@
+
+     * Returns the collection usage threshold value of this memory pool 
+     * in bytes.  The default value is zero. The collection usage 
+     * threshold can be changed via the 
+     * {@link #setCollectionUsageThreshold setCollectionUsageThreshold} method.
+     * 
+     * @return the collection usage threshold of this memory pool in bytes.
+     *
+     * @throws UnsupportedOperationException if this memory pool
+     *         does not support a collection usage threshold.
+     *
+     * @see #isCollectionUsageThresholdSupported
+     

@@ -1,0 +1,4 @@
+
+     * Returns all of the values comprising E.
+     * The result is uncloned, cached, and shared by all callers.
+     

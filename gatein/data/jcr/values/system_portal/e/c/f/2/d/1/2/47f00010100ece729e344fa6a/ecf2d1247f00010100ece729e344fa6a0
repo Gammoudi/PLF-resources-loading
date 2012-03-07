@@ -1,0 +1,4 @@
+
+         * Performs lock.  Try immediate barge, backing up to normal
+         * acquire on failure.
+         

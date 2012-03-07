@@ -1,0 +1,7 @@
+
+     * Creates a new {@code AtomicStampedReference} with the given
+     * initial values.
+     *
+     * @param initialRef the initial reference
+     * @param initialStamp the initial stamp
+     

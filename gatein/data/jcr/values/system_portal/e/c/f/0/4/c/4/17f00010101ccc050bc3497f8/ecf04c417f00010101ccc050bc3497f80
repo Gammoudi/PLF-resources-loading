@@ -1,0 +1,7 @@
+
+     * Waits for this thread to die. 
+     *
+     * @exception  InterruptedException if any thread has interrupted
+     *             the current thread.  The <i>interrupted status</i> of the
+     *             current thread is cleared when this exception is thrown.
+     

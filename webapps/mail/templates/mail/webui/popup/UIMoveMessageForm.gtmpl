@@ -1,0 +1,24 @@
+<%
+  import org.exoplatform.mail.webui.UISelectFolder;
+%>
+<% uiform.begin() %>
+  <div class="UIAddToContact">
+    <div class="HorizontalLayout">
+      <table class="UIFormGrid">
+        <tr>
+          <td class="FieldComponent">
+            <%uicomponent.renderChild(UISelectFolder.class)%>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <div class="UIAction">
+        <% for(action in uicomponent.getActions()) { 
+                 String actionLabel = _ctx.appRes(uicomponent.getName() + ".action." + action) ;
+                 String link = uicomponent.event(action) ;
+        %>
+        <a href="$link" class="ActionButton LightBlueStyle">$actionLabel</a>
+        <%}%>
+    </div> 
+  </div>
+<% uiform.end() %> 

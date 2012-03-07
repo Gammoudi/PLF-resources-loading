@@ -1,0 +1,15 @@
+
+     * Returns a reverse order view of the mappings contained in this map.
+     * The descending map is backed by this map, so changes to the map are
+     * reflected in the descending map, and vice-versa.  If either map is
+     * modified while an iteration over a collection view of either map
+     * is in progress (except through the iterator's own {@code remove}
+     * operation), the results of the iteration are undefined.
+     *
+     * <p>The returned map has an ordering equivalent to
+     * <tt>{@link Collections#reverseOrder(Comparator) Collections.reverseOrder}(comparator())</tt>.
+     * The expression {@code m.descendingMap().descendingMap()} returns a
+     * view of {@code m} essentially equivalent to {@code m}.
+     *
+     * @return a reverse order view of this map
+     

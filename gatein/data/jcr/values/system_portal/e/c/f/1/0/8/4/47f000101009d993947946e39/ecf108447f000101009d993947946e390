@@ -1,0 +1,12 @@
+
+     * Atomically sets the value of both the reference and mark
+     * to the given update values if the
+     * current reference is {@code ==} to the expected reference
+     * and the current mark is equal to the expected mark.
+     *
+     * @param expectedReference the expected value of the reference
+     * @param newReference the new value for the reference
+     * @param expectedMark the expected value of the mark
+     * @param newMark the new value for the mark
+     * @return true if successful
+     

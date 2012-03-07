@@ -1,0 +1,6 @@
+
+     * Gets the current value at position {@code i}.
+     *
+     * @param i the index
+     * @return the current value
+     

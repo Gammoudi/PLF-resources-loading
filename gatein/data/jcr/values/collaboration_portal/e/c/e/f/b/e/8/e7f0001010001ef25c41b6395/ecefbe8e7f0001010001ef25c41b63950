@@ -1,0 +1,61 @@
+<div class="UIACMWelcome">
+	<div class="UIBanner">
+		<div class="Header ClearFix">
+			<img alt="" src="/portal/rest/jcr/repository/collaboration/sites content/live/intranet/web contents/site artifacts/Welcome/medias/images/Logo.png" />
+			<div class="TxtHeader">
+				<h1>
+					Welcome to ACME</h1>
+				<h3>
+					Super Powers for Regular People</h3>
+			</div>
+		</div>
+	</div>
+	<div class="SocialIntranet">
+		<h1>
+			The Acme Social Intranet</h1>
+		The Acme Social Intranet is a sample application that demonstrates the rich user experience features of eXo Platform 3.5. Acme, a fictitious company that sells &quot;super powers to ordinary people&quot;, uses eXo Platform to deliver an enterprise intranet that integrates social networks, activity streams, collaboration spaces, calendars, chat and more. Acme employees can use simple drag-and-drop controls to personalize their individual workspaces.<br />
+		<br />
+		By logging in as one of the Acme user profiles below, you can explore the Social Intranet&#39;s capabilities from the perspective of several different user types and permission levels.</div>
+	<div class="UIContentAccount">
+		<div class="BgAccounLogin ClearFix">
+			<h1>
+				Login as one of Acme&#39;s Social Intranet users to experience eXo Platform 3.5</h1>
+			<p>
+				Default password for each sample user is &quot;gtn&quot;</p>
+			<div class="FL AccounLogin">
+				<img alt="" class="ImgLogin" src="/portal/rest/jcr/repository/collaboration/sites content/live/intranet/web contents/site artifacts/Welcome/medias/images/Jack.png" />
+				<h4>
+					Jack Miller</h4>
+				<p>
+					A developer who will see the admin bar with a personal preferences menu and has access to the web-based IDE.</p>
+				<a class="BntJack" href="/portal/login?username=demo&amp;password=gtn&amp;initialURI=/portal/intranet">Login as Jack</a></div>
+			<div class="FL AccounLogin ClosRight">
+				<img alt="" class="ImgLogin" src="/portal/rest/jcr/repository/collaboration/sites content/live/intranet/web contents/site artifacts/Welcome/medias/images/Mary.png" />
+				<h4>
+					Mary Williams</h4>
+				<p>
+					A publisher who can write contents but also can create new pages or edit them in the current site.</p>
+				<a class="BntMary" href="/portal/login?username=mary&amp;password=gtn&amp;initialURI=/portal/intranet">Login as Mary</a></div>
+			<div class="FL AccounLogin">
+				<img alt="" class="ImgLogin" src="/portal/rest/jcr/repository/collaboration/sites content/live/intranet/web contents/site artifacts/Welcome/medias/images/Jame.png" />
+				<h4>
+					James Davis</h4>
+				<p>
+					An author with authoring rights on the website contents and a backoffice access.</p>
+				<a class="BntJame" href="/portal/login?username=james&amp;password=gtn&amp;initialURI=/portal/intranet">Login as James</a></div>
+			<div class="FL AccounLogin ClosRight">
+				<img alt="" class="ImgLogin" src="/portal/rest/jcr/repository/collaboration/sites content/live/intranet/web contents/site artifacts/Welcome/medias/images/John.png" />
+				<h4>
+					John Smith</h4>
+				<p>
+					An administrator with administrator rights on the platform. he can manage security access and application organisation.</p>
+				<a class="BntJohn" href="/portal/login?username=john&amp;password=gtn&amp;initialURI=/portal/intranet">Login as John</a></div>
+		</div>
+	</div>
+	<div class="BntSign">
+		<a href="#" onclick="if(document.getElementById('UIMaskWorkspace')) ajaxGet(eXo.env.server.createPortalURL('UIPortal', 'ShowLoginForm', true));"><b>Sign in</b>&nbsp;&nbsp; | &nbsp;&nbsp;Start a new session</a> <a href="#" onclick="document.location.href='/portal/public/intranet/Register';"><b>Register</b>&nbsp;&nbsp; | &nbsp;&nbsp;Create an account</a></div>
+	<div class="UIFooter">
+		<div class="TxtFooter">
+			Powered by eXo Platform 3.5 | Copyright &copy; 2000-2011. All rights Reserved, eXo Platform SAS.</div>
+	</div>
+</div>

@@ -1,0 +1,12 @@
+ Node to anchor at the end of a line or the end of input based on the
+ multiline mode.
+
+ When not in multiline mode, the $ can only match at the very end
+ of the input, unless the input ends in a line terminator in which
+ it matches right before the last line terminator.
+
+ Note that \r\n is considered an atomic line terminator.
+
+ Like ^ the $ operator matches at a position, it does not match the
+ line terminators themselves.
+     

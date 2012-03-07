@@ -1,0 +1,5 @@
+
+     * Returns this Matcher's input character at index i.
+     *
+     * @return A char from the specified index
+     

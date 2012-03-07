@@ -1,0 +1,13 @@
+
+	 * Read a Pack200 archive, and write the encoded JAR to
+	 * a JarOutputStream.
+	 * The entire contents of the input stream will be read.
+	 * It may be more efficient to read the Pack200 archive
+	 * to a file and pass the File object, using the alternate
+	 * method described below.
+	 * <p>
+	 * Closes its input but not its output.  (The output can accumulate more elements.)
+	 * @param in an InputStream.
+	 * @param out a JarOutputStream.
+	 * @exception IOException if an error is encountered.
+	 

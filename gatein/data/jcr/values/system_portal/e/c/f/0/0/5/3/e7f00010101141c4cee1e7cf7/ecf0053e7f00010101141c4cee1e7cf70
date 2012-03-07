@@ -1,0 +1,11 @@
+
+     * Tests if thread contention monitoring is enabled.
+     *
+     * @return <tt>true</tt> if thread contention monitoring is enabled;
+     *         <tt>false</tt> otherwise.
+     *
+     * @throws java.lang.UnsupportedOperationException if the Java virtual 
+     * machine does not support thread contention monitoring.
+     *
+     * @see #isThreadContentionMonitoringSupported
+     

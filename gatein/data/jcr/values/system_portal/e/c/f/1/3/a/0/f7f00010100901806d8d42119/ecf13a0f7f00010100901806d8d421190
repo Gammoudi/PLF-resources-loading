@@ -1,0 +1,8 @@
+
+         * Tries to CAS newSucc as successor.  To minimize races with
+         * unlink that may lose this index node, if the node being
+         * indexed is known to be deleted, it doesn't try to link in.
+         * @param succ the expected current successor
+         * @param newSucc the new successor
+         * @return true if successful
+         

@@ -1,0 +1,4 @@
+
+     * Returns the length (in days) of the specified year. The year
+     * must be normalized.
+     

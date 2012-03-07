@@ -1,0 +1,6 @@
+
+     * Returns the directory name corresponding to the specified node name.
+     * Generally, this is just the node name.  If the node name includes
+     * inappropriate characters (as per isDirChar) it is translated to Base64.
+     * with the underscore  character ('_', 0x5f) prepended. 
+     

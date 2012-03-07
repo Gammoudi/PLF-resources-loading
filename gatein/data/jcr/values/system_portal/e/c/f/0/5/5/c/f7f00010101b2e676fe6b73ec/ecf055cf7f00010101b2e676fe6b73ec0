@@ -1,0 +1,10 @@
+
+         * Get the entry associated with key.  This method
+         * itself handles only the fast path: a direct hit of existing
+         * key. It otherwise relays to getEntryAfterMiss.  This is
+         * designed to maximize performance for direct hits, in part
+         * by making this method readily inlinable.
+         *
+         * @param  key the thread local object
+         * @return the entry associated with key, or null if no such
+         

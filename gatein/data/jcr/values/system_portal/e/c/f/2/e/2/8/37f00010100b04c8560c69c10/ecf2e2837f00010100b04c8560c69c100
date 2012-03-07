@@ -1,0 +1,6 @@
+
+     * Parses a backref greedily, taking as many numbers as it
+     * can. The first digit is always treated as a backref, but
+     * multi digit numbers are only treated as a backref if at
+     * least that many backrefs exist at this point in the regex.
+     

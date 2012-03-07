@@ -1,0 +1,20 @@
+
+     * Adds or subtracts (up/down) a single unit of time on the given time 
+     * field without changing larger fields. For example, to roll the current 
+     * date up by one day, you can achieve it by calling:
+     * <p>roll(Calendar.DATE, true).
+     * When rolling on the year or Calendar.YEAR field, it will roll the year
+     * value in the range between 1 and the value returned by calling
+     * <code>getMaximum(Calendar.YEAR)</code>.
+     * When rolling on the month or Calendar.MONTH field, other fields like
+     * date might conflict and, need to be changed. For instance,
+     * rolling the month on the date 01/31/96 will result in 02/29/96.
+     * When rolling on the hour-in-day or Calendar.HOUR_OF_DAY field, it will
+     * roll the hour value in the range between 0 and 23, which is zero-based.
+     *
+     * @param field the time field.
+     * @param up indicates if the value of the specified time field is to be
+     * rolled up or rolled down. Use true if rolling up, false otherwise.
+     * @see Calendar#add(int,int)
+     * @see Calendar#set(int,int)
+     

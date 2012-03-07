@@ -1,0 +1,4 @@
+
+         * Fair version of tryAcquire.  Don't grant access unless
+         * recursive call or no waiters or is first.
+         

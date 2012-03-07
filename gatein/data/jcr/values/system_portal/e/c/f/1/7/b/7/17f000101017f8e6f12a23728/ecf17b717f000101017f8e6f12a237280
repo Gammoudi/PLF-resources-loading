@@ -1,0 +1,4 @@
+
+         * Returns true if node s is at head or there is an active
+         * fulfiller.
+         

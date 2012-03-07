@@ -1,0 +1,7 @@
+ A Slot is an AtomicReference with heuristic padding to lessen
+ cache effects of this heavily CAS'ed location.  While the
+ padding adds noticeable space, all slots are created only on
+ demand, and there will be more than one of them only when it
+ would improve throughput more than enough to outweigh using
+ extra space.
+     

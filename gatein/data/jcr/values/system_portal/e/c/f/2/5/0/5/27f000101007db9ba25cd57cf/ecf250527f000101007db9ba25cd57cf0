@@ -1,0 +1,6 @@
+
+     * Replace the deserialized Locale object with a newly
+     * created object. Newer language codes are replaced with older ISO 
+     * codes. The country and variant codes are replaced with internalized 
+     * String copies. 
+     

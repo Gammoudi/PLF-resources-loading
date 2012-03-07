@@ -1,0 +1,19 @@
+Manifest-Version: 1.0
+Archiver-Version: Plexus Archiver
+Created-By: Apache Maven
+Built-By: vetal
+Build-Jdk: 1.6.0_21
+Implementation-Vendor-Id: org.exoplatform.gwt
+Date: 20111130-1514
+Implementation-Title: eXo GWT Framework :: SmartGWT
+Implementation-URL: http://www.exoplatform.com/exo-gwtframework-parent
+ /exo-gwtframework-smartgwt
+Implementation-Vendor: eXo Platform SAS
+Implementation-Version: 1.1.2
+SCM-Revision: 77133
+SCM-URL: scm:svn:http://svn.exoplatform.org/projects/gwt/tags/1.1.2/ex
+ o-gwtframework-smartgwt
+Specification-Title: eXo Platform
+Specification-Vendor: eXo Platform SAS
+Specification-Version: N/A
+

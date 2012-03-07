@@ -1,0 +1,4 @@
+ A class used to aid in Properties load and save in XML. Keeping this
+ code outside of Properties helps reduce the number of classes loaded
+ when Properties is loaded.
+ <DL><DT><B>Authors:</B></DT><DD>Michael McCloskey</DD></DL><DL><DT><B>Version:</B></DT><DD>1.9, 01/23/03</DD></DL><DL><DT><B>Since:</B></DT><DD>1.3</DD></DL>

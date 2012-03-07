@@ -1,0 +1,11 @@
+
+     * Queries if this time zone uses daylight savings time.
+     * <p>
+     * If an underlying <code>TimeZone</code> implementation subclass
+     * supports historical Daylight Saving Time schedule changes, the
+     * method refers to the latest Daylight Saving Time schedule
+     * information.
+     *
+     * @return true if this time zone uses daylight savings time,
+     * false, otherwise.
+     

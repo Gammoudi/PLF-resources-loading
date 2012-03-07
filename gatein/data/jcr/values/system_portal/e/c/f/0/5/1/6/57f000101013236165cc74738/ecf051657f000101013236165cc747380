@@ -1,0 +1,5 @@
+
+     * Adds the specified Thread group to this group.
+     * @param g the specified Thread group to be added
+     * @exception IllegalThreadStateException If the Thread group has been destroyed.
+     

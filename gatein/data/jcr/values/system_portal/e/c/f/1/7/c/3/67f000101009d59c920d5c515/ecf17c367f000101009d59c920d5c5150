@@ -1,0 +1,8 @@
+
+             * Tries to match node s to this node, if so, waking up thread.
+             * Fulfillers call tryMatch to identify their waiters.
+             * Waiters block until they have been matched.
+             *
+             * @param s the node to match
+             * @return true if successfully matched to s
+             

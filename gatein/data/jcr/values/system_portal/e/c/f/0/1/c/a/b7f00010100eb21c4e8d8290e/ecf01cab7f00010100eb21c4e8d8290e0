@@ -1,0 +1,41 @@
+
+     * Defines a package by name in this <tt>ClassLoader</tt>.  This allows
+     * class loaders to define the packages for their classes. Packages must
+     * be created before the class is defined, and package names must be
+     * unique within a class loader and cannot be redefined or changed once
+     * created.  </p>
+     *
+     * @param  name
+     *         The package name
+     *
+     * @param  specTitle
+     *         The specification title
+     *
+     * @param  specVersion
+     *         The specification version
+     *
+     * @param  specVendor
+     *         The specification vendor
+     *
+     * @param  implTitle
+     *         The implementation title
+     *
+     * @param  implVersion
+     *         The implementation version
+     *
+     * @param  implVendor
+     *         The implementation vendor
+     *
+     * @param  sealBase
+     *         If not <tt>null</tt>, then this package is sealed with
+     *         respect to the given code source {@link java.net.URL
+     *         <tt>URL</tt>}  object.  Otherwise, the package is not sealed.
+     *
+     * @return  The newly defined <tt>Package</tt> object
+     *
+     * @throws  IllegalArgumentException
+     *          If package name duplicates an existing package either in this
+     *          class loader or one of its ancestors
+     *
+     * @since  1.2
+     

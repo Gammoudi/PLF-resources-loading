@@ -1,0 +1,4 @@
+
+     * Throws NotSerializableException, since NodeChangeEvent objects are not
+     * intended to be serializable.
+     

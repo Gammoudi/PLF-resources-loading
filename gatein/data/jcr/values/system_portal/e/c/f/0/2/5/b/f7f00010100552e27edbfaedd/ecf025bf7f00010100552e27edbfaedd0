@@ -1,0 +1,5 @@
+ A program element annotated &#64;Deprecated is one that programmers
+ are discouraged from using, typically because it is dangerous,
+ or because a better alternative exists.  Compilers warn when a
+ deprecated program element is used or overridden in non-deprecated code.
+ <DL><DT><B>Authors:</B></DT><DD>Neal Gafter</DD></DL><DL><DT><B>Version:</B></DT><DD>%I%, %G%</DD></DL><DL><DT><B>Since:</B></DT><DD>1.5</DD></DL>

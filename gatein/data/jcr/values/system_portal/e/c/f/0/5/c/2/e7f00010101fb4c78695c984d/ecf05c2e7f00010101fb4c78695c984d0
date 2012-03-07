@@ -1,0 +1,47 @@
+
+     * Specifies a JAR file with instrumentation classes to be defined by the
+     * bootstrap class loader.
+     *
+     * <p> When the virtual machine's built-in class loader, known as the "bootstrap
+     * class loader", unsuccessfully searches for a class, the entries in the {@link
+     * java.util.jar.JarFile JAR file} will be searched as well.
+     * 
+     * <p> This method may be used multiple times to add multiple JAR files to be
+     * searched in the order that this method was invoked.
+     * 
+     * <p> The agent should take care to ensure that the JAR does not contain any
+     * classes or resources other than those to be defined by the bootstrap
+     * class loader for the purpose of instrumentation.
+     * Failure to observe this warning could result in unexpected
+     * behaviour that is difficult to diagnose. For example, suppose there is a 
+     * loader L, and L's parent for delegation is the bootstrap class loader.
+     * Furthermore, a method in class C, a class defined by L, makes reference to
+     * a non-public accessor class C$1. If the JAR file contains a class C$1 then 
+     * the delegation to the bootstrap class loader will cause C$1 to be defined
+     * by the bootstrap class loader. In this example an <code>IllegalAccessError</code>
+     * will be thrown that may cause the application to fail. One approach to 
+     * avoiding these types of issues, is to use a unique package name for the
+     * instrumentation classes.
+     *
+     * <p> The <a href="http://java.sun.com/docs/books/vmspec/">Java Virtual Machine
+     * Specification</a> specifies that a subsequent attempt to resolve a symbolic
+     * reference that the Java virtual machine has previously unsuccessfully attempted 
+     * to resolve always fails with the same error that was thrown as a result of the
+     * initial resolution attempt. Consequently, if the JAR file contains an entry
+     * that corresponds to a class for which the Java virtual machine has
+     * unsuccessfully attempted to resolve a reference, then subsequent attempts to
+     * resolve that reference will fail with the same error as the initial attempt.
+     *
+     * @param	jarfile
+     *		The JAR file to be searched when the bootstrap class loader
+     *		unsuccessfully searches for a class.
+     *
+     * @throws	NullPointerException
+     *		If <code>jarfile</code> is <code>null</code>.
+     *
+     * @see     #appendToSystemClassLoaderSearch
+     * @see	java.lang.ClassLoader
+     * @see	java.util.jar.JarFile
+     *
+     * @since 1.6
+     

@@ -1,0 +1,10 @@
+
+     * Removes the mapping for the specified key from this map if present.
+     *
+     * @param  key key for which mapping should be removed
+     * @return the previous value associated with the specified key, or
+     *         <tt>null</tt> if there was no mapping for the key
+     * @throws ClassCastException if the specified key cannot be compared
+     *         with the keys currently in the map
+     * @throws NullPointerException if the specified key is null
+     

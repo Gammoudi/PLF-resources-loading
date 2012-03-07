@@ -1,0 +1,13 @@
+
+     * Returns whether the value of the specified calendar field has been set
+     * externally by calling one of the setter methods rather than by the
+     * internal time calculation.
+     *
+     * @return <code>true</code> if the field has been set externally,
+     * <code>false</code> otherwise.
+     * @exception IndexOutOfBoundsException if the specified
+     *                <code>field</code> is out of range
+     *               (<code>field &lt; 0 || field &gt;= FIELD_COUNT</code>).
+     * @see #selectFields()
+     * @see #setFieldsComputed(int)
+     

@@ -1,0 +1,35 @@
+
+     * Returns a view of the portion of this set whose elements range from
+     * {@code fromElement} to {@code toElement}.  If {@code fromElement} and
+     * {@code toElement} are equal, the returned set is empty unless {@code
+     * fromExclusive} and {@code toExclusive} are both true.  The returned set
+     * is backed by this set, so changes in the returned set are reflected in
+     * this set, and vice-versa.  The returned set supports all optional set
+     * operations that this set supports.
+     *
+     * <p>The returned set will throw an {@code IllegalArgumentException}
+     * on an attempt to insert an element outside its range.
+     *
+     * @param fromElement low endpoint of the returned set
+     * @param fromInclusive {@code true} if the low endpoint
+     *        is to be included in the returned view
+     * @param toElement high endpoint of the returned set
+     * @param toInclusive {@code true} if the high endpoint
+     *        is to be included in the returned view
+     * @return a view of the portion of this set whose elements range from
+     *         {@code fromElement}, inclusive, to {@code toElement}, exclusive
+     * @throws ClassCastException if {@code fromElement} and
+     *         {@code toElement} cannot be compared to one another using this
+     *         set's comparator (or, if the set has no comparator, using
+     *         natural ordering).  Implementations may, but are not required
+     *         to, throw this exception if {@code fromElement} or
+     *         {@code toElement} cannot be compared to elements currently in
+     *         the set.
+     * @throws NullPointerException if {@code fromElement} or
+     *         {@code toElement} is null and this set does
+     *         not permit null elements
+     * @throws IllegalArgumentException if {@code fromElement} is
+     *         greater than {@code toElement}; or if this set itself
+     *         has a restricted range, and {@code fromElement} or
+     *         {@code toElement} lies outside the bounds of the range.
+     

@@ -1,0 +1,7 @@
+ Handles the curly-brace style repetition with a specified minimum and
+ maximum occurrences in deterministic cases. This is an iterative
+ optimization over the Prolog and Loop system which would handle this
+ in a recursive way. The * quantifier is handled as a special case.
+ If capture is true then this class saves group settings and ensures
+ that groups are unset when backing off of a group match.
+     

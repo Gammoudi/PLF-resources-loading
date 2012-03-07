@@ -1,0 +1,4 @@
+
+     * Determines if the specified year (normalized) is the Gregorian
+     * cutover year. This object must have been normalized.
+     

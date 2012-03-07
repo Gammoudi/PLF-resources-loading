@@ -1,0 +1,10 @@
+
+     * Converts the current millisecond time value {@link #time}
+     * to calendar field values in {@link #fields fields[]}.
+     * This allows you to sync up the calendar field values with
+     * a new time that is set for the calendar.  The time is <em>not</em>
+     * recomputed first; to recompute the time, then the fields, call the
+     * {@link #complete()} method.
+     *
+     * @see #computeTime()
+     

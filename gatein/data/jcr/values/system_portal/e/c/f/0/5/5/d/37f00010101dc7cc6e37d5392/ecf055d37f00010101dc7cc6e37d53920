@@ -1,0 +1,9 @@
+
+         * Version of getEntry method for use when key is not found in
+         * its direct hash slot.
+         *
+         * @param  key the thread local object
+         * @param  i the table index for key's hash code
+         * @param  e the entry at table[i]
+         * @return the entry associated with key, or null if no such
+         

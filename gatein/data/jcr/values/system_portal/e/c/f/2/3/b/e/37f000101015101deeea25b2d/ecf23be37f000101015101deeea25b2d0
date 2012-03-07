@@ -1,0 +1,8 @@
+
+     * Removes from this set all of its elements that are contained in
+     * the specified collection.
+     *
+     * @param c elements to be removed from this set
+     * @return <tt>true</tt> if this set changed as a result of the call
+     * @throws NullPointerException if the specified collection is null
+     

@@ -1,0 +1,11 @@
+
+     * Set a filter to control output on this Logger.
+     * <P>
+     * After passing the initial "level" check, the Logger will
+     * call this Filter to check if a log record should really
+     * be published.
+     *
+     * @param   newFilter  a filter object (may be null)
+     * @exception  SecurityException  if a security manager exists and if
+     *             the caller does not have LoggingPermission("control").
+     

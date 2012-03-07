@@ -1,0 +1,13 @@
+
+     * Save the state of this object to a stream (i.e., serialize it).
+     *
+     * Ideally, <code>Calendar</code> would only write out its state data and
+     * the current time, and not write any field data out, such as
+     * <code>fields[]</code>, <code>isTimeSet</code>, <code>areFieldsSet</code>,
+     * and <code>isSet[]</code>.  <code>nextStamp</code> also should not be part
+     * of the persistent state. Unfortunately, this didn't happen before JDK 1.1
+     * shipped. To be compatible with JDK 1.1, we will always have to write out
+     * the field values and state flags.  However, <code>nextStamp</code> can be
+     * removed from the serialization stream; this will probably happen in the
+     * near future.
+     

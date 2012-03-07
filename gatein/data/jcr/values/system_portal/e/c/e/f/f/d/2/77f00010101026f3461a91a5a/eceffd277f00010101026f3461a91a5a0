@@ -1,0 +1,21 @@
+ 
+     * Returns the current memory usage of non-heap memory that
+     * is used by the Java virtual machine.
+     * The non-heap memory consists of one or more memory pools.  
+     * The <tt>used</tt> and <tt>committed</tt> size of the 
+     * returned memory usage is the sum of those values of 
+     * all non-heap memory pools whereas the <tt>init</tt> 
+     * and <tt>max</tt> size of the returned memory usage 
+     * represents the setting of the non-heap
+     * memory which may not be the sum of those of all non-heap
+     * memory pools.
+     *
+     * <p>
+     * <b>MBeanServer access</b>:<br>
+     * The mapped type of <tt>MemoryUsage</tt> is
+     * <tt>CompositeData</tt> with attributes as specified in 
+     * {@link MemoryUsage#from MemoryUsage}.
+     *
+     * @return a {@link MemoryUsage} object representing 
+     * the non-heap memory usage.
+     

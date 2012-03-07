@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<configuration
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation="http://www.exoplatform.org/xml/ns/kernel_1_2.xsd http://www.exoplatform.org/xml/ns/kernel_1_2.xsd"
+   xmlns="http://www.exoplatform.org/xml/ns/kernel_1_2.xsd">
+	<component>
+		<type>org.exoplatform.commons.info.ProductInformations</type>
+		<init-params>
+			<value-param>
+				<name>product.versions.declaration.file</name>
+				<value>jar:/conf/platform.properties</value>
+			</value-param>
+		</init-params>
+	</component>
+	<external-component-plugins>
+		<target-component>org.exoplatform.commons.upgrade.UpgradeProductService</target-component>
+		<component-plugin profiles="social,all,default">
+			<name>Upgrade-Spaces-Home-page</name>
+			<set-method>addUpgradePlugin</set-method>
+			<type>org.exoplatform.platform.upgrade.plugins.UpgradeSpacePlugin</type>
+			<description>Spaces Home page Upgrade Plugin</description>
+			<init-params>
+				<value-param>
+					<name>product.group.id</name>
+					<description>The groupId of the product</description>
+					<value>org.exoplatform.platform</value>
+				</value-param>
+				<value-param>
+					<name>plugin.execution.order</name>
+					<description>The plugin execution order</description>
+					<value>3</value>
+				</value-param>
+			</init-params>
+		</component-plugin>
+		<component-plugin>
+			<name>Upgrade-WCM-Contents</name>
+			<set-method>addUpgradePlugin</set-method>
+			<type>org.exoplatform.platform.upgrade.plugins.UpgradeContentPlugin</type>
+			<description>WCM Contents Upgrade Plugin</description>
+			<init-params>
+				<value-param>
+					<name>product.group.id</name>
+					<description>The groupId of the product</description>
+					<value>org.exoplatform.platform</value>
+				</value-param>
+				<value-param>
+					<name>plugin.execution.order</name>
+					<description>The plugin execution order</description>
+					<value>4</value>
+				</value-param>
+				<values-param>
+					<name>webapps-mames</name>
+					<description>webapps to upgrade</description>
+					<value>acme-intranet</value>
+					<value>acme-intranet-portlet</value>
+					<value>acme-website</value>
+					<value>acme-websiteResources</value>
+					<value>authoring-apps</value>
+					<value>calendar</value>
+					<value>chat</value>
+					<value>chatbar</value>
+					<value>cometd</value>
+					<value>commons-extension</value>
+					<value>CommonsResources</value>
+					<value>contact</value>
+					<value>content</value>
+					<value>crash</value>
+					<value>cs-extension</value>
+					<value>csResources</value>
+					<value>dashboard</value>
+					<value>default-website</value>
+					<value>ecm-wcm-core</value>
+					<value>ecm-wcm-extension</value>
+					<value>ecmadmin</value>
+					<value>ecmbrowsecontent</value>
+					<value>ecmexplorer</value>
+					<value>ecmworkflow-extension</value>
+					<value>exo-gadget-resources</value>
+					<value>exoadmin</value>
+					<value>eXoDMSGadgets</value>
+					<value>eXoDMSResources</value>
+					<value>eXoGadgets</value>
+					<value>eXoGadgetServer</value>
+					<value>eXoPlatformResources</value>
+					<value>eXoResources</value>
+					<value>eXoStaticResources</value>
+					<value>eXoWCMResources</value>
+					<value>eXoWorkflowResources</value>
+					<value>faq</value>
+					<value>fck</value>
+					<value>formgenerator</value>
+					<value>forum</value>
+					<value>gadget-pack</value>
+					<value>IDE</value>
+					<value>intranet-gadget</value>
+					<value>ks-extension</value>
+					<value>ksResources</value>
+					<value>mail</value>
+					<value>newsletter</value>
+					<value>platform-extension</value>
+					<value>platformNavigation</value>
+					<value>poll</value>
+					<value>portal</value>
+					<value>presentation</value>
+					<value>rest</value>
+					<value>searches</value>
+					<value>seo</value>
+					<value>SmartGWT</value>
+					<value>social</value>
+					<value>social-extension</value>
+					<value>social-portlet</value>
+					<value>social-resources</value>
+					<value>web</value>
+					<value>webos-ext</value>
+					<value>webosadmin</value>
+					<value>webosResources</value>
+					<value>wiki</value>
+					<value>workflow</value>
+				</values-param>
+			</init-params>
+		</component-plugin>
+		<component-plugin>
+			<name>Upgrade-Navigations</name>
+			<set-method>addUpgradePlugin</set-method>
+			<type>org.exoplatform.platform.upgrade.plugins.UpgradeNavigationPlugin</type>
+			<description>Navigations Upgrade Plugin</description>
+			<init-params>
+				<value-param>
+					<name>product.group.id</name>
+					<description>The groupId of the product</description>
+					<value>org.exoplatform.platform</value>
+				</value-param>
+				<value-param>
+					<name>plugin.execution.order</name>
+					<description>The plugin execution order</description>
+					<value>2</value>
+				</value-param>
+			</init-params>
+		</component-plugin>
+		<component-plugin>
+			<name>Upgrade-Gadgets</name>
+			<set-method>addUpgradePlugin</set-method>
+			<type>org.exoplatform.platform.upgrade.plugins.UpgradeLocalGadgetsPlugin</type>
+			<description>Gadgets Upgrade Plugin</description>
+			<init-params>
+				<value-param>
+					<name>product.group.id</name>
+					<description>The groupId of the product</description>
+					<value>org.exoplatform.platform</value>
+				</value-param>
+				<value-param>
+					<name>plugin.execution.order</name>
+					<description>The plugin execution order</description>
+					<value>1</value>
+				</value-param>
+				<object-param>
+					<name>eventslist</name>
+					<object type="org.exoplatform.platform.upgrade.plugins.GadgetUpgrade">
+						<field name="name">
+							<string>eventslist</string>
+						</field>
+						<field name="path">
+							<string>war:/gadgets/events/Events.xml</string>
+						</field>
+					</object>
+				</object-param>
+				<object-param>
+					<name>taskslist</name>
+					<object type="org.exoplatform.platform.upgrade.plugins.GadgetUpgrade">
+						<field name="name">
+							<string>taskslist</string>
+						</field>
+						<field name="path">
+							<string>war:/gadgets/tasks/Tasks.xml</string>
+						</field>
+					</object>
+				</object-param>
+				<object-param>
+					<name>messageslist</name>
+					<object type="org.exoplatform.platform.upgrade.plugins.GadgetUpgrade">
+						<field name="name">
+							<string>messageslist</string>
+						</field>
+						<field name="path">
+							<string>war:/gadgets/messages/Messages.xml</string>
+						</field>
+					</object>
+				</object-param>
+				<object-param>
+					<name>To-do</name>
+					<object type="org.exoplatform.platform.upgrade.plugins.GadgetUpgrade">
+						<field name="name">
+							<string>To-do</string>
+						</field>
+						<field name="path">
+							<string>war:/gadgets/Todo/Todo.xml</string>
+						</field>
+					</object>
+				</object-param>
+				<object-param>
+					<name>Calendar</name>
+					<object type="org.exoplatform.platform.upgrade.plugins.GadgetUpgrade">
+						<field name="name">
+							<string>Calendar</string>
+						</field>
+						<field name="path">
+							<string>war:/gadgets/Calendar/Calendar.xml</string>
+						</field>
+					</object>
+				</object-param>
+				<object-param>
+					<name>Calculator</name>
+					<object type="org.exoplatform.platform.upgrade.plugins.GadgetUpgrade">
+						<field name="name">
+							<string>Calculator</string>
+						</field>
+						<field name="path">
+							<string>war:/gadgets/Calculator/Calculator.xml</string>
+						</field>
+					</object>
+				</object-param>
+				<object-param>
+					<name>rssAggregator</name>
+					<object type="org.exoplatform.platform.upgrade.plugins.GadgetUpgrade">
+						<field name="name">
+							<string>rssAggregator</string>
+						</field>
+						<field name="path">
+							<string>war:/gadgets/rssAggregator/rssAggregator.xml</string>
+						</field>
+					</object>
+				</object-param>
+				<object-param>
+					<name>IDE</name>
+					<object type="org.exoplatform.platform.upgrade.plugins.GadgetUpgrade">
+						<field name="name">
+							<string>IDE</string>
+						</field>
+						<field name="path">
+							<string>war:/ide.xml</string>
+						</field>
+					</object>
+				</object-param>
+				<object-param>
+					<name>lastpost</name>
+					<object type="org.exoplatform.platform.upgrade.plugins.GadgetUpgrade">
+						<field name="name">
+							<string>lastpost</string>
+						</field>
+						<field name="path">
+							<string>war:/gadgets/lastpost/Lastpost.xml</string>
+						</field>
+					</object>
+				</object-param>
+				<object-param>
+					<name>pollslist</name>
+					<object type="org.exoplatform.platform.upgrade.plugins.GadgetUpgrade">
+						<field name="name">
+							<string>pollslist</string>
+						</field>
+						<field name="path">
+							<string>war:/gadgets/polls/Polls.xml</string>
+						</field>
+					</object>
+				</object-param>
+				<object-param>
+					<name>Activities</name>
+					<object type="org.exoplatform.platform.upgrade.plugins.GadgetUpgrade">
+						<field name="name">
+							<string>Activities</string>
+						</field>
+						<field name="path">
+							<string>war:/gadgets/Activities/Activities.xml</string>
+						</field>
+					</object>
+				</object-param>
+				<object-param>
+					<name>ViewerFriends</name>
+					<object type="org.exoplatform.platform.upgrade.plugins.GadgetUpgrade">
+						<field name="name">
+							<string>ViewerFriends</string>
+						</field>
+						<field name="path">
+							<string>war:/gadgets/ViewerFriends/ViewerFriends.xml</string>
+						</field>
+					</object>
+				</object-param>
+				<object-param>
+					<name>SocialRssReader</name>
+					<object type="org.exoplatform.platform.upgrade.plugins.GadgetUpgrade">
+						<field name="name">
+							<string>SocialRssReader</string>
+						</field>
+						<field name="path">
+							<string>war:/gadgets/SocialRssReader/SocialRssReader.xml</string>
+						</field>
+					</object>
+				</object-param>
+				<object-param>
+					<name>MySpaces</name>
+					<object type="org.exoplatform.platform.upgrade.plugins.GadgetUpgrade">
+						<field name="name">
+							<string>MySpaces</string>
+						</field>
+						<field name="path">
+							<string>war:/gadgets/MySpaces/MySpaces.xml</string>
+						</field>
+					</object>
+				</object-param>
+			</init-params>
+		</component-plugin>
+	</external-component-plugins>
+</configuration>

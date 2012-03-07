@@ -1,0 +1,6 @@
+ A Guard node at the end of each atom node in a Branch. It
+ serves the purpose of chaining the "match" operation to
+ "next" but not the "study", so we can collect the TreeInfo
+ of each atom node without including the TreeInfo of the
+ "next".
+     

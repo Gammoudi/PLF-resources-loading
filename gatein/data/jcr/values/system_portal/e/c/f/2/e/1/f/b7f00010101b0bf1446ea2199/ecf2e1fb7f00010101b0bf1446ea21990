@@ -1,0 +1,4 @@
+
+     * Returns node for matching characters within an explicit value
+     * range in a case insensitive manner.
+     

@@ -1,0 +1,6 @@
+
+     * Retrieves and removes the first (lowest) element,
+     * or returns {@code null} if this set is empty.
+     *
+     * @return the first element, or {@code null} if this set is empty
+     

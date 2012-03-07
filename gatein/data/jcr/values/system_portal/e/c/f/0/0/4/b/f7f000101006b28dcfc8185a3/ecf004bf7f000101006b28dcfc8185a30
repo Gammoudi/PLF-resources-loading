@@ -1,0 +1,51 @@
+
+     * Returns the thread info for each thread 
+     * whose ID is in the input array <tt>ids</tt>,
+     * with stack trace of a specified number of stack trace elements.
+     * The <tt>maxDepth</tt> parameter indicates the maximum number of 
+     * {@link StackTraceElement} to be retrieved from the stack trace.
+     * If <tt>maxDepth == Integer.MAX_VALUE</tt>, the entire stack trace of 
+     * the thread will be dumped. 
+     * If <tt>maxDepth == 0</tt>, no stack trace of the thread 
+     * will be dumped.
+     * This method does not obtain the locked monitors and locked 
+     * synchronizers of the threads.
+     * <p>
+     * When the Java virtual machine has no stack trace information 
+     * about a thread or <tt>maxDepth == 0</tt>, 
+     * the stack trace in the
+     * <tt>ThreadInfo</tt> object will be an empty array of 
+     * <tt>StackTraceElement</tt>.
+     * <p>
+     * This method returns an array of the <tt>ThreadInfo</tt> objects,
+     * each is the thread information about the thread with the same index
+     * as in the <tt>ids</tt> array.
+     * If a thread of the given ID is not alive or does not exist,
+     * <tt>null</tt> will be set in the corresponding element 
+     * in the returned array.  A thread is alive if 
+     * it has been started and has not yet died.
+     *
+     * <p>
+     * <b>MBeanServer access</b>:<br>
+     * The mapped type of <tt>ThreadInfo</tt> is
+     * <tt>CompositeData</tt> with attributes as specified in the
+     * {@link ThreadInfo#from ThreadInfo.from} method.
+     *
+     * @param ids an array of thread IDs 
+     * @param maxDepth the maximum number of entries in the stack trace 
+     * to be dumped. <tt>Integer.MAX_VALUE</tt> could be used to request
+     * the entire stack to be dumped.
+     *
+     * @return an array of the {@link ThreadInfo} objects, each containing
+     * information about a thread whose ID is in the corresponding
+     * element of the input array of IDs with no locked monitor and
+     * synchronizer info.
+     *
+     * @throws IllegalArgumentException if <tt>maxDepth is negative</tt>.
+     * @throws IllegalArgumentException if any element in the input array 
+     *      <tt>ids</tt> is <tt>&lt= 0</tt>.
+     * @throws java.lang.SecurityException if a security manager
+     *         exists and the caller does not have
+     *         ManagementPermission("monitor").
+     *
+     

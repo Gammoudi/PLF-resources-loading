@@ -1,0 +1,5 @@
+
+     * This method scans to see which entry we're parsing and
+     * keeps various state information depending on what type of
+     * file is being parsed.
+     

@@ -1,0 +1,8 @@
+
+     * Tests if the thread associated with this <tt>ThreadInfo</tt>
+     * is suspended.  This method returns <tt>true</tt> if
+     * {@link Thread#suspend} has been called.
+     *
+     * @return <tt>true</tt> if the thread is suspended;
+     *         <tt>false</tt> otherwise.
+     

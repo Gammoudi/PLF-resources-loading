@@ -1,0 +1,11 @@
+
+     * Implements the <tt>absolutePath</tt> method as per the specification in
+     * {@link Preferences#absolutePath()}.
+     *
+     * <p>This implementation merely returns the absolute path name that
+     * was computed at the time that this node was constructed (based on
+     * the name that was passed to this node's constructor, and the names
+     * that were passed to this node's ancestors' constructors).
+     *
+     * @return this preference node's absolute path name.
+     

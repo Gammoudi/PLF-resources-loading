@@ -1,0 +1,5 @@
+
+     * @throws ClassCastException {@inheritDoc}
+     * @throws NullPointerException if {@code toKey} is null
+     * @throws IllegalArgumentException {@inheritDoc}
+     

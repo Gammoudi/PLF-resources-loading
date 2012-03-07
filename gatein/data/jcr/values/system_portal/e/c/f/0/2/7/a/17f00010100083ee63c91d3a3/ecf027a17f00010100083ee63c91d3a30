@@ -1,0 +1,4 @@
+ The class <code>Exception</code> and its subclasses are a form of 
+ <code>Throwable</code> that indicates conditions that a reasonable 
+ application might want to catch.
+ <DL><DT><B>Authors:</B></DT><DD>Frank Yellin</DD></DL><DL><DT><B>Version:</B></DT><DD>%I%, %G%</DD></DL><DL><DT><B>See Also:</B></DT><DD><a href='../java/lang/Error.html' title='Error'>Error</a></DD></DL><DL><DT><B>Since:</B></DT><DD>JDK1.0</DD></DL>

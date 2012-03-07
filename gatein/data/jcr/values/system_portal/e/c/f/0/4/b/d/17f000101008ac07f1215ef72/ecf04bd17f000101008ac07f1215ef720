@@ -1,0 +1,9 @@
+
+     * Returns a clone if the class of this object is {@link Cloneable Cloneable}.
+     *
+     * @return  a clone if the class of this object is {@code Cloneable}
+     *
+     * @throws  CloneNotSupportedException
+     *          if this method is invoked on a class that does not
+     *          support {@code Cloneable}
+     

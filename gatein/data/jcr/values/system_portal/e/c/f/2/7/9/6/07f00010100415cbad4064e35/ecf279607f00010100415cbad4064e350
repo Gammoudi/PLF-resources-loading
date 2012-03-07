@@ -1,0 +1,12 @@
+
+     * Schedule the specified timer task for execution at the specified
+     * time with the specified period, in milliseconds.  If period is
+     * positive, the task is scheduled for repeated execution; if period is
+     * zero, the task is scheduled for one-time execution. Time is specified
+     * in Date.getTime() format.  This method checks timer state, task state,
+     * and initial execution time, but not period.
+     *
+     * @throws IllegalArgumentException if <tt>time()</tt> is negative.
+     * @throws IllegalStateException if task was already scheduled or
+     *         cancelled, timer was cancelled, or timer thread terminated.
+     

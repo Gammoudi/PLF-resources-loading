@@ -1,0 +1,90 @@
+.UINewsletterPortlet {
+  background: #fff;
+  padding: 35px 3px;
+}
+
+.UINewsletterPortlet .NewsletterBoxContent {
+  padding: 0px;
+}
+
+.UINewsletterPortlet .NewsletterBoxContent .LeftUserName {
+	margin-left: 290px !important;
+	color: #5a5a5a;
+}
+
+.UINewsletterPortlet .NewsletterBoxContent .RightUserName .Input input {
+	width: 273px;
+	height: 20px;
+	border: 1px solid #e3e9ef;
+	border-top: 1px solid #abadb3;
+}
+
+.UICategories .CategoryTitle .LeftTitle {
+  background: url('/portal/rest/jcr/repository/collaboration/sites content/live/acme/web contents/site artifacts/newsletter_header/medias/images/TabBg.gif') no-repeat top left;
+  padding-left: 5px;
+  float: left;
+}
+
+.UICategories .CategoryTitle .RightTitle {
+  background: url('/portal/rest/jcr/repository/collaboration/sites content/live/acme/web contents/site artifacts/newsletter_header/medias/images/TabBg.gif') no-repeat right top;
+  padding-right: 5px;
+}
+
+.UICategories .CategoryTitle .CenterTitle {
+  background: url('/portal/rest/jcr/repository/collaboration/sites content/live/acme/web contents/site artifacts/newsletter_header/medias/images/TabBg.gif') repeat-x left -29px;
+  height: 29px;
+  padding: 0px 10px;
+}
+
+.UICategories .CategoryTitle .IconCategory {
+  background: url('/portal/rest/jcr/repository/collaboration/sites content/live/acme/web contents/site artifacts/newsletter_header/medias/images/CategoryIco.gif') no-repeat left center;
+  padding: 0 25px 0 25px;
+  line-height: 29px;
+  color: #2f4394;
+  font-weight: bold;
+  display: block;
+  font-size: 14px;
+  text-shadow: 1px 1px #f6f6f6;
+}
+
+.UICategories .Subscriptions table {
+  border: none;
+  margin-left: 0px;
+}
+
+.UICategories .Subscriptions .Title {
+  line-height: 30px;
+  color: #20263f;
+  font-weight: bold;
+  text-align: center;
+  background: #e2ddc7;
+  border-right: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+}
+
+.UICategories .Subscriptions .OddRow {
+  background: #f5f4f4;
+}
+
+.UICategories .Subscriptions .EvenRow {
+  background: #f9f9f9;
+}
+
+.UICategories .Subscriptions td {
+  border-right: 1px solid white !important;
+  border-top: 1px solid white !important;
+  line-height: 26px;
+  color: #000;
+  padding: 0px 5px;
+  text-align: left;
+}
+
+.UICategories .Subscriptions .SubscriptionTitle {
+  font-weight: bold;
+  color: #f58220;
+}
+
+.UICategories .Subscriptions .SubscriptionDescription {
+  color: #5a5a5a;
+  font-style: normal;
+}

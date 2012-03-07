@@ -1,0 +1,9 @@
+
+     * Compiles the given regular expression into a pattern.  </p>
+     *
+     * @param  regex
+     *         The expression to be compiled
+     *
+     * @throws  PatternSyntaxException
+     *          If the expression's syntax is invalid
+     

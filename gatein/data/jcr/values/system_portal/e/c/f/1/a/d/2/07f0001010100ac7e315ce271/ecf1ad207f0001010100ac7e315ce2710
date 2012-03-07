@@ -1,0 +1,7 @@
+
+	 * Replaces the value corresponding to this entry with the specified
+	 * value.
+	 *
+	 * @param value new value to be stored in this entry
+	 * @return the old value corresponding to the entry
+         

@@ -1,0 +1,4 @@
+
+     * Removes first entry; returns its snapshot.
+     * @return null if empty, else snapshot of first entry
+     

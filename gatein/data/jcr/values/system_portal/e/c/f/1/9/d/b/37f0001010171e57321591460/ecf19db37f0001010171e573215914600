@@ -1,0 +1,6 @@
+
+     * called to let us know we have processed all the
+     * META-INF entries, and if we re-read one of them, don't
+     * re-process it. Also gets rid of any data structures
+     * we needed when parsing META-INF entries.
+     

@@ -1,0 +1,4 @@
+ Type is the common superinterface for all types in the Java
+ programming language. These include raw types, parameterized types,
+ array types, type variables and primitive types.
+ <DL><DT><B>Since:</B></DT><DD>1.5</DD></DL>

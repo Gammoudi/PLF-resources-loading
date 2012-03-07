@@ -1,0 +1,4 @@
+
+     * Reconstitute the <tt>HashSet</tt> instance from a stream (that is,
+     * deserialize it).
+     

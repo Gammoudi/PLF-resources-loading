@@ -1,0 +1,20 @@
+jQuery.noConflict();
+jQuery(document).ready(function() {
+var htmlContent = "Powered by eXo Platform ";
+        var divContent = document.getElementById("platformInfoDiv");
+        var requestJsonPlatformInfo = jQuery.ajax({ type: "GET", url: "/portal/rest/platform/info", async: false });
+        if(requestJsonPlatformInfo.readyState == 4 && requestJsonPlatformInfo.status == 200){
+                //readyState 4: request finished and response is ready
+                //status 200: "OK"
+                var jsonPlatformInfo = eval('(' + requestJsonPlatformInfo.responseText + ')');
+                htmlContent += "v"
+                htmlContent += jsonPlatformInfo.platformVersion;
+                htmlContent += " - build "
+                htmlContent += jsonPlatformInfo.platformBuildNumber;
+                htmlContent += " - rev. "
+                htmlContent += jsonPlatformInfo.platformRevision;
+        }else{
+                htmlContent += "3.5"
+        }
+        divContent.innerHTML = htmlContent;
+});

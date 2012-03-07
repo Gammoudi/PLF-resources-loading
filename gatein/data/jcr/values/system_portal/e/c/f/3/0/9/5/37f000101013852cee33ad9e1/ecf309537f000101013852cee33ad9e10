@@ -1,0 +1,3 @@
+ Node class for a unicode_case_insensitive/BMP-only sequence of
+ literal characters. Uses unicode case folding.
+     

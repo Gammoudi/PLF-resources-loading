@@ -1,0 +1,5 @@
+
+     * Removes the ith element from queue without regard for maintaining
+     * the heap invariant.  Recall that queue is one-based, so
+     * 1 <= i <= size.
+     

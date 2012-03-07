@@ -1,0 +1,10 @@
+
+     * Returns the number of processors available to the Java virtual machine.
+     * This method is equivalent to the {@link Runtime#availableProcessors()}
+     * method.
+     * <p> This value may change during a particular invocation of
+     * the virtual machine.
+     *
+     * @return  the number of processors available to the virtual
+     *          machine; never smaller than one.
+     

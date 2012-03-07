@@ -1,0 +1,12 @@
+
+     * Compares the specified object with this map for equality.  Returns
+     * <tt>true</tt> if the given object is also a map and the two maps
+     * represent the same mappings.  More formally, two maps <tt>m1</tt> and
+     * <tt>m2</tt> represent the same mappings if
+     * <tt>m1.entrySet().equals(m2.entrySet())</tt>.  This ensures that the
+     * <tt>equals</tt> method works properly across different implementations
+     * of the <tt>Map</tt> interface.
+     *
+     * @param o object to be compared for equality with this map
+     * @return <tt>true</tt> if the specified object is equal to this map
+     

@@ -1,0 +1,12 @@
+
+     * Adds a permission to the PropertyPermissions. The key for the hash is
+     * the name.
+     *
+     * @param permission the Permission object to add.
+     *
+     * @exception IllegalArgumentException - if the permission is not a
+     *                                       PropertyPermission
+     *
+     * @exception SecurityException - if this PropertyPermissionCollection
+     *                                object has been marked readonly
+     

@@ -1,0 +1,8 @@
+
+     * Returns the hash code value for this object.
+     * The hash code used is the hash code of this permissions name, that is,
+     * <code>getName().hashCode()</code>, where <code>getName</code> is
+     * from the Permission superclass.
+     *
+     * @return a hash code value for this object.
+     

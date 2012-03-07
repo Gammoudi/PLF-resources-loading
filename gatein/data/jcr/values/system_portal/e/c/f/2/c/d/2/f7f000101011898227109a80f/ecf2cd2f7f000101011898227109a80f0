@@ -1,0 +1,34 @@
+
+     * Causes the current thread to wait until it is signalled.
+     *
+     * <p>The lock associated with this condition is atomically
+     * released and the current thread becomes disabled for thread scheduling
+     * purposes and lies dormant until <em>one</em> of three things happens:
+     * <ul>
+     * <li>Some other thread invokes the {@link #signal} method for this
+     * {@code Condition} and the current thread happens to be chosen as the
+     * thread to be awakened; or
+     * <li>Some other thread invokes the {@link #signalAll} method for this
+     * {@code Condition}; or
+     * <li>A &quot;<em>spurious wakeup</em>&quot; occurs.
+     * </ul>
+     *
+     * <p>In all cases, before this method can return the current thread must
+     * re-acquire the lock associated with this condition. When the
+     * thread returns it is <em>guaranteed</em> to hold this lock.
+     *
+     * <p>If the current thread's interrupted status is set when it enters
+     * this method, or it is {@linkplain Thread#interrupt interrupted}
+     * while waiting, it will continue to wait until signalled. When it finally
+     * returns from this method its interrupted status will still
+     * be set.
+     *
+     * <p><b>Implementation Considerations</b>
+     *
+     * <p>The current thread is assumed to hold the lock associated with this
+     * {@code Condition} when this method is called.
+     * It is up to the implementation to determine if this is
+     * the case and if not, how to respond. Typically, an exception will be
+     * thrown (such as {@link IllegalMonitorStateException}) and the
+     * implementation must document that fact.
+     

@@ -1,0 +1,13 @@
+
+     * Maps the specified key to the specified value in this table.
+     * Neither the key nor the value can be null.
+     *
+     * <p> The value can be retrieved by calling the <tt>get</tt> method
+     * with a key that is equal to the original key.
+     *
+     * @param key key with which the specified value is to be associated
+     * @param value value to be associated with the specified key
+     * @return the previous value associated with <tt>key</tt>, or
+     *         <tt>null</tt> if there was no mapping for <tt>key</tt>
+     * @throws NullPointerException if the specified key or value is null
+     

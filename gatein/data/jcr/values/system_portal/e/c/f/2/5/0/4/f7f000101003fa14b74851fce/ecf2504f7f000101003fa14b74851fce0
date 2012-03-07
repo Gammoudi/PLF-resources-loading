@@ -1,0 +1,5 @@
+
+     * Override hashCode.
+     * Since Locales are often used in hashtables, caches the value
+     * for speed.
+     

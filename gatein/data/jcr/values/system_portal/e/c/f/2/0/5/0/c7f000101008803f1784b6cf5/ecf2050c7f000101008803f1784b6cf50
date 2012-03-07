@@ -1,0 +1,5 @@
+
+     * Returns the number of entries (distinct keys) in this dictionary.
+     *
+     * @return  the number of keys in this dictionary.
+     

@@ -1,0 +1,45 @@
+ A java.util.Set that uses an internal <a href='../java/util/concurrent/CopyOnWriteArrayList.html' title='CopyOnWriteArrayList'>CopyOnWriteArrayList</a>
+ for all of its operations.  Thus, it shares the same basic properties:
+ <ul>
+  <li>It is best suited for applications in which set sizes generally
+       stay small, read-only operations
+       vastly outnumber mutative operations, and you need
+       to prevent interference among threads during traversal.
+  <li>It is thread-safe.
+  <li>Mutative operations (<tt>add</tt>, <tt>set</tt>, <tt>remove</tt>, etc.)
+      are expensive since they usually entail copying the entire underlying
+      array.
+  <li>Iterators do not support the mutative <tt>remove</tt> operation.
+  <li>Traversal via iterators is fast and cannot encounter
+      interference from other threads. Iterators rely on
+      unchanging snapshots of the array at the time the iterators were
+      constructed.
+ </ul>
+
+ <p> <b>Sample Usage.</b> The following code sketch uses a
+ copy-on-write set to maintain a set of Handler objects that
+ perform some action upon state updates.
+
+ <pre>
+ class Handler { void handle(); ... }
+
+ class X {
+    private final CopyOnWriteArraySet&lt;Handler&gt; handlers
+       = new CopyOnWriteArraySet&lt;Handler&gt;();
+    public void addHandler(Handler h) { handlers.add(h); }
+
+    private long internalState;
+    private synchronized void changeState() { internalState = ...; }
+
+    public void update() {
+       changeState();
+       for (Handler handler : handlers)
+          handler.handle();
+    }
+ }
+ </pre>
+
+ <p>This class is a member of the
+ <a href="{@docRoot}/../technotes/guides/collections/index.html">
+ Java Collections Framework</a>.
+ <DL><DT><B>Parameters:</B></DT><DD><code><E></code> -  the type of elements held in this collection</DD></DL><DL><DT><B>Authors:</B></DT><DD>Doug Lea</DD></DL><DL><DT><B>See Also:</B></DT><DD><a href='../java/util/concurrent/CopyOnWriteArrayList.html' title='CopyOnWriteArrayList'>CopyOnWriteArrayList</a></DD></DL><DL><DT><B>Since:</B></DT><DD>1.5</DD></DL>

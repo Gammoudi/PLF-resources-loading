@@ -1,0 +1,14 @@
+
+     * This computeFields implements the conversion from UTC
+     * (millisecond offset from the Epoch) to calendar
+     * field values. fieldMask specifies which fields to change the
+     * setting state to COMPUTED, although all fields are set to
+     * the correct values. This is required to fix 4685354.
+     *
+     * @param fieldMask a bit mask to specify which fields to change
+     * the setting state.
+     * @param tzMask a bit mask to specify which time zone offset
+     * fields to be used for time calculations
+     * @return a new field mask that indicates what field values have
+     * actually been set.
+     

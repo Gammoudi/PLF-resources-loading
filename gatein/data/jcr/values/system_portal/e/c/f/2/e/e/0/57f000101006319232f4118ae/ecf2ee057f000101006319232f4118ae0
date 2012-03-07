@@ -1,0 +1,4 @@
+ Node to anchor at the beginning of input. This object implements the
+ match for a \A sequence, and the caret anchor will use this if not in
+ multiline mode.
+     

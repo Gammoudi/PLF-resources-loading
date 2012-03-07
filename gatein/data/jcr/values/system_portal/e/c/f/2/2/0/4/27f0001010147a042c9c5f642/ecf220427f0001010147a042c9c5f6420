@@ -1,0 +1,4 @@
+
+     * Returns the day before the Gregorian cutover date as a
+     * BaseCalendar.Date. The date is a Julian date.
+     

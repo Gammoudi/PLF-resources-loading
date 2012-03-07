@@ -1,0 +1,13 @@
+
+     * Returns an array of {@link MonitorInfo} objects, each of which
+     * represents an object monitor currently locked by the thread
+     * associated with this <tt>ThreadInfo</tt>.
+     * If no locked monitor was requested for this thread info or
+     * no monitor is locked by the thread, this method
+     * will return a zero-length array.
+     *
+     * @return an array of <tt>MonitorInfo</tt> objects representing
+     *         the object monitors locked by the thread.
+     *
+     * @since 1.6
+     

@@ -1,0 +1,12 @@
+ A task that returns a result and may throw an exception.
+ Implementors define a single method with no arguments called
+ <tt>call</tt>.
+
+ <p>The <tt>Callable</tt> interface is similar to java.lang.Runnable, in that both are designed for classes whose
+ instances are potentially executed by another thread.  A
+ <tt>Runnable</tt>, however, does not return a result and cannot
+ throw a checked exception.
+
+ <p> The <a href='../java/util/concurrent/Executors.html' title='Executors'>Executors</a> class contains utility methods to
+ convert from other common forms to <tt>Callable</tt> classes.
+ <DL><DT><B>Parameters:</B></DT><DD><code><V></code> -  the result type of method <tt>call</tt></DD></DL><DL><DT><B>Authors:</B></DT><DD>Doug Lea</DD></DL><DL><DT><B>See Also:</B></DT><DD><a href='../java/util/concurrent/Executor.html' title='Executor'>Executor</a></DD></DL><DL><DT><B>Since:</B></DT><DD>1.5</DD></DL>

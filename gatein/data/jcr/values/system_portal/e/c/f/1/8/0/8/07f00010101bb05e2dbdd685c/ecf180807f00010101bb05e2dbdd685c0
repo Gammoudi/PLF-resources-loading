@@ -1,0 +1,75 @@
+ This class provides a skeletal implementation of the <a href='../java/util/prefs/Preferences.html' title='Preferences'>Preferences</a>
+ class, greatly easing the task of implementing it.
+
+ <p><strong>This class is for <tt>Preferences</tt> implementers only.
+ Normal users of the <tt>Preferences</tt> facility should have no need to
+ consult this documentation.  The <a href='../java/util/prefs/Preferences.html' title='Preferences'>Preferences</a> documentation
+ should suffice.</strong>
+
+ <p>Implementors must override the nine abstract service-provider interface
+ (SPI) methods: <a href='#getSpi(java.lang.String)'>getSpi(String)</a>, <a href='#putSpi(java.lang.String, java.lang.String)'>putSpi(String,String)</a>,
+ <a href='#removeSpi(java.lang.String)'>removeSpi(String)</a>, <a href='#childSpi(java.lang.String)'>childSpi(String)</a>, <a href='#removeNodeSpi()'>removeNodeSpi()</a>, <a href='#keysSpi()'>keysSpi()</a>, <a href='#childrenNamesSpi()'>childrenNamesSpi()</a>, <a href='#syncSpi()'>syncSpi()</a> and <a href='#flushSpi()'>flushSpi()</a>.  All of the concrete methods specify
+ precisely how they are implemented atop these SPI methods.  The implementor
+ may, at his discretion, override one or more of the concrete methods if the
+ default implementation is unsatisfactory for any reason, such as
+ performance.
+
+ <p>The SPI methods fall into three groups concerning exception
+ behavior. The <tt>getSpi</tt> method should never throw exceptions, but it
+ doesn't really matter, as any exception thrown by this method will be
+ intercepted by <a href='#get(java.lang.String, java.lang.String)'>get(String,String)</a>, which will return the specified
+ default value to the caller.  The <tt>removeNodeSpi, keysSpi,
+ childrenNamesSpi, syncSpi</tt> and <tt>flushSpi</tt> methods are specified
+ to throw <a href='../java/util/prefs/BackingStoreException.html' title='BackingStoreException'>BackingStoreException</a>, and the implementation is required
+ to throw this checked exception if it is unable to perform the operation.
+ The exception propagates outward, causing the corresponding API method
+ to fail.
+
+ <p>The remaining SPI methods <a href='#putSpi(java.lang.String, java.lang.String)'>putSpi(String,String)</a>, <a href='#removeSpi(java.lang.String)'>removeSpi(String)</a> and <a href='#childSpi(java.lang.String)'>childSpi(String)</a> have more complicated
+ exception behavior.  They are not specified to throw
+ <tt>BackingStoreException</tt>, as they can generally obey their contracts
+ even if the backing store is unavailable.  This is true because they return
+ no information and their effects are not required to become permanent until
+ a subsequent call to <a href='../java/util/prefs/Preferences.html#flush()' title='Preferences.flush'>Preferences.flush</a> or
+ <a href='../java/util/prefs/Preferences.html#sync()' title='Preferences.sync'>Preferences.sync</a>. Generally speaking, these SPI methods should not
+ throw exceptions.  In some implementations, there may be circumstances
+ under which these calls cannot even enqueue the requested operation for
+ later processing.  Even under these circumstances it is generally better to
+ simply ignore the invocation and return, rather than throwing an
+ exception.  Under these circumstances, however, all subsequent invocations
+ of <tt>flush()</tt> and <tt>sync</tt> should return <tt>false</tt>, as
+ returning <tt>true</tt> would imply that all previous operations had
+ successfully been made permanent.
+
+ <p>There is one circumstance under which <tt>putSpi, removeSpi and
+ childSpi</tt> <i>should</i> throw an exception: if the caller lacks
+ sufficient privileges on the underlying operating system to perform the
+ requested operation.  This will, for instance, occur on most systems
+ if a non-privileged user attempts to modify system preferences.
+ (The required privileges will vary from implementation to
+ implementation.  On some implementations, they are the right to modify the
+ contents of some directory in the file system; on others they are the right
+ to modify contents of some key in a registry.)  Under any of these
+ circumstances, it would generally be undesirable to let the program
+ continue executing as if these operations would become permanent at a later
+ time.  While implementations are not required to throw an exception under
+ these circumstances, they are encouraged to do so.  A java.lang.SecurityException would be appropriate.
+
+ <p>Most of the SPI methods require the implementation to read or write
+ information at a preferences node.  The implementor should beware of the
+ fact that another VM may have concurrently deleted this node from the
+ backing store.  It is the implementation's responsibility to recreate the
+ node if it has been deleted.
+
+ <p>Implementation note: In Sun's default <tt>Preferences</tt>
+ implementations, the user's identity is inherited from the underlying
+ operating system and does not change for the lifetime of the virtual
+ machine.  It is recognized that server-side <tt>Preferences</tt>
+ implementations may have the user identity change from request to request,
+ implicitly passed to <tt>Preferences</tt> methods via the use of a
+ static java.lang.ThreadLocal instance.  Authors of such implementations are
+ <i>strongly</i> encouraged to determine the user at the time preferences
+ are accessed (for example by the <a href='#get(java.lang.String, java.lang.String)'>get(String,String)</a> or <a href='#put(java.lang.String, java.lang.String)'>put(String,String)</a> method) rather than permanently associating a user
+ with each <tt>Preferences</tt> instance.  The latter behavior conflicts
+ with normal <tt>Preferences</tt> usage and would lead to great confusion.
+ <DL><DT><B>Authors:</B></DT><DD>Josh Bloch</DD></DL><DL><DT><B>Version:</B></DT><DD>%I%, %G%</DD></DL><DL><DT><B>See Also:</B></DT><DD><a href='../java/util/prefs/Preferences.html' title='Preferences'>Preferences</a></DD></DL><DL><DT><B>Since:</B></DT><DD>1.4</DD></DL>

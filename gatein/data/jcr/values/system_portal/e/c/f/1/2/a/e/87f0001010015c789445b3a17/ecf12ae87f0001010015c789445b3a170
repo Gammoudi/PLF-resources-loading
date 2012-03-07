@@ -1,0 +1,4 @@
+
+     * Constructs a new, empty map, sorted according to the
+     * {@linkplain Comparable natural ordering} of the keys.
+     

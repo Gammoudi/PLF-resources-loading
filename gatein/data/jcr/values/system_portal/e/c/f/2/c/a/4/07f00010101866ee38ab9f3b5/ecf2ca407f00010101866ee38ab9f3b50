@@ -1,0 +1,6 @@
+
+         * Removes and transfers nodes until hit non-cancelled one or
+         * null. Split out from signal in part to encourage compilers
+         * to inline the case of no waiters.
+         * @param first (non-null) the first node on condition queue
+         

@@ -1,0 +1,13 @@
+
+     * Returns the usage threshold value of this memory pool in bytes.
+     * Each memory pool has a platform-dependent default threshold value.
+     * The current usage threshold can be changed via the
+     * {@link #setUsageThreshold setUsageThreshold} method.
+     *
+     * @return the usage threshold value of this memory pool in bytes.
+     *
+     * @throws UnsupportedOperationException if this memory pool
+     *         does not support a usage threshold.
+     *
+     * @see #isUsageThresholdSupported
+     

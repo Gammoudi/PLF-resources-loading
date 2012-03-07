@@ -1,0 +1,8 @@
+
+         * Spins/blocks until node s is matched by a fulfill operation.
+         *
+         * @param s the waiting node
+         * @param timed true if timed wait
+         * @param nanos timeout value
+         * @return matched node, or s if cancelled
+         

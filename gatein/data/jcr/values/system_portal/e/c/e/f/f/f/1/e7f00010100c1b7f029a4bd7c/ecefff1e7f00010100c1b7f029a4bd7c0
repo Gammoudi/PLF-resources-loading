@@ -1,0 +1,10 @@
+
+     * Returns the type of this memory pool.
+     *
+     * <p>
+     * <b>MBeanServer access</b>:<br>
+     * The mapped type of <tt>MemoryType</tt> is <tt>String</tt>
+     * and the value is the name of the <tt>MemoryType</tt>.
+     *
+     * @return the type of this memory pool.
+     

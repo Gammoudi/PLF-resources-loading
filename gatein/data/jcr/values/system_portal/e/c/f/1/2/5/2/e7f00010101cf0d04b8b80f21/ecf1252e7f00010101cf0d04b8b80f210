@@ -1,0 +1,3 @@
+ Custom Entry class used by EntryIterator.next(), that relays
+ setValue changes to the underlying map.
+     

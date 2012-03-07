@@ -1,0 +1,6 @@
+
+     * Returns a key-value mapping associated with the greatest
+     * key in this map, or <tt>null</tt> if the map is empty.
+     * The returned entry does <em>not</em> support
+     * the <tt>Entry.setValue</tt> method.
+     

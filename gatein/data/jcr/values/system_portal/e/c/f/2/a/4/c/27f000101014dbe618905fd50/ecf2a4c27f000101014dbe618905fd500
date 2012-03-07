@@ -1,0 +1,3 @@
+
+     * Returns internal representation of null key back to caller as null.
+     

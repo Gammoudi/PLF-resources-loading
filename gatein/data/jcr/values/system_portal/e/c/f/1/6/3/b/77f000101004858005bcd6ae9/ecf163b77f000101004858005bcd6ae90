@@ -1,0 +1,14 @@
+
+     * Sweeps through arena checking for any waiting threads.  Called
+     * only upon return from timeout while waiting in slot 0.  When a
+     * thread gives up on a timed wait, it is possible that a
+     * previously-entered thread is still waiting in some other
+     * slot.  So we scan to check for any.  This is almost always
+     * overkill, but decreases the likelihood of timeouts when there
+     * are other threads present to far less than that in lock-based
+     * exchangers in which earlier-arriving threads may still be
+     * waiting on entry locks.
+     *
+     * @param node the waiting node
+     * @return another thread's item, or CANCEL
+     

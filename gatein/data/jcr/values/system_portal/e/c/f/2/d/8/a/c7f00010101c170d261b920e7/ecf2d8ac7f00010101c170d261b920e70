@@ -1,0 +1,3 @@
+ A counter for per-thread read hold counts.
+ Maintained as a ThreadLocal; cached in cachedHoldCounter
+         

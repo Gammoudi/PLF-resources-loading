@@ -1,0 +1,5 @@
+
+     * Sets the current compression level to the specified value.
+     * @param level the new compression level (0-9)
+     * @exception IllegalArgumentException if the compression level is invalid
+     

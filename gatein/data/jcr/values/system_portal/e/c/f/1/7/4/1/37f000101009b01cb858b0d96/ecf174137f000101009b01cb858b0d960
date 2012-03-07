@@ -1,0 +1,3 @@
+ An annoying wrapper class to convince javac to use a
+ DelayQueue<RunnableScheduledFuture> as a BlockingQueue<Runnable>
+     

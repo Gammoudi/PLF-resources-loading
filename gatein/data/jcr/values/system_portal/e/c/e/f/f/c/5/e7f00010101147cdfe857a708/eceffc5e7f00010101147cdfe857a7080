@@ -1,0 +1,7 @@
+
+     * Returns the total number of collections that have occurred.
+     * This method returns <tt>-1</tt> if the collection count is undefined for 
+     * this collector.
+     *
+     * @return the total number of collections that have occurred.
+     

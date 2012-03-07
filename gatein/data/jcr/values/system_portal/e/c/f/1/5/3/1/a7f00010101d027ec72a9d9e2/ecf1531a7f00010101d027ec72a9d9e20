@@ -1,0 +1,7 @@
+
+     * Removes the element at the specified position in this list.
+     * Shifts any subsequent elements to the left (subtracts one from their
+     * indices).  Returns the element that was removed from the list.
+     *
+     * @throws IndexOutOfBoundsException {@inheritDoc}
+     

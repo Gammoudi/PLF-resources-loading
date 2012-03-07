@@ -1,0 +1,8 @@
+
+     * Method childValue is visibly defined in subclass
+     * InheritableThreadLocal, but is internally defined here for the
+     * sake of providing createInheritedMap factory method without
+     * needing to subclass the map class in InheritableThreadLocal.
+     * This technique is preferable to the alternative of embedding
+     * instanceof tests in methods.
+     

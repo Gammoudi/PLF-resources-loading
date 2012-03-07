@@ -1,0 +1,7 @@
+
+     * Fills in any unset fields in the calendar fields. First, the {@link
+     * #computeTime()} method is called if the time value (millisecond offset
+     * from the <a href="#Epoch">Epoch</a>) has not been calculated from
+     * calendar field values. Then, the {@link #computeFields()} method is
+     * called to calculate all calendar field values.
+     

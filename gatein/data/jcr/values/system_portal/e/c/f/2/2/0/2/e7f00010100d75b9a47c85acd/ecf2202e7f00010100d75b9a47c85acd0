@@ -1,0 +1,5 @@
+
+     * Returns the calendar system for dates before the cutover date
+     * in the cutover year. If the cutover date is January 1, the
+     * method returns Gregorian. Otherwise, Julian.
+     

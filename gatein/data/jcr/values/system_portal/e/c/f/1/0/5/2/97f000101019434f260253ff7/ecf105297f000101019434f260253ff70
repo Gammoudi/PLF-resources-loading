@@ -1,0 +1,8 @@
+
+     * Sets the field of the given object managed by this updater to the
+     * given updated value. This operation is guaranteed to act as a volatile
+     * store with respect to subsequent invocations of {@code compareAndSet}.
+     *
+     * @param obj An object whose field to set
+     * @param newValue the new value
+     

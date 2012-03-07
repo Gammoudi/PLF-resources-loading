@@ -1,0 +1,6 @@
+
+     * Variant of set() to establish initialValue. Used instead
+     * of set() in case user has overridden the set() method.
+     *
+     * @return the initial value
+     

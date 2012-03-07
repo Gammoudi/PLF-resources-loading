@@ -1,0 +1,11 @@
+
+     * Returns a name of this time zone suitable for presentation to the user
+     * in the specified locale.
+     * This method returns the long name, not including daylight savings.
+     * If the display name is not available for the locale,
+     * then this method returns a string in the 
+     * <a href="#NormalizedCustomID">normalized custom ID format</a>.
+     * @param locale the locale in which to supply the display name.
+     * @return the human-readable name of this time zone in the given locale.
+     * @since 1.2
+     

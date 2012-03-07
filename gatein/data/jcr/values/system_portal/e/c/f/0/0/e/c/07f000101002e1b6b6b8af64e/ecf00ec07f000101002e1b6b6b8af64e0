@@ -1,0 +1,7 @@
+
+     * Returns a hash code for this <tt>Boolean</tt> object.
+     *
+     * @return  the integer <tt>1231</tt> if this object represents 
+     * <tt>true</tt>; returns the integer <tt>1237</tt> if this 
+     * object represents <tt>false</tt>. 
+     

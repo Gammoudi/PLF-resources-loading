@@ -1,0 +1,20 @@
+
+     * Removes all cancelled tasks from this timer's task queue.  <i>Calling
+     * this method has no effect on the behavior of the timer</i>, but
+     * eliminates the references to the cancelled tasks from the queue.
+     * If there are no external references to these tasks, they become
+     * eligible for garbage collection.
+     *
+     * <p>Most programs will have no need to call this method.
+     * It is designed for use by the rare application that cancels a large
+     * number of tasks.  Calling this method trades time for space: the
+     * runtime of the method may be proportional to n + c log n, where n
+     * is the number of tasks in the queue and c is the number of cancelled
+     * tasks.
+     *
+     * <p>Note that it is permissible to call this method from within a
+     * a task scheduled on this timer.
+     *
+     * @return the number of tasks removed from the queue.
+     * @since 1.5
+     

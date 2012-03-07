@@ -1,0 +1,4 @@
+function setEditableImgageSrc() {
+  var REST_URL =  eXo.env.portal.context + "/"  + eXo.env.portal.rest + "/jcr/repository/collaboration/sites%20content/live/" + eXo.env.portal.portalName + "/ApplicationData/NewsletterApplication/DefaultTemplates/template1/medias/images/logo_header.jpg";
+  document.getElementById('editableImg1').src = REST_URL;
+}

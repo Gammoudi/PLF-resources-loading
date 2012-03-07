@@ -1,0 +1,11 @@
+
+     * Main exchange function, handling the different policy variants.
+     * Uses Object, not "V" as argument and return value to simplify
+     * handling of sentinel values.  Callers from public methods decode
+     * and cast accordingly.
+     *
+     * @param item the (non-null) item to exchange
+     * @param timed true if the wait is timed
+     * @param nanos if timed, the maximum wait time
+     * @return the other thread's item, or CANCEL if interrupted or timed out
+     

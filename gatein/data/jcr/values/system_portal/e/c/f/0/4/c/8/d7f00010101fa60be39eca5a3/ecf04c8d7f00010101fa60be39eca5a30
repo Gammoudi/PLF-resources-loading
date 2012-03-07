@@ -1,0 +1,3 @@
+
+     * Common impl for stop() and stop(Throwable).
+     

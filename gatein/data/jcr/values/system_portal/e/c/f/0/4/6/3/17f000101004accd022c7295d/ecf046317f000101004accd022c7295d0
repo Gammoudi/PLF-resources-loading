@@ -1,0 +1,6 @@
+
+     * @throws StringIndexOutOfBoundsException {@inheritDoc}
+     * @see        java.lang.String#valueOf(double)
+     * @see        #insert(int, java.lang.String)
+     * @see        #length()
+     

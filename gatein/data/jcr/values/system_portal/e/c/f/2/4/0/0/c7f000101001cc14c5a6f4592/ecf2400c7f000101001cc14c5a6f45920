@@ -1,0 +1,6 @@
+
+         * This method is invoked by the superclass whenever the value
+         * of a pre-existing entry is read by Map.get or modified by Map.set.
+         * If the enclosing Map is access-ordered, it moves the entry
+         * to the end of the list; otherwise, it does nothing.
+         

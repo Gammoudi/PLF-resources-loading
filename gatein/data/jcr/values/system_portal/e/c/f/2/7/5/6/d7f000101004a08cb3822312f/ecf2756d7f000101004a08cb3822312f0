@@ -1,0 +1,12 @@
+
+     * Sets the base time zone offset to GMT.
+     * This is the offset to add to UTC to get local time.
+     * <p>
+     * If an underlying <code>TimeZone</code> implementation subclass
+     * supports historical GMT offset changes, the specified GMT
+     * offset is set as the latest GMT offset and the difference from
+     * the known latest GMT offset value is used to adjust all
+     * historical GMT offset values.
+     *
+     * @param offsetMillis the given base time zone offset to GMT.
+     

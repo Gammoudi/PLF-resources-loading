@@ -1,0 +1,23 @@
+Manifest-Version: 1.0
+Archiver-Version: Plexus Archiver
+Created-By: Apache Maven
+Built-By: swfhudson
+Build-Jdk: 1.6.0_29
+Implementation-Vendor-Id: org.exoplatform.webos
+Hudson-Build-Number: 248
+Hudson-Project: webos-master-pkg
+Hudson-Version: 1.451
+Implementation-Title: WebOS Admin Portlet
+Implementation-URL: http://www.exoplatform.com/webos-parent/exo.webos.
+ portlet.webosadmin
+Implementation-Vendor: eXo Platform SAS
+Implementation-Version: 2.0.3-SNAPSHOT
+Jenkins-Build-Number: 248
+Jenkins-Project: webos-master-pkg
+Jenkins-Version: 1.451
+SCM-URL: scm:git:git://github.com/exoportal/webos.git/exo.webos.portle
+ t.webosadmin
+Specification-Title: eXo Platform
+Specification-Vendor: eXo Platform SAS
+Specification-Version: N/A
+

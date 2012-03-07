@@ -1,0 +1,9 @@
+
+     * Returns the index of the element that would be returned by a subsequent
+     * call to <tt>previous</tt>. (Returns -1 if the list iterator is at the
+     * beginning of the list.)
+     *
+     * @return the index of the element that would be returned by a subsequent
+     * 	       call to <tt>previous</tt>, or -1 if list iterator is at
+     *	       beginning of list.
+     

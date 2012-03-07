@@ -1,0 +1,5 @@
+
+     * Returns the name of the thread associated with this <tt>ThreadInfo</tt>.
+     *
+     * @return the name of the associated thread.
+     

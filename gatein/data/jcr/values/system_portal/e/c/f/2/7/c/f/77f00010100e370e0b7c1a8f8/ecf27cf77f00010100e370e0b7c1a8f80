@@ -1,0 +1,14 @@
+
+     * Removes the mapping for this key from this TreeMap if present.
+     *
+     * @param  key key for which mapping should be removed
+     * @return the previous value associated with <tt>key</tt>, or
+     *         <tt>null</tt> if there was no mapping for <tt>key</tt>.
+     *         (A <tt>null</tt> return can also indicate that the map
+     *         previously associated <tt>null</tt> with <tt>key</tt>.)
+     * @throws ClassCastException if the specified key cannot be compared
+     *         with the keys currently in the map
+     * @throws NullPointerException if the specified key is null
+     *         and this map uses natural ordering, or its comparator
+     *         does not permit null keys
+     

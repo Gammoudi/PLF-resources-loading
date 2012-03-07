@@ -1,0 +1,8 @@
+
+     * Gets a calendar using the specified time zone and default locale.
+     * The <code>Calendar</code> returned is based on the current time
+     * in the given time zone with the default locale. 
+     *
+     * @param zone the time zone to use
+     * @return a Calendar.
+     

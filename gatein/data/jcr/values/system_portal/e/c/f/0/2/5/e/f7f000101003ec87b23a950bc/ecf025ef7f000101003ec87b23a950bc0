@@ -1,0 +1,2 @@
+ This is the common base class of all Java language enumeration types.
+ <DL><DT><B>Authors:</B></DT><DD>Josh Bloch</DD><DD>Neal Gafter</DD></DL><DL><DT><B>Version:</B></DT><DD>%I%, %G%</DD></DL><DL><DT><B>Since:</B></DT><DD>1.5</DD></DL>

@@ -1,0 +1,4 @@
+
+         * Moves to next valid node and returns item to return for
+         * next(), or null if no such.
+         

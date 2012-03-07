@@ -1,0 +1,37 @@
+
+     * Returns the <tt>LockInfo</tt> of an object for which 
+     * the thread associated with this <tt>ThreadInfo</tt> 
+     * is blocked waiting. 
+     * A thread can be blocked waiting for one of the following:
+     * <ul>
+     * <li>an object monitor to be acquired for entering or reentering
+     *     a synchronization block/method.
+     *     <br>The thread is in the {@link java.lang.Thread.State#BLOCKED BLOCKED}
+     *     state waiting to enter the <tt>synchronized</tt> statement
+     *     or method.
+     *     <p></li> 
+     * <li>an object monitor to be notified by another thread.
+     *     <br>The thread is in the {@link java.lang.Thread.State#WAITING WAITING}
+     *     or {@link java.lang.Thread.State#TIMED_WAITING TIMED_WAITING} state
+     *     due to a call to the {@link Object#wait Object.wait} method.
+     *     <p></li>
+     * <li>a synchronization object responsible for the thread parking.
+     *     <br>The thread is in the {@link java.lang.Thread.State#WAITING WAITING}
+     *     or {@link java.lang.Thread.State#TIMED_WAITING TIMED_WAITING} state
+     *     due to a call to the
+     *     {@link java.util.concurrent.locks.LockSupport#park(Object)
+     *     LockSupport.park} method.  The synchronization object
+     *     is the object returned from 
+     *     {@link java.util.concurrent.locks.LockSupport#getBlocker
+     *     LockSupport.getBlocker} method. Typically it is an 
+     *     <a href="LockInfo.html#OwnableSynchronizer"> ownable synchronizer</a>
+     *     or a {@link java.util.concurrent.locks.Condition Condition}.</li>
+     * </ul>
+     *
+     * <p>This method returns <tt>null</tt> if the thread is not in any of
+     * the above conditions.
+     *
+     * @return <tt>LockInfo</tt> of an object for which the thread
+     *         is blocked waiting if any; <tt>null</tt> otherwise.
+     * @since 1.6
+     

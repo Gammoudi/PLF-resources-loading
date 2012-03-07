@@ -1,0 +1,13 @@
+
+     * Tests if the Java virtual machine supports monitoring of
+     * object monitor usage.
+     *
+     * @return
+     *   <tt>true</tt>
+     *     if the Java virtual machine supports monitoring of
+     *     object monitor usage;
+     *   <tt>false</tt> otherwise.
+     *
+     * @see #dumpAllThreads
+     * @since 1.6
+     

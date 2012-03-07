@@ -1,0 +1,5 @@
+
+         * Tries to append a deletion marker to this node.
+         * @param f the assumed current successor of this node
+         * @return true if successful
+         

@@ -1,0 +1,8 @@
+
+     * Parses an escape sequence to determine the actual value that needs
+     * to be matched.
+     * If -1 is returned and create was true a new object was added to the tree
+     * to handle the escape sequence.
+     * If the returned value is greater than zero, it is the value that
+     * matches the escape sequence.
+     

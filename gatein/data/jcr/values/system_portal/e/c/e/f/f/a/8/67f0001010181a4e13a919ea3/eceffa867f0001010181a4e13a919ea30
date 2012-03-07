@@ -1,0 +1,5 @@
+ Annotation retention policy.  The constants of this enumerated type
+ describe the various policies for retaining annotations.  They are used
+ in conjunction with the <a href='../java/lang/annotation/Retention.html' title='Retention'>Retention</a> meta-annotation type to specify
+ how long annotations are to be retained.
+ <DL><DT><B>Authors:</B></DT><DD>Joshua Bloch</DD></DL><DL><DT><B>Since:</B></DT><DD>1.5</DD></DL>

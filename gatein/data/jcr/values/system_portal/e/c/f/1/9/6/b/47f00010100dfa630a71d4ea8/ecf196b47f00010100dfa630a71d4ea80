@@ -1,0 +1,7 @@
+ An event emitted by a <tt>Preferences</tt> node to indicate that
+ a child of that node has been added or removed.<p>
+  
+ Note, that although NodeChangeEvent inherits Serializable interface from
+ java.util.EventObject, it is not intended to be Serializable. Appropriate
+ serialization methods are implemented to throw NotSerializableException.<DL><DT><B>serial:</B></DT><DD>exclude</DD></DL>
+ <DL><DT><B>Authors:</B></DT><DD>Josh Bloch</DD></DL><DL><DT><B>Version:</B></DT><DD>\$I\$, \$G\$</DD></DL><DL><DT><B>See Also:</B></DT><DD><a href='../java/util/prefs/Preferences.html' title='Preferences'>Preferences</a></DD><DD><a href='../java/util/prefs/NodeChangeListener.html' title='NodeChangeListener'>NodeChangeListener</a></DD><DD><a href='../java/util/prefs/PreferenceChangeEvent.html' title='PreferenceChangeEvent'>PreferenceChangeEvent</a></DD></DL><DL><DT><B>Since:</B></DT><DD>1.4</DD></DL>

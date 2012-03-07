@@ -1,0 +1,8 @@
+
+     * Returns the first live (non-deleted) node on list, or null if none.
+     * This is yet another variant of poll/peek; here returning the
+     * first node, not element. We could make peek() a wrapper around
+     * first(), but that would cost an extra volatile read of item,
+     * and the need to add a retry loop to deal with the possibility
+     * of losing a race to a concurrent poll().
+     

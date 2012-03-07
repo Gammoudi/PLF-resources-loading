@@ -1,0 +1,20 @@
+
+     * Implements the <tt>children</tt> method as per the specification in
+     * {@link Preferences#childrenNames()}.
+     *
+     * <p>This implementation obtains this preference node's lock, checks that
+     * the node has not been removed, constructs a <tt>TreeSet</tt> initialized
+     * to the names of children already cached (the children in this node's
+     * "child-cache"), invokes {@link #childrenNamesSpi()}, and adds all of the
+     * returned child-names into the set.  The elements of the tree set are
+     * dumped into a <tt>String</tt> array using the <tt>toArray</tt> method,
+     * and this array is returned.
+     *
+     * @return the names of the children of this preference node.
+     * @throws BackingStoreException if this operation cannot be completed
+     *         due to a failure in the backing store, or inability to 
+     *         communicate with it.
+     * @throws IllegalStateException if this node (or an ancestor) has been
+     *         removed with the {@link #removeNode()} method.
+     * @see #cachedChildren()
+     

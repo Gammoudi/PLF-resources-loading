@@ -1,0 +1,5 @@
+
+     * Complete the character class being parsed and add a set
+     * of alternations to it that will match the canonical equivalences
+     * of the characters within the class.
+     

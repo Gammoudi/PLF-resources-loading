@@ -1,0 +1,9 @@
+
+     * {@inheritDoc}
+     *
+     * <p>Equivalent to {@code subMap(fromKey, true, toKey, false)}.
+     *
+     * @throws ClassCastException       {@inheritDoc}
+     * @throws NullPointerException     {@inheritDoc}
+     * @throws IllegalArgumentException {@inheritDoc}
+     

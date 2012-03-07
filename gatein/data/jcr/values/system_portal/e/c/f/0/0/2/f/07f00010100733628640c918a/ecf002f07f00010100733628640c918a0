@@ -1,0 +1,14 @@
+
+     * Returns the ID of the thread which owns the object  
+     * for which the thread associated with this <tt>ThreadInfo</tt>
+     * is blocked waiting.
+     * This method will return <tt>-1</tt> if this thread is not blocked
+     * waiting for any object or if the object is not owned by any thread.
+     *
+     * @return the thread ID of the owner thread of the object 
+     * this thread is blocked on;
+     * <tt>-1</tt> if this thread is not blocked
+     * or if the object lis not owned by any thread.
+     *
+     * @see #getLockInfo
+     

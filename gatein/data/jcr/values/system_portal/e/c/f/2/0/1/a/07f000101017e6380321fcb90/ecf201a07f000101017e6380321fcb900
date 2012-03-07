@@ -1,0 +1,6 @@
+
+     * Returns an iterator over the elements in this deque in proper sequence.
+     * The elements will be returned in order from first (head) to last (tail).
+     *
+     * @return an iterator over the elements in this deque in proper sequence
+     

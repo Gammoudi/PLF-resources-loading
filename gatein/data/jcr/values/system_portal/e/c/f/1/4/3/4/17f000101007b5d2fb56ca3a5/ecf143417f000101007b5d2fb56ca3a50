@@ -1,0 +1,5 @@
+
+         * Creates and returns a new SimpleImmutableEntry holding current
+         * mapping if this node holds a valid value, else null.
+         * @return new entry or null
+         

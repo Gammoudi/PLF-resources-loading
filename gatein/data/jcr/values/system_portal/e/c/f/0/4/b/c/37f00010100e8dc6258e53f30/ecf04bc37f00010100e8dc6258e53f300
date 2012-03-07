@@ -1,0 +1,7 @@
+
+     * Returns the number of active threads in the current thread's thread
+     * group.
+     *
+     * @return  the number of active threads in the current thread's thread
+     *          group.
+     

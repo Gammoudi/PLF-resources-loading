@@ -1,0 +1,5 @@
+
+     * Updates checksum with specified array of bytes.
+     *
+     * @param b the array of bytes to update the checksum with
+     

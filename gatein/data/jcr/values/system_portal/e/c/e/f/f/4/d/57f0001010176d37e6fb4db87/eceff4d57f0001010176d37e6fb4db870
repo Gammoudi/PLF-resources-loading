@@ -1,0 +1,8 @@
+
+     * Returns the invocation handler for the specified proxy instance.
+     *
+     * @param	proxy the proxy instance to return the invocation handler for
+     * @return	the invocation handler for the proxy instance
+     * @throws	IllegalArgumentException if the argument is not a
+     *		proxy instance
+     

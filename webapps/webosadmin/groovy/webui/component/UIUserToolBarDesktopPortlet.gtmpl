@@ -1,0 +1,121 @@
+<%
+	import org.exoplatform.portal.mop.user.UserNode;
+    import org.exoplatform.portal.mop.SiteType;
+	import org.exoplatform.portal.webui.util.Util ;
+	import org.exoplatform.web.application.JavascriptManager;
+    import org.exoplatform.web.url.navigation.NavigationResource;
+	import org.exoplatform.web.url.PortalURL;
+	import java.util.Collection;
+    
+	import javax.portlet.MimeResponse;
+	import javax.portlet.ResourceURL;
+
+	def rcontext = _ctx.getRequestContext() ;
+	JavascriptManager jsmanager = rcontext.getJavascriptManager();
+	jsmanager.importJavascript('eXo.portal.UIPortalNavigation');
+	jsmanager.importJavascript('eXo.portal.UIAdminToolbar');
+	jsmanager.addCustomizedOnLoadScript('eXo.portal.UIAdminToolbar.onLoad("' + uicomponent.id + '");');
+
+	def portalURI = Util.getPortalRequestContext().getPortalURI();
+	void renderDashboards(PortalURL nodeURL, Collection nodes) {
+	   String clazz = "";
+
+	   print """
+			<ul style="display:none" class="MenuItemContainer">
+		""";
+					for(UserNode node : nodes) {
+						renderPageNode(nodeURL, node);
+					}
+       print """
+			</ul>
+		""" ;
+	}
+
+	void renderPageNode(PortalURL nodeURL, UserNode node) {
+        if (uicomponent.isWebOSNode(node)) return;
+
+        UserNode selectedNode = uicomponent.getSelectedNode();
+		String tabStyleNavigation = "";
+		if(selectedNode != null && node.getURI() == selectedNode.getURI()) {
+				tabStyleNavigation = "SelectedItem";
+		}
+
+		boolean hasChild = (node.getChildren() != null && node.getChildren().size() > 0);
+		String clazz = "";
+		if(hasChild) clazz = "ArrowIcon";
+		String href = nodeURL.setNode(node);
+		String icon = node.getIcon();
+		if(icon == null) icon = "DefaultPageIcon";
+		def resolvedLabel = node.getEncodedResolvedLabel();
+		if ("Tab_Default".equals(node.getName()))
+		{
+		    resolvedLabel = _ctx.appRes("UIUserToolbarDesktopPortlet.page." + resolvedLabel);
+		}
+	
+		boolean toolong = (resolvedLabel.length() > 60);
+		String label = ( toolong ? resolvedLabel.substring(0, 57) + "..." : resolvedLabel);
+		String title = "";
+		if(toolong) title = "title='$resolvedLabel'";
+		else title = "";
+        
+		def getNodeURL = "";
+		if (hasChild) {
+			MimeResponse res = _ctx.getRequestContext().getResponse();
+			ResourceURL resourceURL = res.createResourceURL();
+			resourceURL.setResourceID(res.encodeURL(node.getURI()));	
+			getNodeURL = "exo:getNodeURL='" + resourceURL.toString() + "'";
+		}
+        
+		print """
+			<li class="MenuItem $clazz $tabStyleNavigation" $getNodeURL>
+		""";
+				if(node.pageRef != null) {
+						print """<a class="ItemIcon $icon" href="$href" $title>$label</a>""";
+				} else {
+						print """<a class="ItemIcon $icon" href="#" $title>$label</a>""";
+				}
+
+		if(hasChild) {
+			print """
+				<ul class="MenuItemContainer">
+			""" ;
+				for(UserNode child : node.getChildren()) {
+					renderPageNode(nodeURL, child);
+				}
+			print """
+				</ul>
+			""" ;
+
+		}
+		print """
+			</li>
+		""" ;
+	}
+%>
+
+<%
+	def userNodes = uicomponent.getUserNodes(uicomponent.getCurrentUserNavigation());
+    String dashboardLink;
+    PortalURL dashboardUrl = nodeurl();
+    UserNode dashboardNode = uicomponent.findDashboardNode();
+    if (dashboardNode != null)
+    {
+       dashboardLink = dashboardUrl.setNode(dashboardNode).toString();
+    }
+    else
+    {
+       dashboardUrl.setResource(new NavigationResource(SiteType.USER, rcontext.getRemoteUser(), null));
+       dashboardLink = dashboardUrl.toString();
+    }
+    
+    String desktopLink = nodeurl().setResource(new NavigationResource(SiteType.USER, rcontext.getRemoteUser(), "classicWebosPage")).toString();
+%>
+<ul class="UIUserToolBarDesktopPortlet UIHorizontalTabs ClearFix" id="$uicomponent.id">
+    <li class="UITab NormalToolbarTab">
+        <a class="DashboardIcon TBIcon" href="<%= dashboardLink %>">Dashboard</a>
+        <% renderDashboards(dashboardUrl, userNodes); %>
+    </li>
+    <li class="UITab NormalToolbarTab">
+        <a class="DashboardIcon TBIcon" href="<%= desktopLink %>">Desktop</a>
+    </li>
+</ul>
